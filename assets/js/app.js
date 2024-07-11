@@ -15,6 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+window.onload = function () {
+  window.scrollTo(0, 0);
+};
+
 // Years dropdown (change year in btn)
 document.querySelectorAll(".dropdown-item").forEach((item) => {
   item.addEventListener("click", function (event) {
@@ -30,6 +34,7 @@ document.querySelectorAll(".dropdown-item").forEach((item) => {
 const inputElement = document.querySelector(".form-control");
 const buttonContainer = document.createElement("div");
 const resultContainer = document.getElementById("search-result");
+const spinner = document.getElementById("spinner");
 
 // Function to handle chip clicked
 let clickedButtonId; // model id
@@ -43,11 +48,89 @@ const handleButtonClick = (event) => {
   clickedButtonId = event.target.id; // model id
 };
 
-inputElement.addEventListener("keyup", async function () {
+// inputElement.addEventListener("keyup", async function () {
+//   const searchValue = inputElement.value.trim(); // Get the value
+
+//   if (searchValue === "") {
+//     resultContainer.style.gridTemplateRows = "0fr";
+//   }
+
+//   try {
+//     if (searchValue !== "") {
+//       spinner.style.display = "block";
+
+//       const response = await fetch(
+//         "https://cashif.online/back-end/public/api/car-models/search",
+//         {
+//           method: "POST",
+//           headers: {
+//             "Content-Type": "application/json",
+//           },
+//           body: JSON.stringify({ search: searchValue }),
+//         }
+//       );
+
+//       spinner.style.display = "none";
+
+//       if (!response.ok) {
+//         throw new Error("Failed to fetch data");
+//       }
+
+//       const data = await response.json();
+//       const firstTenResults = data.carModels.slice(0, 10); // Get the first 10 results
+//       // console.log(firstTenResults);
+
+//       // Clear previous buttons
+//       buttonContainer.innerHTML = "";
+
+//       // Map over the first 10 results and create buttons
+//       firstTenResults.forEach((result) => {
+//         const button = document.createElement("button");
+//         button.textContent = result.model_name;
+//         button.id = result.id;
+//         button.classList.add("custom-button-class");
+//         button.addEventListener("click", handleButtonClick);
+//         buttonContainer.appendChild(button);
+//       });
+
+//       // Append the buttons to a container in the DOM
+//       resultContainer.appendChild(buttonContainer);
+//       resultContainer.style.gridTemplateRows = "1fr";
+//     } else {
+//       // Clear previous buttons
+//       buttonContainer.innerHTML = "";
+//     }
+//   } catch (error) {
+//     console.error("Error:", error);
+//     spinner.style.display = "none";
+//   }
+// });
+
+// Debounce function
+const debounce = (func, delay) => {
+  let timeoutId;
+  return (...args) => {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    timeoutId = setTimeout(() => {
+      func(...args);
+    }, delay);
+  };
+};
+
+// Search input with debounce
+const debouncedSearch = debounce(async () => {
   const searchValue = inputElement.value.trim(); // Get the value
+
+  if (searchValue === "") {
+    resultContainer.style.gridTemplateRows = "0fr";
+  }
 
   try {
     if (searchValue !== "") {
+      spinner.style.display = "block";
+
       const response = await fetch(
         "https://cashif.online/back-end/public/api/car-models/search",
         {
@@ -58,6 +141,8 @@ inputElement.addEventListener("keyup", async function () {
           body: JSON.stringify({ search: searchValue }),
         }
       );
+
+      spinner.style.display = "none";
 
       if (!response.ok) {
         throw new Error("Failed to fetch data");
@@ -82,19 +167,23 @@ inputElement.addEventListener("keyup", async function () {
 
       // Append the buttons to a container in the DOM
       resultContainer.appendChild(buttonContainer);
+      resultContainer.style.gridTemplateRows = "1fr";
     } else {
       // Clear previous buttons
       buttonContainer.innerHTML = "";
     }
   } catch (error) {
     console.error("Error:", error);
+    spinner.style.display = "none";
   }
-});
+}, 500); // Set the delay to 500ms
+
+inputElement.addEventListener("keyup", debouncedSearch);
 
 // Submit form
 const submit = async () => {
   let yearValue = document.getElementById("dropdownButton").dataset.value;
-  let button = document.querySelector(".discount-bttn");
+  let button = document.querySelector(".submit-btn");
 
   // Check if yearValue is not selected
   if (!yearValue) {
@@ -114,7 +203,6 @@ const submit = async () => {
     yearValue = 1;
   }
 
-  // Show spinner
   button.innerHTML = " جاري البحث...";
 
   try {
@@ -129,12 +217,12 @@ const submit = async () => {
     );
 
     if (!response.ok) {
+      button.innerHTML = "أسعار الخدمة";
       throw new Error("Failed to fetch data from the new API");
     }
 
     const newData = await response.json();
-    // Handle the response from the new API here
-    console.log(newData);
+    // console.log(newData);
 
     button.innerHTML = "أسعار الخدمة";
 
@@ -154,9 +242,24 @@ const submit = async () => {
 
     //
     const overlay = document.getElementById("overlay");
+    overlay.style.padding = "16px";
     overlay.style.gridTemplateRows = "1fr";
+
+    // Wait for the layout to be updated before scrolling
+    setTimeout(() => {
+      overlay.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+    }, 100);
   } catch (error) {
     // Handle any errors that occur during the API request to the new API
     console.error("Error:", error);
+    button.innerHTML = "أسعار الخدمة";
   }
 };
+
+
+
+// Whatsapp Plane btn

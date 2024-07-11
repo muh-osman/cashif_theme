@@ -22,121 +22,11 @@
                     </h6>
                 </div>
 
-                <!-- Search -->
-                <div class="input-group mb-3 search-input">
-                    <button id="dropdownButton" class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">سنة الصنع</button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#" data-value="2025">2025</a></li>
-                        <li><a class="dropdown-item" href="#" data-value="2024">2024</a></li>
-                        <li><a class="dropdown-item" href="#" data-value="2023">2023</a></li>
-                        <li><a class="dropdown-item" href="#" data-value="2022">2022</a></li>
-                        <li><a class="dropdown-item" href="#" data-value="2021">2021</a></li>
-                        <li><a class="dropdown-item" href="#" data-value="2020">2020</a></li>
-                        <li><a class="dropdown-item" href="#" data-value="2019">2019</a></li>
-                        <li><a class="dropdown-item" href="#" data-value="2018">2018</a></li>
-                        <li><a class="dropdown-item" href="#" data-value="2017">2017</a></li>
-                        <li><a class="dropdown-item" href="#" data-value="2016">2016</a></li>
-                        <li><a class="dropdown-item" href="#" data-value="2015">2015</a></li>
-                        <li><a class="dropdown-item" href="#" data-value="2014">2014</a></li>
-                        <li><a class="dropdown-item" href="#" data-value="2013">2013</a></li>
-                        <li><a class="dropdown-item" href="#" data-value="2012">2012</a></li>
-                        <li><a class="dropdown-item" href="#" data-value="2011">2011</a></li>
-                        <li><a class="dropdown-item" href="#" data-value="2010">2010</a></li>
-                        <li><a class="dropdown-item" href="#" data-value="أقدم">أقدم</a></li>
-                    </ul>
-                    <input type="text" class="form-control" placeholder="كورولا" require>
-                </div>
 
-                <!-- Search result -->
-                <div class="search-result" id="search-result"></div>
 
-                <!-- Start Overlay -->
-                <div class="overlay" id="overlay">
-
-                    <div>
-
-                        <div class="last-title planes">
-                            <h3>اختر الباقة المناسبة</h3>
-                        </div>
-
-                        <div class="row row-cols-1 row-cols-md-3 mb-3 mt-5 text-center plane-box">
-                            <div class="col plane">
-                                <div class="card mb-4 rounded-3 shadow-sm card-price">
-                                    <div class="card-header py-3">
-                                        <h4 class="my-0 fw-normal">المحركات</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <h1 id="engain-price" class="card-title pricing-card-title"></h1>
-                                        <ul class="list-unstyled mt-3 mb-4">
-                                            <h5>تشمل فحص:</h5>
-                                            <li>المكينة</li>
-                                            <li>القير</li>
-                                            <li>كمبيوتر</li>
-                                            <li>دفرنس</li>
-                                            <li>شاصي</li>
-                                            <li>ميكانيكا أسفل السيارة</li>
-                                            <li>تجربة السيارة</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col plane">
-                                <div class="card mb-4 rounded-3 shadow-sm card-price">
-                                    <div class="card-header py-3">
-                                        <h4 class="my-0 fw-normal">الاساسي</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <h1 id="main-price" class="card-title pricing-card-title"></h1>
-                                        <ul class="list-unstyled mt-3 mb-4">
-                                            <h5>تشمل فحص:</h5>
-                                            <li>المكينة</li>
-                                            <li>القير</li>
-                                            <li>كمبيوتر</li>
-                                            <li>دفرنس</li>
-                                            <li>شاصي</li>
-                                            <li>ميكانيكا أسفل السيارة</li>
-                                            <li>تجربة السيارة</li>
-                                            <li>بودي السيارة</li>
-                                            <li>الايرباق</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col plane crown-box">
-                                <div class="card mb-4 rounded-3 shadow-sm card-price">
-                                    <div class="card-header py-3 crown">
-                                        <h4 class="my-0 fw-normal">الشامل</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <h1 id="full-price" class="card-title pricing-card-title"></h1>
-                                        <ul class="list-unstyled mt-3 mb-4">
-                                            <h5>تشمل فحص:</h5>
-                                            <li>المكينة</li>
-                                            <li>القير</li>
-                                            <li>كمبيوتر</li>
-                                            <li>دفرنس</li>
-                                            <li>شاصي</li>
-                                            <li>ميكانيكا أسفل السيارة</li>
-                                            <li>تجربة السيارة</li>
-                                            <li>بودي السيارة</li>
-                                            <li>الايرباق</li>
-                                            <li>الديكورات الداخلية</li>
-                                            <li>مزايا السيارة</li>
-                                            <li>الكفرات والأنوار</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <!-- End Overlay -->
-
-                <button onclick="submit()" class="discount-bttn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
-                    أسعار الخدمة
-                </button>
+                <a href="#prices" class="discount-bttn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+                    أسعار الخدمات
+                </a>
 
 
             </div>
@@ -152,82 +42,25 @@
     <section class="samples-section">
         <div class="container">
             <h2 data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                خدماتنا
+                من هو كاشف ؟
             </h2>
-            <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+            <!-- <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
                 جميع الخدمات تتم على أيدي أمهر المختصين في مجال فحص السيارات
-            </p>
-
-            <div class="swiper mySwiper" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="slider-item">
-                            <div class="slider-item-img">
-                                <img src=<?php echo get_template_directory_uri() . '/assets/images/a.jpg' ?> alt="slider-img" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="slider-item">
-                            <div class="slider-item-img">
-                                <img src=<?php echo get_template_directory_uri() . '/assets/images/b.jpg' ?> alt="slider-img" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="slider-item">
-                            <div class="slider-item-img">
-                                <img src=<?php echo get_template_directory_uri() . '/assets/images/c.jpg' ?> alt="slider-img" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="slider-item">
-                            <div class="slider-item-img">
-                                <img src=<?php echo get_template_directory_uri() . '/assets/images/d.jpg' ?> alt="slider-img" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="slider-item">
-                            <div class="slider-item-img">
-                                <img src=<?php echo get_template_directory_uri() . '/assets/images/e.jpg' ?> alt="slider-img" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="slider-item">
-                            <div class="slider-item-img">
-                                <img src=<?php echo get_template_directory_uri() . '/assets/images/b.jpg' ?> alt="slider-img" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="slider-item">
-                            <div class="slider-item-img">
-                                <img src=<?php echo get_template_directory_uri() . '/assets/images/c.jpg' ?> alt="slider-img" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="slider-item">
-                            <div class="slider-item-img">
-                                <img src=<?php echo get_template_directory_uri() . '/assets/images/d.jpg' ?> alt="slider-img" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </p> -->
         </div>
     </section>
     <!--end samples section-->
+
+    <section class="samples-section serv">
+        <div class="container">
+            <h2 data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                خدماتنا
+            </h2>
+        </div>
+    </section>
+
+
+
 
     <section class="services-section">
         <div class="container">
@@ -315,6 +148,11 @@
         </div>
     </section>
 
+
+    <div class="buy_btn_box">
+        <h3>أجزاء ومراحل الفحص</h3>
+    </div>
+
     <!-- Start inspection stage section -->
     <div class="cont aos-init aos-animate" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
         <div dir="rtl" class="price_box" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
@@ -327,10 +165,6 @@
                     <li class="u_padd"><img class="stages-img" src=<?php echo get_template_directory_uri() . '/assets/images/x5.jpg' ?> alt="logo">فحص ميكانيكا أسفل السيارة</li>
                     <li class="u_padd"><img class="stages-img" src=<?php echo get_template_directory_uri() . '/assets/images/x6.jpg' ?> alt="logo">فحص الزيوت والسوائل والتسريبات</li>
                 </ul>
-            </div>
-
-            <div class="buy_btn_box">
-                <h3>أجزاء ومراحل الفحص</h3>
             </div>
 
             <div class="g_two">
@@ -406,6 +240,225 @@
             </div>
         </div>
     </section>
+
+    <!--start get Service section-->
+
+    <section id="prices" class="getService-sectionss">
+        <h4 class="price-title">أسعار الخدمات</h4>
+    </section>
+
+    <section class="getService-section">
+
+        <div class="container">
+            <p class="form-sub-title">أدخل موديل السيارة</p>
+
+            <!-- Search -->
+            <div class="input-group mb-3 search-input">
+                <button id="dropdownButton" class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">سنة الصنع</button>
+                <!-- Spinner -->
+                <div id="spinner" class="spinner-border text-warning" role="status"></div>
+
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#" data-value="2025">2025</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="2024">2024</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="2023">2023</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="2022">2022</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="2021">2021</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="2020">2020</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="2019">2019</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="2018">2018</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="2017">2017</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="2016">2016</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="2015">2015</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="2014">2014</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="2013">2013</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="2012">2012</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="2011">2011</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="2010">2010</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="أقدم">أقدم</a></li>
+                </ul>
+                <input type="text" class="form-control" placeholder="مثال: كامري" require>
+            </div>
+
+            <!-- Search result -->
+            <div class="search-result" id="search-result"></div>
+
+            <button onclick="submit()" id="btn" type="submit" class="contact-bttn submit-btn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+                بحث
+            </button>
+
+        </div>
+    </section>
+    <!--end get Service section-->
+
+    <!-- Start Overlay -->
+    <div class="overlay" id="overlay">
+
+        <div>
+
+            <div class="last-title planes chose">
+                <h3>اختر الباقة المناسبة</h3>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-3 mb-3 mt-5 text-center plane-box">
+                <div class="col plane eng-pane">
+                    <div class="card mb-4 rounded-3 shadow-sm card-price eng">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">المحركات</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 id="engain-price" class="card-title pricing-card-title"></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <h5>تشمل فحص:</h5>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> المكينة</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> القير</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> كمبيوتر</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> دفرنس</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> شاصي</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> ميكانيكا أسفل السيارة</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> تجربة السيارة</li>
+
+                                <li> <span><svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                                        </svg></span> بودي السيارة</li>
+                                <li> <span><svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                                        </svg></span> الايرباق</li>
+                                <li> <span><svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                                        </svg></span> الديكورات الداخلية</li>
+                                <li> <span><svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                                        </svg></span> مزايا السيارة</li>
+                                <li> <span><svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                                        </svg></span> الكفرات والأنوار</li>
+                            </ul>
+                            <button id="plane-one" class="ask-now">أطلب الأن</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col plane main-plane">
+                    <div class="card mb-4 rounded-3 shadow-sm card-price">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">الأساسي</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 id="main-price" class="card-title pricing-card-title"></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <h5>تشمل فحص:</h5>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> المكينة</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> القير</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> كمبيوتر</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> دفرنس</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> شاصي</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> ميكانيكا أسفل السيارة</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> تجربة السيارة</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> بودي السيارة</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> الايرباق</li>
+
+                                <li> <span><svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                                        </svg></span> الديكورات الداخلية</li>
+                                <li> <span><svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                                        </svg></span> مزايا السيارة</li>
+                                <li> <span><svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                                        </svg></span> الكفرات والأنوار</li>
+                            </ul>
+                            <button id="plane-two" class="ask-now">أطلب الأن</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col plane crown-box full-pane">
+                    <div class="card mb-0 rounded-3 shadow-sm card-price">
+                        <div class="card-header py-3 crown">
+                            <h4 class="my-0 fw-normal">الشامل</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 id="full-price" class="card-title pricing-card-title"></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <h5>تشمل فحص:</h5>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> المكينة</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> القير</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> كمبيوتر</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> دفرنس</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> شاصي</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> ميكانيكا أسفل السيارة</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> تجربة السيارة</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> بودي السيارة</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> الايرباق</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> الديكورات الداخلية</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> مزايا السيارة</li>
+                                <li> <span><svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                                        </svg></span> الكفرات والأنوار</li>
+                            </ul>
+                            <button id="plane-three" class="ask-now">أطلب الأن</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- End Overlay -->
 
 
     <div class="last-title">

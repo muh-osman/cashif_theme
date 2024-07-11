@@ -272,8 +272,7 @@ body::after {
   height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
-  /* filter: contrast(125%) brightness(1) hue-rotate(0deg) saturate(2); */
-  /* filter: drop-shadow(1px 1px 0px rgba(255, 255, 255, 0.5)); */
+  transform: scale(1.2);
 }
 
 @media (max-width: 625px) {
@@ -281,6 +280,14 @@ body::after {
     width: 100px;
     height: auto;
     margin: 0 auto 30px;
+  }
+
+  .intro-section .intro-content .logo-img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    transform: scale(1.1);
   }
 }
 
@@ -478,7 +485,7 @@ body::after {
   }
 
   .intro-section .intro-content .discount-details h6 span {
-    font-size: 32px;
+    font-size: 30px !important;
   }
 }
 @media (max-width: 625px) {
@@ -729,6 +736,7 @@ body::after {
   border-bottom: 5px solid #e6d39c;
   width: fit-content;
   padding-bottom: 12px;
+  margin-bottom: 32px;
 }
 .samples-section p {
   color: #777;
@@ -812,7 +820,7 @@ body::after {
 }
 .discount-bttn {
   min-width: 165px;
-  height: 60px;
+  height: 55px;
   padding: 10px 25px;
   display: inline-flex;
   justify-content: center;
@@ -851,17 +859,26 @@ body::after {
   justify-content: center;
   width: 70%;
   margin: 0px auto;
+  margin-bottom: 64px;
   border-radius: 50px;
-  margin-bottom: -5%;
-  background-color: #fef8fb !important;
+  background-color: #fff !important;
   position: relative;
   padding: 60px 120px;
   padding-top: 50px;
   z-index: 1;
+
+  padding-top: 32px;
+  padding-bottom: 28px;
 }
+
+.getService-section .price-title {
+  color: #213941 !important;
+  margin-bottom: 16px !important;
+}
+
 .getService-section::before {
   position: absolute;
-  background: linear-gradient(180deg, #213941 0%, #08c16a78 100%);
+  background: #213941;
   inset: 0 -4px;
   content: "";
   z-index: -1;
@@ -874,19 +891,19 @@ body::after {
   background: #fff;
   z-index: -1;
   border-radius: inherit;
-  background-color: #fef8fb;
+  background-color: #fff;
 }
-.getService-section h4 {
+.getService-sectionss h4 {
   color: #213941;
   text-align: center;
   font-family: "mont-bold";
   font-size: 24px;
-  margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
   border-bottom: 5px solid #e6d39c;
   width: fit-content;
   padding-bottom: 12px;
+  margin-bottom: 48px;
 }
 .getService-section .form-group {
   margin-bottom: 30px;
@@ -909,20 +926,7 @@ body::after {
   border-radius: 10px;
   font-size: 13px;
 }
-.getService-section .form-group input::-moz-placeholder,
-.getService-section .form-group select::-moz-placeholder {
-  padding: 10px 5px;
-  color: #999;
-  font-family: "mont-reg";
-  font-size: 15px;
-}
-.getService-section .form-group input::placeholder,
-.getService-section .form-group select::placeholder {
-  padding: 10px 5px;
-  color: #999;
-  font-family: "mont-reg";
-  font-size: 15px;
-}
+
 .getService-section .form-group input:focus,
 .getService-section .form-group select:focus {
   box-shadow: 0px 0px 0px transparent !important;
@@ -958,18 +962,22 @@ body::after {
   padding: 10px !important;
 }
 .getService-section .contact-bttn {
-  height: 44px !important;
-  min-width: 150px;
-  max-width: 200px;
-  padding: 10px 15px;
-  display: flex;
+  margin: 35px auto;
+  margin-bottom: 32px;
+  display: block;
+
+  min-width: 165px;
+  height: 55px;
+  padding: 10px 25px;
+  /* display: inline-flex; */
   justify-content: center;
   align-items: center;
-  border-radius: 30px;
-  /* background: linear-gradient(101deg, #623e97 0%, #8b3b95 50%, #c964a5 100%); */
+  border-radius: 50px;
   background-color: #213941;
   color: #fff;
-  margin: 35px auto;
+  font-size: 18px;
+  transition: 0.2s;
+  border: 1px solid transparent;
 }
 
 .getService-section .contact-bttn:hover {
@@ -979,17 +987,16 @@ body::after {
 
 @media (max-width: 625px) {
   .getService-section .contact-bttn {
-    margin: 0 auto;
     font-size: 14px;
   }
 }
 @media (max-width: 768px) {
   .getService-section {
     width: calc(100% - 30px);
-    margin-bottom: -25%;
+    /* margin-bottom: -25%; */
     border-radius: 20px;
     height: auto;
-    padding: 30px 15px;
+    padding: 30px 0px;
   }
   .getService-section p {
     font-size: 23px;
@@ -1013,7 +1020,7 @@ body::after {
 @media (min-width: 768px) and (max-width: 991px) {
   .getService-section {
     width: 75%;
-    margin-bottom: -15%;
+    /* margin-bottom: -15%; */
     border-radius: 65px;
     height: auto;
   }
@@ -1027,7 +1034,7 @@ body::after {
 @media (min-width: 991px) and (max-width: 1199px) {
   .getService-section {
     width: 75%;
-    margin-bottom: -8%;
+    /* margin-bottom: -8%; */
     border-radius: 65px;
     height: auto;
   }
@@ -1714,27 +1721,11 @@ body::after {
     font-size: 13px;
     font-family: "mont-light";
   }
-  .form-control::-moz-placeholder {
-    font-size: 13px !important;
-    font-family: "mont-light";
-  }
-  .form-control::placeholder {
-    font-size: 13px !important;
-    font-family: "mont-light";
-  }
 }
 .form-control {
   background-color: #fff;
   height: 60px;
   font-size: 13px;
-  font-family: "mont-light";
-}
-.form-control::-moz-placeholder {
-  font-size: 13px !important;
-  font-family: "mont-light";
-}
-.form-control::placeholder {
-  font-size: 13px !important;
   font-family: "mont-light";
 }
 
@@ -2029,7 +2020,7 @@ body::after {
 }
 
 .last-title h3 {
-  color: #213941;
+  color: #213941 !important;
   font-weight: 600;
   text-align: center;
   margin: 0px auto;
@@ -2038,6 +2029,7 @@ body::after {
   margin-top: 0;
   width: fit-content;
   padding-bottom: 12px;
+  padding-top: 0px;
   line-height: 1.5;
 
   font-family: "mont-bold";
@@ -2058,12 +2050,6 @@ form select {
   font-family: "mont-reg" !important;
   margin-bottom: 32px !important;
 }
-form input::placeholder {
-  font-size: 16px !important;
-  color: #999 !important;
-  font-weight: 600 !important;
-  font-family: "mont-reg" !important;
-}
 
 form label {
   color: #999;
@@ -2073,6 +2059,10 @@ form label {
 
 .form-control {
   appearance: auto;
+
+  border-radius: 55px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 
 .form-check-label {
@@ -2143,12 +2133,12 @@ form {
 
 /* Bootstrap */
 .form-control {
-  border: none !important;
+  border: 1px solid #6c757d !important;
   outline: none !important;
   box-shadow: none !important;
 }
 .form-control:focus {
-  border: none !important;
+  border: 1px solid #6c757d !important;
   outline: none !important;
   box-shadow: none !important;
 }
@@ -2177,7 +2167,7 @@ form {
 
 .cont {
   border-radius: 9px;
-  border: 1px solid #b6ac9a;
+  /* border: 1px solid #b6ac9a; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2185,8 +2175,23 @@ form {
   padding: 40px 40px 0;
   margin: 64px;
   margin-bottom: 99px;
-  margin-top: 0px;
+  padding: 16px;
+  margin-top: 16px;
+  padding-top: 32px;
 }
+
+@media (max-width: 625px) {
+  .cont {
+    padding: 16px;
+    padding-bottom: 0;
+  }
+
+  .buy_btn_box {
+    padding-bottom: 0 !important;
+    padding-top: 32px !important;
+  }
+}
+
 .cont ul {
   list-style: none;
 }
@@ -2284,8 +2289,8 @@ iframe {
 }
 
 .buy_btn_box {
-  border-left: 1px solid #b6ac9a;
-  border-right: 1px solid #b6ac9a;
+  /* border-left: 1px solid #b6ac9a; */
+  /* border-right: 1px solid #b6ac9a; */
   padding: 0 32px;
   text-align: center;
   display: flex;
@@ -2314,6 +2319,7 @@ iframe {
   font-weight: 600;
   /* margin: 50px auto; */
   border-bottom: 5px solid #e6d39c;
+  margin-bottom: 48px;
 }
 
 .buy_btn_box h2 {
@@ -2422,6 +2428,7 @@ iframe {
 /* why-we */
 .why-we-container {
   padding: 32px;
+  padding-bottom: 64px;
   padding-left: 0;
   padding-right: 0;
   margin-bottom: 32px;
@@ -2459,7 +2466,7 @@ iframe {
 }
 
 .why-we-boxs .how-we-box div svg {
-  fill: #fff;
+  fill: #e6d39c;
   height: 64px;
   width: 64px;
 }
@@ -2649,12 +2656,20 @@ iframe {
   color: #fff;
   background-color: #6c757d;
   min-width: 124px;
+  border-top-left-radius: 55px;
+  border-bottom-left-radius: 55px;
+}
+
+.dropdown-toggle:hover {
+  background-color: #6c757d !important;
 }
 
 .dropdown-menu {
   min-width: unset;
   width: 124px;
   text-align: center;
+  height: 200px;
+  overflow: auto;
 }
 
 .dropdown-toggle::after {
@@ -2662,12 +2677,17 @@ iframe {
   margin-right: 0.255em !important;
 }
 
-.form-control::placeholder {
-  font-size: 24px !important;
-  color: #777 !important;
+.search-result {
+  transition: 0.3s;
+
+  display: grid;
+  grid-template-rows: 0fr;
+  background-color: transparent;
 }
 
 .search-result div {
+  overflow: hidden;
+  transition: 0.3s;
   margin-top: 24px;
   display: flex;
   flex-wrap: wrap;
@@ -2677,10 +2697,11 @@ iframe {
 }
 
 .search-result div button {
+  transition: 0.3s;
   border-radius: 22px;
   height: 32px;
-  border: 1px solid #f0f1f3;
-  color: #f0f1f3;
+  border: 1px solid #6c757d;
+  color: #6c757d;
   background-color: transparent;
   padding-left: 11px;
   padding-right: 11px;
@@ -2688,8 +2709,8 @@ iframe {
 }
 
 .active-model {
-  background-color: #f0f1f3 !important;
-  color: #000 !important;
+  background-color: #6c757d !important;
+  color: #fff !important;
 }
 
 /* Overlay */
@@ -2697,8 +2718,14 @@ iframe {
 .last-title.planes h3 {
   color: #f0f1f3;
 }
+
+.chose {
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
 .overlay {
-  padding: 16px;
+  padding: 0px;
+  margin-bottom: 32px;
   width: 100%;
   /* height: 0; */
   background-color: #f0f1f3;
@@ -2713,9 +2740,9 @@ iframe {
   overflow: hidden;
 }
 
-/* .overlay:hover {
-  grid-template-rows: 1fr;
-} */
+.overlay {
+  grid-template-rows: 1fr !important;
+}
 
 .overlay .card-header {
   background-color: #174545;
@@ -2729,7 +2756,7 @@ color: #174545;
 } */
 
 .card-price {
-  border: 1px solid transparent;
+  /* border: 1px solid #174545; */
 }
 
 .pricing-card-title {
@@ -2750,6 +2777,20 @@ color: #174545;
   color: #757575;
   line-height: 2.1;
   font-size: 18px;
+  text-align: right;
+}
+
+.overlay li svg{
+  width: 16px;
+  margin-left: 6px;
+}
+
+.true-icon {
+  fill: #25d366;
+}
+
+.wrong-icon {
+  fill: red;
 }
 
 .plane-box {
@@ -2758,11 +2799,36 @@ color: #174545;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 16px;
+  margin-bottom: 0 !important;
 }
 
 .plane {
   padding: 0;
   width: 300px;
+  /* height: 755px; */
+}
+.card {
+  height: 100%;
+}
+.card-body {
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+.card-body button {
+  margin-top: auto;
+}
+
+@media (max-width: 955px) {
+  .eng-pane,
+  .main-plane {
+    /* height: 639px; */
+  }
+}
+
+@media (max-width: 640px) {
+  .plane {
+    height: unset;
+  }
 }
 
 .crown-box {
@@ -2784,4 +2850,90 @@ color: #174545;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.text-warning {
+  display: none;
+  color: #e6d39c !important;
+  position: absolute;
+  top: 14px;
+  left: 138px;
+  z-index: 9999999999;
+  border-radius: 50px !important;
+}
+
+@media (min-width: 1116px) {
+  .eng {
+    height: 700.5;
+  }
+}
+
+.form-sub-title {
+  color: #777;
+  text-align: center;
+  font-size: 18px !important;
+  /* font-family: "mont-light"; */
+  /* margin: 15px 0px 45px 0px; */
+  margin: auto;
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+/* .getService-section .form-group input::-moz-placeholder,
+.getService-section .form-group select::-moz-placeholder {
+  padding: 10px 5px;
+  color: #999;
+  font-family: "mont-reg";
+  font-size: 15px;
+} */
+/* .getService-section .form-group input::placeholder,
+.getService-section .form-group select::placeholder {
+  padding: 10px 5px;
+  color: #999;
+  font-family: "mont-reg";
+  font-size: 15px;
+} */
+
+/* .form-control::-moz-placeholder {
+  font-size: 13px !important;
+  font-family: "mont-light";
+} */
+
+/* form input::placeholder {
+  font-size: 16px !important;
+  color: red !important;
+  font-family: "mont-reg" !important;
+} */
+
+.form-control::placeholder {
+  font-family: "mont-light";
+  font-size: 18px !important;
+  color: #999 !important;
+}
+
+/* @media (max-width: 991px) {
+  .form-control::-moz-placeholder {
+    font-size: 13px !important;
+  }
+  .form-control::placeholder {
+    font-size: 13px !important;
+  }
+} */
+
+.serv {
+  padding-bottom: 0px !important;
+}
+
+@media (max-width: 991px) {
+  .serv {
+    padding-bottom: 16px !important;
+  }
+}
+
+.ask-now {
+  background-color: #213941;
+  color: #fff;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 5px;
 }
