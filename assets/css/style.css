@@ -2740,8 +2740,9 @@ iframe {
   overflow: hidden;
 }
 
+/* for test */
 .overlay {
-  grid-template-rows: 1fr !important;
+  /* grid-template-rows: 1fr !important; */
 }
 
 .overlay .card-header {
@@ -2780,7 +2781,7 @@ color: #174545;
   text-align: right;
 }
 
-.overlay li svg{
+.overlay li svg {
   width: 16px;
   margin-left: 6px;
 }
@@ -2936,4 +2937,18 @@ color: #174545;
   width: 100%;
   padding: 8px 12px;
   border-radius: 5px;
+}
+
+.gree {
+  background-color: #25d366 !important;
+  border-color: #25d366 !important;
+  color: #fff !important;
+}
+
+.video-container {
+  margin-bottom: 64px !important;
+}
+
+.video-box video{
+  border: 3px solid #213941;
 }

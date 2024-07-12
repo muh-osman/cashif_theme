@@ -38,6 +38,7 @@ const spinner = document.getElementById("spinner");
 
 // Function to handle chip clicked
 let clickedButtonId; // model id
+let clickedButtonTitle; // model id
 const handleButtonClick = (event) => {
   buttonContainer.querySelectorAll("button").forEach((button) => {
     button.classList.remove("active-model");
@@ -46,65 +47,13 @@ const handleButtonClick = (event) => {
   event.target.classList.add("active-model");
 
   clickedButtonId = event.target.id; // model id
+  clickedButtonTitle = event.target.getAttribute("data-model-name");
+
+  if (clickedButtonId === "موديل غير موجود") {
+    window.location.href =
+      "https://wa.me/966536181188?text=استعلام عن موديل غير موجود";
+  }
 };
-
-// inputElement.addEventListener("keyup", async function () {
-//   const searchValue = inputElement.value.trim(); // Get the value
-
-//   if (searchValue === "") {
-//     resultContainer.style.gridTemplateRows = "0fr";
-//   }
-
-//   try {
-//     if (searchValue !== "") {
-//       spinner.style.display = "block";
-
-//       const response = await fetch(
-//         "https://cashif.online/back-end/public/api/car-models/search",
-//         {
-//           method: "POST",
-//           headers: {
-//             "Content-Type": "application/json",
-//           },
-//           body: JSON.stringify({ search: searchValue }),
-//         }
-//       );
-
-//       spinner.style.display = "none";
-
-//       if (!response.ok) {
-//         throw new Error("Failed to fetch data");
-//       }
-
-//       const data = await response.json();
-//       const firstTenResults = data.carModels.slice(0, 10); // Get the first 10 results
-//       // console.log(firstTenResults);
-
-//       // Clear previous buttons
-//       buttonContainer.innerHTML = "";
-
-//       // Map over the first 10 results and create buttons
-//       firstTenResults.forEach((result) => {
-//         const button = document.createElement("button");
-//         button.textContent = result.model_name;
-//         button.id = result.id;
-//         button.classList.add("custom-button-class");
-//         button.addEventListener("click", handleButtonClick);
-//         buttonContainer.appendChild(button);
-//       });
-
-//       // Append the buttons to a container in the DOM
-//       resultContainer.appendChild(buttonContainer);
-//       resultContainer.style.gridTemplateRows = "1fr";
-//     } else {
-//       // Clear previous buttons
-//       buttonContainer.innerHTML = "";
-//     }
-//   } catch (error) {
-//     console.error("Error:", error);
-//     spinner.style.display = "none";
-//   }
-// });
 
 // Debounce function
 const debounce = (func, delay) => {
@@ -120,6 +69,7 @@ const debounce = (func, delay) => {
 };
 
 // Search input with debounce
+let firstTenResults;
 const debouncedSearch = debounce(async () => {
   const searchValue = inputElement.value.trim(); // Get the value
 
@@ -149,16 +99,27 @@ const debouncedSearch = debounce(async () => {
       }
 
       const data = await response.json();
-      const firstTenResults = data.carModels.slice(0, 10); // Get the first 10 results
+      firstTenResults = data.carModels.slice(0, 10); // Get the first 10 results
       // console.log(firstTenResults);
 
       // Clear previous buttons
       buttonContainer.innerHTML = "";
 
+      if (firstTenResults.length === 0) {
+        const button = document.createElement("button");
+        button.textContent = "موديل غير موجود";
+        button.setAttribute("data-model-name", "موديل غير موجود");
+        button.id = "موديل غير موجود";
+        button.classList.add("custom-button-class", "gree");
+        button.addEventListener("click", handleButtonClick);
+        buttonContainer.appendChild(button);
+      }
+
       // Map over the first 10 results and create buttons
       firstTenResults.forEach((result) => {
         const button = document.createElement("button");
         button.textContent = result.model_name;
+        button.setAttribute("data-model-name", result.model_name);
         button.id = result.id;
         button.classList.add("custom-button-class");
         button.addEventListener("click", handleButtonClick);
@@ -181,19 +142,20 @@ const debouncedSearch = debounce(async () => {
 inputElement.addEventListener("keyup", debouncedSearch);
 
 // Submit form
+let newData;
 const submit = async () => {
   let yearValue = document.getElementById("dropdownButton").dataset.value;
   let button = document.querySelector(".submit-btn");
 
-  // Check if yearValue is not selected
-  if (!yearValue) {
-    alert("يرجى اختيار سنة الصنع");
+  // Check if model is not selected
+  if (!clickedButtonId) {
+    alert("يرجى اختيار موديل");
     return;
   }
 
-  // Check if model is not selected
-  if (!clickedButtonId) {
-    alert("يرجى اختيار الموديل");
+  // Check if yearValue is not selected
+  if (!yearValue) {
+    alert("يرجى اختيار سنة الصنع");
     return;
   }
 
@@ -221,7 +183,7 @@ const submit = async () => {
       throw new Error("Failed to fetch data from the new API");
     }
 
-    const newData = await response.json();
+    newData = await response.json();
     // console.log(newData);
 
     button.innerHTML = "أسعار الخدمة";
@@ -260,6 +222,32 @@ const submit = async () => {
   }
 };
 
-
-
 // Whatsapp Plane btn
+// https://wa.me/1XXXXXXXXXX?text=I'm%20interested%20in%20your%20car%20for%20sale
+const planeOneBtn = document.getElementById("plane-one");
+const planeTwoBtn = document.getElementById("plane-two");
+const planeThreeBtn = document.getElementById("plane-three");
+
+const palneA = () => {
+  const url = `https://wa.me/966536181188?text=طلب خدمة فحص سيارة موديل "${clickedButtonTitle}" باقة "المحركات" - ${
+    newData[0].prices[2].price * (1).toFixed(2)
+  } ريال`;
+
+  window.location.href = url;
+};
+
+const palneB = () => {
+  const url = `https://wa.me/966536181188?text=طلب خدمة فحص سيارة موديل "${clickedButtonTitle}" الباقة "الأساسية" - ${
+    newData[0].prices[1].price * (1).toFixed(2)
+  } ريال`;
+
+  window.location.href = url;
+};
+
+const palneC = () => {
+  const url = `https://wa.me/966536181188?text=طلب خدمة فحص سيارة موديل "${clickedButtonTitle}" الباقة "الشاملة" - ${
+    newData[0].prices[0].price * (1).toFixed(2)
+  } ريال`;
+
+  window.location.href = url;
+};
