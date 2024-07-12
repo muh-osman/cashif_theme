@@ -1,3 +1,7 @@
+// Video
+const player = new Plyr(document.getElementById("player"));
+
+//
 document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("load", function () {
     document.body.style.overflowY = "auto";

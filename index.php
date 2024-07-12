@@ -46,7 +46,7 @@
             </h2>
 
             <div class="video-box">
-                <video width="320" height="240" controls>
+                <video id="player" controls poster=<?php echo get_template_directory_uri() . '/assets/images/cashif.jpg' ?> >
                     <source src=<?php echo get_template_directory_uri() . '/assets/videos/cashif.mp4' ?> type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
