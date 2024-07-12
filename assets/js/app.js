@@ -1,7 +1,7 @@
-// Video
+// Video player
 const player = new Plyr(document.getElementById("player"));
 
-//
+// AOS animation
 document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("load", function () {
     document.body.style.overflowY = "auto";
@@ -19,9 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//
 window.onload = function () {
   window.scrollTo(0, 0);
 };
+
+// Bootstrap tooltips
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 // Years dropdown (change year in btn)
 document.querySelectorAll(".dropdown-item").forEach((item) => {
