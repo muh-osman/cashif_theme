@@ -842,6 +842,15 @@
     </section>
     <!-- End Testimonian -->
 
+    <!-- Start Google maps -->
+    <div class="title-box">
+        <h2 data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">فروعنا</h2>
+    </div>
+    <div class="google-maps-container">
+        <iframe src="https://www.google.com/maps/d/u/3/embed?mid=1E9g-PBQO9iFrA7wD0xCUzSGJyT13tKA&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
+    </div>
+    <!-- End Google maps -->
+
     <!--start footer section-->
     <footer class="footer-section">
         <div class="container">
@@ -927,19 +936,19 @@
                                 <h4>خدمات كاشف</h4>
                                 <ul>
                                     <li>
-                                        <a href="#">فحص ماقبل الشراء</a>
+                                        <button>فحص ماقبل الشراء</button>
                                     </li>
 
                                     <li>
-                                        <a href="#">فحص ماقبل السفر</a>
+                                        <button>فحص ماقبل السفر</button>
                                     </li>
 
                                     <li>
-                                        <a href="#">فحص مركبتي الخاصة</a>
+                                        <button>فحص مركبتي الخاصة</button>
                                     </li>
 
                                     <li>
-                                        <a href="#">فحص الصيانة</a>
+                                        <button>فحص الصيانة</button>
                                     </li>
                                 </ul>
                             </div>

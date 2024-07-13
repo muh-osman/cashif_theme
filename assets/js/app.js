@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //
-window.onload = function () {
-  window.scrollTo(0, 0);
-};
+// window.onload = function () {
+//   window.scrollTo(0, 0);
+// };
 
 // Bootstrap tooltips
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
