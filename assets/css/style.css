@@ -1569,6 +1569,11 @@ form {
 .footer-section .help-list {
   position: relative;
 }
+.footer-section .help-list svg {
+  width: 12px;
+  margin-right: 3px;
+}
+
 .footer-section .help-list h4 {
   color: #e6d39c;
 }
