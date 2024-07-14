@@ -13,13 +13,15 @@
         <div class="container">
             <div class="intro-content">
                 <div class="logo-img" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-                    <img src=<?php echo get_template_directory_uri() . '/assets/images/logo.webp' ?> alt="Cashif logo" />
+                    <a href="<?php echo esc_url(home_url('/')); ?>">
+                        <img src=<?php echo get_template_directory_uri() . '/assets/images/logo.webp' ?> alt="Cashif logo" />
+                    </a>
                 </div>
                 <div class="discount-details">
                     <h6>
                         <span>كاشف لفحص السيارات</span>
                         <br />
-                        مركز متخصص في فحص السيارات المستعملة، يقدم مفهوم جديداً يواكب أحدث التقنيات ليساعدك في قرار الشراء
+                        مركز متخصص في فحص السيارات المستعملة، يقدم مفهومًا جديدًا يواكب أحدث التقنيات ليساعدك في قرار الشراء
                     </h6>
                 </div>
 
@@ -228,7 +230,7 @@
     </section>
     <section class="getService-section" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
         <div class="container">
-            <p class="form-sub-title">أدخل أول حرف من سيارتك بالعربي</p>
+            <p class="form-sub-title">ابحث عن اسم سيارتك بالعربي</p>
             <!-- Search -->
             <div class="input-group mb-3 search-input">
                 <button aria-label="Years Button" id="dropdownButton" class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">سنة الصنع</button>
@@ -945,7 +947,7 @@
                     </div>
 
                     <p class="footer-intro">
-                        مركز كاشف لفحص السيارات المستعملة بشكل كامل مع تقارير تفصيلية لحالة السيارة تساعدك في اتخاذ قرار شراء السيارة المستعملة بثقة تامة.
+                        نسعى في كاشف، لإبراز رسالة توعوية غاية في الأهمية؛ تتمثل في رفع الوعي لدى المستهلك بضرورة الكشف على المركبة المستعملة لدى مركز متخصص قبل الشروع في الشراء .
                     </p>
 
 
