@@ -5,10 +5,22 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title -->
     <title><?php bloginfo('name') ?> | <?php bloginfo('description') ?></title>
 
+    <!-- Meta Description -->
+    <meta name="description" content="كاشف لفحص السيارات | مركز متخصص في فحص السيارات المستعملة، يقدم مفهوم جديداً يواكب أحدث التقنيات ليساعدك في قرار الشراء">
 
-    <link href=<?php echo get_template_directory_uri() . '/assets/images/logo.png' ?> rel="icon" />
+
+
+    <!-- Favicon -->
+    <?php
+    $custom_favicon_url = get_theme_mod('custom_favicon_setting');
+    if ($custom_favicon_url) {
+        echo '<link href="' . esc_url($custom_favicon_url) . '" rel="icon" />';
+    }
+    ?>
 
 
     <?php wp_head() ?>

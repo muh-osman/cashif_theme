@@ -29,6 +29,26 @@ add_action('wp_enqueue_scripts', 'wpdocs_cashif_theme_scripts');
 
 
 
+
+// Register a new sidebar simply named 'sidebar'
+function add_widget_support()
+{
+    register_sidebar(array(
+        'name'          => 'Sidebar',
+        'id'            => 'sidebar',
+        'before_widget' => '<div>',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2>',
+        'after_title'   => '</h2>',
+    ));
+}
+// Hook the widget initiation and run our function
+add_action('widgets_init', 'add_widget_support');
+
+
+
+
+
 // Register a new navigation menu
 function add_Main_Nav()
 {

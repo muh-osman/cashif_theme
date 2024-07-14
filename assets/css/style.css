@@ -687,6 +687,8 @@ body::after {
 /* Start why deal with us section */
 .why-we-container {
   padding: 16px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .why-we-boxs {
@@ -1323,7 +1325,7 @@ form {
 
 /* Start testimonian */
 .testimonian {
-  /* margin-bottom: -100px; */
+  margin-bottom: -100px;
   margin-top: 32px;
   position: relative;
   z-index: 999;
@@ -1792,35 +1794,3 @@ form {
 }
 
 /* End Whatsapp Icon */
-
-/* Start Google maps */
-.google-maps-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  margin-bottom: -100px;
-  position: relative;
-  z-index: 9;
-}
-
-.google-maps-container iframe {
-  border-radius: 9px;
-}
-
-.google-maps-container div {
-  background-color: red !important;
-}
-
-.HzV7m-b7CEbf .i4ewOd-pzNkMb-tJHJj {
-  background-color: red !important;
-}
-
-.i4ewOd-pzNkMb-tJHJj {
-  background-color: red !important;
-}
-
-.i4ewOd-pzNkMb-haAclf {
-  background-color: red !important;
-}
-/* End Google maps */
