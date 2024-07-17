@@ -13,9 +13,7 @@
         <div class="container">
             <div class="intro-content">
                 <div class="logo-img" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-                    <a href="<?php echo esc_url(home_url('/')); ?>">
-                        <img src=<?php echo get_template_directory_uri() . '/assets/images/logo.webp' ?> alt="Cashif logo" />
-                    </a>
+                    <img src=<?php echo get_template_directory_uri() . '/assets/images/logo.webp' ?> alt="Cashif logo" />
                 </div>
                 <div class="discount-details">
                     <h6>
