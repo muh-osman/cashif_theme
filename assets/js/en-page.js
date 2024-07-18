@@ -19,14 +19,33 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// WhatsApp Btn
+const whatsappBtn = document.getElementById("whatsapp-btn");
+
+window.addEventListener("scroll", function () {
+    let scrollPosition = window.scrollY || window.pageYOffset;
+    let documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    if (scrollPosition >= documentHeight) {
+        whatsappBtn.classList.add("hide-btn");
+    } else {
+        whatsappBtn.classList.remove("hide-btn");
+    }
+});
+
+
 //
 // window.onload = function () {
 //   window.scrollTo(0, 0);
 // };
 
 // Bootstrap tooltips
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+const tooltipTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="tooltip"]'
+);
+const tooltipList = [...tooltipTriggerList].map(
+  (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+);
 
 // Years dropdown (change year in btn)
 document.querySelectorAll(".dropdown-item").forEach((item) => {
@@ -58,9 +77,9 @@ const handleButtonClick = (event) => {
   clickedButtonId = event.target.id; // model id
   clickedButtonTitle = event.target.getAttribute("data-model-name");
 
-  if (clickedButtonId === "موديل غير موجود") {
+  if (clickedButtonId === "Model not found") {
     window.location.href =
-      "https://wa.me/966536181188?text=استعلام عن موديل غير موجود";
+      "https://wa.me/966536181188?text=Inquiry about a model that does not exist";
   }
 };
 
@@ -91,7 +110,7 @@ const debouncedSearch = debounce(async () => {
       spinner.style.display = "block";
 
       const response = await fetch(
-        "https://cashif.online/back-end/public/api/car-models/search",
+        "https://cashif.online/back-end/public/api/car-models/limited-general-search",
         {
           method: "POST",
           headers: {
@@ -116,9 +135,9 @@ const debouncedSearch = debounce(async () => {
 
       if (firstTenResults.length === 0) {
         const button = document.createElement("button");
-        button.textContent = "موديل غير موجود";
-        button.setAttribute("data-model-name", "موديل غير موجود");
-        button.id = "موديل غير موجود";
+        button.textContent = "Model not found";
+        button.setAttribute("data-model-name", "Model not found");
+        button.id = "Model not found";
         button.classList.add("custom-button-class", "gree");
         button.addEventListener("click", handleButtonClick);
         buttonContainer.appendChild(button);
@@ -158,13 +177,13 @@ const submit = async () => {
 
   // Check if model is not selected
   if (!clickedButtonId) {
-    alert("يرجى اختيار موديل");
+    alert("Please select a model");
     return;
   }
 
   // Check if yearValue is not selected
   if (!yearValue) {
-    alert("يرجى اختيار سنة الصنع");
+    alert("Please select a model year");
     return;
   }
 
@@ -174,7 +193,7 @@ const submit = async () => {
     yearValue = 1;
   }
 
-  button.innerHTML = " جاري البحث...";
+  button.innerHTML = "Searching...";
 
   try {
     const response = await fetch(
@@ -188,28 +207,28 @@ const submit = async () => {
     );
 
     if (!response.ok) {
-      button.innerHTML = "أسعار الخدمة";
+      button.innerHTML = "Search";
       throw new Error("Failed to fetch data from the new API");
     }
 
     newData = await response.json();
     // console.log(newData);
 
-    button.innerHTML = "أسعار الخدمة";
+    button.innerHTML = "Search";
 
     //
     const engainPrice = document.getElementById("engain-price");
     engainPrice.textContent = `${
       newData[0].prices[2].price * (1).toFixed(2)
-    } ريال`;
+    } SAR`;
     const mainPrice = document.getElementById("main-price");
     mainPrice.textContent = `${
       newData[0].prices[1].price * (1).toFixed(2)
-    } ريال`;
+    } SAR`;
     const fullPrice = document.getElementById("full-price");
     fullPrice.textContent = `${
       newData[0].prices[0].price * (1).toFixed(2)
-    } ريال`;
+    } SAR`;
 
     //
     const overlay = document.getElementById("overlay");
@@ -227,7 +246,7 @@ const submit = async () => {
   } catch (error) {
     // Handle any errors that occur during the API request to the new API
     console.error("Error:", error);
-    button.innerHTML = "أسعار الخدمة";
+    button.innerHTML = "Search";
   }
 };
 
@@ -238,25 +257,25 @@ const planeTwoBtn = document.getElementById("plane-two");
 const planeThreeBtn = document.getElementById("plane-three");
 
 const palneA = () => {
-  const url = `https://wa.me/966536181188?text=طلب خدمة فحص سيارة موديل "${clickedButtonTitle}" باقة "المحركات" - ${
+  const url = `https://wa.me/966536181188?text=Request a car inspection service "${clickedButtonTitle}" package "Engines" - ${
     newData[0].prices[2].price * (1).toFixed(2)
-  } ريال`;
+  } SAR`;
 
   window.location.href = url;
 };
 
 const palneB = () => {
-  const url = `https://wa.me/966536181188?text=طلب خدمة فحص سيارة موديل "${clickedButtonTitle}" الباقة "الأساسية" - ${
+  const url = `https://wa.me/966536181188?text=Request a car inspection service "${clickedButtonTitle}" package "Basic" - ${
     newData[0].prices[1].price * (1).toFixed(2)
-  } ريال`;
+  } SAR`;
 
   window.location.href = url;
 };
 
 const palneC = () => {
-  const url = `https://wa.me/966536181188?text=طلب خدمة فحص سيارة موديل "${clickedButtonTitle}" الباقة "الشاملة" - ${
+  const url = `https://wa.me/966536181188?text=Request a car inspection service "${clickedButtonTitle}" package "All-in-one" - ${
     newData[0].prices[0].price * (1).toFixed(2)
-  } ريال`;
+  } SAR`;
 
   window.location.href = url;
 };

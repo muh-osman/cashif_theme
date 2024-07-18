@@ -1,5 +1,21 @@
+<?php
+// Get the current page URL
+$current_url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+// Check if the URL ends with '/en/' for English or '/ar/' for Arabic
+if (preg_match('/\/en\/?$/', $current_url)) {
+    $lang = 'en';
+    $title = 'Cashif for Car Inspection | Comprehensive and Accurate Inspection with the Latest Technologies';
+} else {
+    $lang = 'ar';
+    $title = 'كاشف لفحص السيارات | فحص شامل ودقيق بأحدث التقنيات';
+}
+?>
+
+
+
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="<?php echo $lang; ?>">
 
 <head>
     <meta charset="utf-8" />
@@ -7,22 +23,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Title -->
-    <title><?php bloginfo('name') ?> | <?php bloginfo('description') ?></title>
+    <title><?php echo $title; ?></title>
 
 
-    <!-- yoast seo will overwrite all this things -->
-    <!-- Meta Description -->
-    <meta name="description" content="كاشف لفحص السيارات | مركز متخصص في فحص السيارات المستعملة، يقدم مفهوم جديداً يواكب أحدث التقنيات ليساعدك في قرار الشراء">
-
-    <!-- Favicon -->
-    <?php
-    $custom_favicon_url = get_theme_mod('custom_favicon_setting');
-    if ($custom_favicon_url) {
-        echo '<link href="' . esc_url($custom_favicon_url) . '" rel="icon" />';
-    }
-    ?>
-
-    <meta name="facebook-domain-verification" content="afn8s5scmy0pcaoswyiz34ncdqymfr" />
+    <!-- yoast seo will overwrite all meta -->
 
     <?php wp_head() ?>
 </head>

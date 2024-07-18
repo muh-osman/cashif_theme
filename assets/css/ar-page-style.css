@@ -694,8 +694,8 @@ body::after {
 .why-we-boxs {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
   justify-content: space-evenly;
+  align-items: stretch;
 }
 
 .why-we-boxs .how-we-box {
@@ -1651,7 +1651,7 @@ form {
   margin-bottom: 10px;
   font-family: "mont-light";
   font-size: 15px;
-  display: inline-block;
+  display: block;
 }
 @media (max-width: 768px) {
   .footer-section .footer-contact ul li p {
@@ -1671,7 +1671,7 @@ form {
 }
 @media (max-width: 991px) {
   .footer-section .footer-contact ul li span {
-    font-size: 12px;
+    font-size: 13px;
     margin: 10px 0px;
   }
 }
