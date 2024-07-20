@@ -15,10 +15,10 @@ function wpdocs_cashif_theme_scripts()
     $current_url = $_SERVER['REQUEST_URI'];
     if (substr($current_url, -2) === 'en' || substr($current_url, -3) === 'en/') {
         // EN CSS
-        wp_enqueue_style('en-page-style', get_template_directory_uri() . '/assets/css/en-page-style.min.css');
+        wp_enqueue_style('en-page-style', get_template_directory_uri() . '/assets/css/en-page-style.css');
     } else {
         // AR CSS
-        wp_enqueue_style('ar-page-style', get_template_directory_uri() . '/assets/css/ar-page-style.min.css');
+        wp_enqueue_style('ar-page-style', get_template_directory_uri() . '/assets/css/ar-page-style.css');
     }
 
     // Enqueue Google Fonts
@@ -35,10 +35,10 @@ function wpdocs_cashif_theme_scripts()
     $current_url = $_SERVER['REQUEST_URI'];
     if (substr($current_url, -2) === 'en' || substr($current_url, -3) === 'en/') {
         // EN JS
-        wp_enqueue_script('en-page-js', get_template_directory_uri() . '/assets/js/en-page.min.js', array('jquery'), '1.0.0', true);
+        wp_enqueue_script('en-page-js', get_template_directory_uri() . '/assets/js/en-page.js', array('jquery'), '1.0.0', true);
     } else {
         // AR JS
-        wp_enqueue_script('ar-page-js', get_template_directory_uri() . '/assets/js/ar-page.min.js', array('jquery'), '1.0.0', true);
+        wp_enqueue_script('ar-page-js', get_template_directory_uri() . '/assets/js/ar-page.js', array('jquery'), '1.0.0', true);
     }
 }
 add_action('wp_enqueue_scripts', 'wpdocs_cashif_theme_scripts');

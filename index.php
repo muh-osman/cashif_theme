@@ -27,6 +27,16 @@
                     أسعار الخدمات
                 </a>
 
+
+                <div  class="lang-switcher">
+                    <div class="switch">
+                        <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+                        <label for="language-toggle"></label>
+                        <span class="on">AR</span>
+                        <span class="off">EN</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

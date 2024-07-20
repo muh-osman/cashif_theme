@@ -23,16 +23,40 @@ document.addEventListener("DOMContentLoaded", function () {
 const whatsappBtn = document.getElementById("whatsapp-btn");
 
 window.addEventListener("scroll", function () {
-    let scrollPosition = window.scrollY || window.pageYOffset;
-    let documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+  let scrollPosition = window.scrollY || window.pageYOffset;
+  let documentHeight =
+    document.documentElement.scrollHeight - window.innerHeight;
 
-    if (scrollPosition >= documentHeight) {
-        whatsappBtn.classList.add("hide-btn");
-    } else {
-        whatsappBtn.classList.remove("hide-btn");
-    }
+  if (scrollPosition >= documentHeight) {
+    whatsappBtn.classList.add("hide-btn");
+  } else {
+    whatsappBtn.classList.remove("hide-btn");
+  }
 });
 
+// Language btn
+const languageToggle = document.getElementById("language-toggle");
+
+// Check if the page is being loaded from the cache
+window.addEventListener("pageshow", function (event) {
+  // If the language toggle was checked, uncheck it
+  if (
+    event.persisted ||
+    (window.performance && window.performance.navigation.type === 2)
+  ) {
+    languageToggle.checked = false;
+  }
+});
+
+languageToggle.addEventListener("change", function () {
+  if (this.checked) {
+    // Redirect to Arabic page
+    window.location.href = "https://cashif.cc/";
+  } else {
+    // Redirect to English page
+    window.location.href = "https://cashif.cc/en/";
+  }
+});
 
 //
 // window.onload = function () {

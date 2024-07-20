@@ -19,14 +19,39 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Language btn
+const languageToggle = document.getElementById("language-toggle");
+
+// Check if the page is being loaded from the cache
+window.addEventListener('pageshow', function(event) {
+  // If the language toggle was checked, uncheck it
+  if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
+    languageToggle.checked = false;
+  }
+});
+
+languageToggle.addEventListener("change", function () {
+  if (this.checked) {
+    // Redirect to Arabic page
+    window.location.href = "https://cashif.cc/en/";
+  } else {
+    // Redirect to English page
+    window.location.href = "https://cashif.cc/";
+  }
+});
+
 //
 // window.onload = function () {
 //   window.scrollTo(0, 0);
 // };
 
 // Bootstrap tooltips
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+const tooltipTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="tooltip"]'
+);
+const tooltipList = [...tooltipTriggerList].map(
+  (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+);
 
 // Years dropdown (change year in btn)
 document.querySelectorAll(".dropdown-item").forEach((item) => {
