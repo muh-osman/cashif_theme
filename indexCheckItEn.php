@@ -3,29 +3,31 @@
 <body dir="ltr">
     <!--Start intro section-->
     <section class="intro-section">
-        <div class="circle circle-top"></div>
+        <!-- <div class="circle circle-top"></div> -->
         <div class="circle circle-top-left"></div>
         <div class="circle circle-top-right"></div>
-        <div class="circle large-circle"></div>
+        <!-- <div class="circle large-circle"></div> -->
         <div class="circle xs-circle1"></div>
         <div class="circle xs-circle"></div>
 
         <div class="container p-0">
             <div class="intro-content">
-                <div class="logo-img" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-                    <img src=<?php echo get_template_directory_uri() . '/assets/images/logo.webp' ?> alt="Cashif logo" />
-                </div>
                 <div class="discount-details">
-                    <h6 dir="ltr">
-                        <span>Cashif for car inspection</span>
-                        <br />
-                        A center specialized in inspecting used cars, keeps pace with the latest technologies to help you in your purchasing decision
+                    <h6 class="first-title">
+                        <span>
+                            Found a car for sale while you are outside Riyadh or Dammam?
+                        </span>
+                    </h6>
+                    <h6 class="mt-0">
+                        Cashif checks it for you and ships it to you
                     </h6>
                 </div>
 
-                <a href="#prices" class="discount-bttn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
-                    Service prices
-                </a>
+                <div class="hero-btn-container">
+                    <a href="#prices" class="discount-bttn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                        Request the service now
+                    </a>
+                </div>
 
 
                 <div class="lang-switcher">
@@ -42,159 +44,151 @@
     </section>
     <!--End intro section-->
 
-    <!--Start Video Section-->
-    <div class="title-box">
-        <h2 dir="ltr" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-            Who is Cashif ?
-        </h2>
-    </div>
-    <section class="video-container" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
-        <div class="container">
-            <div class="video-box">
-                <video id="player" controls poster=<?php echo get_template_directory_uri() . '/assets/images/cashif.webp' ?>>
-                    <source src=<?php echo get_template_directory_uri() . '/assets/videos/cashif.mp4' ?> type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+    <section class="hero-image-container">
+        <div class="hero-image-box">
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/new-serv.png' ?>" alt="hero">
         </div>
     </section>
-    <!--End Video Section-->
+    <!--End stage section-->
 
-    <!-- Start Our Services Section -->
+    <!-- Start new services stages section -->
     <div class="title-box">
-        <h2 data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-            Our services
-        </h2>
+        <h2 data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">مراحل الخدمة</h2>
     </div>
-    <section dir="ltr" class="services-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
-                    <div class="service-card d-flex flex-column h-100">
-                        <div class="service-img">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                                <path d="M160 64c0-11.8-6.5-22.6-16.9-28.2s-23-5-32.8 1.6l-96 64C-.5 111.2-4.4 131 5.4 145.8s29.7 18.7 44.4 8.9L96 123.8V416H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96 96c17.7 0 32-14.3 32-32s-14.3-32-32-32H160V64z" />
+
+    <section class="new-serv-stages">
+
+        <div class="two-box-box">
+
+            <div class="right-new-serv">
+
+                <div class="stage">
+                    <div>
+                        <div class="svg-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
                             </svg>
                         </div>
-                        <h4>Our basic services</h4>
-                        <p>Inspect all parts of the car to identify and detect malfunctions</p>
-                        <ul>
-                            <li>
-                                <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
-                                        <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
-                                    </svg>
-                                </span>
-                                <span>Pre-purchase inspection</span>
-                            </li>
-                            <li>
-                                <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
-                                        <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
-                                    </svg>
-                                </span>
-                                <span>Pre-travel inspection</span>
-                            </li>
-                            <li>
-                                <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
-                                        <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
-                                    </svg>
-                                </span>
-                                <span>Inspecting my own car</span>
-                            </li>
-                            <li>
-                                <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
-                                        <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
-                                    </svg>
-                                </span>
-                                <span>Maintenance check</span>
-                            </li>
-
-                        </ul>
+                    </div>
+                    <div>
+                        <h3>Communicate with the car owner</h3>
+                        <h6>We communicate with the car owner and set the appropriate appointment</h6>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
-                    <div class="service-card d-flex flex-column h-100">
-                        <div class="service-img">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                                <path d="M142.9 96c-21.5 0-42.2 8.5-57.4 23.8L54.6 150.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L40.2 74.5C67.5 47.3 104.4 32 142.9 32C223 32 288 97 288 177.1c0 38.5-15.3 75.4-42.5 102.6L109.3 416H288c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-12.9 0-24.6-7.8-29.6-19.8s-2.2-25.7 6.9-34.9L200.2 234.5c15.2-15.2 23.8-35.9 23.8-57.4c0-44.8-36.3-81.1-81.1-81.1z" />
+                <div class="stage">
+                    <div>
+                        <div class="svg-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-raised-hand" viewBox="0 0 16 16">
+                                <path d="M6 6.207v9.043a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H6.236a1 1 0 0 1-.447-.106l-.33-.165A.83.83 0 0 1 5 2.488V.75a.75.75 0 0 0-1.5 0v2.083c0 .715.404 1.37 1.044 1.689L5.5 5c.32.32.5.754.5 1.207" />
+                                <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
                             </svg>
                         </div>
-                        <h4>Our additional services</h4>
-                        <p>In cooperation with our partners, we provide a number of additional services:</p>
-                        <ul>
-                            <li>
-                                <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
-                                        <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
-                                    </svg>
-                                </span>
-                                <span>Report of car history</span>
-                            </li>
-                            <li>
-                                <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
-                                        <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
-                                    </svg>
-                                </span>
-                                <span>Transfer of ownership</span>
-                            </li>
-                            <li>
-                                <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
-                                        <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
-                                    </svg>
-                                </span>
-                                <span>Car Insurance</span>
-                            </li>
-                        </ul>
+                    </div>
+                    <div>
+                        <h3>The presence of the car owner</h3>
+                        <h6>The car owner must come to one of our inspection centers for the inspection</h6>
                     </div>
                 </div>
 
+                <div class="stage">
+                    <div>
+                        <div class="svg-box">
 
-                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
-                    <a href="https://cashif.cc/check-it/en/">
-                        <div class="service-card d-flex flex-column h-100">
-                            <div class="service-img">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                                    <path d="M0 64C0 46.3 14.3 32 32 32l240 0c13.2 0 25 8.1 29.8 20.4s1.5 26.3-8.2 35.2L162.3 208l21.7 0c75.1 0 136 60.9 136 136s-60.9 136-136 136l-78.6 0C63 480 24.2 456 5.3 418.1l-1.9-3.8c-7.9-15.8-1.5-35 14.3-42.9s35-1.5 42.9 14.3l1.9 3.8c8.1 16.3 24.8 26.5 42.9 26.5l78.6 0c39.8 0 72-32.2 72-72s-32.2-72-72-72L80 272c-13.2 0-25-8.1-29.8-20.4s-1.5-26.3 8.2-35.2L189.7 96 32 96C14.3 96 0 81.7 0 64z" />
-                                </svg>
-                            </div>
-                            <h4>We check it for you</h4>
-                            <p>A dedicated service for customers outside Riyadh and Dammam. Cashif inspects it for you and ships it to you</p>
-                            <ul>
-                                <li>
-                                    <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
-                                            <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
-                                        </svg>
-                                    </span>
-                                    <span>Contact the car owner</span>
-                                </li>
-                                <li>
-                                    <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
-                                            <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
-                                        </svg>
-                                    </span>
-                                    <span>Car inspection</span>
-                                </li>
-                                <li>
-                                    <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
-                                            <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
-                                        </svg>
-                                    </span>
-                                    <span>Detailed report</span>
-                                </li>
-                                <li>
-                                    <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
-                                            <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
-                                        </svg>
-                                    </span>
-                                    <span>Shipping the car</span>
-                                </li>
-                            </ul>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
                         </div>
-                    </a>
+                    </div>
+                    <div>
+                        <h3>Car inspection</h3>
+                        <h6>We inspect the car and test it on the road by an expert technician, to ensure its performance</h6>
+                    </div>
+                </div>
+
+                <div class="stage">
+                    <div>
+                        <div class="svg-box">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-camera2" viewBox="0 0 16 16">
+                                <path d="M5 8c0-1.657 2.343-3 4-3V4a4 4 0 0 0-4 4" />
+                                <path d="M12.318 3h2.015C15.253 3 16 3.746 16 4.667v6.666c0 .92-.746 1.667-1.667 1.667h-2.015A5.97 5.97 0 0 1 9 14a5.97 5.97 0 0 1-3.318-1H1.667C.747 13 0 12.254 0 11.333V4.667C0 3.747.746 3 1.667 3H2a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1h.682A5.97 5.97 0 0 1 9 2c1.227 0 2.367.368 3.318 1M2 4.5a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0M14 8A5 5 0 1 0 4 8a5 5 0 0 0 10 0" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Photography and documentation</h3>
+                        <h6>We provide you with pictures and videos showing the condition of the car in detail</h6>
+                    </div>
                 </div>
             </div>
+
+            <div class="left-new-serv">
+
+                <div class="stage">
+                    <div>
+                        <div class="svg-box">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list-task" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zM3 3H2v1h1z" />
+                                <path d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1z" />
+                                <path fill-rule="evenodd" d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Detailed report</h3>
+                        <h6>We send you a comprehensive report that includes all observations and recommendations regarding the condition of the car</h6>
+                    </div>
+                </div>
+
+                <div class="stage">
+                    <div>
+                        <div class="svg-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Car insurance</h3>
+                        <h6>In cooperation with our partners, we help you secure the car that suits your needs</h6>
+                    </div>
+                </div>
+
+                <div class="stage">
+                    <div>
+                        <div class="svg-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-credit-card-2-front-fill" viewBox="0 0 16 16">
+                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2.5 1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm0 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Transfer of ownership</h3>
+                        <h6>In cooperation with our partners, we carry out ownership transfer procedures easily and quickly</h6>
+                    </div>
+                </div>
+
+                <div class="stage">
+                    <div>
+                        <div class="svg-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-car-front-fill" viewBox="0 0 16 16">
+                                <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17s3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Shipping the car</h3>
+                        <h6>In cooperation with our partners, we provide a car shipping service to your city safely</h6>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
     </section>
-    <!-- End Our Services Section -->
+    <!-- End new services stages section -->
 
     <!-- Start inspection stage section -->
     <div class="title-box">
@@ -1069,19 +1063,19 @@
                                 <h4>Cashif services</h4>
                                 <ul>
                                     <li>
-                                        <button aria-label="Cashif Servces Button">Pre-purchase inspection</button>
+                                        <a href="https://cashif.cc/en/">Pre-purchase inspection</a>
                                     </li>
 
                                     <li>
-                                        <button aria-label="Cashif Servces Button">Pre-travel inspection</button>
+                                        <a href="https://cashif.cc/en/">Pre-travel inspection</a>
                                     </li>
 
                                     <li>
-                                        <button aria-label="Cashif Servces Button">Inspecting my own car</button>
+                                        <a href="https://cashif.cc/en/">Inspecting my own car</a>
                                     </li>
 
                                     <li>
-                                        <button aria-label="Cashif Servces Button">Maintenance check</button>
+                                        <a href="https://cashif.cc/en/">Maintenance check</a>
                                     </li>
 
                                     <li>
@@ -1101,7 +1095,7 @@
                                     </li>
                                     <li class="footer-contact-li">
                                         <span>Language:</span>
-                                        <p><a href="https://cashif.cc/">Arabic (AR)</a></p>
+                                        <p><a href="https://cashif.cc/check-it/">Arabic (AR)</a></p>
                                     </li>
                                 </ul>
                             </div>

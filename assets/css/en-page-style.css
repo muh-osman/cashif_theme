@@ -615,6 +615,11 @@ input.check-toggle-round-flat:checked + label:after {
   transition: 0.3s;
   min-height: 415px;
   background-color: #fff;
+  transition: 0.2s;
+}
+
+.services-section .service-card:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 @media (max-width: 768px) {
