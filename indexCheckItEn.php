@@ -11,7 +11,7 @@
         <div class="circle xs-circle"></div>
 
         <div class="container p-0">
-            <div class="intro-content">
+            <div class="intro-content" dir="ltr">
                 <div class="discount-details">
                     <h6 class="first-title">
                         <span>
@@ -25,7 +25,7 @@
 
                 <div class="hero-btn-container">
                     <a href="#prices" class="discount-bttn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                        Request the service now
+                        Order now
                     </a>
                 </div>
 
@@ -53,10 +53,10 @@
 
     <!-- Start new services stages section -->
     <div class="title-box">
-        <h2 data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">مراحل الخدمة</h2>
+        <h2 data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">Service stages</h2>
     </div>
 
-    <section class="new-serv-stages">
+    <section class="new-serv-stages" dir="ltr">
 
         <div class="two-box-box">
 
