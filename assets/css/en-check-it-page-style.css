@@ -385,10 +385,10 @@ body::after {
     width: 100%;
     font-size: 19px;
     margin-bottom: 52px;
+  }
 
-    .first-title {
-      margin-bottom: 16px !important;
-    }
+  .first-title {
+    margin-bottom: 16px !important;
   }
 
   .intro-section .intro-content .discount-details h6 span {
