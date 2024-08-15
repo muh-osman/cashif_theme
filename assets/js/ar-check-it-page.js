@@ -88,7 +88,7 @@ const handleButtonClick = (event) => {
 
   if (clickedButtonId === "موديل غير موجود") {
     window.location.href =
-      "https://wa.me/966536181188?text=استعلام عن موديل غير موجود (خدمة نفحصها عنك)";
+      "https://wa.me/966920019948?text=استعلام عن موديل غير موجود (خدمة نفحصها عنك)";
   }
 };
 
@@ -272,7 +272,7 @@ const planeThreeBtn = document.getElementById("plane-three");
 
 const palneA = () => {
   const priceA = parseFloat(newData[0].prices[2].price) + 100;
-  const url = `https://wa.me/966536181188?text=طلب خدمة  *نفحصها عنك* موديل "${clickedButtonTitle}" باقة "المحركات" - ${
+  const url = `https://wa.me/966920019948?text=طلب خدمة  *نفحصها عنك* موديل "${clickedButtonTitle}" باقة "المحركات" - ${
     priceA % 1 === 0 ? priceA.toFixed(0) : priceA.toFixed(2)
   } ريال`;
 
@@ -281,7 +281,7 @@ const palneA = () => {
 
 const palneB = () => {
   const priceB = parseFloat(newData[0].prices[1].price) + 100;
-  const url = `https://wa.me/966536181188?text=طلب خدمة  *نفحصها عنك* موديل "${clickedButtonTitle}" الباقة "الأساسية" - ${
+  const url = `https://wa.me/966920019948?text=طلب خدمة  *نفحصها عنك* موديل "${clickedButtonTitle}" الباقة "الأساسية" - ${
     priceB % 1 === 0 ? priceB.toFixed(0) : priceB.toFixed(2)
   } ريال`;
 
@@ -290,7 +290,7 @@ const palneB = () => {
 
 const palneC = () => {
   const priceC = parseFloat(newData[0].prices[0].price) + 100;
-  const url = `https://wa.me/966536181188?text=طلب خدمة  *نفحصها عنك* موديل "${clickedButtonTitle}" الباقة "الشاملة" - ${
+  const url = `https://wa.me/966920019948?text=طلب خدمة  *نفحصها عنك* موديل "${clickedButtonTitle}" الباقة "الشاملة" - ${
     priceC % 1 === 0 ? priceC.toFixed(0) : priceC.toFixed(2)
   } ريال`;
 

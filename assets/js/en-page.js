@@ -103,7 +103,7 @@ const handleButtonClick = (event) => {
 
   if (clickedButtonId === "Model not found") {
     window.location.href =
-      "https://wa.me/966536181188?text=Inquiry about a model that does not exist";
+      "https://wa.me/966920019948?text=Inquiry about a model that does not exist";
   }
 };
 
@@ -281,7 +281,7 @@ const planeTwoBtn = document.getElementById("plane-two");
 const planeThreeBtn = document.getElementById("plane-three");
 
 const palneA = () => {
-  const url = `https://wa.me/966536181188?text=Request a car inspection service "${clickedButtonTitle}" package "Engines" - ${
+  const url = `https://wa.me/966920019948?text=Request a car inspection service "${clickedButtonTitle}" package "Engines" - ${
     newData[0].prices[2].price * (1).toFixed(2)
   } SAR`;
 
@@ -289,7 +289,7 @@ const palneA = () => {
 };
 
 const palneB = () => {
-  const url = `https://wa.me/966536181188?text=Request a car inspection service "${clickedButtonTitle}" package "Basic" - ${
+  const url = `https://wa.me/966920019948?text=Request a car inspection service "${clickedButtonTitle}" package "Basic" - ${
     newData[0].prices[1].price * (1).toFixed(2)
   } SAR`;
 
@@ -297,7 +297,7 @@ const palneB = () => {
 };
 
 const palneC = () => {
-  const url = `https://wa.me/966536181188?text=Request a car inspection service "${clickedButtonTitle}" package "All-in-one" - ${
+  const url = `https://wa.me/966920019948?text=Request a car inspection service "${clickedButtonTitle}" package "All-in-one" - ${
     newData[0].prices[0].price * (1).toFixed(2)
   } SAR`;
 

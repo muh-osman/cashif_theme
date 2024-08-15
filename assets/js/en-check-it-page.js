@@ -103,7 +103,7 @@ const handleButtonClick = (event) => {
 
   if (clickedButtonId === "Model not found") {
     window.location.href =
-      "https://wa.me/966536181188?text=Inquiry about a model that does not exist (We check it for you service.)";
+      "https://wa.me/966920019948?text=Inquiry about a model that does not exist (We check it for you service.)";
   }
 };
 
@@ -287,7 +287,7 @@ const planeThreeBtn = document.getElementById("plane-three");
 
 const palneA = () => {
   const priceA = parseFloat(newData[0].prices[2].price) + 100;
-  const url = `https://wa.me/966536181188?text=Request a car inspection service *We check it for you service* "${clickedButtonTitle}" package "Engines" - ${
+  const url = `https://wa.me/966920019948?text=Request a car inspection service *We check it for you service* "${clickedButtonTitle}" package "Engines" - ${
     priceA % 1 === 0 ? priceA.toFixed(0) : priceA.toFixed(2)
   } SAR`;
 
@@ -296,7 +296,7 @@ const palneA = () => {
 
 const palneB = () => {
   const priceB = parseFloat(newData[0].prices[1].price) + 100;
-  const url = `https://wa.me/966536181188?text=Request a car inspection service *We check it for you service* "${clickedButtonTitle}" package "Basic" - ${
+  const url = `https://wa.me/966920019948?text=Request a car inspection service *We check it for you service* "${clickedButtonTitle}" package "Basic" - ${
     priceB % 1 === 0 ? priceB.toFixed(0) : priceB.toFixed(2)
   } SAR`;
 
@@ -305,7 +305,7 @@ const palneB = () => {
 
 const palneC = () => {
   const priceC = parseFloat(newData[0].prices[0].price) + 100;
-  const url = `https://wa.me/966536181188?text=Request a car inspection service *We check it for you service* "${clickedButtonTitle}" package "All-in-one" - ${
+  const url = `https://wa.me/966920019948?text=Request a car inspection service *We check it for you service* "${clickedButtonTitle}" package "All-in-one" - ${
     priceC % 1 === 0 ? priceC.toFixed(0) : priceC.toFixed(2)
   } SAR`;
 
