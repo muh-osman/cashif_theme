@@ -281,25 +281,34 @@ const planeTwoBtn = document.getElementById("plane-two");
 const planeThreeBtn = document.getElementById("plane-three");
 
 const palneA = () => {
-  const url = `https://wa.me/966920019948?text=Request a car inspection service "${clickedButtonTitle}" package "Engines" - ${
-    newData[0].prices[2].price * (1).toFixed(2)
-  } SAR`;
+  // const url = `https://wa.me/966920019948?text=Request a car inspection service "${clickedButtonTitle}" package "Engines" - ${
+  //   newData[0].prices[2].price * (1).toFixed(2)
+  // } SAR`;
+
+  const url =
+    "https://wa.me/966920019948?text=*Go directly to your nearest branch, you will not need to book an appointment.*";
 
   window.location.href = url;
 };
 
 const palneB = () => {
-  const url = `https://wa.me/966920019948?text=Request a car inspection service "${clickedButtonTitle}" package "Basic" - ${
-    newData[0].prices[1].price * (1).toFixed(2)
-  } SAR`;
+  // const url = `https://wa.me/966920019948?text=Request a car inspection service "${clickedButtonTitle}" package "Basic" - ${
+  //   newData[0].prices[1].price * (1).toFixed(2)
+  // } SAR`;
+
+  const url =
+    "https://wa.me/966920019948?text=*Go directly to your nearest branch, you will not need to book an appointment.*";
 
   window.location.href = url;
 };
 
 const palneC = () => {
-  const url = `https://wa.me/966920019948?text=Request a car inspection service "${clickedButtonTitle}" package "All-in-one" - ${
-    newData[0].prices[0].price * (1).toFixed(2)
-  } SAR`;
+  // const url = `https://wa.me/966920019948?text=Request a car inspection service "${clickedButtonTitle}" package "All-in-one" - ${
+  //   newData[0].prices[0].price * (1).toFixed(2)
+  // } SAR`;
+
+  const url =
+    "https://wa.me/966920019948?text=*Go directly to your nearest branch, you will not need to book an appointment.*";
 
   window.location.href = url;
 };

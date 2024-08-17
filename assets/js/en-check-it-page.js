@@ -287,27 +287,36 @@ const planeThreeBtn = document.getElementById("plane-three");
 
 const palneA = () => {
   const priceA = parseFloat(newData[0].prices[2].price) + 100;
-  const url = `https://wa.me/966920019948?text=Request a car inspection service *We check it for you service* "${clickedButtonTitle}" package "Engines" - ${
-    priceA % 1 === 0 ? priceA.toFixed(0) : priceA.toFixed(2)
-  } SAR`;
+  // const url = `https://wa.me/966920019948?text=Request a car inspection service *We check it for you service* "${clickedButtonTitle}" package "Engines" - ${
+  //   priceA % 1 === 0 ? priceA.toFixed(0) : priceA.toFixed(2)
+  // } SAR`;
+
+  const url =
+    "https://wa.me/966920019948?text=*Go directly to your nearest branch, you will not need to book an appointment (Check-it Service).*";
 
   window.location.href = url;
 };
 
 const palneB = () => {
   const priceB = parseFloat(newData[0].prices[1].price) + 100;
-  const url = `https://wa.me/966920019948?text=Request a car inspection service *We check it for you service* "${clickedButtonTitle}" package "Basic" - ${
-    priceB % 1 === 0 ? priceB.toFixed(0) : priceB.toFixed(2)
-  } SAR`;
+  // const url = `https://wa.me/966920019948?text=Request a car inspection service *We check it for you service* "${clickedButtonTitle}" package "Basic" - ${
+  //   priceB % 1 === 0 ? priceB.toFixed(0) : priceB.toFixed(2)
+  // } SAR`;
+
+  const url =
+    "https://wa.me/966920019948?text=*Go directly to your nearest branch, you will not need to book an appointment (Check-it Service).*";
 
   window.location.href = url;
 };
 
 const palneC = () => {
   const priceC = parseFloat(newData[0].prices[0].price) + 100;
-  const url = `https://wa.me/966920019948?text=Request a car inspection service *We check it for you service* "${clickedButtonTitle}" package "All-in-one" - ${
-    priceC % 1 === 0 ? priceC.toFixed(0) : priceC.toFixed(2)
-  } SAR`;
+  // const url = `https://wa.me/966920019948?text=Request a car inspection service *We check it for you service* "${clickedButtonTitle}" package "All-in-one" - ${
+  //   priceC % 1 === 0 ? priceC.toFixed(0) : priceC.toFixed(2)
+  // } SAR`;
+
+  const url =
+    "https://wa.me/966920019948?text=*Go directly to your nearest branch, you will not need to book an appointment (Check-it Service).*";
 
   window.location.href = url;
 };

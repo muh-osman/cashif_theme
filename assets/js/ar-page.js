@@ -23,9 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
 const languageToggle = document.getElementById("language-toggle");
 
 // Check if the page is being loaded from the cache
-window.addEventListener('pageshow', function(event) {
+window.addEventListener("pageshow", function (event) {
   // If the language toggle was checked, uncheck it
-  if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
+  if (
+    event.persisted ||
+    (window.performance && window.performance.navigation.type === 2)
+  ) {
     languageToggle.checked = false;
   }
 });
@@ -263,25 +266,34 @@ const planeTwoBtn = document.getElementById("plane-two");
 const planeThreeBtn = document.getElementById("plane-three");
 
 const palneA = () => {
-  const url = `https://wa.me/966920019948?text=طلب خدمة فحص سيارة موديل "${clickedButtonTitle}" باقة "المحركات" - ${
-    newData[0].prices[2].price * (1).toFixed(2)
-  } ريال`;
+  // const url = `https://wa.me/966920019948?text=طلب خدمة فحص سيارة موديل "${clickedButtonTitle}" باقة "المحركات" - ${
+  //   newData[0].prices[2].price * (1).toFixed(2)
+  // } ريال`;
+
+  const url =
+    "https://wa.me/966920019948?text=*توجه مباشرة الى أقرب فرع لك، لن تحتاج الى حجز موعد.*";
 
   window.location.href = url;
 };
 
 const palneB = () => {
-  const url = `https://wa.me/966920019948?text=طلب خدمة فحص سيارة موديل "${clickedButtonTitle}" الباقة "الأساسية" - ${
-    newData[0].prices[1].price * (1).toFixed(2)
-  } ريال`;
+  // const url = `https://wa.me/966920019948?text=طلب خدمة فحص سيارة موديل "${clickedButtonTitle}" الباقة "الأساسية" - ${
+  //   newData[0].prices[1].price * (1).toFixed(2)
+  // } ريال`;
+
+  const url =
+    "https://wa.me/966920019948?text=*توجه مباشرة الى أقرب فرع لك، لن تحتاج الى حجز موعد.*";
 
   window.location.href = url;
 };
 
 const palneC = () => {
-  const url = `https://wa.me/966920019948?text=طلب خدمة فحص سيارة موديل "${clickedButtonTitle}" الباقة "الشاملة" - ${
-    newData[0].prices[0].price * (1).toFixed(2)
-  } ريال`;
+  // const url = `https://wa.me/966920019948?text=طلب خدمة فحص سيارة موديل "${clickedButtonTitle}" الباقة "الشاملة" - ${
+  //   newData[0].prices[0].price * (1).toFixed(2)
+  // } ريال`;
+
+  const url =
+    "https://wa.me/966920019948?text=*توجه مباشرة الى أقرب فرع لك، لن تحتاج الى حجز موعد.*";
 
   window.location.href = url;
 };
