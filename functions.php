@@ -5,6 +5,9 @@
  */
 function wpdocs_cashif_theme_scripts()
 {
+
+    $version = '1.0.2';
+
     // Enqueue CSS
     wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
     wp_enqueue_style('aos-css', get_template_directory_uri() . '/assets/css/aos.min.css');
@@ -21,22 +24,23 @@ function wpdocs_cashif_theme_scripts()
     // $receipt_page_en = '';
 
     if (preg_match('/\/check-it\/receipt\/en\/\?plan=([^&]+)&model=([^&]+)&price=([^&]*)/', $current_url)) {
-        wp_enqueue_style('en-receipt-page-style', get_template_directory_uri() . '/assets/css/en-receipt.css');
+        //
+        wp_enqueue_style('en-receipt-page-style', get_template_directory_uri() . '/assets/css/en-receipt.css', array(), $version);
     } elseif (preg_match('/\/check-it\/receipt\/\?plan=([^&]+)&model=([^&]+)&price=([^&]*)/', $current_url)) {
         // Apply CSS for the specific receipt page
-        wp_enqueue_style('ar-receipt-page-style', get_template_directory_uri() . '/assets/css/ar-receipt.css');
+        wp_enqueue_style('ar-receipt-page-style', get_template_directory_uri() . '/assets/css/ar-receipt.css', array(), $version);
     } elseif (strpos($current_url, '/check-it/en/') !== false) {
         // EN CSS
-        wp_enqueue_style('en-check-it-style', get_template_directory_uri() . '/assets/css/en-check-it-page-style.css');
+        wp_enqueue_style('en-check-it-style', get_template_directory_uri() . '/assets/css/en-check-it-page-style.css', array(), $version);
     } elseif (strpos($current_url, '/check-it/') !== false) {
         // AR CSS
-        wp_enqueue_style('ar-check-it-style', get_template_directory_uri() . '/assets/css/ar-check-it-page-style.css');
+        wp_enqueue_style('ar-check-it-style', get_template_directory_uri() . '/assets/css/ar-check-it-page-style.css', array(), $version);
     } elseif (strpos($current_url, '/en/') !== false) {
         // EN CSS
-        wp_enqueue_style('en-page-style', get_template_directory_uri() . '/assets/css/en-page-style.css');
+        wp_enqueue_style('en-page-style', get_template_directory_uri() . '/assets/css/en-page-style.css', array(), $version);
     } elseif (strpos($current_url, '/') !== false) {
         // AR CSS
-        wp_enqueue_style('ar-page-style', get_template_directory_uri() . '/assets/css/ar-page-style.css');
+        wp_enqueue_style('ar-page-style', get_template_directory_uri() . '/assets/css/ar-page-style.css', array(), $version);
     }
 
     // Enqueue Google Fonts
@@ -44,30 +48,30 @@ function wpdocs_cashif_theme_scripts()
 
     // Enqueue JS
     wp_enqueue_script('jquery');
-    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array('jquery'), '1.0.0', true);
-    wp_enqueue_script('aos-js', get_template_directory_uri() . '/assets/js/aos.min.js', array('jquery'), '1.0.0', true);
-    wp_enqueue_script('plyr-js', get_template_directory_uri() . '/assets/js/plyr.min.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array('jquery'), $version, true);
+    wp_enqueue_script('aos-js', get_template_directory_uri() . '/assets/js/aos.min.js', array('jquery'), $version, true);
+    wp_enqueue_script('plyr-js', get_template_directory_uri() . '/assets/js/plyr.min.js', array('jquery'), $version, true);
 
     // Additional JS for EN and AR page
 
     if (preg_match('/\/check-it\/receipt\/en\/\?plan=([^&]+)&model=([^&]+)&price=([^&]*)/', $current_url)) {
         //
-        wp_enqueue_script('en-receipt-js', get_template_directory_uri() . '/assets/js/en-receipt.js', array('jquery'), '1.0.1', true);
+        wp_enqueue_script('en-receipt-js', get_template_directory_uri() . '/assets/js/en-receipt.js', array('jquery'), $version, true);
     } elseif (preg_match('/\/check-it\/receipt\/\?plan=([^&]+)&model=([^&]+)&price=([^&]*)/', $current_url)) {
         // Apply JS for the specific receipt page
-        wp_enqueue_script('ar-receipt-js', get_template_directory_uri() . '/assets/js/ar-receipt.js', array('jquery'), '1.0.1', true);
+        wp_enqueue_script('ar-receipt-js', get_template_directory_uri() . '/assets/js/ar-receipt.js', array('jquery'), $version, true);
     } elseif (strpos($current_url, '/check-it/en/') !== false) {
         // EN JS
-        wp_enqueue_script('en-check-it-page-js', get_template_directory_uri() . '/assets/js/en-check-it-page.js', array('jquery'), '1.0.1', true);
+        wp_enqueue_script('en-check-it-page-js', get_template_directory_uri() . '/assets/js/en-check-it-page.js', array('jquery'), $version, true);
     } elseif (strpos($current_url, '/check-it/') !== false) {
         // AR JS
-        wp_enqueue_script('ar-check-it-page-js', get_template_directory_uri() . '/assets/js/ar-check-it-page.js', array('jquery'), '1.0.1', true);
+        wp_enqueue_script('ar-check-it-page-js', get_template_directory_uri() . '/assets/js/ar-check-it-page.js', array('jquery'), $version, true);
     } elseif (strpos($current_url, '/en/') !== false) {
         // EN JS
-        wp_enqueue_script('en-page-js', get_template_directory_uri() . '/assets/js/en-page.js', array('jquery'), '1.0.1', true);
+        wp_enqueue_script('en-page-js', get_template_directory_uri() . '/assets/js/en-page.js', array('jquery'), $version, true);
     } elseif (strpos($current_url, '/') !== false) {
         // AR JS
-        wp_enqueue_script('ar-page-js', get_template_directory_uri() . '/assets/js/ar-page.js', array('jquery'), '1.0.1', true);
+        wp_enqueue_script('ar-page-js', get_template_directory_uri() . '/assets/js/ar-page.js', array('jquery'), $version, true);
     }
 }
 add_action('wp_enqueue_scripts', 'wpdocs_cashif_theme_scripts');

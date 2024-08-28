@@ -616,6 +616,7 @@ input.check-toggle-round-flat:checked + label:after {
   min-height: 415px;
   background-color: #fff;
   transition: 0.2s;
+  justify-content: space-between;
 }
 
 .services-section .service-card:hover {
@@ -624,7 +625,11 @@ input.check-toggle-round-flat:checked + label:after {
 
 @media (max-width: 768px) {
   .services-section .service-card {
-    padding: 20px;
+    padding: 16px;
+  }
+
+  .serv-container {
+    padding: 0;
   }
 }
 @media (max-width: 625px) {
@@ -697,6 +702,18 @@ input.check-toggle-round-flat:checked + label:after {
 
 .services-section .service-card ul li:last-child {
   margin-bottom: 0;
+}
+
+.ask-now-serv {
+  background-color: #213941;
+  color: #fff;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.ask-now-serv:hover {
+  background-color: #1a292e;
 }
 /*End Our Services Section*/
 
@@ -805,7 +822,7 @@ input.check-toggle-round-flat:checked + label:after {
 .MuiSvgIcon-root {
   width: 25px;
   height: 25px;
-  margin-left: 12px;
+  margin-left: 7px;
   fill: rgb(76, 175, 80);
 }
 
