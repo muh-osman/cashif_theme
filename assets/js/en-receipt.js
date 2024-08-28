@@ -1,19 +1,16 @@
-// ---------------- AOS animation ----------------
-document.addEventListener("DOMContentLoaded", function () {
-  window.addEventListener("load", function () {
-    document.body.style.overflowY = "auto";
+// Hide WhatsApp Btn
+const whatsappBtn = document.getElementById("whatsapp-btn");
 
-    var loadingElement = document.getElementById("loading");
-    if (loadingElement) {
-      setTimeout(function () {
-        loadingElement.style.display = "none";
-      }, 5000);
-    }
-  });
+window.addEventListener("scroll", function () {
+  let scrollPosition = window.scrollY || window.pageYOffset;
+  let documentHeight =
+    document.documentElement.scrollHeight - window.innerHeight;
 
-  AOS.init({
-    once: true,
-  });
+  if (scrollPosition >= documentHeight) {
+    whatsappBtn.classList.add("hide-btn");
+  } else {
+    whatsappBtn.classList.remove("hide-btn");
+  }
 });
 
 // ---------- Get the current URL ----------------
@@ -94,7 +91,9 @@ askServBtn.addEventListener("click", function () {
   let serv = `Request a service (check it for you)`;
   let selectedModel = `model car (${encodeURIComponent(model)})`;
   let selectedPlan = `plan (${encodeURIComponent(plan)})`;
-  let additionalServ = `additional services (${checkedValues.join(", ") || "none"})`;
+  let additionalServ = `additional services (${
+    checkedValues.join(", ") || "none"
+  })`;
   let sum = `total (${total})`;
 
   let whatsAppUrl = `https://wa.me/966920019948?text=${serv} ${selectedModel} ${selectedPlan} ${additionalServ} ${sum}`;
