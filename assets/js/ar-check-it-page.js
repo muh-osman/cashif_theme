@@ -88,7 +88,7 @@ const handleButtonClick = (event) => {
 
   if (clickedButtonId === "موديل غير موجود") {
     window.location.href =
-      "https://wa.me/966920019948?text=استعلام عن موديل غير موجود (خدمة نفحصها عنك)";
+      "https://wa.me/966920019948?text=استعلام عن موديل غير موجود (خدمة مخدوم)";
   }
 };
 
@@ -180,8 +180,9 @@ inputElement.addEventListener("keyup", debouncedSearch);
 
 // Submit form
 let newData;
+let yearValue;
 const submit = async () => {
-  let yearValue = document.getElementById("dropdownButton").dataset.value;
+  yearValue = document.getElementById("dropdownButton").dataset.value;
   let button = document.querySelector(".submit-btn");
 
   // Check if model is not selected
@@ -226,22 +227,13 @@ const submit = async () => {
     button.innerHTML = "بحث";
 
     //
-    const engainPrice = document.getElementById("engain-price");
-    const engainValue = parseFloat(newData[0].prices[2].price) + 100;
-    engainPrice.textContent = `${
-      engainValue % 1 === 0 ? engainValue.toFixed(0) : engainValue.toFixed(2)
-    } ريال`;
-
     const mainPrice = document.getElementById("main-price");
-    const mainValue = parseFloat(newData[0].prices[1].price) + 100;
     mainPrice.textContent = `${
-      mainValue % 1 === 0 ? mainValue.toFixed(0) : mainValue.toFixed(2)
+      newData[0].prices[1].price * (1).toFixed(2)
     } ريال`;
-
     const fullPrice = document.getElementById("full-price");
-    const fullValue = parseFloat(newData[0].prices[0].price) + 100;
     fullPrice.textContent = `${
-      fullValue % 1 === 0 ? fullValue.toFixed(0) : fullValue.toFixed(2)
+      newData[0].prices[0].price * (1).toFixed(2)
     } ريال`;
 
     //
@@ -265,43 +257,18 @@ const submit = async () => {
 };
 
 // Whatsapp Plane btn
-// https://wa.me/1XXXXXXXXXX?text=I'm%20interested%20in%20your%20car%20for%20sale
-const planeOneBtn = document.getElementById("plane-one");
-const planeTwoBtn = document.getElementById("plane-two");
-const planeThreeBtn = document.getElementById("plane-three");
-
-const palneA = () => {
-  const priceA = parseFloat(newData[0].prices[2].price) + 100;
-  // const url = `https://wa.me/966920019948?text=طلب خدمة  *نفحصها عنك* موديل "${clickedButtonTitle}" باقة "المحركات" - ${
-  //   priceA % 1 === 0 ? priceA.toFixed(0) : priceA.toFixed(2)
-  // } ريال`;
-
-  const url =
-    "https://wa.me/966920019948?text=*توجه مباشرة الى أقرب فرع لك، لن تحتاج الى حجز موعد (خدمة نفحصها عنك).*";
-
-  window.location.href = url;
-};
-
+// الخطة الاساسية
 const palneB = () => {
-  const priceB = parseFloat(newData[0].prices[1].price) + 100;
-  // const url = `https://wa.me/966920019948?text=طلب خدمة  *نفحصها عنك* موديل "${clickedButtonTitle}" الباقة "الأساسية" - ${
-  //   priceB % 1 === 0 ? priceB.toFixed(0) : priceB.toFixed(2)
-  // } ريال`;
+  const priceB = parseFloat(newData[0].prices[1].price);
 
-  const url =
-    "https://wa.me/966920019948?text=*توجه مباشرة الى أقرب فرع لك، لن تحتاج الى حجز موعد (خدمة نفحصها عنك).*";
-
+  const url = `http://cashif.cc/check-it/receipt/?plan=أساسي&model=${newData[0].model_name}&price=${priceB}`;
   window.location.href = url;
 };
 
+// الخطة الشاملة
 const palneC = () => {
-  const priceC = parseFloat(newData[0].prices[0].price) + 100;
-  // const url = `https://wa.me/966920019948?text=طلب خدمة  *نفحصها عنك* موديل "${clickedButtonTitle}" الباقة "الشاملة" - ${
-  //   priceC % 1 === 0 ? priceC.toFixed(0) : priceC.toFixed(2)
-  // } ريال`;
+  const priceC = parseFloat(newData[0].prices[0].price);
 
-  const url =
-    "https://wa.me/966920019948?text=*توجه مباشرة الى أقرب فرع لك، لن تحتاج الى حجز موعد (خدمة نفحصها عنك).*";
-
+  const url = `http://cashif.cc/check-it/receipt/?plan=شامل&model=${newData[0].model_name}&price=${priceC}`;
   window.location.href = url;
 };

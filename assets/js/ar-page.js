@@ -260,16 +260,7 @@ const submit = async () => {
 };
 
 // Whatsapp Plane btn
-// https://wa.me/1XXXXXXXXXX?text=I'm%20interested%20in%20your%20car%20for%20sale
-const planeOneBtn = document.getElementById("plane-one");
-const planeTwoBtn = document.getElementById("plane-two");
-const planeThreeBtn = document.getElementById("plane-three");
-
 const palneA = () => {
-  // const url = `https://wa.me/966920019948?text=طلب خدمة فحص سيارة موديل "${clickedButtonTitle}" باقة "المحركات" - ${
-  //   newData[0].prices[2].price * (1).toFixed(2)
-  // } ريال`;
-
   const url =
     "https://wa.me/966920019948?text=*توجه مباشرة الى أقرب فرع لك، لن تحتاج الى حجز موعد.*";
 
@@ -277,10 +268,6 @@ const palneA = () => {
 };
 
 const palneB = () => {
-  // const url = `https://wa.me/966920019948?text=طلب خدمة فحص سيارة موديل "${clickedButtonTitle}" الباقة "الأساسية" - ${
-  //   newData[0].prices[1].price * (1).toFixed(2)
-  // } ريال`;
-
   const url =
     "https://wa.me/966920019948?text=*توجه مباشرة الى أقرب فرع لك، لن تحتاج الى حجز موعد.*";
 
@@ -288,10 +275,6 @@ const palneB = () => {
 };
 
 const palneC = () => {
-  // const url = `https://wa.me/966920019948?text=طلب خدمة فحص سيارة موديل "${clickedButtonTitle}" الباقة "الشاملة" - ${
-  //   newData[0].prices[0].price * (1).toFixed(2)
-  // } ريال`;
-
   const url =
     "https://wa.me/966920019948?text=*توجه مباشرة الى أقرب فرع لك، لن تحتاج الى حجز موعد.*";
 
