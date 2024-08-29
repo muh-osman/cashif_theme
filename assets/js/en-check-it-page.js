@@ -48,13 +48,18 @@ window.addEventListener("pageshow", function (event) {
   }
 });
 
+// Get the current domain
+const currentDomain = window.location.origin;
+// Subdirectory for development only
+const subdirectory = window.location.hostname === "localhost" ? "/cashif" : "";
+
 languageToggle.addEventListener("change", function () {
   if (this.checked) {
     // Redirect to Arabic page
-    window.location.href = "https://cashif.cc/check-it/";
+    window.location.href = `${currentDomain}${subdirectory}/check-it/`;
   } else {
     // Redirect to English page
-    window.location.href = "https://cashif.cc/check-it/en/";
+    window.location.href = `${currentDomain}${subdirectory}/check-it/en/`;
   }
 });
 
@@ -271,13 +276,13 @@ const submit = async () => {
   }
 };
 
+// Plans btns
 
-// Whatsapp Plane btn
 // الخطة الاساسية
 const palneB = () => {
   const priceB = parseFloat(newData[0].prices[1].price);
 
-  const url = `http://cashif.cc/check-it/receipt/en/?plan=Basic&model=${newData[0].model_name}&price=${priceB}`;
+  const url = `${currentDomain}${subdirectory}/check-it/receipt/en/?plan=Basic&model=${newData[0].model_name}&price=${priceB}`;
   window.location.href = url;
 };
 
@@ -285,6 +290,6 @@ const palneB = () => {
 const palneC = () => {
   const priceC = parseFloat(newData[0].prices[0].price);
 
-  const url = `http://cashif.cc/check-it/receipt/en/?plan=All-in-one&model=${newData[0].model_name}&price=${priceC}`;
+  const url = `${currentDomain}${subdirectory}/check-it/receipt/en/?plan=All-in-one&model=${newData[0].model_name}&price=${priceC}`;
   window.location.href = url;
 };

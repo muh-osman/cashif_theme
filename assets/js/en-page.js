@@ -48,13 +48,18 @@ window.addEventListener("pageshow", function (event) {
   }
 });
 
+// Get the current domain
+const currentDomain = window.location.origin;
+// Subdirectory for development only
+const subdirectory = window.location.hostname === "localhost" ? "/cashif" : "";
+
 languageToggle.addEventListener("change", function () {
   if (this.checked) {
     // Redirect to Arabic page
-    window.location.href = "https://cashif.cc/";
+    window.location.href = `${currentDomain}${subdirectory}/`;
   } else {
     // Redirect to English page
-    window.location.href = "https://cashif.cc/en/";
+    window.location.href = `${currentDomain}${subdirectory}/en/`;
   }
 });
 
