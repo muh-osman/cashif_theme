@@ -6,7 +6,7 @@
 function wpdocs_cashif_theme_scripts()
 {
 
-    $version = '1.0.3';
+    $version = '1.0.6';
 
     // Enqueue CSS
     wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
@@ -16,35 +16,26 @@ function wpdocs_cashif_theme_scripts()
     // Additional style for EN and AR page
     // Check if the URL ends with "en" or "en/"
     $current_url = $_SERVER['REQUEST_URI'];
-    // $home_page_ar = '';
-    // $home_page_en = '';
-    // $check_it_page_ar = '';
-    // $check_it_page_en = '';
-    // $receipt_page_ar = '';
-    // $receipt_page_en = '';
 
-    if (preg_match('/\/check-it\/receipt\/en\/\?plan=([^&]+)&model=([^&]+)&price=([^&]*)/', $current_url)) {
-        //
-        wp_enqueue_style('en-receipt-page-style', get_template_directory_uri() . '/assets/css/en-receipt.css', array(), $version);
-    } elseif (preg_match('/\/check-it\/receipt\/\?plan=([^&]+)&model=([^&]+)&price=([^&]*)/', $current_url)) {
-        // Apply CSS for the specific receipt page
-        wp_enqueue_style('ar-receipt-page-style', get_template_directory_uri() . '/assets/css/ar-receipt.css', array(), $version);
-    } elseif (strpos($current_url, '/check-it/en/') !== false) {
-        // EN CSS
-        wp_enqueue_style('en-check-it-style', get_template_directory_uri() . '/assets/css/en-check-it-page-style.css', array(), $version);
-    } elseif (strpos($current_url, '/check-it/') !== false) {
-        // AR CSS
-        wp_enqueue_style('ar-check-it-style', get_template_directory_uri() . '/assets/css/ar-check-it-page-style.css', array(), $version);
-    } elseif (strpos($current_url, '/en/') !== false) {
-        // EN CSS
-        wp_enqueue_style('en-page-style', get_template_directory_uri() . '/assets/css/en-page-style.css', array(), $version);
-    } elseif (strpos($current_url, '/') !== false) {
-        // AR CSS
-        wp_enqueue_style('ar-page-style', get_template_directory_uri() . '/assets/css/ar-page-style.css', array(), $version);
+    // Define an array of styles to enqueue based on URL patterns
+    //  ex: https://cashif.cc/check-it/receipt/en/?plan=Basic&model=Camry&price=430 => en-receipt-page-style.css
+    $styles = [
+        '/\/check-it\/receipt\/en\/\?plan=([^&]+)&model=([^&]+)&price=([^&]*)/' => 'en-receipt',
+        '/\/check-it\/receipt\/\?plan=([^&]+)&model=([^&]+)&price=([^&]*)/' => 'ar-receipt',
+        '/\/check-it\/en/' => 'en-check-it',
+        '/\/check-it/' => 'ar-check-it',
+        '/\/en/' => 'en',
+        '/\//' => 'ar'
+    ];
+
+    // Loop through the styles array and enqueue the appropriate style
+    foreach ($styles as $pattern => $style) {
+        if (preg_match($pattern, $current_url)) {
+            wp_enqueue_style("{$style}-style", get_template_directory_uri() . "/assets/css/{$style}-page-style.css", array(), $version);
+            break; // Exit the loop once a match is found
+        }
     }
 
-    // Enqueue Google Fonts
-    // wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&display=swap', array(), '1.0.0');
 
     // Enqueue JS
     wp_enqueue_script('jquery');
@@ -54,24 +45,22 @@ function wpdocs_cashif_theme_scripts()
 
     // Additional JS for EN and AR page
 
-    if (preg_match('/\/check-it\/receipt\/en\/\?plan=([^&]+)&model=([^&]+)&price=([^&]*)/', $current_url)) {
-        //
-        wp_enqueue_script('en-receipt-js', get_template_directory_uri() . '/assets/js/en-receipt.js', array('jquery'), $version, true);
-    } elseif (preg_match('/\/check-it\/receipt\/\?plan=([^&]+)&model=([^&]+)&price=([^&]*)/', $current_url)) {
-        // Apply JS for the specific receipt page
-        wp_enqueue_script('ar-receipt-js', get_template_directory_uri() . '/assets/js/ar-receipt.js', array('jquery'), $version, true);
-    } elseif (strpos($current_url, '/check-it/en/') !== false) {
-        // EN JS
-        wp_enqueue_script('en-check-it-page-js', get_template_directory_uri() . '/assets/js/en-check-it-page.js', array('jquery'), $version, true);
-    } elseif (strpos($current_url, '/check-it/') !== false) {
-        // AR JS
-        wp_enqueue_script('ar-check-it-page-js', get_template_directory_uri() . '/assets/js/ar-check-it-page.js', array('jquery'), $version, true);
-    } elseif (strpos($current_url, '/en/') !== false) {
-        // EN JS
-        wp_enqueue_script('en-page-js', get_template_directory_uri() . '/assets/js/en-page.js', array('jquery'), $version, true);
-    } elseif (strpos($current_url, '/') !== false) {
-        // AR JS
-        wp_enqueue_script('ar-page-js', get_template_directory_uri() . '/assets/js/ar-page.js', array('jquery'), $version, true);
+    // Define an array of scripts to enqueue based on URL patterns
+    $scripts = [
+        '/\/check-it\/receipt\/en\/\?plan=([^&]+)&model=([^&]+)&price=([^&]*)/' => 'en-receipt',
+        '/\/check-it\/receipt\/\?plan=([^&]+)&model=([^&]+)&price=([^&]*)/' => 'ar-receipt',
+        '/\/check-it\/en/' => 'en-check-it',
+        '/\/check-it/' => 'ar-check-it',
+        '/\/en/' => 'en',
+        '/\//' => 'ar'
+    ];
+
+    // Loop through the scripts array and enqueue the appropriate script
+    foreach ($scripts as $pattern => $script) {
+        if (preg_match($pattern, $current_url)) {
+            wp_enqueue_script("{$script}-script", get_template_directory_uri() . "/assets/js/{$script}-page.js", array('jquery'), $version, true);
+            break; // Exit the loop once a match is found
+        }
     }
 }
 add_action('wp_enqueue_scripts', 'wpdocs_cashif_theme_scripts');
@@ -82,17 +71,18 @@ add_action('wp_enqueue_scripts', 'wpdocs_cashif_theme_scripts');
 // URL of English page of website (Do NOT forget to flush: go to Settings > Permalinks and click "Save Changes")
 function custom_rewrite_rule()
 {
-    // http://localhost/cashif/en/
-    add_rewrite_rule('^en/?$', 'index.php?page_id=30', 'top');
+    // Define an array of rewrite rules
+    $rewrite_rules = [
+        'en' => 30,
+        'check-it/en' => 36,
+        'check-it/receipt' => 45,
+        'check-it/receipt/en' => 47,
+    ];
 
-    // http://localhost/cashif/check-it/en/
-    add_rewrite_rule('^check-it/en/?$', 'index.php?page_id=36', 'top');
-
-    // http://localhost/cashif/check-it/receipt/
-    add_rewrite_rule('^check-it/receipt/?$', 'index.php?page_id=45', 'top');
-
-    // http://localhost/cashif/check-it/receipt/en/
-    add_rewrite_rule('^check-it/receipt/en/?$', 'index.php?page_id=47', 'top');
+    // Loop through the rewrite rules and add them
+    foreach ($rewrite_rules as $slug => $page_id) {
+        add_rewrite_rule('^' . $slug . '/?$', 'index.php?page_id=' . $page_id, 'top');
+    }
 }
 add_action('init', 'custom_rewrite_rule');
 
