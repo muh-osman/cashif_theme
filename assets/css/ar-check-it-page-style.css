@@ -353,7 +353,7 @@ body::after {
   background-color: #e2d399;
   color: #213941;
   font-size: 18px;
-  margin: 48px 0;
+  margin: 32px 0 0;
   transition: 0.2s;
   transition: 0.2s;
 }
@@ -579,7 +579,6 @@ input.check-toggle-round-flat:checked + label:after {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 64px;
 }
 /* End hero image */
 

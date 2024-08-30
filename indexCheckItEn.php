@@ -44,11 +44,11 @@
     </section>
     <!--End intro section-->
 
-    <section class="hero-image-container">
+    <!-- <section class="hero-image-container">
         <div class="hero-image-box">
             <img src="<?php echo get_template_directory_uri() . '/assets/images/new-serv.png' ?>" alt="hero">
         </div>
-    </section>
+    </section> -->
     <!--End stage section-->
 
     <!-- Start new services stages section -->
