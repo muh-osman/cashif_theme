@@ -19,7 +19,7 @@
                         </span>
                     </h6>
                     <h6 class="mt-0">
-                        Cashif checks it for you and ships it to you
+                        Cashif checks it for you and facilitates the transportation and shipping procedures for you.
                     </h6>
                 </div>
 
