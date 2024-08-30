@@ -545,9 +545,9 @@ input.check-toggle-round-flat:checked + label:after {
 }
 
 .hero-image-box {
-  width: 50%;
+  width: 33%;
   overflow: hidden;
-  border-radius: 80px;
+  border-radius: 40px;
   margin: auto;
 }
 

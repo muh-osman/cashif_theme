@@ -57,45 +57,84 @@
                 </div>
 
                 <div class="form-check mb-3">
-                    <input class="form-check-input control-table" type="checkbox" value="Ownership transfer" id="reverseCheck2" data-row="row-ownership">
+                    <input class="form-check-input" type="checkbox" value="mobile inspection" id="reverseCheck2" data-row="row-mobile-inspection" disabled>
                     <label class="form-check-label small-text-in-small-screeen" for="reverseCheck2">
+                        Mobile inspection (Soon)
+                    </label>
+                </div>
+
+                <!-- <div class="form-check mb-3">
+                    <input class="form-check-input control-table" type="checkbox" value="Ownership transfer" id="reverseCheck3" data-row="row-ownership">
+                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck3">
                         Car ownership transfer (+550 SAR)
                     </label>
-                </div>
+                </div> -->
 
-                <div class="form-check mb-3">
-                    <input class="form-check-input" type="checkbox" value="Car insurance" id="reverseCheck3">
-                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck3">
+                <!-- <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" value="Car insurance" id="reverseCheck4">
+                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck4">
                         Car insurance (not specified)
                     </label>
-                </div>
+                </div> -->
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Car Shipping" id="reverseCheck4">
-                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck4">
+                <!-- <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Car Shipping" id="reverseCheck5">
+                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck5">
                         Shipping the car to you (10% discount)
                     </label>
-                </div>
+                </div> -->
 
             </div>
 
         </section>
 
         <div class="title-box">
-            <h2 dir="ltr">
-                Note !
+            <h2>
+                Post-Inspection Services
             </h2>
         </div>
 
-        <div dir="ltr">
+        <div class="sub-title-box mt-5">
+            <h3>
+                Vehicle Ownership Transfer
+            </h3>
+        </div>
+
+        <div>
             <div class="text-center p-2 pt-0 note-box">
-                <p class="small-text-in-small-screeen">In cooperation with <span>Al Bassami</span> Car Shipping Company. We offer a <span>10%</span> discount on the total bill.</p>
-                <p class="small-text-in-small-screeen">Please note that <span>prices vary</span> depending on the car and the city.</p>
-                <p class="mb-5 small-text-in-small-screeen">Car shipping prices start at <span>around</span> 350 riyals.</p>
-                <p class="small-text-in-small-screeen"><span>Car insurance</span> prices vary depending on the car and the person.</p>
-                <p class="small-text-in-small-screeen">Car insurance prices start at <span>around</span> 800 riyals.</p>
+                <p class="small-text-in-small-screeen">In collaboration with <span>our partners</span>, we facilitate the vehicle ownership transfer process for you.</p>
+                <p class="small-text-in-small- m-0">The cost of vehicle ownership transfer is <span>550 SAR</span>.</p>
             </div>
         </div>
+
+        <div class="sub-title-box mt-5">
+            <h3>
+                Vehicle Insurance
+            </h3>
+        </div>
+
+        <div>
+            <div class="text-center p-2 pt-0 note-box">
+                <p class="small-text-in-small-screeen">In collaboration with <span>insurance companies</span>, we help you obtain suitable insurance.</p>
+                <p class="small-text-in-small-screeen">Please note that <span>insurance prices vary</span> depending on the vehicle and the individual.</p>
+                <p class="small-text-in-small-screeen m-0">Vehicle insurance prices start at <span>approximately 800 SAR</span>.</p>
+            </div>
+        </div>
+
+        <div class="sub-title-box mt-5">
+            <h3>
+                Vehicle Shipping
+            </h3>
+        </div>
+
+        <div>
+            <div class="text-center p-2 pt-0 note-box">
+                <p class="small-text-in-small-screeen">In collaboration with <span>Al-Bassami Company</span> for vehicle shipping, we offer you a <span>10%</span> discount on the total invoice.</p>
+                <p class="small-text-in-small-screeen">Please note that <span>prices vary</span> depending on the vehicle and the city.</p>
+                <p class="mb-4 small-text-in-small-screeen">Vehicle shipping prices start at <span>approximately 350 SAR</span>.</p>
+            </div>
+        </div>
+
 
 
         <div class="table-container">

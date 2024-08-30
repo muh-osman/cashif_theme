@@ -56,25 +56,32 @@
                 </div>
 
                 <div class="form-check form-check-reverse mb-3">
-                    <input class="form-check-input control-table" type="checkbox" value="نقل ملكية" id="reverseCheck2" data-row="row-ownership">
+                    <input class="form-check-input" type="checkbox" value="فحص متنقل" id="reverseCheck2" data-row="row-mobile-inspection" disabled>
                     <label class="form-check-label small-text-in-small-screeen" for="reverseCheck2">
+                        فحص متنقل (قريبا)
+                    </label>
+                </div>
+
+                <!-- <div class="form-check form-check-reverse mb-3">
+                    <input class="form-check-input control-table" type="checkbox" value="نقل ملكية" id="reverseCheck3" data-row="row-ownership">
+                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck3">
                         نقل ملكية السيارة (+550 ريال)
                     </label>
-                </div>
+                </div> -->
 
-                <div class="form-check form-check-reverse mb-3">
-                    <input class="form-check-input" type="checkbox" value="تأمين السيارة" id="reverseCheck3">
-                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck3">
+                <!-- <div class="form-check form-check-reverse mb-3">
+                    <input class="form-check-input" type="checkbox" value="تأمين السيارة" id="reverseCheck4">
+                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck4>
                         تأمين السيارة (غير محدد)
                     </label>
-                </div>
+                </div> -->
 
-                <div class="form-check form-check-reverse">
-                    <input class="form-check-input" type="checkbox" value="شحن السيارة" id="reverseCheck4">
-                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck4">
+                <!-- <div class="form-check form-check-reverse">
+                    <input class="form-check-input" type="checkbox" value="شحن السيارة" id="reverseCheck5">
+                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck5">
                         شحن السيارة الى مدينتك (خصم 10%)
                     </label>
-                </div>
+                </div> -->
 
             </div>
 
@@ -82,19 +89,51 @@
 
         <div class="title-box">
             <h2>
-                ملاحظة !
+                خدمات ما بعد الفحص
             </h2>
+        </div>
+
+        <div class="sub-title-box mt-5">
+            <h3>
+                نقل ملكية السيارة
+            </h3>
         </div>
 
         <div>
             <div class="text-center p-2 pt-0 note-box">
-                <p class="small-text-in-small-screeen">بالتعاون مع <span>شركة البسامي</span> لشحن السيارات. نقدم خصم <span>%10</span> من اجمالي الفاتورة.</p>
-                <p class="small-text-in-small-screeen">مع العلم <span>الأسعار تختلف</span> على حسب السيارة وعلى حسب المدينة.</p>
-                <p class="mb-5 small-text-in-small-screeen">أسعار شحن السيارات تبدأ بـ 350 ريال <span>تقريبا</span>.</p>
-                <p class="small-text-in-small-screeen">أسعار <span>تأمين السيارة</span> تختلف على حسب السيارة وعلى حسب الشخص</p>
-                <p class="small-text-in-small-screeen">أسعار تأمين السيارات تبدأ بـ800 ريال <span>تقريبا</span></p>
+                <p class="small-text-in-small-screeen">بالتعاون مع <span>شركائنا</span>, نسهل عليك إجراءات نقل ملكية السيارة</p>
+                <p class="small-text-in-small- m-0">سعر نقل ملكية السيارة <span>550 ريال</span></p>
             </div>
         </div>
+
+        <div class="sub-title-box mt-5">
+            <h3>
+                تأمين السيارة
+            </h3>
+        </div>
+
+        <div>
+            <div class="text-center p-2 pt-0 note-box">
+                <p class="small-text-in-small-screeen">بالتعاون مع <span>شركات التأمين</span>, نسهل عليك الحصول على تأمين مناسب لك</p>
+                <p class="small-text-in-small-screeen">مع العلم أسعار <span>تأمين السيارة تختلف</span> على حسب السيارة وعلى حسب الشخص</p>
+                <p class="small-text-in-small-screeen m-0">أسعار تأمين السيارات تبدأ بـ800 ريال <span>تقريبا</span></p>
+            </div>
+        </div>
+
+        <div class="sub-title-box mt-5">
+            <h3>
+                شحن السيارة
+            </h3>
+        </div>
+
+        <div>
+            <div class="text-center p-2 pt-0 note-box">
+                <p class="small-text-in-small-screeen">بالتعاون مع <span>شركة البسامي</span> لشحن السيارات, نقدم لك خصم <span>%10</span> من اجمالي الفاتورة.</p>
+                <p class="small-text-in-small-screeen">مع العلم <span>الأسعار تختلف</span> على حسب السيارة وعلى حسب المدينة.</p>
+                <p class="mb-4 small-text-in-small-screeen">أسعار شحن السيارات تبدأ بـ 350 ريال <span>تقريبا</span>.</p>
+            </div>
+        </div>
+
 
 
         <div class="table-container">

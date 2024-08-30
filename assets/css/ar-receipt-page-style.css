@@ -228,6 +228,16 @@ input[type="checkbox"]:checked + label {
   color: red;
 }
 
+.sub-title-box {
+
+}
+
+.sub-title-box h3{
+  text-align: center;
+  margin-bottom: 16px;
+  color: #213941;
+}
+
 /* Start table */
 .table-container {
   position: relative;

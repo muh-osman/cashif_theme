@@ -6,7 +6,7 @@
 function wpdocs_cashif_theme_scripts()
 {
 
-    $version = '1.0.6';
+    $version = '1.0.7';
 
     // Enqueue CSS
     wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
