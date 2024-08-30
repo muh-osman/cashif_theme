@@ -273,6 +273,7 @@ const submit = async () => {
     // Handle any errors that occur during the API request to the new API
     console.error("Error:", error);
     button.innerHTML = "Search";
+    alert(error);
   }
 };
 
