@@ -169,6 +169,17 @@
         </div>
 
 
+        <footer>
+            <div>
+                <p>جميع الحقوق محفوظة © 2024 مركز كاشف</p>
+            </div>
+            <div class="footer-links-box">
+                <a href="https://cashif.cc/privacy-policy/">سياسة الخصوصية</a>
+                <a href="https://cashif.cc/return-policy/">سياسة الاسترجاع</a>
+                <a href="https://cashif.cc/terms-of-service/">شروط الخدمة</a>
+            </div>
+        </footer>
+
 
         <!--Start WhatsApp icon section-->
         <a id="whatsapp-btn" aria-label="WhatsApp Customer Service" class="sticky-icon" target="_blank" href="https://api.whatsapp.com/send?phone=966920019948&text=*أرغب بالتحدث مع خدمة العملاء*">

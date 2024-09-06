@@ -170,6 +170,18 @@
         </div>
 
 
+        <footer dir="ltr">
+            <div>
+                <p>All rights reserved © 2024 Cashif Center</p>
+            </div>
+            <div class=" footer-links-box">
+                <a href="https://cashif.cc/privacy-policy/en/">Privacy policy</a>
+                <a href="https://cashif.cc/return-policy/en/">Return policy</a>
+                <a href="https://cashif.cc/terms-of-service/en/">Terms of service</a>
+            </div>
+        </footer>
+
+
         <!--Start WhatsApp icon section-->
         <a id="whatsapp-btn" aria-label="WhatsApp Customer Service" class="sticky-icon" target="_blank" href="https://api.whatsapp.com/send?phone=966920019948&text=*I would like to speak with customer service*">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-whatsapp" viewbox="0 0 16 16">

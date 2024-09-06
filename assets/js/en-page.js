@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// WhatsApp Btn
+// Hide WhatsApp Btn
 const whatsappBtn = document.getElementById("whatsapp-btn");
 
 window.addEventListener("scroll", function () {

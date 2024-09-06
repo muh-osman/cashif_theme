@@ -6,7 +6,7 @@
 function wpdocs_cashif_theme_scripts()
 {
 
-    $version = '1.1.0';
+    $version = '1.1.1';
 
     // Enqueue CSS
     wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
@@ -24,6 +24,9 @@ function wpdocs_cashif_theme_scripts()
         '/\/check-it\/receipt\/\?plan=([^&]+)&model=([^&]+)&price=([^&]*)/' => 'ar-receipt',
         '/\/check-it\/en/' => 'en-check-it',
         '/\/check-it/' => 'ar-check-it',
+        '/\/privacy-policy/' => 'ar-en-privacy-policy',
+        '/\/return-policy/' => 'ar-en-return-policy',
+        '/\/terms-of-service/' => 'ar-en-terms-of-service',
         '/\/en/' => 'en',
         '/\//' => 'ar'
     ];
@@ -75,8 +78,14 @@ function custom_rewrite_rule()
     $rewrite_rules = [
         'en' => 30,
         'check-it/en' => 36,
+
         'check-it/receipt' => 45,
         'check-it/receipt/en' => 47,
+
+        'privacy-policy/en' => 57,
+        'return-policy/en' => 59,
+        'terms-of-service/en' => 61,
+
     ];
 
     // Loop through the rewrite rules and add them

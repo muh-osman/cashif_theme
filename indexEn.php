@@ -953,7 +953,7 @@
 
     <!--start footer section-->
     <footer dir="ltr" class="footer-section">
-        <div class="container">
+        <div class="container custom-container">
             <div class="row">
                 <div class="col-xl-4 col-lg-6 col-md-12 col-12">
                     <div class="footer-logo-img">
@@ -996,13 +996,13 @@
 
                 <div class="col-xl-8 col-lg-6 col-md-12 col-12">
                     <div class="row">
-                        <div class="col-xl-4 col-md-6 col-6">
+                        <div class="col-xl-3 col-md-6 col-6">
                             <div class="help-list">
                                 <h4>Our branches</h4>
                                 <ul>
                                     <li>
                                         <a href="https://maps.app.goo.gl/MiFGsgakfo62on7u8">
-                                            Riyadh - Al-Qadisiyah <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                            Riyadh - Al Qadisiyah <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                                 <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
                                                 <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
                                             </svg>
@@ -1029,24 +1029,16 @@
                             </div>
                         </div>
 
-                        <div class="col-xl-4 col-md-6 col-6">
+                        <div class="col-xl-3 col-md-6 col-6">
                             <div class="help-list">
                                 <h4>Cashif services</h4>
                                 <ul>
                                     <li>
-                                        <button aria-label="Cashif Servces Button">Pre-purchase inspection</button>
+                                        <a href="#prices">Pre-purchase inspection</a>
                                     </li>
 
                                     <li>
-                                        <button aria-label="Cashif Servces Button">Pre-travel inspection</button>
-                                    </li>
-
-                                    <li>
-                                        <button aria-label="Cashif Servces Button">Inspecting my own car</button>
-                                    </li>
-
-                                    <li>
-                                        <button aria-label="Cashif Servces Button">Maintenance check</button>
+                                        <a href="#prices">Pre-travel inspection</a>
                                     </li>
 
                                     <li>
@@ -1056,7 +1048,24 @@
                             </div>
                         </div>
 
-                        <div class="col-xl-4 col-lg-12 col-12 contact-us">
+                        <div class="col-xl-3 col-md-6 col-6">
+                            <div class="help-list">
+                                <h4>Legal</h4>
+                                <ul>
+                                    <li>
+                                        <a href="https://cashif.cc/privacy-policy/en/">Privacy policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://cashif.cc/return-policy/en/">Return policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://cashif.cc/terms-of-service/en/">Terms of service</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 col-6 contact-us">
                             <div class="footer-contact">
                                 <h4>Contact us</h4>
                                 <ul>
@@ -1064,7 +1073,7 @@
                                         <span>Customers service</span>
                                         <p><a href="tel:920019948">920019948</a></p>
                                     </li>
-                                    <li class="footer-contact-li">
+                                    <li class="footer-contact-li w-100">
                                         <span>Language:</span>
                                         <p><a href="https://cashif.cc/">Arabic (AR)</a></p>
                                     </li>
