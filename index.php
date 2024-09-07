@@ -77,7 +77,7 @@
                             </svg>
                         </div>
                         <h4>فحص الشراء</h4>
-                        <p>فحص جميع أجزاء المركبة المستعملة لمعرفة واكتشاف الأعطال والعيوب قبل اتخاذ قرار الشراء، خدمة مخصصة لمن هم <u>داخل الرياض او الدمام</u></p>
+                        <p>فحص جميع أجزاء المركبة المستعملة لمعرفة واكتشاف الأعطال والعيوب قبل اتخاذ قرار الشراء.</p>
                         <ul>
                             <li>
                                 <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
@@ -121,7 +121,7 @@
                             </svg>
                         </div>
                         <h4>خدمة مخدوم</h4>
-                        <p>حصلت سيارة مستعملة خارج الرياض أو الدمام؟ كاشف يفحصها عنك ويسهل عليك النقل والشحن, خدمة مخصصة لمن هم <u>خارج الرياض او الدمام</u></p>
+                        <p>حصلت سيارة مستعملة للبيع <u>وأنت خارج</u> الرياض أو الدمام ؟ كاشف يفحصها عنك ويسهل عليك إجراءات النقل والشحن.</p>
                         <ul>
                             <li>
                                 <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
@@ -1040,11 +1040,7 @@
                                 <h4>خدمات كاشف</h4>
                                 <ul>
                                     <li>
-                                        <a href="#prices">فحص ماقبل الشراء</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#prices">فحص ماقبل السفر</a>
+                                        <a href="#prices">فحص ما قبل الشراء</a>
                                     </li>
 
                                     <li>
@@ -1056,18 +1052,15 @@
 
                         <div class="col-xl-3 col-md-6 col-6">
                             <div class="help-list">
-                                <h4>رعاية العميل</h4>
+                                <h4>روابط مهمة</h4>
                                 <ul>
 
                                     <li>
-                                        <a href="https://cashif.cc/privacy-policy/">سياسة الخصوصية</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://cashif.cc/return-policy/">سياسة الاسترجاع</a>
+                                        <a href="https://cashif.cc/terms-and-privacy-policy/">الأحكام والخصوصية</a>
                                     </li>
 
                                     <li>
-                                        <a href="https://cashif.cc/terms-of-service/">شروط الخدمة</a>
+                                        <a href="https://cashif.cc/return-policy/">الاسترجاع والاستبدال</a>
                                     </li>
 
                                 </ul>
@@ -1082,10 +1075,6 @@
                                         <span>خدمة العملاء</span>
                                         <p><a href="tel:920019948">920019948</a></p>
                                     </li>
-                                    <li class="footer-contact-li w-100">
-                                        <span>اللغة:</span>
-                                        <p><a href="https://cashif.cc/en">English (US)</a></p>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -1099,7 +1088,7 @@
 
             <div class="rights-section">
                 <div class="rights-info">
-                    <p>جميع الحقوق محفوظة © 2024 مركز كاشف</p>
+                    <p class="m-0 mt-4">جميع الحقوق محفوظة © 2024 مركز كاشف</p>
                 </div>
             </div>
         </div>

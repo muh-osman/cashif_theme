@@ -874,11 +874,7 @@
                                 <h4>خدمات كاشف</h4>
                                 <ul>
                                     <li>
-                                        <a href="https://cashif.cc/">فحص ماقبل الشراء</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="https://cashif.cc/">فحص ماقبل السفر</a>
+                                        <a href="https://cashif.cc/">فحص ما قبل الشراء</a>
                                     </li>
 
                                     <li>
@@ -890,18 +886,15 @@
 
                         <div class="col-xl-3 col-md-6 col-6">
                             <div class="help-list">
-                                <h4>رعاية العميل</h4>
+                                <h4>روابط مهمة</h4>
                                 <ul>
 
                                     <li>
-                                        <a href="https://cashif.cc/privacy-policy/">سياسة الخصوصية</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://cashif.cc/return-policy/">سياسة الاسترجاع</a>
+                                        <a href="https://cashif.cc/terms-and-privacy-policy/">الأحكام والخصوصية</a>
                                     </li>
 
                                     <li>
-                                        <a href="https://cashif.cc/terms-of-service/">شروط الخدمة</a>
+                                        <a href="https://cashif.cc/return-policy/">الاسترجاع والاستبدال</a>
                                     </li>
 
                                 </ul>
@@ -916,10 +909,6 @@
                                         <span>خدمة العملاء</span>
                                         <p><a href="tel:920019948">920019948</a></p>
                                     </li>
-                                    <li class="footer-contact-li">
-                                        <span>اللغة:</span>
-                                        <p><a href="https://cashif.cc/check-it/en/">English (US)</a></p>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -932,7 +921,7 @@
 
             <div class="rights-section">
                 <div class="rights-info">
-                    <p>جميع الحقوق محفوظة © 2024 مركز كاشف</p>
+                    <p class="m-0 mt-4">جميع الحقوق محفوظة © 2024 مركز كاشف</p>
                 </div>
             </div>
         </div>

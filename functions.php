@@ -27,6 +27,8 @@ function wpdocs_cashif_theme_scripts()
         '/\/privacy-policy/' => 'ar-en-privacy-policy',
         '/\/return-policy/' => 'ar-en-return-policy',
         '/\/terms-of-service/' => 'ar-en-terms-of-service',
+
+        '/\/terms-and-privacy-policy/' => 'ar-en-privacy-policy',
         '/\/en/' => 'en',
         '/\//' => 'ar'
     ];
@@ -85,6 +87,8 @@ function custom_rewrite_rule()
         'privacy-policy/en' => 57,
         'return-policy/en' => 59,
         'terms-of-service/en' => 61,
+
+        'terms-and-privacy-policy/en' => 65,
 
     ];
 

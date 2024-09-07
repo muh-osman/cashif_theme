@@ -78,7 +78,7 @@
                             </svg>
                         </div>
                         <h4>Purchase check</h4>
-                        <p>Inspecting all parts of the used vehicle to identify and discover faults and defects before making a purchase decision, a dedicated service for those <u>inside Riyadh or Dammam</u></p>
+                        <p>Inspect all parts of the used vehicle to identify and discover faults and defects before making a purchase decision.</p>
                         <ul>
                             <li>
                                 <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
@@ -122,7 +122,7 @@
                             </svg>
                         </div>
                         <h4>We check it for you</h4>
-                        <p>Found a used car outside Riyadh or Dammam? Cashif will check it for you and make it easy for you to transport and ship it, a service dedicated to those <u>outside Riyadh or Dammam</u></p>
+                        <p>Did you find a used car for sale <u>while you are outside</u> Riyadh or Dammam? Cashif will inspect it for you and facilitate the transportation and shipping procedures.</p>
                         <ul>
                             <li>
                                 <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
@@ -1038,10 +1038,6 @@
                                     </li>
 
                                     <li>
-                                        <a href="#prices">Pre-travel inspection</a>
-                                    </li>
-
-                                    <li>
                                         <a href="https://cashif.cc/check-it/en/">We check it for you</a>
                                     </li>
                                 </ul>
@@ -1053,13 +1049,10 @@
                                 <h4>Legal</h4>
                                 <ul>
                                     <li>
-                                        <a href="https://cashif.cc/privacy-policy/en/">Privacy policy</a>
+                                        <a href="https://cashif.cc/terms-and-privacy-policy/en/">Terms and Privacy</a>
                                     </li>
                                     <li>
-                                        <a href="https://cashif.cc/return-policy/en/">Return policy</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://cashif.cc/terms-of-service/en/">Terms of service</a>
+                                        <a href="https://cashif.cc/return-policy/en/">Return and exchange</a>
                                     </li>
                                 </ul>
                             </div>
@@ -1073,10 +1066,6 @@
                                         <span>Customers service</span>
                                         <p><a href="tel:920019948">920019948</a></p>
                                     </li>
-                                    <li class="footer-contact-li w-100">
-                                        <span>Language:</span>
-                                        <p><a href="https://cashif.cc/">Arabic (AR)</a></p>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -1089,7 +1078,7 @@
 
             <div class="rights-section">
                 <div class="rights-info">
-                    <p>All rights reserved © 2024 Cashif Center</p>
+                    <p class="m-0 mt-4">All rights reserved © 2024 Cashif Center</p>
                 </div>
             </div>
         </div>

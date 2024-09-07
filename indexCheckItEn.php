@@ -872,10 +872,6 @@
                                     </li>
 
                                     <li>
-                                        <a href="https://cashif.cc/en/">Pre-travel inspection</a>
-                                    </li>
-
-                                    <li>
                                         <a href="https://cashif.cc/check-it/en/">We check it for you</a>
                                     </li>
                                 </ul>
@@ -887,13 +883,10 @@
                                 <h4>Legal</h4>
                                 <ul>
                                     <li>
-                                        <a href="https://cashif.cc/privacy-policy/en/">Privacy policy</a>
+                                        <a href="https://cashif.cc/terms-and-privacy-policy/en/">Terms and Privacy</a>
                                     </li>
                                     <li>
-                                        <a href="https://cashif.cc/return-policy/en/">Return policy</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://cashif.cc/terms-of-service/en/">Terms of service</a>
+                                        <a href="https://cashif.cc/return-policy/en/">Return and exchange</a>
                                     </li>
                                 </ul>
                             </div>
@@ -907,10 +900,6 @@
                                         <span>Customers service</span>
                                         <p><a href="tel:920019948">920019948</a></p>
                                     </li>
-                                    <li class="footer-contact-li">
-                                        <span>Language:</span>
-                                        <p><a href="https://cashif.cc/check-it/">Arabic (AR)</a></p>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -923,7 +912,7 @@
 
             <div class="rights-section">
                 <div class="rights-info">
-                    <p>All rights reserved © 2024 Cashif Center</p>
+                    <p class="m-0 mt-4">All rights reserved © 2024 Cashif Center</p>
                 </div>
             </div>
         </div>
