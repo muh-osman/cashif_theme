@@ -521,7 +521,7 @@
                 <div class="col plane crown-box full-pane">
                     <div class="card mb-0 rounded-3 shadow-sm card-price">
                         <div class="card-header py-3 crown">
-                            <h4 class="my-0 fw-normal">All-in-one</h4>
+                            <h4 class="my-0 fw-normal">Full Inspection</h4>
                         </div>
                         <div class="card-body">
                             <h1 id="full-price" class="card-title pricing-card-title"></h1>

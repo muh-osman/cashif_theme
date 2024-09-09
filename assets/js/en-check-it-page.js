@@ -291,6 +291,6 @@ const palneB = () => {
 const palneC = () => {
   const priceC = parseFloat(newData[0].prices[0].price);
 
-  const url = `${currentDomain}${subdirectory}/check-it/receipt/en/?plan=All-in-one&model=${newData[0].model_name}&price=${priceC}`;
+  const url = `${currentDomain}${subdirectory}/check-it/receipt/en/?plan=Full-Inspection&model=${newData[0].model_name}&price=${priceC}`;
   window.location.href = url;
 };
