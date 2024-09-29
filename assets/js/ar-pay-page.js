@@ -8,11 +8,6 @@ const yearId = params.get("year_id");
 const carModelId = params.get("car_model_id");
 const priceId = params.get("price_id");
 
-const planSpan = document.getElementById("inspection-plane");
-planSpan.innerHTML = plan;
-
-// Flag to track if it's the initial load
-let isInitialLoad = true;
 //
 let name;
 let phone;
@@ -44,24 +39,10 @@ const fetchPrice = async () => {
     serv = newData[0].prices[priceId].service_name;
     mod = newData[0].model_name;
 
-    // console.log(newData[0].model_name);
-    // console.log(newData[0].prices[priceId].service_name);
-
-    mainDescription = `الخدمة(مخدوم) فحص(${serv}) موديل(${mod})`;
-    // console.log(mainDescription);
-
-    updateTotal();
-    // Set the flag to false after the initial load
-    isInitialLoad = false;
+    mainDescription = `فحص(${serv}) موديل(${mod})`;
 
     const spinner = document.getElementById("spinner");
     spinner.style.display = "none";
-
-    const pricePlane = document.getElementById("price-plane");
-    pricePlane.innerHTML = mainPrice;
-
-    const carModelName = document.getElementById("car-model-name");
-    carModelName.innerHTML = newData[0].model_name;
 
     // Initialize Moyasar with the initial amount
     updateMoyasarAmount(mainPrice, mainDescription, name, phone, branch);
@@ -95,15 +76,19 @@ document
 
 // Function to update the Moyasar amount
 function updateMoyasarAmount(total, description, name, phone, branch) {
-  // console.log(total, description, name, phone, branch);
-
   // Get the current domain
   const currentDomain = window.location.origin;
   // Subdirectory for development only
   const subdirectory =
     window.location.hostname === "localhost" ? "/cashif" : "";
   // Re-initialize Moyasar with the new amount
-  // console.log(description);
+
+  console.log("Total: ", total);
+  console.log("Description: ", description);
+  console.log("Name: ", name);
+  console.log("Phone: ", phone);
+  console.log("Branch: ", branch);
+
 
   Moyasar.init({
     element: ".mysr-form",
@@ -111,7 +96,7 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
     currency: "SAR",
     description: description,
     publishable_api_key: "pk_test_AvodBD5CyRDusKoYkfbiXzpk49uy2TxfEbYYpE4t",
-    callback_url: `${currentDomain}${subdirectory}/thanks`,
+    callback_url: `${currentDomain}${subdirectory}/thankyou`,
     methods: ["creditcard"],
 
     supported_networks: ["mada", "visa", "mastercard"],
@@ -131,67 +116,6 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
     },
   });
 }
-
-// Prices associated with each service
-const prices = {
-  "row-video": 45,
-  "row-ownership": 550,
-};
-
-// Function to update the total sum
-function updateTotal() {
-  // console.log(isInitialLoad);
-
-  // Loop through each checkbox to calculate the total
-  document.querySelectorAll(".control-table").forEach((checkbox) => {
-    const rowId = checkbox.getAttribute("data-row");
-    if (checkbox.checked) {
-      mainPrice += prices[rowId] || 0; // Add the price if the checkbox is checked
-    } else if (!isInitialLoad && !checkbox.checked) {
-      mainPrice -= prices[rowId] || 0; // Subtract the price if the checkbox is not checked and it's not the initial load
-    }
-  });
-
-  // Update the caption with the new total
-  const caption = document.querySelector(".table caption");
-  caption.textContent = `المجموع: ${mainPrice} ريال`;
-
-  const checkedValues = []; // Array to hold the values of checked checkboxes
-  // Loop through each checkbox with the class 'form-check-input'
-  document.querySelectorAll(".form-check-input").forEach((checkbox) => {
-    if (checkbox.checked) {
-      checkedValues.push(checkbox.value); // Add the value to the array if checked
-    }
-  });
-
-  mainDescription = `الخدمة(مخدوم) فحص(${serv}) موديل(${mod}) خدمات اضافية(${
-    checkedValues.join(", ") || "لايوجد"
-  })`;
-
-  // Update the Moyasar amount
-  updateMoyasarAmount(mainPrice, mainDescription, name, phone, branch);
-}
-
-// Add event listeners to checkboxes
-document.querySelectorAll(".control-table").forEach((checkbox) => {
-  checkbox.addEventListener("change", function () {
-    const rowId = this.getAttribute("data-row");
-    const row = document.getElementById(rowId);
-
-    // Show or hide the row based on checkbox state
-    if (this.checked) {
-      row.style.display = ""; // Show the row
-    } else {
-      row.style.display = "none"; // Hide the row
-    }
-
-    // Update the total after changing the visibility
-    updateTotal();
-  });
-});
-
-// Initial total calculation on page load
-updateTotal();
 
 // Hide WhatsApp Btn
 const whatsappBtn = document.getElementById("whatsapp-btn");

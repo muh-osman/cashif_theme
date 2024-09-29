@@ -4,9 +4,6 @@
 
     <div class="white-background">
 
-
-
-
         <!-- Start Section -->
         <section class="services-section">
 
@@ -134,10 +131,38 @@
             </div>
         </div>
 
-
+        <div>
+            <h2 id="car-model-name" class="text-center mt-4"></h2>
+        </div>
 
         <div class="table-container">
-            <div class="table-box">
+
+            <div class="inputs-containers">
+
+                <div style="width: fit-content; margin: auto;">
+                    <div class="mb-3">
+                        <label for="exampleName" class="form-label">الاسم الثلاثي*</label>
+                        <input type="text" class="form-control" id="exampleName" aria-describedby="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputphone" class="form-label">رقم الهاتف*</label>
+                        <input type="tel" class="form-control" id="exampleInputphone" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleBranch" class="form-label">الفرع*</label>
+                        <select class="form-select" id="exampleBranch" aria-label="Default select example" required>
+                            <option selected disabled>اختر فرع</option>
+                            <option value="الرياض-القادسية">الرياض - القادسية</option>
+                            <option value="الرياض-الشفا">الرياض - الشفا</option>
+                            <option value="الدمام">الدمام</option>
+                        </select>
+                    </div>
+
+                    <div class="mysr-form"></div>
+                </div>
+            </div>
+
+            <div class=" table-box">
                 <table class="table">
                     <caption style="padding-top: 24px;"></caption>
                     <thead>
@@ -163,9 +188,9 @@
                 </table>
             </div>
 
-            <button id="ask-serv-btn" class="discount-bttn">
+            <!-- <button id="ask-serv-btn" class="discount-bttn">
                 اطلب الخدمة
-            </button>
+            </button> -->
         </div>
 
 
@@ -181,6 +206,7 @@
         </footer>
 
 
+
         <!--Start WhatsApp icon section-->
         <a id="whatsapp-btn" aria-label="WhatsApp Customer Service" class="sticky-icon" target="_blank" href="https://api.whatsapp.com/send?phone=966920019948&text=*اختر من القائمة الرئيسية*">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-whatsapp" viewbox="0 0 16 16">
@@ -188,6 +214,13 @@
             </svg>
         </a>
         <!--End WhatsApp icon section-->
+
+
+        <div id="spinner" class="spinner">
+            <div class="spinner-border" style="margin: auto;" role="status">
+            </div>
+        </div>
+
     </div>
 
     <?php get_footer() ?>

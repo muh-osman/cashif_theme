@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -moz-border: 0;
+  font-family: "mont-reg";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #f0f1f3;
+  padding: 16px !important;
+  margin: 0px;
+  overflow-x: hidden;
+  direction: rtl;
+}
+
+@font-face {
+  font-family: "mont-bold";
+  src: url(../fonts/ArbFONTS-Montserrat-Arabic-Bold.ttf);
+}
+@font-face {
+  font-family: "mont-medium";
+  src: url(../fonts/ArbFONTS-Montserrat-Arabic-Medium.ttf);
+}
+@font-face {
+  font-family: "mont-reg";
+  src: url(../fonts/ArbFONTS-Montserrat-Arabic-Regular.ttf);
+}
+@font-face {
+  font-family: "mont-light";
+  src: url(../fonts/ArbFONTS-Montserrat-Arabic-Light.ttf);
+}
+@font-face {
+  font-family: "mont-semi";
+  src: url(../fonts/ArbFONTS-Montserrat-Arabic-SemiBold.ttf);
+}
+
+html {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 28px;
+}
+
+h4 {
+  color: #757575;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 625px) {
+  h4 {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  ul {
+    gap: 16px;
+  }
+
+  ul svg {
+    display: none;
+  }
+
+  ul a {
+    font-size: 14px;
+  }
+}
+
+/* Start QR */
+.qr-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* End QR */
+
+/* Start Whatsapp Icon */
+.sticky-icon {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  left: 30px;
+  bottom: 30px;
+  z-index: 9999;
+  background-color: #25d366;
+  border-radius: 100%;
+  color: #fff !important;
+  font-size: 32px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+@media (max-width: 625px) {
+  .sticky-icon {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+.hide-btn {
+  bottom: -66px;
+}
+
+/* End Whatsapp Icon */
+.thanks-box {
+  display: none;
+}
+.error-box {
+  display: none;
+  height: calc(100vh - 100px);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

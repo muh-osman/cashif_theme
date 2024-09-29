@@ -29,4 +29,17 @@ if (preg_match('/\/en\/?$/', $current_url)) {
     <!-- yoast seo will overwrite all meta -->
 
     <?php wp_head() ?>
+
+
+    <!-- Moyasar Styles -->
+    <link rel="stylesheet" href="https://cdn.moyasar.com/mpf/1.14.0/moyasar.css" />
+    <!-- Moyasar Scripts -->
+    <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=fetch"></script>
+    <script src="https://cdn.moyasar.com/mpf/1.14.0/moyasar.js"></script>
+
+
+    <!-- QrCode -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+
+
 </head>

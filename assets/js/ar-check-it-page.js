@@ -281,16 +281,18 @@ const submit = async () => {
 
 // الخطة الاساسية
 const palneB = () => {
-  const priceB = parseFloat(newData[0].prices[1].price);
+  // const priceB = parseFloat(newData[0].prices[1].price);
 
-  const url = `${currentDomain}${subdirectory}/check-it/receipt/?plan=أساسي&model=${newData[0].model_name}&price=${priceB}`;
+  const url = `${currentDomain}${subdirectory}/check-it/receipt/?plan=أساسي&year_id=${yearValue}&car_model_id=${clickedButtonId}&price_id=1`;
+
   window.location.href = url;
 };
 
 // الخطة الشاملة
 const palneC = () => {
-  const priceC = parseFloat(newData[0].prices[0].price);
+  // const priceC = parseFloat(newData[0].prices[0].price);
 
-  const url = `${currentDomain}${subdirectory}/check-it/receipt/?plan=شامل&model=${newData[0].model_name}&price=${priceC}`;
+  const url = `${currentDomain}${subdirectory}/check-it/receipt/?plan=شامل&year_id=${yearValue}&car_model_id=${clickedButtonId}&price_id=0`;
+
   window.location.href = url;
 };

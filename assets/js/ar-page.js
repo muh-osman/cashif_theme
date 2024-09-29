@@ -200,8 +200,9 @@ inputElement.addEventListener("keyup", debouncedSearch);
 
 // Submit form
 let newData;
+let yearValue;
 const submit = async () => {
-  let yearValue = document.getElementById("dropdownButton").dataset.value;
+  yearValue = document.getElementById("dropdownButton").dataset.value;
   let button = document.querySelector(".submit-btn");
 
   // Check if model is not selected
@@ -282,22 +283,22 @@ const submit = async () => {
 
 // Whatsapp Plane btn
 const palneA = () => {
-  const url =
-    "https://wa.me/966920019948?text=*توجه مباشرة الى أقرب فرع لك، لن تحتاج الى حجز موعد.*";
+  // const url = "https://wa.me/966920019948?text=*توجه مباشرة الى أقرب فرع لك، لن تحتاج الى حجز موعد.*";
+  const url = `${currentDomain}${subdirectory}/pay/?plan=محركات&year_id=${yearValue}&car_model_id=${clickedButtonId}&price_id=2`;
 
   window.location.href = url;
 };
 
 const palneB = () => {
-  const url =
-    "https://wa.me/966920019948?text=*توجه مباشرة الى أقرب فرع لك، لن تحتاج الى حجز موعد.*";
+  // const url = "https://wa.me/966920019948?text=*توجه مباشرة الى أقرب فرع لك، لن تحتاج الى حجز موعد.*";
+  const url = `${currentDomain}${subdirectory}/pay/?plan=أساسي&year_id=${yearValue}&car_model_id=${clickedButtonId}&price_id=1`;
 
   window.location.href = url;
 };
 
 const palneC = () => {
-  const url =
-    "https://wa.me/966920019948?text=*توجه مباشرة الى أقرب فرع لك، لن تحتاج الى حجز موعد.*";
+  // const url = "https://wa.me/966920019948?text=*توجه مباشرة الى أقرب فرع لك، لن تحتاج الى حجز موعد.*";
+  const url = `${currentDomain}${subdirectory}/pay/?plan=شامل&year_id=${yearValue}&car_model_id=${clickedButtonId}&price_id=0`;
 
   window.location.href = url;
 };

@@ -135,12 +135,43 @@
             </div>
         </div>
 
+        <div>
+            <h2 id="car-model-name" class="text-center mt-4"></h2>
+        </div>
 
 
         <div class="table-container">
+
+            <div class="inputs-containers">
+
+                <div style="width: fit-content; margin: auto;">
+                    <div class="mb-3">
+                        <label for="exampleName" class="form-label">Full name*</label>
+                        <input type="text" class="form-control" id="exampleName" aria-describedby="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputphone" class="form-label">Phone number*</label>
+                        <input type="tel" class="form-control" id="exampleInputphone" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleBranch" class="form-label">Branch*</label>
+                        <select class="form-select" id="exampleBranch" aria-label="Default select example" required>
+                            <option selected disabled>Choose a branch</option>
+                            <option value="الرياض-القادسية">Riyadh - Al-Qadisiyah</option>
+                            <option value="الرياض-الشفا">Riyadh - Al-Shifa</option>
+                            <option value="الدمام">Dammam</option>
+                        </select>
+                    </div>
+
+                    <div class="mysr-form"></div>
+                </div>
+            </div>
+
+
+
             <div class="table-box">
                 <table dir="ltr" class="table">
-                    <caption dir="ltr" style="padding-top: 24px;"></caption>
+                    <caption dir="ltr"></caption>
                     <thead>
                         <tr>
                             <th scope="col">Service Type</th>
@@ -164,9 +195,9 @@
                 </table>
             </div>
 
-            <button id="ask-serv-btn" class="discount-bttn">
+            <!-- <button id="ask-serv-btn" class="discount-bttn">
                 Order
-            </button>
+            </button> -->
         </div>
 
 
@@ -189,6 +220,11 @@
             </svg>
         </a>
         <!--End WhatsApp icon section-->
+
+        <div id="spinner" class="spinner">
+            <div class="spinner-border" style="margin: auto;" role="status">
+            </div>
+        </div>
 
     </div>
 
