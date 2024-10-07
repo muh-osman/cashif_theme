@@ -8,7 +8,38 @@
 
             <div class="inputs-containers">
 
-                <div style="width: fit-content; margin: auto;">
+                <div class="p-2">
+
+                    <h4 class="mb-4" style="color: #1A1A1AE6;">طلبك</h4>
+
+                    <div style="color: #747a79;">
+                        <div class="d-flex justify-content-between" style="border-bottom: 1px solid #ececec;">
+                            <h6 style="font-size: 15px;">الباقة</h6>
+                            <h6 style="font-size: 15px;">المجموع</h6>
+                        </div>
+                    </div>
+
+                    <div style="color: #747a79;">
+                        <div class="d-flex justify-content-between mb-0 mt-4">
+                            <h6 style="font-size: 15px;" class="m-0">فحص <span id="plan"></span></h6>
+                            <h6 style="font-size: 15px;" class="m-0" style="color: #1A1A1AE6;"><span id="price"></span> ريال</h6>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p id="model" style="color: #1A1A1AE6; font-size: 12px;"></p>
+                    </div>
+
+                    <div class="mb-4" style="color: #747a79; border-top: 1px solid #ececec;">
+                        <div class="d-flex justify-content-between mt-2">
+                            <h6 style="font-size: 15px;">الإجمالي</h6>
+                            <h6 style="font-size: 15px;"><span style="color: #1A1A1AE6;" id="total"></span> <span style="color: #1A1A1AE6;">ريال</span></h6>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div style="width: 100%; margin: auto;">
                     <div class="mb-3">
                         <label for="exampleName" class="form-label">الاسم الثلاثي*</label>
                         <input type="text" class="form-control" id="exampleName" aria-describedby="name" required>
@@ -27,19 +58,33 @@
                         </select>
                     </div>
 
+                    <div class=" mb-4 pt-2 pb-2" style="border-top: 1px solid #ececec; border-bottom: 1px solid #ececec;">
+                        <div class="form-check form-check-reverse" style="border-bottom: 1px solid #ececec;">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2" style="color: #1A1A1AE6;">
+                                دفع الكتروني
+                                <p style="color: #747a79; font-size: 11px; margin-top: 6px;">ادفع باستخدام بطاقة الإئتمان, Mada, Visa, MasterCard</p>
+                            </label>
+                        </div>
+
+                        <div class="form-check form-check-reverse pt-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1" style="color: #1A1A1AE6;">
+                                دفع في المركز
+                                <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">قم بالدفع عند حضورك الى أحد فروع كاتشف</p>
+                            </label>
+                        </div>
+                    </div>
+
                     <div class="mysr-form"></div>
+
+                    <div class="pay-in-center text-center mb-4 mt-4">
+                        <button id="pay-in-center-btn" class="btn btn-primary" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">تأكيد الطلب</button>
+                    </div>
                 </div>
             </div>
 
         </div>
-
-        <div>
-            <div class="line">
-                <span>أو</span>
-            </div>
-        </div>
-
-        <h4 class="text-center p-4" style="color: #1A1A1AE6;">الدفع في المركز</h4>
 
 
         <footer>

@@ -15,7 +15,7 @@
             </svg>
         </div>
 
-        <h3 class="mt-3 text-center">تم الدفع</h3>
+        <h3 id="done" class="mt-3 text-center">تم الدفع</h3>
         <h4 class="mt-4 text-center">قم بحفظ الباركود، لإبرازه لموظف الاستقبال في الفرع المحدد لإتمام إجراءات الفحص.</h4>
         <ul class="list-unstyled">
             <li>
@@ -65,6 +65,11 @@
         </svg>
     </a>
     <!--End WhatsApp icon section-->
+
+    <div id="spinner" class="spinner">
+        <div class="spinner-border" style="margin: auto;" role="status">
+        </div>
+    </div>
 
 
     <?php get_footer() ?>
