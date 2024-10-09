@@ -15,7 +15,7 @@
             </svg>
         </div>
 
-        <h3 class="mt-3 text-center">Done</h3>
+        <h3 id="done" class="mt-3 text-center">Done</h3>
         <h4 dir="ltr" class="m-auto mt-4 text-center" style="max-width: 675px;">Ask the car owner to go to the specified branch and show the following barcode to the receptionist to complete the inspection procedures.</h4>
         <ul class="list-unstyled">
             <li>
@@ -65,6 +65,12 @@
         </svg>
     </a>
     <!--End WhatsApp icon section-->
+
+
+    <div id="spinner" class="spinner">
+        <div class="spinner-border" style="margin: auto;" role="status">
+        </div>
+    </div>
 
 
     <?php get_footer() ?>

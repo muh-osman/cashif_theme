@@ -105,6 +105,13 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
   // Re-initialize Moyasar with the new amount
   // console.log(description);
 
+  console.log("Total: ", total);
+  console.log("Description: ", description);
+  console.log("Name: ", name);
+  console.log("Phone: ", phone);
+  console.log("Branch: ", branch);
+  console.log("additionalServices: ", checkedValues.join(", ") || "لايوجد");
+
   Moyasar.init({
     element: ".mysr-form",
     amount: total * 100, // Convert to smallest currency unit
@@ -120,6 +127,15 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
       name: name,
       phone: phone,
       branch: branch,
+
+      year: yearId,
+
+      plan: serv,
+      model: mod,
+      price: total,
+
+      service: "مخدوم",
+      additionalServices: checkedValues.join(", ") || "لايوجد",
     },
 
     on_initiating: function () {
@@ -138,8 +154,10 @@ const prices = {
   "row-ownership": 550,
 };
 
+let checkedValues = []; // Array to hold the values of checked checkboxes
 // Function to update the total sum
 function updateTotal() {
+  checkedValues = []; // Reset the array before calculating the total again
   // console.log(isInitialLoad);
 
   // Loop through each checkbox to calculate the total
@@ -154,11 +172,10 @@ function updateTotal() {
 
   // Update the caption with the new total
   const caption = document.querySelector(".table caption");
-  caption.textContent = `المجموع: ${mainPrice} ريال`;
+  caption.textContent = `الاجمالي: ${mainPrice} ريال`;
 
-  const checkedValues = []; // Array to hold the values of checked checkboxes
-  // Loop through each checkbox with the class 'form-check-input'
-  document.querySelectorAll(".form-check-input").forEach((checkbox) => {
+  // Loop through each checkbox with the class 'checked-input'
+  document.querySelectorAll(".checked-input").forEach((checkbox) => {
     if (checkbox.checked) {
       checkedValues.push(checkbox.value); // Add the value to the array if checked
     }
@@ -192,6 +209,57 @@ document.querySelectorAll(".control-table").forEach((checkbox) => {
 
 // Initial total calculation on page load
 updateTotal();
+
+// Function to toggle visibility based on selected radio button
+function toggleForms() {
+  const formMysr = document.querySelector(".mysr-form");
+  const formPayInCenter = document.querySelector(".pay-in-center");
+
+  // Check if flexRadioDefault2 is checked
+  if (document.getElementById("flexRadioDefault2").checked) {
+    formMysr.style.display = "block"; // Show mysr-form
+    formPayInCenter.style.display = "none"; // Hide pay-in-center
+  } else if (document.getElementById("flexRadioDefault1").checked) {
+    formMysr.style.display = "none"; // Hide mysr-form
+    formPayInCenter.style.display = "block"; // Show pay-in-center
+  }
+}
+
+// Add event listeners to radio buttons
+document
+  .getElementById("flexRadioDefault1")
+  .addEventListener("change", toggleForms);
+document
+  .getElementById("flexRadioDefault2")
+  .addEventListener("change", toggleForms);
+
+// Initial call to set the correct display at page load
+window.onload = toggleForms;
+
+//
+const payInCenterBtn = document.getElementById("pay-in-center-btn");
+payInCenterBtn.addEventListener("click", function () {
+  if (!name || !phone || !branch || branch === "اختر فرع") {
+    alert("جميع الحقول مطلوبة!");
+    return false;
+  }
+  const origin = window.location.origin; // https://example.com
+  const sub = window.location.hostname === "localhost" ? "/cashif" : "";
+  // Random string 14 Char
+  const randomString = Array.from(
+    { length: 14 },
+    () =>
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"[
+        Math.floor(Math.random() * 62)
+      ]
+  ).join("");
+
+  const url = `${origin}${sub}/thanks/?id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${mainPrice}&model=${mod}&yearId=${yearId}&additionalServices=${
+    checkedValues.join(", ") || "لايوجد"
+  }`;
+
+  window.location.href = url;
+});
 
 // Hide WhatsApp Btn
 const whatsappBtn = document.getElementById("whatsapp-btn");

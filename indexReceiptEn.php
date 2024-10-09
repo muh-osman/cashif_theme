@@ -50,35 +50,35 @@
             <div class="inputs-box">
 
                 <div class="form-check mb-3">
-                    <input class="form-check-input control-table" type="checkbox" value="Shooting a video" id="reverseCheck1" data-row="row-video">
+                    <input class="form-check-input control-table checked-input" type="checkbox" value="Shooting a video" id="reverseCheck1" data-row="row-video">
                     <label class="form-check-label small-text-in-small-screeen" for="reverseCheck1">
                         Shooting video of the car (+45 SAR)
                     </label>
                 </div>
 
                 <div class="form-check mb-3">
-                    <input class="form-check-input" type="checkbox" value="mobile inspection" id="reverseCheck2" data-row="row-mobile-inspection" disabled>
+                    <input class="form-check-input checked-input" type="checkbox" value="mobile inspection" id="reverseCheck2" data-row="row-mobile-inspection" disabled>
                     <label class="form-check-label small-text-in-small-screeen" for="reverseCheck2">
                         Mobile inspection (Soon)
                     </label>
                 </div>
 
                 <!-- <div class="form-check mb-3">
-                    <input class="form-check-input control-table" type="checkbox" value="Ownership transfer" id="reverseCheck3" data-row="row-ownership">
+                    <input class="form-check-input control-table checked-input" type="checkbox" value="Ownership transfer" id="reverseCheck3" data-row="row-ownership">
                     <label class="form-check-label small-text-in-small-screeen" for="reverseCheck3">
                         Car ownership transfer (+550 SAR)
                     </label>
                 </div> -->
 
                 <!-- <div class="form-check mb-3">
-                    <input class="form-check-input" type="checkbox" value="Car insurance" id="reverseCheck4">
+                    <input class="form-check-input checked-input" type="checkbox" value="Car insurance" id="reverseCheck4">
                     <label class="form-check-label small-text-in-small-screeen" for="reverseCheck4">
                         Car insurance (not specified)
                     </label>
                 </div> -->
 
                 <!-- <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Car Shipping" id="reverseCheck5">
+                    <input class="form-check-input checked-input" type="checkbox" value="Car Shipping" id="reverseCheck5">
                     <label class="form-check-label small-text-in-small-screeen" for="reverseCheck5">
                         Shipping the car to you (10% discount)
                     </label>
@@ -135,69 +135,96 @@
             </div>
         </div>
 
-        <div>
+        <!-- <div>
             <h2 id="car-model-name" class="text-center mt-4"></h2>
-        </div>
+        </div> -->
 
 
         <div class="table-container">
 
-            <div class="inputs-containers">
 
-                <div style="width: fit-content; margin: auto;">
-                    <div class="mb-3">
-                        <label for="exampleName" class="form-label">Full name*</label>
-                        <input type="text" class="form-control" id="exampleName" aria-describedby="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputphone" class="form-label">Phone number*</label>
-                        <input type="tel" class="form-control" id="exampleInputphone" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="exampleBranch" class="form-label">Branch*</label>
-                        <select class="form-select" id="exampleBranch" aria-label="Default select example" required>
-                            <option selected disabled>Choose a branch</option>
-                            <option value="الرياض-القادسية">Riyadh - Al-Qadisiyah</option>
-                            <option value="الرياض-الشفا">Riyadh - Al-Shifa</option>
-                            <option value="الدمام">Dammam</option>
-                        </select>
-                    </div>
+            <div class="box">
+                <div class="table-box">
 
-                    <div class="mysr-form"></div>
+                    <h4 class="mb-4" style="color: #1A1A1AE6;">Order</h4>
+
+                    <table dir="ltr" class="table">
+                        <caption dir="ltr"></caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Service plan</th>
+                                <th class="text-center" scope="col">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span id="inspection-plane"></span></td>
+                                <td class="text-center"><span id="price-plane"></span> SAR</td>
+                            </tr>
+                            <tr id="row-video" style="display: none;">
+                                <td>Shooting a video</td>
+                                <td class="text-center">45 SAR</td>
+                            </tr>
+                            <tr id="row-ownership" style="display: none;">
+                                <td>Ownership transfer</td>
+                                <td class="text-center">550 SAR</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <div class="inputs-containers">
+
+                    <div>
+                        <div class="mb-3">
+                            <label for="exampleName" class="form-label">Full name*</label>
+                            <input type="text" class="form-control" id="exampleName" aria-describedby="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputphone" class="form-label">Phone number*</label>
+                            <input type="tel" class="form-control" id="exampleInputphone" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="exampleBranch" class="form-label">Branch*</label>
+                            <select class="form-select" id="exampleBranch" aria-label="Default select example" required>
+                                <option selected disabled>Choose a branch</option>
+                                <option value="الرياض-القادسية">Riyadh - Al-Qadisiyah</option>
+                                <option value="الرياض-الشفا">Riyadh - Al-Shifa</option>
+                                <option value="الدمام">Dammam</option>
+                            </select>
+                        </div>
+
+                        <div dir="ltr" class=" mb-4 pt-2 pb-2" style="border-top: 1px solid #ececec; border-bottom: 1px solid #ececec;">
+                            <div dir="ltr" class="form-check" style="border-bottom: 1px solid #ececec;">
+                                <input dir="ltr" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label dir="ltr" class="form-check-label" for="flexRadioDefault2" style="color: #1A1A1AE6;">
+                                    Electronic payment
+                                    <p style="color: #747a79; font-size: 11px; margin-top: 6px;">Pay with credit card, Mada, Visa, MasterCard</p>
+                                </label>
+                            </div>
+
+                            <div dir="ltr" class="form-check pt-2">
+                                <input dir="ltr" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label dir="ltr" class="form-check-label" for="flexRadioDefault1" style="color: #1A1A1AE6;">
+                                    Pay at the center
+                                    <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">Pay at one of the Cashif branches</p>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="mysr-form"></div>
+
+
+                        <div class="pay-in-center text-center mb-4 mt-4">
+                            <button id="pay-in-center-btn" class="btn btn-primary" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">Confirm order</button>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
-
-
-            <div class="table-box">
-                <table dir="ltr" class="table">
-                    <caption dir="ltr"></caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Service Type</th>
-                            <th class="text-center" scope="col">Unit price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Plan <span id="inspection-plane"></span></td>
-                            <td class="text-center"><span id="price-plane"></span> SAR</td>
-                        </tr>
-                        <tr id="row-video" style="display: none;">
-                            <td>Shooting a video</td>
-                            <td class="text-center">45 SAR</td>
-                        </tr>
-                        <tr id="row-ownership" style="display: none;">
-                            <td>Ownership transfer</td>
-                            <td class="text-center">550 SAR</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- <button id="ask-serv-btn" class="discount-bttn">
-                Order
-            </button> -->
         </div>
 
 
