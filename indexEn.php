@@ -690,7 +690,8 @@
                             <h4 class="my-0 fw-normal">Full Inspection</h4>
                         </div>
                         <div class="card-body">
-                            <h1 id="full-price" class="card-title pricing-card-title"></h1>
+                            <h1 id="full-price" class="card-title pricing-card-title" style="margin-bottom: 0"></h1>
+                            <h3 id="old-price" class="text-decoration-line-through" style="margin-bottom: 5px; font-size: 16px; color: #757575"></h3>
                             <h5>Check includes:</h5>
                             <ul dir="ltr" class="list-unstyled mt-3 mb-4">
                                 <li>

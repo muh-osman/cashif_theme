@@ -1520,12 +1520,12 @@ form {
 
 .crown-box::after {
   position: absolute;
-  content: "شائع";
+  content: "حسم 20%";
   top: 15px;
   left: -50px;
   width: 175px;
   height: 47px;
-  font-size: 18px;
+  font-size: 16px;
   background-color: #e6d39c;
   transform: rotate(315deg);
   color: #000;

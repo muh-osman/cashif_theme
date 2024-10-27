@@ -21,7 +21,7 @@ let mod;
 const fetchPrice = async () => {
   try {
     const response = await fetch(
-      `https://cashif.online/back-end/public/api/get-prices-by-model-and-year?car_model_id=${carModelId}&year_id=${yearId}`,
+      `https://cashif.online/back-end/public/api/get-discounted-prices-by-model-and-year?car_model_id=${carModelId}&year_id=${yearId}`,
       {
         method: "GET",
         headers: {
@@ -100,7 +100,7 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
     amount: total * 100, // Convert to smallest currency unit
     currency: "SAR",
     description: description,
-    publishable_api_key: "pk_test_AvodBD5CyRDusKoYkfbiXzpk49uy2TxfEbYYpE4t",
+    publishable_api_key: "",
     callback_url: `${currentDomain}${subdirectory}/thankyou/en`,
     methods: ["creditcard"],
 

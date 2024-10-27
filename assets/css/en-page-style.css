@@ -1384,12 +1384,12 @@ form {
 
 .crown-box::after {
   position: absolute;
-  content: "Popular";
+  content: "20% OFF";
   top: 7px;
   right: -58px;
   width: 175px;
   height: 47px;
-  font-size: 18px;
+  font-size: 14px;
   background-color: #e6d39c;
   transform: rotate(404deg);
   color: #000;

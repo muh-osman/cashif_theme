@@ -227,7 +227,7 @@ const submit = async () => {
 
   try {
     const response = await fetch(
-      `https://cashif.online/back-end/public/api/get-prices-by-model-and-year?car_model_id=${clickedButtonId}&year_id=${yearValue}`,
+      `https://cashif.online/back-end/public/api/get-discounted-prices-by-model-and-year?car_model_id=${clickedButtonId}&year_id=${yearValue}`,
       {
         method: "GET",
         headers: {
@@ -254,6 +254,11 @@ const submit = async () => {
     const fullPrice = document.getElementById("full-price");
     fullPrice.textContent = `${
       newData[0].prices[0].price * (1).toFixed(2)
+    } SAR`;
+
+    // old price
+    document.getElementById("old-price").innerHTML = `${
+      (newData[0].prices[0].price * (1).toFixed(2)) / 0.8
     } SAR`;
 
     //
