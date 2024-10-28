@@ -1486,9 +1486,9 @@ form {
   width: 175px;
   height: 47px;
   font-size: 14px;
-  background-color: #e6d39c;
+  background-color: #d32f2f;
   transform: rotate(404deg);
-  color: #000;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;

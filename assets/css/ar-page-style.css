@@ -1382,15 +1382,15 @@ form {
 
 .crown-box::after {
   position: absolute;
-  content: "حسم 20%";
+  content: "خصم 20%";
   top: 15px;
   left: -50px;
   width: 175px;
   height: 47px;
   font-size: 16px;
-  background-color: #e6d39c;
+  background-color: #d32f2f;
   transform: rotate(315deg);
-  color: #000;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;

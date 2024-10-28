@@ -115,9 +115,7 @@
 
         <div>
             <div class="text-center p-2 pt-0 note-box">
-                <p class="small-text-in-small-screeen">In collaboration with <span>insurance companies</span>, we help you obtain suitable insurance.</p>
-                <p class="small-text-in-small-screeen">Please note that <span>insurance prices vary</span> depending on the vehicle and the individual.</p>
-                <p class="small-text-in-small-screeen m-0">Vehicle insurance prices start at <span>approximately 800 SAR</span>.</p>
+                <p class="small-text-in-small-screeen m-0">In collaboration with <span>insurance companies</span>, we help you obtain suitable insurance.</p>
             </div>
         </div>
 
@@ -129,9 +127,7 @@
 
         <div>
             <div class="text-center p-2 pt-0 note-box">
-                <p class="small-text-in-small-screeen">In collaboration with <span>Al-Bassami Company</span> for vehicle shipping, we offer you a <span>10%</span> discount on the total invoice.</p>
-                <p class="small-text-in-small-screeen">Please note that <span>prices vary</span> depending on the vehicle and the city.</p>
-                <p class="mb-4 small-text-in-small-screeen">Vehicle shipping prices start at <span>approximately 350 SAR</span>.</p>
+                <p class="mb-4 small-text-in-small-screeen">In collaboration with <span>Al-Bassami Company</span> for vehicle shipping, we offer you a <span>10%</span> discount on the total invoice.</p>
             </div>
         </div>
 

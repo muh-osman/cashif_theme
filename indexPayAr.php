@@ -71,7 +71,7 @@
                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                             <label class="form-check-label" for="flexRadioDefault1" style="color: #1A1A1AE6;">
                                 دفع في المركز
-                                <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">قم بالدفع عند حضورك الى أحد فروع كاتشف</p>
+                                <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">قم بالدفع عند حضورك الى أحد فروع كاشف</p>
                             </label>
                         </div>
                     </div>

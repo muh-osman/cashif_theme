@@ -111,9 +111,7 @@
 
         <div>
             <div class="text-center p-2 pt-0 note-box">
-                <p class="small-text-in-small-screeen">بالتعاون مع <span>شركات التأمين</span>, نسهل عليك الحصول على تأمين مناسب لك</p>
-                <p class="small-text-in-small-screeen">مع العلم أسعار <span>تأمين السيارة تختلف</span> على حسب السيارة وعلى حسب الشخص</p>
-                <p class="small-text-in-small-screeen m-0">أسعار تأمين السيارات تبدأ بـ800 ريال <span>تقريبا</span></p>
+                <p class="small-text-in-small-screeen m-0">بالتعاون مع <span>شركات التأمين</span>, نسهل عليك الحصول على تأمين مناسب لك</p>
             </div>
         </div>
 
@@ -125,9 +123,7 @@
 
         <div>
             <div class="text-center p-2 pt-0 note-box">
-                <p class="small-text-in-small-screeen">بالتعاون مع <span>شركة البسامي</span> لشحن السيارات, نقدم لك خصم <span>%10</span> من اجمالي الفاتورة.</p>
-                <p class="small-text-in-small-screeen">مع العلم <span>الأسعار تختلف</span> على حسب السيارة وعلى حسب المدينة.</p>
-                <p class="mb-4 small-text-in-small-screeen">أسعار شحن السيارات تبدأ بـ 350 ريال <span>تقريبا</span>.</p>
+                <p class="mb-4 small-text-in-small-screeen">بالتعاون مع <span>شركة البسامي</span> للنقليات, نقدم لك خصم <span>%10</span> من اجمالي الفاتورة.</p>
             </div>
         </div>
 
@@ -202,7 +198,7 @@
                                 <input class="form-check-input" type="radio" style="width: 1em;" name="flexRadioDefault" id="flexRadioDefault1">
                                 <label class="form-check-label" for="flexRadioDefault1" style="color: #1A1A1AE6;">
                                     دفع في المركز
-                                    <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">قم بالدفع عند حضورك الى أحد فروع كاتشف</p>
+                                    <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">قم بالدفع عند حضورك الى أحد فروع كاشف</p>
                                 </label>
                             </div>
                         </div>

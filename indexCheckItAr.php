@@ -12,6 +12,11 @@
 
         <div class="container p-0">
             <div class="intro-content">
+                <div class="logo-img" style="margin-bottom: 16px;" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                    <a href="https://cashif.cc/">
+                        <img src=<?php echo get_template_directory_uri() . '/assets/images/logo.webp' ?> alt="Cashif logo" />
+                    </a>
+                </div>
                 <div class="discount-details">
                     <h6 class="first-title">
                         <span>
@@ -251,12 +256,12 @@
             </div>
             <div class="how-we-box">
                 <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                        <path d="M384 96V320H64L64 96H384zM64 32C28.7 32 0 60.7 0 96V320c0 35.3 28.7 64 64 64H181.3l-10.7 32H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H352c17.7 0 32-14.3 32-32s-14.3-32-32-32H277.3l-10.7-32H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm464 0c-26.5 0-48 21.5-48 48V432c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48H528zm16 64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H544c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-16 80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H544c-8.8 0-16-7.2-16-16zm32 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path d="M400 0L176 0c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8L24 64C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9L192 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l192 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-26.1 0C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24L446.4 64c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112l84.4 0c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6l84.4 0c-5.1 66.3-31.1 111.2-63 142.3z" />
                     </svg>
                 </div>
-                <h2>استخدام أحدث الأجهزة</h2>
-                <p>استخدام تقنيات الفحص المتقدمة والأجهزة الحديثة لضمان دقة وسلامة الفحص</p>
+                <h2>نقاط ولاء للعملاء</h2>
+                <p>كل زيارة لمركز كاشف تحصل على رصيد مجاني تستفيد منه في الفحص القادم</p>
             </div>
             <div class="how-we-box">
                 <div>
@@ -522,13 +527,13 @@
                     </div>
                 </div>
                 <div class="col plane crown-box full-pane">
-                    <div class="card mb-0 rounded-3 shadow-sm card-price">
+                    <div class="card mb-0 rounded-3 shadow-sm card-price" style="border: 2px solid #174545;">
                         <div class="card-header py-3 crown">
                             <h4 class="my-0 fw-normal">الشامل</h4>
                         </div>
                         <div class="card-body">
                             <h1 id="full-price" class="card-title pricing-card-title" style="margin-bottom: 0"></h1>
-                            <h3 id="old-price" class="text-decoration-line-through" style="margin-bottom: 5px; font-size: 16px; color: #757575"></h3>
+                            <h3 id="old-price" style="margin-bottom: 5px; font-size: 16px; color: #d32f2f"></h3>
                             <h5>تشمل فحص:</h5>
                             <ul class="list-unstyled mt-3 mb-4">
                                 <li>

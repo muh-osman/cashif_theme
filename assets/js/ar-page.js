@@ -261,9 +261,14 @@ const submit = async () => {
     } ريال`;
 
     // old price
-    document.getElementById("old-price").innerHTML = `${
-      (newData[0].prices[0].price * (1).toFixed(2)) / 0.8
-    } ريال`;
+    document.getElementById("old-price").innerHTML = `
+    <span class="text-decoration-line-through">
+    ${(newData[0].prices[0].price * (1).toFixed(2)) / 0.8} ريال
+    </span>
+    <span style="text-decoration: none; color: #25d366; background-color: #dff1d9; margin-right: 6px; padding: 0 5px; border-radius: 2px; font-size: 16px;">وفر ${
+      (newData[0].prices[0].price * (1).toFixed(2)) / 0.8 -
+      newData[0].prices[0].price * (1).toFixed(2)
+    } ريال</span>`;
 
     //
     const overlay = document.getElementById("overlay");
