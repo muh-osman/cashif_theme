@@ -44,6 +44,10 @@
                     </div>
                 </div>
 
+                <div class="login-btn-box">
+                    <a href="https://cashif.cc/dashboard/" target="_blank">دخول</a>
+                </div>
+
             </div>
         </div>
     </section>

@@ -292,6 +292,7 @@ body::after {
     width: 100px;
     height: auto;
     margin: 0 auto 30px;
+    margin-top: 55px;
   }
 
   .intro-section .intro-content .logo-img img {
@@ -405,17 +406,53 @@ body::after {
   }
 }
 
-.lang-switcher {
+/* Login Button */
+.login-btn-box {
   position: absolute;
   top: 32px;
   right: 32px;
+  width: fit-content;
+}
+
+.login-btn-box a {
+  border-radius: 50px;
+  background-color: transparent;
+  color: #e2d399;
+  font-size: 14px;
+  transition: 0.1s;
+  border: 1px solid #e2d399;
+  width: 101px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn-box a:hover {
+  background-color: #e2d399;
+  color: #213941;
+}
+
+@media (max-width: 625px) {
+  .login-btn-box {
+    top: 16px;
+    right: 16px;
+  }
+}
+
+/* Language Switcher */
+.lang-switcher {
+  position: absolute;
+  z-index: 9;
+  top: 32px;
+  left: 32px;
   box-sizing: content-box !important;
 }
 
 .switch {
   position: relative;
   display: inline-block;
-  margin: 0 5px;
+  margin: 0;
   box-sizing: content-box !important;
 }
 
@@ -526,7 +563,7 @@ input.check-toggle-round-flat:checked + label:after {
 @media (max-width: 625px) {
   .lang-switcher {
     top: 16px;
-    right: 16px;
+    left: 16px;
   }
 }
 
