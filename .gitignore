@@ -1,8 +1,12 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-#
+# pk_live
 assets/js/ar-pay-page.js
 assets/js/en-pay-page.js
 assets/js/ar-receipt-page.js
 assets/js/en-receipt-page.js
 
+#
+assets/secret/google-tag.js
+assets/secret/Capture.PNG
+assets/secret/payment-gateway-(secret keys).txt
