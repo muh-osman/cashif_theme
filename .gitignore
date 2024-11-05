@@ -6,7 +6,7 @@ assets/js/en-pay-page.js
 assets/js/ar-receipt-page.js
 assets/js/en-receipt-page.js
 
-#
+# Secret
 assets/secret/google-tag.js
 assets/secret/Capture.PNG
 assets/secret/payment-gateway-(secret keys).txt
