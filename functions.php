@@ -50,6 +50,7 @@ function wpdocs_cashif_theme_scripts()
     wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array('jquery'), $version, true);
     wp_enqueue_script('aos-js', get_template_directory_uri() . '/assets/js/aos.min.js', array('jquery'), $version, true);
     wp_enqueue_script('plyr-js', get_template_directory_uri() . '/assets/js/plyr.min.js', array('jquery'), $version, true);
+    wp_enqueue_script('config-script', get_template_directory_uri() . '/assets/js/config.js', array(), $version, true);
 
     // Additional JS for EN and AR page
 
@@ -71,7 +72,7 @@ function wpdocs_cashif_theme_scripts()
     // Loop through the scripts array and enqueue the appropriate script
     foreach ($scripts as $pattern => $script) {
         if (preg_match($pattern, $current_url)) {
-            wp_enqueue_script("{$script}-script", get_template_directory_uri() . "/assets/js/{$script}-page.js", array('jquery'), $version, true);
+            wp_enqueue_script("{$script}-script", get_template_directory_uri() . "/assets/js/{$script}-page.js", array('jquery', 'config-script'), $version, true);
             break; // Exit the loop once a match is found
         }
     }
