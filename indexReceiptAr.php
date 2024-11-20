@@ -172,8 +172,8 @@
                             <input type="text" class="form-control" id="exampleName" aria-describedby="name" required>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputphone" class="form-label">رقم الهاتف*</label>
-                            <input type="tel" class="form-control" id="exampleInputphone" required>
+                            <label for="exampleInputphone" class="form-label">رقم الهاتف* (5xxxxxxxx)</label>
+                            <input maxlength="9" type="tel" class="form-control" id="exampleInputphone" required>
                         </div>
                         <div class="mb-4">
                             <label for="exampleBranch" class="form-label">الفرع*</label>
@@ -194,19 +194,38 @@
                                 </label>
                             </div>
 
-                            <div class="form-check form-check-reverse pt-2">
+                            <div class="form-check form-check-reverse pt-2 pb-2" style="border-bottom: 1px solid #ececec;">
                                 <input class="form-check-input" type="radio" style="width: 1em;" name="flexRadioDefault" id="flexRadioDefault1">
                                 <label class="form-check-label" for="flexRadioDefault1" style="color: #1A1A1AE6;">
                                     دفع في المركز
                                     <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">قم بالدفع عند حضورك الى أحد فروع كاشف</p>
                                 </label>
                             </div>
+
+
+                            <div class="form-check form-check-reverse pt-2">
+                                <input class="form-check-input" type="radio" style="width: 1em;" name="flexRadioDefault" id="flexRadioDefault0">
+                                <label class="form-check-label" for="flexRadioDefault0" style="color: #1A1A1AE6;">
+                                    <div style="display: flex; align-items: center; gap: 8px;">
+                                        <div><img src=<?php echo get_template_directory_uri() . '/assets/images/tamara-logo.svg' ?> alt="tamata logo"></div>
+                                        قسمها على 4 دفعات
+                                    </div>
+                                    <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">بدون رسوم تأخير، متوافقة مع الشريعة الإسلامية</p>
+                                </label>
+                            </div>
                         </div>
 
+                        <!-- Moyasar form -->
                         <div class="mysr-form"></div>
 
+                        <!-- Pay in center button -->
                         <div class="pay-in-center text-center mb-4 mt-4">
                             <button id="pay-in-center-btn" class="btn btn-primary" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">تأكيد الطلب</button>
+                        </div>
+
+                        <!-- Pay with Tamara button -->
+                        <div class="pay-with-tamara text-center mb-4 mt-4">
+                            <button id="pay-with-tamara-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">تأكيد الطلب</button>
                         </div>
                     </div>
                 </div>

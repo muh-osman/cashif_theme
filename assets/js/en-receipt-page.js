@@ -218,14 +218,21 @@ updateTotal();
 function toggleForms() {
   const formMysr = document.querySelector(".mysr-form");
   const formPayInCenter = document.querySelector(".pay-in-center");
+  const formPayWithTamara = document.querySelector(".pay-with-tamara");
 
   // Check if flexRadioDefault2 is checked
   if (document.getElementById("flexRadioDefault2").checked) {
     formMysr.style.display = "block"; // Show mysr-form
     formPayInCenter.style.display = "none"; // Hide pay-in-center
+    formPayWithTamara.style.display = "none"; // Hide pay-with-tamara
   } else if (document.getElementById("flexRadioDefault1").checked) {
     formMysr.style.display = "none"; // Hide mysr-form
+    formPayWithTamara.style.display = "none"; // Hide pay-with-tamara
     formPayInCenter.style.display = "block"; // Show pay-in-center
+  } else if (document.getElementById("flexRadioDefault0").checked) {
+    formMysr.style.display = "none"; // Hide mysr-form
+    formPayInCenter.style.display = "none"; // Hide pay-in-center
+    formPayWithTamara.style.display = "block"; // Show pay-with-tamara
   }
 }
 
@@ -236,11 +243,14 @@ document
 document
   .getElementById("flexRadioDefault2")
   .addEventListener("change", toggleForms);
+document
+  .getElementById("flexRadioDefault0")
+  .addEventListener("change", toggleForms);
 
 // Initial call to set the correct display at page load
 window.onload = toggleForms;
 
-//
+//pay In Center Btn
 const payInCenterBtn = document.getElementById("pay-in-center-btn");
 payInCenterBtn.addEventListener("click", function () {
   if (!name || !phone || !branch || branch === "Choose a branch") {
@@ -263,6 +273,129 @@ payInCenterBtn.addEventListener("click", function () {
   }`;
 
   window.location.href = url;
+});
+
+// Pay with Tamara Btn (Checkout Tamara API)
+const payWithTamaraBtn = document.getElementById("pay-with-tamara-btn");
+payWithTamaraBtn.addEventListener("click", async function () {
+  if (!name || !phone || !branch || branch === "Choose a branch") {
+    alert("All fields are required!");
+    return false;
+  }
+  const origin = window.location.origin; // https://example.com
+  const sub = window.location.hostname === "localhost" ? "/cashif" : "";
+
+  // Random string 16 Char
+  const timestamp = Date.now().toString(36).slice(-6);
+  let randomString = Math.random().toString(36).substr(2, 10);
+  randomString = "ORDER-" + (timestamp + randomString).slice(0, 10); // Total length will be 16
+
+  const orderData = {
+    total_amount: {
+      amount: mainPrice,
+      currency: "SAR",
+    },
+    shipping_amount: {
+      amount: 0,
+      currency: "SAR",
+    },
+    tax_amount: {
+      amount: 0,
+      currency: "SAR",
+    },
+    order_reference_id: randomString,
+    discount: {
+      name: "N/A",
+      amount: {
+        amount: 0,
+        currency: "SAR",
+      },
+    },
+    items: [
+      {
+        name: serv,
+        type: "Digital",
+        reference_id: randomString,
+        sku: "SA-12436",
+        quantity: 1,
+        total_amount: {
+          amount: mainPrice,
+          currency: "SAR",
+        },
+      },
+    ],
+    consumer: {
+      email: "customer@email.com",
+      first_name: name.trim().split(" ")[0],
+      last_name: name.trim().split(" ").slice(1).join(" "),
+      phone_number: phone,
+    },
+    country_code: "SA",
+    description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${mainPrice}&model=${mod}&yearId=${yearId}&service=مخدوم&additionalServices=${
+      checkedValues.join(", ") || "لايوجد"
+    }`,
+    merchant_url: {
+      cancel: `${origin}${sub}/thanks/en/?cancel=true`,
+      failure: `${origin}${sub}/thanks/en/?fail=true`,
+      success: `${origin}${sub}/thanks/en/`,
+    },
+    payment_type: "PAY_BY_INSTALMENTS",
+    instalments: 3,
+    shipping_address: {
+      city: branch,
+      country_code: "SA",
+      first_name: name.trim().split(" ")[0],
+      last_name: name.trim().split(" ").slice(1).join(" "),
+      line1: "N/A",
+    },
+    locale: "en_US",
+  };
+
+  // add boostrap spinner to payWithTamaraBtn button
+  payWithTamaraBtn.innerHTML = "";
+  const spinner = document.createElement("div");
+  spinner.classList.add("spinner-border");
+  spinner.setAttribute("role", "status");
+  spinner.style.margin = "auto";
+  spinner.style.width = "22.5px";
+  spinner.style.height = "22.5px";
+  payWithTamaraBtn.appendChild(spinner);
+
+  // Show spinner
+  spinner.style.display = "block";
+
+  try {
+    // this api will send the "user data(orderData)" to back-end then the back-end will send this data to Tamara API and return the "checkout_url" that will take it in Front-end to redirect the user to Tamara checkout page(Checkout Session), after the payment is done, tamara will redirect the user back to the "success_url (thankyou page)" that we have set in the "orderData" object.
+    const response = await fetch(`${BACK_END_API}/api/pay-with-tamara`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(orderData),
+    });
+
+    if (!response.ok) {
+      spinner.style.display = "none";
+      payWithTamaraBtn.innerHTML = "Confirm order";
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const result = await response.json();
+
+    // Redirect to Tamara checkout page
+    if (result.checkout_url) {
+      window.location.href = result.checkout_url;
+    } else {
+      spinner.style.display = "none";
+      payWithTamaraBtn.innerHTML = "Confirm order";
+      alert("Failed to retrieve checkout URL.");
+    }
+  } catch (error) {
+    spinner.style.display = "none";
+    payWithTamaraBtn.innerHTML = "Confirm order";
+    console.error("Error creating Tamara checkout:", error);
+    alert("An error occurred while processing your payment. Please try again.");
+  }
 });
 
 // Hide WhatsApp Btn
