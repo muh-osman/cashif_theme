@@ -53,32 +53,18 @@
                 </div>
 
                 <div class="form-check form-check-reverse mb-3">
+                    <input class="form-check-input control-table checked-input" type="checkbox" value="تقرير موجز" id="reverseCheck3" data-row="row-summary-report">
+                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck3">
+                        تقرير موجز (+<span class="summary-label"></span> ريال)
+                    </label>
+                </div>
+
+                <div class="form-check form-check-reverse mb-3">
                     <input class="form-check-input checked-input" type="checkbox" value="فحص متنقل" id="reverseCheck2" data-row="row-mobile-inspection" disabled>
                     <label class="form-check-label small-text-in-small-screeen" for="reverseCheck2">
                         فحص متنقل (قريبا)
                     </label>
                 </div>
-
-                <!-- <div class="form-check form-check-reverse mb-3">
-                    <input class="form-check-input control-table checked-input" type="checkbox" value="نقل ملكية" id="reverseCheck3" data-row="row-ownership">
-                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck3">
-                        نقل ملكية السيارة (+550 ريال)
-                    </label>
-                </div> -->
-
-                <!-- <div class="form-check form-check-reverse mb-3">
-                    <input class="form-check-input checked-input" type="checkbox" value="تأمين السيارة" id="reverseCheck4">
-                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck4>
-                        تأمين السيارة (غير محدد)
-                    </label>
-                </div> -->
-
-                <!-- <div class="form-check form-check-reverse">
-                    <input class="form-check-input checked-input" type="checkbox" value="شحن السيارة" id="reverseCheck5">
-                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck5">
-                        شحن السيارة الى مدينتك (خصم 10%)
-                    </label>
-                </div> -->
 
             </div>
 
@@ -127,9 +113,6 @@
             </div>
         </div>
 
-        <!-- <div>
-            <h2 id="car-model-name" class="text-center mt-4"></h2>
-        </div> -->
 
         <div class="table-container">
 
@@ -154,11 +137,11 @@
                             </tr>
                             <tr id="row-video" style="display: none;">
                                 <td>تصوير فيديو</td>
-                                <td class="text-center">45 ريال</td>
+                                <td class="text-center" id="video-price">45 ريال</td>
                             </tr>
-                            <tr id="row-ownership" style="display: none;">
-                                <td>نقل الملكية</td>
-                                <td class="text-center">550 ريال</td>
+                            <tr id="row-summary-report" style="display: none;">
+                                <td>تقرير موجز</td>
+                                <td class="text-center" id="summary-price"><span class="summary-label"></span> ريال</td>
                             </tr>
                         </tbody>
                     </table>

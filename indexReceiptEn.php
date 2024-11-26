@@ -57,32 +57,18 @@
                 </div>
 
                 <div class="form-check mb-3">
+                    <input class="form-check-input control-table checked-input" type="checkbox" value="Summary report" id="reverseCheck3" data-row="row-summary-report">
+                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck3">
+                        Summary report (+<span class="summary-label"></span> SAR)
+                    </label>
+                </div>
+
+                <div class="form-check mb-3">
                     <input class="form-check-input checked-input" type="checkbox" value="mobile inspection" id="reverseCheck2" data-row="row-mobile-inspection" disabled>
                     <label class="form-check-label small-text-in-small-screeen" for="reverseCheck2">
                         Mobile inspection (Soon)
                     </label>
                 </div>
-
-                <!-- <div class="form-check mb-3">
-                    <input class="form-check-input control-table checked-input" type="checkbox" value="Ownership transfer" id="reverseCheck3" data-row="row-ownership">
-                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck3">
-                        Car ownership transfer (+550 SAR)
-                    </label>
-                </div> -->
-
-                <!-- <div class="form-check mb-3">
-                    <input class="form-check-input checked-input" type="checkbox" value="Car insurance" id="reverseCheck4">
-                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck4">
-                        Car insurance (not specified)
-                    </label>
-                </div> -->
-
-                <!-- <div class="form-check">
-                    <input class="form-check-input checked-input" type="checkbox" value="Car Shipping" id="reverseCheck5">
-                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck5">
-                        Shipping the car to you (10% discount)
-                    </label>
-                </div> -->
 
             </div>
 
@@ -131,10 +117,6 @@
             </div>
         </div>
 
-        <!-- <div>
-            <h2 id="car-model-name" class="text-center mt-4"></h2>
-        </div> -->
-
 
         <div class="table-container">
 
@@ -154,16 +136,16 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><span id="inspection-plane"></span></td>
+                                <td><span id="inspection-plane"></span></br><span id="car-model-name"></span></td>
                                 <td class="text-center"><span id="price-plane"></span> SAR</td>
                             </tr>
                             <tr id="row-video" style="display: none;">
                                 <td>Shooting a video</td>
-                                <td class="text-center">45 SAR</td>
+                                <td class="text-center" id="video-price">45 SAR</td>
                             </tr>
-                            <tr id="row-ownership" style="display: none;">
-                                <td>Ownership transfer</td>
-                                <td class="text-center">550 SAR</td>
+                            <tr id="row-summary-report" style="display: none;">
+                                <td>Summary report</td>
+                                <td class="text-center" id="summary-price"><span class="summary-label"></span> SAR</td>
                             </tr>
                         </tbody>
                     </table>

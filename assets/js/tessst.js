@@ -1,23 +1,3 @@
-const spinner = document.getElementById("spinner");
-const planSpan = document.getElementById("inspection-plane");
-const pricePlane = document.getElementById("price-plane");
-const carModelName = document.getElementById("car-model-name");
-const videoPriceDiv = document.getElementById("row-video");
-const summaryReportPriceDiv = document.getElementById("row-summary-report");
-const caption = document.querySelector(".table caption");
-const nameInput = document.getElementById("exampleName");
-const phoneInput = document.getElementById("exampleInputphone");
-const branchInput = document.getElementById("exampleBranch");
-const payWithTamaraBtn = document.getElementById("pay-with-tamara-btn");
-const payInCenterBtn = document.getElementById("pay-in-center-btn");
-const formMysr = document.querySelector(".mysr-form");
-const formPayInCenter = document.querySelector(".pay-in-center");
-const formPayWithTamara = document.querySelector(".pay-with-tamara");
-const summaryLabels = document.querySelectorAll(".summary-label");
-
-const origin = window.location.origin; // https://example.com
-const sub = window.location.hostname === "localhost" ? "/cashif" : "";
-
 // Get the current URL
 const currentUrl = window.location.href;
 const url = new URL(currentUrl);
@@ -28,20 +8,16 @@ const yearId = params.get("year_id");
 const carModelId = params.get("car_model_id");
 const priceId = params.get("price_id");
 
-planSpan.innerHTML = plan;
-
-// Fetch price and initialize Moyasar
+//
 let name;
 let phone;
 let branch;
-let mainPrice = 0;
+// Fetch price and initialize Moyasar
+// Store the main price
+let mainPrice;
 let mainDescription;
 let serv;
 let mod;
-
-let total = 0;
-let checkedValues = []; // Array to hold the values of checked checkboxes
-
 const fetchPrice = async () => {
   try {
     const response = await fetch(
@@ -58,73 +34,81 @@ const fetchPrice = async () => {
       throw new Error("Failed to fetch data from the new API");
     }
     const newData = await response.json();
-
     mainPrice = +(newData[0].prices[priceId].price * 1).toFixed(2);
-    total = mainPrice;
 
     serv = newData[0].prices[priceId].service_name;
     mod = newData[0].model_name;
-    mainDescription = `الخدمة(مخدوم) فحص(${serv}) موديل(${mod})`;
 
-    pricePlane.innerHTML = mainPrice;
-    carModelName.innerHTML = newData[0].model_name;
+    mainDescription = `فحص(${serv}) موديل(${mod})`;
 
-    // Change price "summary" addetional service (in checkboxe and table) based on the plan
-    summaryLabels.forEach((label) => {
-      label.innerHTML = serv === "أساسي" ? "55" : serv === "شامل" ? "50" : "60";
-    });
+    document.getElementById("plan").innerHTML = plan;
+    document.getElementById("price").innerHTML = mainPrice;
+    document.getElementById("model").innerHTML = mod;
+    document.getElementById("total").innerHTML = mainPrice;
 
-    caption.textContent = `الاجمالي: ${total} ريال`;
-
+    const spinner = document.getElementById("spinner");
     spinner.style.display = "none";
+
     // Initialize Moyasar with the initial amount
-    updateMoyasarAmount(total, mainDescription, name, phone, branch);
+    updateMoyasarAmount(mainPrice, mainDescription, name, phone, branch);
   } catch (error) {
     console.error("Error:", error);
     // alert(error);
   }
 };
 
-// // Check if the page is being loaded from the cache
-// window.addEventListener("pageshow", function (event) {
-//   // If the page load from the cache, reload it
-//   if (
-//     event.persisted ||
-//     (window.performance && window.performance.navigation.type === 2)
-//   ) {
-//     console.log("User navigated back or forward to this page.");
-//     location.reload();
-//   } else {
-//   }
-// });
-
 fetchPrice();
+
+// Function to handle input changes
+function handleInputChange() {
+  name = document.getElementById("exampleName").value;
+  phone = document.getElementById("exampleInputphone").value;
+  branch = document.getElementById("exampleBranch").value;
+
+  updateMoyasarAmount(mainPrice, mainDescription, name, phone, branch);
+}
+
+// Add event listeners to the input fields
+document
+  .getElementById("exampleName")
+  .addEventListener("input", handleInputChange);
+document
+  .getElementById("exampleInputphone")
+  .addEventListener("input", handleInputChange);
+document
+  .getElementById("exampleBranch")
+  .addEventListener("change", handleInputChange);
 
 // Function to update the Moyasar amount
 function updateMoyasarAmount(total, description, name, phone, branch) {
+  // Get the current domain
+  const currentDomain = window.location.origin;
+  // Subdirectory for development only
+  const subdirectory =
+    window.location.hostname === "localhost" ? "/cashif" : "";
+  // Re-initialize Moyasar with the new amount
 
   console.log("Total: ", total);
   console.log("Description: ", description);
   console.log("Name: ", name);
   console.log("Phone: ", phone);
   console.log("Branch: ", branch);
-  console.log("additionalServices: ", checkedValues.join(", ") || "لايوجد");
 
-  // Re-initialize Moyasar with the new amount
   Moyasar.init({
     element: ".mysr-form",
+    language: "en",
     amount: total * 100, // Convert to smallest currency unit
     currency: "SAR",
     description: description,
     publishable_api_key: PUBLISHABLE_API_KEY, // Use the key from config.js
-    callback_url: `${origin}${sub}/thanks`,
+    callback_url: `${currentDomain}${subdirectory}/thankyou/en`,
     methods: ["creditcard", "applepay"],
 
     supported_networks: ["mada", "visa", "mastercard"],
 
     apple_pay: {
       country: "SA",
-      label: "كاشف لفحص السيارات",
+      label: "Cashif for car inspection",
       validate_merchant_url: "https://api.moyasar.com/v1/applepay/initiate",
     },
 
@@ -138,14 +122,13 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
       plan: serv,
       model: mod,
       price: total,
-
-      service: "مخدوم",
-      additionalServices: checkedValues.join(", ") || "لايوجد",
     },
 
     on_initiating: function () {
-      if (!name || !phone || !branch || branch === "اختر فرع") {
-        alert("جميع الحقول مطلوبة!");
+      if (!name || !phone || !branch || branch === "Choose a branch") {
+        console.log(branch);
+
+        alert("All fields are required!");
         return false;
       }
       return true;
@@ -153,82 +136,13 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
   });
 }
 
-// Function to handle input changes
-function handleInputChange() {
-  name = nameInput.value;
-  phone = phoneInput.value;
-  branch = branchInput.value;
-
-  updateTotal();
-}
-// Add event listeners to the input fields
-document
-  .getElementById("exampleName")
-  .addEventListener("input", handleInputChange);
-document
-  .getElementById("exampleInputphone")
-  .addEventListener("input", handleInputChange);
-document
-  .getElementById("exampleBranch")
-  .addEventListener("change", handleInputChange);
-
-// Function to update the total sum
-function updateTotal() {
-  checkedValues = []; // Reset the array before calculating the total again
-  total = 0;
-
-  let videoPrice = 0;
-  let summaryPrice = 0;
-
-  // if videoPriceDiv hiden then it means videoPrice = 45 else videoPrice = 0
-  if (videoPriceDiv.style.display === "table-row") {
-    videoPrice = 45;
-  }
-  // if summaryReportPriceDiv hiden then it means summaryPrice = 50 else summaryPrice = 0
-  if (summaryReportPriceDiv.style.display === "table-row") {
-    summaryPrice = serv === "أساسي" ? 55 : serv === "شامل" ? 50 : 60;
-  }
-
-  total = mainPrice + videoPrice + summaryPrice;
-
-  // Update the caption with the new total
-  caption.textContent = `الاجمالي: ${total} ريال`;
-
-  // Loop through each checkbox with the class 'checked-input'
-  document.querySelectorAll(".checked-input").forEach((checkbox) => {
-    if (checkbox.checked) {
-      checkedValues.push(checkbox.value); // Add the value to the array if checked
-    }
-  });
-
-  mainDescription = `الخدمة(مخدوم) فحص(${serv}) موديل(${mod}) خدمات اضافية(${
-    checkedValues.join(", ") || "لايوجد"
-  })`;
-
-  // Update the Moyasar amount
-  updateMoyasarAmount(total, mainDescription, name, phone, branch);
-}
-
-// Add event listeners to checkboxes
-document.querySelectorAll(".control-table").forEach((checkbox) => {
-  checkbox.addEventListener("change", function () {
-    const rowId = this.getAttribute("data-row");
-    const row = document.getElementById(rowId); // row in table
-
-    // Show or hide the row based on checkbox state
-    if (this.checked) {
-      row.style.display = "table-row"; // Show the row
-    } else {
-      row.style.display = "none"; // Hide the row
-    }
-
-    // Update the total after changing the visibility
-    updateTotal();
-  });
-});
-
 // Function to toggle visibility based on selected radio button
 function toggleForms() {
+  const formMysr = document.querySelector(".mysr-form");
+  const formPayInCenter = document.querySelector(".pay-in-center");
+  const formPayWithTamara = document.querySelector(".pay-with-tamara");
+
+  // Check if flexRadioDefault2 is checked
   if (document.getElementById("flexRadioDefault2").checked) {
     formMysr.style.display = "block"; // Show mysr-form
     formPayInCenter.style.display = "none"; // Hide pay-in-center
@@ -256,15 +170,17 @@ document
   .addEventListener("change", toggleForms);
 
 // Initial call to set the correct display at page load
-toggleForms();
+window.onload = toggleForms;
 
 //pay In Center Btn
+const payInCenterBtn = document.getElementById("pay-in-center-btn");
 payInCenterBtn.addEventListener("click", function () {
-  if (!name || !phone || !branch || branch === "اختر فرع") {
-    alert("جميع الحقول مطلوبة!");
+  if (!name || !phone || !branch || branch === "Choose a branch") {
+    alert("All fields are required!");
     return false;
   }
-
+  const origin = window.location.origin; // https://example.com
+  const sub = window.location.hostname === "localhost" ? "/cashif" : "";
   // Random string 14 Char
   const randomString = Array.from(
     { length: 14 },
@@ -274,19 +190,20 @@ payInCenterBtn.addEventListener("click", function () {
       ]
   ).join("");
 
-  const url = `${origin}${sub}/thanks/?id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
-    checkedValues.join(", ") || "لايوجد"
-  }`;
+  const url = `${origin}${sub}/thankyou/en/?id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${mainPrice}&model=${mod}&yearId=${yearId}`;
 
   window.location.href = url;
 });
 
 // Pay with Tamara Btn (Checkout Tamara API)
+const payWithTamaraBtn = document.getElementById("pay-with-tamara-btn");
 payWithTamaraBtn.addEventListener("click", async function () {
-  if (!name || !phone || !branch || branch === "اختر فرع") {
-    alert("جميع الحقول مطلوبة!");
+  if (!name || !phone || !branch || branch === "Choose a branch") {
+    alert("All fields are required!");
     return false;
   }
+  const origin = window.location.origin; // https://example.com
+  const sub = window.location.hostname === "localhost" ? "/cashif" : "";
 
   // Random string 16 Char
   const timestamp = Date.now().toString(36).slice(-6);
@@ -295,7 +212,7 @@ payWithTamaraBtn.addEventListener("click", async function () {
 
   const orderData = {
     total_amount: {
-      amount: total,
+      amount: mainPrice,
       currency: "SAR",
     },
     shipping_amount: {
@@ -322,7 +239,7 @@ payWithTamaraBtn.addEventListener("click", async function () {
         sku: "SA-12436",
         quantity: 1,
         total_amount: {
-          amount: total,
+          amount: mainPrice,
           currency: "SAR",
         },
       },
@@ -334,13 +251,11 @@ payWithTamaraBtn.addEventListener("click", async function () {
       phone_number: phone,
     },
     country_code: "SA",
-    description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&service=مخدوم&additionalServices=${
-      checkedValues.join(", ") || "لايوجد"
-    }`,
+    description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${mainPrice}&model=${mod}&yearId=${yearId}`,
     merchant_url: {
-      cancel: `${origin}${sub}/thanks/?cancel=true`,
-      failure: `${origin}${sub}/thanks/?fail=true`,
-      success: `${origin}${sub}/thanks/`,
+      cancel: `${origin}${sub}/thankyou/en/?cancel=true`,
+      failure: `${origin}${sub}/thankyou/en/?fail=true`,
+      success: `${origin}${sub}/thankyou/en/`,
     },
     payment_type: "PAY_BY_INSTALMENTS",
     instalments: 3,
@@ -351,11 +266,9 @@ payWithTamaraBtn.addEventListener("click", async function () {
       last_name: name.trim().split(" ").slice(1).join(" "),
       line1: "N/A",
     },
-    locale: "ar_SA",
+    locale: "en_US",
   };
 
-  // disable payWithTamaraBtn button
-  payWithTamaraBtn.disabled = true;
   // add boostrap spinner to payWithTamaraBtn button
   payWithTamaraBtn.innerHTML = "";
   const spinner = document.createElement("div");
@@ -365,10 +278,12 @@ payWithTamaraBtn.addEventListener("click", async function () {
   spinner.style.width = "22.5px";
   spinner.style.height = "22.5px";
   payWithTamaraBtn.appendChild(spinner);
+
+  // Show spinner
   spinner.style.display = "block";
 
   try {
-    // this api will send the "user data(orderData)" to back-end then the back-end will send this data to Tamara API and return the "checkout_url" that will take it in Front-end to redirect the user to Tamara checkout page(Checkout Session), after the payment is done, tamara will redirect the user back to the "success_url (thankyou page)" that we have set in the "orderData" object.
+    // this api will send the "user data(orderData)" to back-end then the back-end will send this data to Tamara API and return the "checkout_url" that will take it in Front-end to redirect the user to Tamara checkout page(Checkout Session), after the payment is done, tamara will redirect the user back to the "success_url (thankyou/en page)" that we have set in the "orderData" object.
     const response = await fetch(`${BACK_END_API}/api/pay-with-tamara`, {
       method: "POST",
       headers: {
@@ -379,8 +294,7 @@ payWithTamaraBtn.addEventListener("click", async function () {
 
     if (!response.ok) {
       spinner.style.display = "none";
-      payWithTamaraBtn.disabled = false;
-      payWithTamaraBtn.innerHTML = "تأكيد الطلب";
+      payWithTamaraBtn.innerHTML = "Confirm order";
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
@@ -391,14 +305,12 @@ payWithTamaraBtn.addEventListener("click", async function () {
       window.location.href = result.checkout_url;
     } else {
       spinner.style.display = "none";
-      payWithTamaraBtn.disabled = false;
-      payWithTamaraBtn.innerHTML = "تأكيد الطلب";
+      payWithTamaraBtn.innerHTML = "Confirm order";
       alert("Failed to retrieve checkout URL.");
     }
   } catch (error) {
     spinner.style.display = "none";
-    payWithTamaraBtn.disabled = false;
-    payWithTamaraBtn.innerHTML = "تأكيد الطلب";
+    payWithTamaraBtn.innerHTML = "Confirm order";
     console.error("Error creating Tamara checkout:", error);
     alert("An error occurred while processing your payment. Please try again.");
   }
@@ -406,6 +318,7 @@ payWithTamaraBtn.addEventListener("click", async function () {
 
 // Hide WhatsApp Btn
 const whatsappBtn = document.getElementById("whatsapp-btn");
+
 window.addEventListener("scroll", function () {
   let scrollPosition = window.scrollY || window.pageYOffset;
   let documentHeight =

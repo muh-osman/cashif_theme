@@ -4,102 +4,140 @@
 
     <div class="white-background">
 
+        <div class="title-box" style="margin-top: 0px; padding-top: 48px;">
+            <h2>
+                خدمات إضافية
+            </h2>
+        </div>
+
+        <section class="inputs-container">
+            <div class="inputs-box">
+
+                <div class="form-check form-check-reverse mb-3" style="display: none;">
+                    <input class="form-check-input control-table checked-input" type="checkbox" value="تصوير فيديو" id="reverseCheck1" data-row="row-video">
+                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck1">
+                        تصوير مقطع فيديو للسيارة (+45 ريال)
+                    </label>
+                </div>
+
+                <div class="form-check form-check-reverse mb-3">
+                    <input class="form-check-input control-table checked-input" type="checkbox" value="تقرير موجز" id="reverseCheck3" data-row="row-summary-report">
+                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck3">
+                        تقرير موجز (+<span class="summary-label"></span> ريال)
+                    </label>
+                </div>
+
+                <div class="form-check form-check-reverse mb-3">
+                    <input class="form-check-input checked-input" type="checkbox" value="فحص متنقل" id="reverseCheck2" data-row="row-mobile-inspection" disabled>
+                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck2">
+                        فحص متنقل (قريبا)
+                    </label>
+                </div>
+
+            </div>
+
+        </section>
+
+
         <div class="table-container">
 
-            <div class="inputs-containers">
+            <div class="box">
 
-                <div class="p-2">
+                <div class=" table-box">
 
                     <h4 class="mb-4" style="color: #1A1A1AE6;">طلبك</h4>
 
-                    <div style="color: #747a79;">
-                        <div class="d-flex justify-content-between" style="border-bottom: 1px solid #ececec;">
-                            <h6 style="font-size: 15px;">الباقة</h6>
-                            <h6 style="font-size: 15px;">المجموع</h6>
-                        </div>
-                    </div>
+                    <table class="table">
+                        <caption style="padding-top: 24px; color: #1A1A1AE6;"></caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">الباقة</th>
+                                <th class="text-center" scope="col">المجموع</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>فحص <span id="inspection-plane"></span></br><span id="car-model-name"></span></td>
+                                <td class="text-center"><span id="price-plane"></span> ريال</td>
+                            </tr>
+                            <tr id="row-video" style="display: none;">
+                                <td>تصوير فيديو</td>
+                                <td class="text-center" id="video-price">45 ريال</td>
+                            </tr>
+                            <tr id="row-summary-report" style="display: none;">
+                                <td>تقرير موجز</td>
+                                <td class="text-center" id="summary-price"><span class="summary-label"></span> ريال</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-                    <div style="color: #747a79;">
-                        <div class="d-flex justify-content-between mb-0 mt-4">
-                            <h6 style="font-size: 15px;" class="m-0">فحص <span id="plan"></span></h6>
-                            <h6 style="font-size: 15px;" class="m-0" style="color: #1A1A1AE6;"><span id="price"></span> ريال</h6>
-                        </div>
-                    </div>
+                <div class="inputs-containers">
 
                     <div>
-                        <p id="model" style="color: #1A1A1AE6; font-size: 12px;"></p>
-                    </div>
+                        <div class="mb-3">
+                            <label for="exampleName" class="form-label">الاسم الثلاثي*</label>
+                            <input type="text" class="form-control" id="exampleName" aria-describedby="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputphone" class="form-label">رقم الهاتف* (5xxxxxxxx)</label>
+                            <input maxlength="9" type="tel" class="form-control" id="exampleInputphone" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="exampleBranch" class="form-label">الفرع*</label>
+                            <select class="form-select" id="exampleBranch" aria-label="Default select example" required>
+                                <option selected disabled>اختر فرع</option>
+                                <option value="الرياض-القادسية">الرياض - القادسية</option>
+                                <option value="الرياض-الشفا">الرياض - الشفا</option>
+                                <option value="الدمام">الدمام</option>
+                            </select>
+                        </div>
 
-                    <div class="mb-4" style="color: #747a79; border-top: 1px solid #ececec;">
-                        <div class="d-flex justify-content-between mt-2">
-                            <h6 style="font-size: 15px;">الإجمالي</h6>
-                            <h6 style="font-size: 15px;"><span style="color: #1A1A1AE6;" id="total"></span> <span style="color: #1A1A1AE6;">ريال</span></h6>
+                        <div class="mb-4 pt-2 pb-2" style="border-top: 1px solid #ececec; border-bottom: 1px solid #ececec;">
+                            <div class="form-check form-check-reverse" style="border-bottom: 1px solid #ececec;">
+                                <input class="form-check-input" style="width: 1em;" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2" style="color: #1A1A1AE6;">
+                                    دفع الكتروني
+                                    <p style="color: #747a79; font-size: 11px; margin-top: 6px; ">ادفع باستخدام بطاقة الإئتمان, Mada, Visa, MasterCard</p>
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-reverse pt-2 pb-2" style="border-bottom: 1px solid #ececec;">
+                                <input class="form-check-input" type="radio" style="width: 1em;" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1" style="color: #1A1A1AE6;">
+                                    دفع في المركز
+                                    <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">قم بالدفع عند حضورك الى أحد فروع كاشف</p>
+                                </label>
+                            </div>
+
+
+                            <div class="form-check form-check-reverse pt-2">
+                                <input class="form-check-input" type="radio" style="width: 1em;" name="flexRadioDefault" id="flexRadioDefault0">
+                                <label class="form-check-label" for="flexRadioDefault0" style="color: #1A1A1AE6;">
+                                    <div style="display: flex; align-items: center; gap: 8px;">
+                                        <div><img src=<?php echo get_template_directory_uri() . '/assets/images/tamara-logo.svg' ?> alt="tamata logo"></div>
+                                        قسمها على 4 دفعات
+                                    </div>
+                                    <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">بدون رسوم تأخير، متوافقة مع الشريعة الإسلامية</p>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Moyasar form -->
+                        <div class="mysr-form"></div>
+
+                        <!-- Pay in center button -->
+                        <div class="pay-in-center text-center mb-4 mt-4">
+                            <button id="pay-in-center-btn" class="btn btn-primary" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">تأكيد الطلب</button>
+                        </div>
+
+                        <!-- Pay with Tamara button -->
+                        <div class="pay-with-tamara text-center mb-4 mt-4">
+                            <button id="pay-with-tamara-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">تأكيد الطلب</button>
                         </div>
                     </div>
-
                 </div>
 
-                <div style="width: 100%; margin: auto;">
-                    <div class="mb-3">
-                        <label for="exampleName" class="form-label">الاسم الثلاثي*</label>
-                        <input type="text" class="form-control" id="exampleName" aria-describedby="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputphone" class="form-label">رقم الهاتف* (5xxxxxxxx)</label>
-                        <input maxlength="9" type="tel" class="form-control" id="exampleInputphone" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="exampleBranch" class="form-label">الفرع*</label>
-                        <select class="form-select" id="exampleBranch" aria-label="Default select example" required>
-                            <option selected disabled>اختر فرع</option>
-                            <option value="الرياض-القادسية">الرياض - القادسية</option>
-                            <option value="الرياض-الشفا">الرياض - الشفا</option>
-                            <option value="الدمام">الدمام</option>
-                        </select>
-                    </div>
-
-                    <div class=" mb-4 pt-2 pb-2" style="border-top: 1px solid #ececec; border-bottom: 1px solid #ececec;">
-                        <div class="form-check form-check-reverse" style="border-bottom: 1px solid #ececec;">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                            <label class="form-check-label" for="flexRadioDefault2" style="color: #1A1A1AE6;">
-                                دفع الكتروني
-                                <p style="color: #747a79; font-size: 11px; margin-top: 6px;">ادفع باستخدام بطاقة الإئتمان, Mada, Visa, MasterCard</p>
-                            </label>
-                        </div>
-
-                        <div class="form-check form-check-reverse pt-2 pb-2" style="border-bottom: 1px solid #ececec;">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1" style="color: #1A1A1AE6;">
-                                دفع في المركز
-                                <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">قم بالدفع عند حضورك الى أحد فروع كاشف</p>
-                            </label>
-                        </div>
-
-                        <div class="form-check form-check-reverse pt-2">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault0">
-                            <label class="form-check-label" for="flexRadioDefault0" style="color: #1A1A1AE6;">
-                                <div style="display: flex; align-items: center; gap: 8px;">
-                                    <div><img src=<?php echo get_template_directory_uri() . '/assets/images/tamara-logo.svg' ?> alt="tamata logo"></div>
-                                    قسمها على 4 دفعات
-                                </div>
-                                <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">بدون رسوم تأخير، متوافقة مع الشريعة الإسلامية</p>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Moyasar form -->
-                    <div class="mysr-form"></div>
-
-                    <!-- Pay in center button -->
-                    <div class="pay-in-center text-center mb-4 mt-4">
-                        <button id="pay-in-center-btn" class="btn btn-primary" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">تأكيد الطلب</button>
-                    </div>
-
-                    <!-- Pay with Tamara button -->
-                    <div class="pay-with-tamara text-center mb-4 mt-4">
-                        <button id="pay-with-tamara-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">تأكيد الطلب</button>
-                    </div>
-                </div>
             </div>
 
         </div>

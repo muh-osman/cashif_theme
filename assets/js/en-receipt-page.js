@@ -1,3 +1,23 @@
+const spinner = document.getElementById("spinner");
+const planSpan = document.getElementById("inspection-plane");
+const pricePlane = document.getElementById("price-plane");
+const carModelName = document.getElementById("car-model-name");
+const videoPriceDiv = document.getElementById("row-video");
+const summaryReportPriceDiv = document.getElementById("row-summary-report");
+const caption = document.querySelector(".table caption");
+const nameInput = document.getElementById("exampleName");
+const phoneInput = document.getElementById("exampleInputphone");
+const branchInput = document.getElementById("exampleBranch");
+const payWithTamaraBtn = document.getElementById("pay-with-tamara-btn");
+const payInCenterBtn = document.getElementById("pay-in-center-btn");
+const formMysr = document.querySelector(".mysr-form");
+const formPayInCenter = document.querySelector(".pay-in-center");
+const formPayWithTamara = document.querySelector(".pay-with-tamara");
+const summaryLabels = document.querySelectorAll(".summary-label");
+
+const origin = window.location.origin; // https://example.com
+const sub = window.location.hostname === "localhost" ? "/cashif" : "";
+
 // Get the current URL
 const currentUrl = window.location.href;
 const url = new URL(currentUrl);
@@ -8,25 +28,24 @@ const yearId = params.get("year_id");
 const carModelId = params.get("car_model_id");
 const priceId = params.get("price_id");
 
-const planSpan = document.getElementById("inspection-plane");
 planSpan.innerHTML = plan;
 
-// Flag to track if it's the initial load
-let isInitialLoad = true;
-//
+// Fetch price and initialize Moyasar
 let name;
 let phone;
 let branch;
-// Fetch price and initialize Moyasar
-// Store the main price
-let mainPrice;
+let mainPrice = 0;
 let mainDescription;
 let serv;
 let mod;
+
+let total = 0;
+let checkedValues = []; // Array to hold the values of checked checkboxes
+
 const fetchPrice = async () => {
   try {
     const response = await fetch(
-      `https://cashif.online/back-end/public/api/get-discounted-prices-by-model-and-year?car_model_id=${carModelId}&year_id=${yearId}`,
+      `${FETCH_PRICES_API}/api/get-discounted-prices-by-model-and-year?car_model_id=${carModelId}&year_id=${yearId}`,
       {
         method: "GET",
         headers: {
@@ -39,69 +58,50 @@ const fetchPrice = async () => {
       throw new Error("Failed to fetch data from the new API");
     }
     const newData = await response.json();
+
     mainPrice = +(newData[0].prices[priceId].price * 1).toFixed(2);
+    total = mainPrice;
 
     serv = newData[0].prices[priceId].service_name;
     mod = newData[0].model_name;
-
-    // console.log(newData[0].model_name);
-    // console.log(newData[0].prices[priceId].service_name);
-
     mainDescription = `الخدمة(مخدوم) فحص(${serv}) موديل(${mod})`;
-    // console.log(mainDescription);
 
-    updateTotal();
-    // Set the flag to false after the initial load
-    isInitialLoad = false;
-
-    const spinner = document.getElementById("spinner");
-    spinner.style.display = "none";
-
-    const pricePlane = document.getElementById("price-plane");
     pricePlane.innerHTML = mainPrice;
+    carModelName.innerHTML = newData[0].model_name;
 
+    // Change price "summary" addetional service (in checkboxe and table) based on the plan
+    summaryLabels.forEach((label) => {
+      label.innerHTML = serv === "أساسي" ? "55" : serv === "شامل" ? "50" : "60";
+    });
+
+    caption.textContent = `Total: ${total} SAR`;
+
+    spinner.style.display = "none";
     // Initialize Moyasar with the initial amount
-    updateMoyasarAmount(mainPrice, mainDescription, name, phone, branch);
+    updateMoyasarAmount(total, mainDescription, name, phone, branch);
   } catch (error) {
     console.error("Error:", error);
     // alert(error);
   }
 };
 
+// // Check if the page is being loaded from the cache
+// window.addEventListener("pageshow", function (event) {
+//   // If the page load from the cache, reload it
+//   if (
+//     event.persisted ||
+//     (window.performance && window.performance.navigation.type === 2)
+//   ) {
+//     console.log("User navigated back or forward to this page.");
+//     location.reload();
+//   } else {
+//   }
+// });
+
 fetchPrice();
-
-// Function to handle input changes
-function handleInputChange() {
-  name = document.getElementById("exampleName").value;
-  phone = document.getElementById("exampleInputphone").value;
-  branch = document.getElementById("exampleBranch").value;
-
-  updateMoyasarAmount(mainPrice, mainDescription, name, phone, branch);
-}
-
-// Add event listeners to the input fields
-document
-  .getElementById("exampleName")
-  .addEventListener("input", handleInputChange);
-document
-  .getElementById("exampleInputphone")
-  .addEventListener("input", handleInputChange);
-document
-  .getElementById("exampleBranch")
-  .addEventListener("change", handleInputChange);
 
 // Function to update the Moyasar amount
 function updateMoyasarAmount(total, description, name, phone, branch) {
-  // console.log(total, description, name, phone, branch);
-
-  // Get the current domain
-  const currentDomain = window.location.origin;
-  // Subdirectory for development only
-  const subdirectory =
-    window.location.hostname === "localhost" ? "/cashif" : "";
-  // Re-initialize Moyasar with the new amount
-  // console.log(description);
-
   console.log("Total: ", total);
   console.log("Description: ", description);
   console.log("Name: ", name);
@@ -109,6 +109,7 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
   console.log("Branch: ", branch);
   console.log("additionalServices: ", checkedValues.join(", ") || "لايوجد");
 
+  // Re-initialize Moyasar with the new amount
   Moyasar.init({
     element: ".mysr-form",
     language: "en",
@@ -116,7 +117,7 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
     currency: "SAR",
     description: description,
     publishable_api_key: PUBLISHABLE_API_KEY, // Use the key from config.js
-    callback_url: `${currentDomain}${subdirectory}/thanks/en`,
+    callback_url: `${origin}${sub}/thanks/en`,
     methods: ["creditcard", "applepay"],
 
     supported_networks: ["mada", "visa", "mastercard"],
@@ -152,31 +153,46 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
   });
 }
 
-// Prices associated with each service
-const prices = {
-  "row-video": 45,
-  "row-ownership": 550,
-};
+// Function to handle input changes
+function handleInputChange() {
+  name = nameInput.value;
+  phone = phoneInput.value;
+  branch = branchInput.value;
 
-let checkedValues = []; // Array to hold the values of checked checkboxes
+  updateTotal();
+}
+// Add event listeners to the input fields
+document
+  .getElementById("exampleName")
+  .addEventListener("input", handleInputChange);
+document
+  .getElementById("exampleInputphone")
+  .addEventListener("input", handleInputChange);
+document
+  .getElementById("exampleBranch")
+  .addEventListener("change", handleInputChange);
+
 // Function to update the total sum
 function updateTotal() {
-  // console.log(isInitialLoad);
   checkedValues = []; // Reset the array before calculating the total again
+  total = 0;
 
-  // Loop through each checkbox to calculate the total
-  document.querySelectorAll(".control-table").forEach((checkbox) => {
-    const rowId = checkbox.getAttribute("data-row");
-    if (checkbox.checked) {
-      mainPrice += prices[rowId] || 0; // Add the price if the checkbox is checked
-    } else if (!isInitialLoad && !checkbox.checked) {
-      mainPrice -= prices[rowId] || 0; // Subtract the price if the checkbox is not checked and it's not the initial load
-    }
-  });
+  let videoPrice = 0;
+  let summaryPrice = 0;
+
+  // if videoPriceDiv hiden then it means videoPrice = 45 else videoPrice = 0
+  if (videoPriceDiv.style.display === "table-row") {
+    videoPrice = 45;
+  }
+  // if summaryReportPriceDiv hiden then it means summaryPrice = 50 else summaryPrice = 0
+  if (summaryReportPriceDiv.style.display === "table-row") {
+    summaryPrice = serv === "أساسي" ? 55 : serv === "شامل" ? 50 : 60;
+  }
+
+  total = mainPrice + videoPrice + summaryPrice;
 
   // Update the caption with the new total
-  const caption = document.querySelector(".table caption");
-  caption.textContent = `Total: ${mainPrice} SAR`;
+  caption.textContent = `Total: ${total} SAR`;
 
   // Loop through each checkbox with the class 'checked-input'
   document.querySelectorAll(".checked-input").forEach((checkbox) => {
@@ -190,18 +206,18 @@ function updateTotal() {
   })`;
 
   // Update the Moyasar amount
-  updateMoyasarAmount(mainPrice, mainDescription, name, phone, branch);
+  updateMoyasarAmount(total, mainDescription, name, phone, branch);
 }
 
 // Add event listeners to checkboxes
 document.querySelectorAll(".control-table").forEach((checkbox) => {
   checkbox.addEventListener("change", function () {
     const rowId = this.getAttribute("data-row");
-    const row = document.getElementById(rowId);
+    const row = document.getElementById(rowId); // row in table
 
     // Show or hide the row based on checkbox state
     if (this.checked) {
-      row.style.display = ""; // Show the row
+      row.style.display = "table-row"; // Show the row
     } else {
       row.style.display = "none"; // Hide the row
     }
@@ -211,16 +227,8 @@ document.querySelectorAll(".control-table").forEach((checkbox) => {
   });
 });
 
-// Initial total calculation on page load
-updateTotal();
-
 // Function to toggle visibility based on selected radio button
 function toggleForms() {
-  const formMysr = document.querySelector(".mysr-form");
-  const formPayInCenter = document.querySelector(".pay-in-center");
-  const formPayWithTamara = document.querySelector(".pay-with-tamara");
-
-  // Check if flexRadioDefault2 is checked
   if (document.getElementById("flexRadioDefault2").checked) {
     formMysr.style.display = "block"; // Show mysr-form
     formPayInCenter.style.display = "none"; // Hide pay-in-center
@@ -248,17 +256,15 @@ document
   .addEventListener("change", toggleForms);
 
 // Initial call to set the correct display at page load
-window.onload = toggleForms;
+toggleForms();
 
 //pay In Center Btn
-const payInCenterBtn = document.getElementById("pay-in-center-btn");
 payInCenterBtn.addEventListener("click", function () {
   if (!name || !phone || !branch || branch === "Choose a branch") {
     alert("All fields are required!");
     return false;
   }
-  const origin = window.location.origin; // https://example.com
-  const sub = window.location.hostname === "localhost" ? "/cashif" : "";
+
   // Random string 14 Char
   const randomString = Array.from(
     { length: 14 },
@@ -268,7 +274,7 @@ payInCenterBtn.addEventListener("click", function () {
       ]
   ).join("");
 
-  const url = `${origin}${sub}/thanks/en/?id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${mainPrice}&model=${mod}&yearId=${yearId}&additionalServices=${
+  const url = `${origin}${sub}/thanks/en/?id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
     checkedValues.join(", ") || "لايوجد"
   }`;
 
@@ -276,14 +282,11 @@ payInCenterBtn.addEventListener("click", function () {
 });
 
 // Pay with Tamara Btn (Checkout Tamara API)
-const payWithTamaraBtn = document.getElementById("pay-with-tamara-btn");
 payWithTamaraBtn.addEventListener("click", async function () {
   if (!name || !phone || !branch || branch === "Choose a branch") {
     alert("All fields are required!");
     return false;
   }
-  const origin = window.location.origin; // https://example.com
-  const sub = window.location.hostname === "localhost" ? "/cashif" : "";
 
   // Random string 16 Char
   const timestamp = Date.now().toString(36).slice(-6);
@@ -292,7 +295,7 @@ payWithTamaraBtn.addEventListener("click", async function () {
 
   const orderData = {
     total_amount: {
-      amount: mainPrice,
+      amount: total,
       currency: "SAR",
     },
     shipping_amount: {
@@ -319,7 +322,7 @@ payWithTamaraBtn.addEventListener("click", async function () {
         sku: "SA-12436",
         quantity: 1,
         total_amount: {
-          amount: mainPrice,
+          amount: total,
           currency: "SAR",
         },
       },
@@ -331,7 +334,7 @@ payWithTamaraBtn.addEventListener("click", async function () {
       phone_number: phone,
     },
     country_code: "SA",
-    description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${mainPrice}&model=${mod}&yearId=${yearId}&service=مخدوم&additionalServices=${
+    description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&service=مخدوم&additionalServices=${
       checkedValues.join(", ") || "لايوجد"
     }`,
     merchant_url: {
@@ -351,6 +354,8 @@ payWithTamaraBtn.addEventListener("click", async function () {
     locale: "en_US",
   };
 
+  // disable payWithTamaraBtn button
+  payWithTamaraBtn.disabled = true;
   // add boostrap spinner to payWithTamaraBtn button
   payWithTamaraBtn.innerHTML = "";
   const spinner = document.createElement("div");
@@ -360,8 +365,6 @@ payWithTamaraBtn.addEventListener("click", async function () {
   spinner.style.width = "22.5px";
   spinner.style.height = "22.5px";
   payWithTamaraBtn.appendChild(spinner);
-
-  // Show spinner
   spinner.style.display = "block";
 
   try {
@@ -376,6 +379,7 @@ payWithTamaraBtn.addEventListener("click", async function () {
 
     if (!response.ok) {
       spinner.style.display = "none";
+      payWithTamaraBtn.disabled = false;
       payWithTamaraBtn.innerHTML = "Confirm order";
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -387,11 +391,13 @@ payWithTamaraBtn.addEventListener("click", async function () {
       window.location.href = result.checkout_url;
     } else {
       spinner.style.display = "none";
+      payWithTamaraBtn.disabled = false;
       payWithTamaraBtn.innerHTML = "Confirm order";
       alert("Failed to retrieve checkout URL.");
     }
   } catch (error) {
     spinner.style.display = "none";
+    payWithTamaraBtn.disabled = false;
     payWithTamaraBtn.innerHTML = "Confirm order";
     console.error("Error creating Tamara checkout:", error);
     alert("An error occurred while processing your payment. Please try again.");
@@ -400,7 +406,6 @@ payWithTamaraBtn.addEventListener("click", async function () {
 
 // Hide WhatsApp Btn
 const whatsappBtn = document.getElementById("whatsapp-btn");
-
 window.addEventListener("scroll", function () {
   let scrollPosition = window.scrollY || window.pageYOffset;
   let documentHeight =

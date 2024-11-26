@@ -139,7 +139,7 @@ const debouncedSearch = debounce(async () => {
       spinner.style.display = "block";
 
       const response = await fetch(
-        "https://cashif.online/back-end/public/api/car-models/limited-general-search",
+        `${FETCH_PRICES_API}/api/car-models/limited-general-search`,
         {
           method: "POST",
           headers: {
@@ -227,7 +227,7 @@ const submit = async () => {
 
   try {
     const response = await fetch(
-      `https://cashif.online/back-end/public/api/get-discounted-prices-by-model-and-year?car_model_id=${clickedButtonId}&year_id=${yearValue}`,
+      `${FETCH_PRICES_API}/api/get-discounted-prices-by-model-and-year?car_model_id=${clickedButtonId}&year_id=${yearValue}`,
       {
         method: "GET",
         headers: {

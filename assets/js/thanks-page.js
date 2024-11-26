@@ -29,7 +29,7 @@ window.onload = function () {
     submitPaidQrCode();
   } else if (tamaraPaymentStatus === "approved" && tamaraOrderId) {
     submitPaidWithTamara();
-  } else if (fullName && phone && branch && plan && price && model && addServ) {
+  } else if (fullName && phone && branch && plan && price && model) {
     submitUnPaidQrCode();
   } else {
     document.getElementById("thanks-box").style.display = "none";
@@ -147,30 +147,6 @@ async function submitUnPaidQrCode() {
 // Paid with Tamara function
 async function submitPaidWithTamara() {
   try {
-    // this api will send "paid_qr_code(orderId of Tamara)" then"Authorise Order" of Tamara payment then "Capture" the payment then "Get the order status" then "Save" the data in the database
-    const response = await fetch(
-      `${BACK_END_API}/api/save-tamara-paid-client`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          paid_qr_code: tamaraOrderId, // Keep it
-          // The rest of the data is will store in the database Automatically by tamara "order status" api
-        }),
-      }
-    );
-
-    // Check if the response is OK (status code 200-299)
-    if (!response.ok) {
-      throw new Error("Network response was not ok " + response.statusText);
-    }
-
-    // Parse the JSON response
-    const data = await response.json();
-    console.log("Success:", data);
-
     document.getElementById("spinner").style.display = "none";
     document.getElementById("thanks-box").style.display = "block";
 

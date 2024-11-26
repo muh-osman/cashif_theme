@@ -1,114 +1,145 @@
 <?php get_header() ?>
 
-<body dir="ltr">
+<body>
 
     <div class="white-background">
 
+        <div class="title-box" style="margin-top: 0px; padding-top: 48px;">
+            <h2>
+                Additional services
+            </h2>
+        </div>
+
+
+        <section class="inputs-container">
+            <div class="inputs-box">
+
+                <div dir="ltr" class="form-check mb-3" style="display: none;">
+                    <input class="form-check-input control-table checked-input" type="checkbox" value="Shooting a video" id="reverseCheck1" data-row="row-video">
+                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck1">
+                        Shooting video of the car (+45 SAR)
+                    </label>
+                </div>
+
+                <div dir="ltr" class="form-check mb-3">
+                    <input class="form-check-input control-table checked-input" type="checkbox" value="Summary report" id="reverseCheck3" data-row="row-summary-report">
+                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck3">
+                        Summary report (+<span class="summary-label"></span> SAR)
+                    </label>
+                </div>
+
+                <div dir="ltr" class="form-check mb-3">
+                    <input class="form-check-input checked-input" type="checkbox" value="mobile inspection" id="reverseCheck2" data-row="row-mobile-inspection" disabled>
+                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck2">
+                        Mobile inspection (Soon)
+                    </label>
+                </div>
+
+            </div>
+
+        </section>
+
+
         <div class="table-container">
 
-            <div class="inputs-containers">
+
+            <div class="box">
+                <div class="table-box">
+
+                    <h4 dir="ltr" class="mb-4" style="color: #1A1A1AE6;">Order</h4>
+
+                    <table dir="ltr" class="table">
+                        <caption dir="ltr" style="text-align: right;"></caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Service plan</th>
+                                <th class="text-center" scope="col">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span id="inspection-plane"></span></br><span id="car-model-name"></span></td>
+                                <td class="text-center"><span id="price-plane"></span> SAR</td>
+                            </tr>
+                            <tr id="row-video" style="display: none;">
+                                <td>Shooting a video</td>
+                                <td class="text-center" id="video-price">45 SAR</td>
+                            </tr>
+                            <tr id="row-summary-report" style="display: none;">
+                                <td>Summary report</td>
+                                <td class="text-center" id="summary-price"><span class="summary-label"></span> SAR</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
 
-                <div class="p-2" dir="ltr">
 
-                    <h4 class="mb-4" style="color: #1A1A1AE6;" dir="ltr">Order</h4>
-
-                    <div style="color: #747a79;">
-                        <div class="d-flex justify-content-between" style="border-bottom: 1px solid #ececec;">
-                            <h6 style="font-size: 15px;">Plan</h6>
-                            <h6 style="font-size: 15px;">Price</h6>
-                        </div>
-                    </div>
-
-                    <div style="color: #747a79;">
-                        <div class="d-flex justify-content-between mb-0 mt-4">
-                            <h6 style="font-size: 15px;" class="m-0"><span id="plan"></span> inspection</h6>
-                            <h6 style="font-size: 15px;" class="m-0" style="color: #1A1A1AE6;"><span id="price"></span> SAR</h6>
-                        </div>
-                    </div>
+                <div dir="ltr" class="inputs-containers">
 
                     <div>
-                        <p id="model" style="color: #1A1A1AE6; font-size: 12px;"></p>
-                    </div>
-
-                    <div class="mb-4" style="color: #747a79; border-top: 1px solid #ececec;">
-                        <div class="d-flex justify-content-between mt-2">
-                            <h6 style="font-size: 15px;">Total</h6>
-                            <h6 style="font-size: 15px;"><span style="color: #1A1A1AE6;" id="total"></span> <span style="color: #1A1A1AE6;">SAR</span></h6>
+                        <div class="mb-3">
+                            <label for="exampleName" class="form-label">Full name*</label>
+                            <input type="text" class="form-control" id="exampleName" aria-describedby="name" required>
                         </div>
-                    </div>
+                        <div class="mb-3">
+                            <label for="exampleInputphone" class="form-label">Phone number* (5xxxxxxxx)</label>
+                            <input maxlength="9" type="tel" class="form-control" id="exampleInputphone" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="exampleBranch" class="form-label">Branch*</label>
+                            <select class="form-select" id="exampleBranch" aria-label="Default select example" required>
+                                <option selected disabled>Choose a branch</option>
+                                <option value="الرياض-القادسية">Riyadh - Al-Qadisiyah</option>
+                                <option value="الرياض-الشفا">Riyadh - Al-Shifa</option>
+                                <option value="الدمام">Dammam</option>
+                            </select>
+                        </div>
 
+                        <div dir="ltr" class=" mb-4 pt-2 pb-2" style="border-top: 1px solid #ececec; border-bottom: 1px solid #ececec;">
+                            <div dir="ltr" class="form-check" style="border-bottom: 1px solid #ececec;">
+                                <input dir="ltr" class="form-check-input" style="width: 1em;" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label dir="ltr" class="form-check-label" for="flexRadioDefault2" style="color: #1A1A1AE6;">
+                                    Electronic payment
+                                    <p style="color: #747a79; font-size: 11px; margin-top: 6px;">Pay with credit card, Mada, Visa, MasterCard</p>
+                                </label>
+                            </div>
+
+                            <div dir="ltr" class="form-check pt-2 pb-2" style="border-bottom: 1px solid #ececec;">
+                                <input dir="ltr" class="form-check-input" style="width: 1em;" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label dir="ltr" class="form-check-label" for="flexRadioDefault1" style="color: #1A1A1AE6;">
+                                    Pay at the center
+                                    <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">Pay at one of the Cashif branches</p>
+                                </label>
+                            </div>
+
+                            <div class="form-check pt-2">
+                                <input class="form-check-input" style="width: 1em;" type="radio" name="flexRadioDefault" id="flexRadioDefault0">
+                                <label class="form-check-label" for="flexRadioDefault0" style="color: #1A1A1AE6;">
+                                    <div style="display: flex; align-items: center; gap: 8px;">
+                                        Split in 4 payments
+                                        <div><img src=<?php echo get_template_directory_uri() . '/assets/images/tamara-logo.svg' ?> alt="tamata logo"></div>
+                                    </div>
+                                    <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">No late fees, Sharia-compliant!</p>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Moyasar form -->
+                        <div class="mysr-form"></div>
+
+                        <!-- Pay in center button -->
+                        <div class="pay-in-center text-center mb-4 mt-4">
+                            <button id="pay-in-center-btn" class="btn btn-primary" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">Confirm order</button>
+                        </div>
+
+                        <!-- Pay with Tamara button -->
+                        <div class="pay-with-tamara text-center mb-4 mt-4">
+                            <button id="pay-with-tamara-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">Confirm order</button>
+                        </div>
+
+                    </div>
                 </div>
-
-
-                <div style="width: 100%; margin: auto;">
-
-
-                    <div class="mb-3">
-                        <label dir="ltr" for="exampleName" class="form-label w-100">Full name*</label>
-                        <input dir="auto" type="text" class="form-control" id="exampleName" aria-describedby="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label dir="ltr" for="exampleInputphone" class="form-label w-100">Phone number* (5xxxxxxxx)</label>
-                        <input maxlength="9" type="tel" class="form-control" id="exampleInputphone" required>
-                    </div>
-                    <div class="mb-4">
-                        <label dir="ltr" for="exampleBranch" class="form-label w-100">Branch*</label>
-                        <select dir="ltr" class="form-select" id="exampleBranch" aria-label="Default select example" required>
-                            <option selected disabled>Choose a branch</option>
-                            <option value="الرياض-القادسية">Riyadh - Al-Qadisiyah</option>
-                            <option value="الرياض-الشفا">Riyadh - Al-Shifa</option>
-                            <option value="الدمام">Dammam</option>
-                        </select>
-                    </div>
-
-
-                    <div dir="ltr" class=" mb-4 pt-2 pb-2" style="border-top: 1px solid #ececec; border-bottom: 1px solid #ececec;">
-                        <div dir="ltr" class="form-check" style="border-bottom: 1px solid #ececec;">
-                            <input dir="ltr" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                            <label dir="ltr" class="form-check-label" for="flexRadioDefault2" style="color: #1A1A1AE6;">
-                                Electronic payment
-                                <p style="color: #747a79; font-size: 11px; margin-top: 6px;">Pay with credit card, Mada, Visa, MasterCard</p>
-                            </label>
-                        </div>
-
-                        <div dir="ltr" class="form-check pt-2 pb-2" style="border-bottom: 1px solid #ececec;">
-                            <input dir="ltr" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label dir="ltr" class="form-check-label" for="flexRadioDefault1" style="color: #1A1A1AE6;">
-                                Pay at the center
-                                <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">Pay at one of the Cashif branches</p>
-                            </label>
-                        </div>
-
-
-                        <div class="form-check pt-2">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault0">
-                            <label class="form-check-label" for="flexRadioDefault0" style="color: #1A1A1AE6;">
-                                <div style="display: flex; align-items: center; gap: 8px;">
-                                    Split in 4 payments
-                                    <div><img src=<?php echo get_template_directory_uri() . '/assets/images/tamara-logo.svg' ?> alt="tamata logo"></div>
-                                </div>
-                                <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">No late fees, Sharia-compliant!</p>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Moyasar form -->
-                    <div dit="ltr" style="direction: ltr;" class="mysr-form"></div>
-
-                    <!-- Pay in center button -->
-                    <div class="pay-in-center text-center mb-4 mt-4">
-                        <button id="pay-in-center-btn" class="btn btn-primary" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">Confirm order</button>
-                    </div>
-
-
-                    <!-- Pay with Tamara button -->
-                    <div class="pay-with-tamara text-center mb-4 mt-4">
-                        <button id="pay-with-tamara-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">Confirm order</button>
-                    </div>
-
-                </div>
-
             </div>
 
         </div>
@@ -126,7 +157,6 @@
         </footer>
 
 
-
         <!--Start WhatsApp icon section-->
         <a id="whatsapp-btn" aria-label="WhatsApp Customer Service" class="sticky-icon" target="_blank" href="https://api.whatsapp.com/send?phone=966920019948&text=*Select from the main menu*">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-whatsapp" viewbox="0 0 16 16">
@@ -135,12 +165,12 @@
         </a>
         <!--End WhatsApp icon section-->
 
-
         <div id="spinner" class="spinner">
             <div class="spinner-border" style="margin: auto;" role="status">
             </div>
         </div>
 
     </div>
+
 
     <?php get_footer() ?>
