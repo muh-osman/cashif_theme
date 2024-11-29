@@ -1994,10 +1994,10 @@ form {
     width: 55px;
     height: 55px;
   }
+}
 
-  .hide-btn {
-    bottom: -66px;
-  }
+.hide-btn {
+  bottom: -66px;
 }
 
 /* End Whatsapp Icon */
