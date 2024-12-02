@@ -69,6 +69,12 @@
                                 <td>Summary report</td>
                                 <td class="text-center" id="summary-price"><span class="summary-label"></span> SAR</td>
                             </tr>
+
+                            <tr id="row-discount" style="display: none;">
+                                <td>Discount <span id="discount-percent-label"></span></td>
+                                <td dir="ltr" class="text-center" id="discount-price"><span id="discount-label"></span></td>
+                            </tr>
+
                         </tbody>
                     </table>
                 </div>
@@ -86,7 +92,7 @@
                             <label for="exampleInputphone" class="form-label">Phone number* (5xxxxxxxx)</label>
                             <input maxlength="9" type="tel" class="form-control" id="exampleInputphone" required>
                         </div>
-                        <div class="mb-4">
+                        <div class="mb-3">
                             <label for="exampleBranch" class="form-label">Branch*</label>
                             <select class="form-select" id="exampleBranch" aria-label="Default select example" required>
                                 <option selected disabled>Choose a branch</option>
@@ -94,6 +100,15 @@
                                 <option value="الرياض-الشفا">Riyadh - Al-Shifa</option>
                                 <option value="الدمام">Dammam</option>
                             </select>
+                        </div>
+
+
+                        <div class="mb-4" dir="ltr">
+                            <label for="discount-input" class="form-label">Discount code</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="discount-input" style="border: 1px solid #6c757d; box-shadow: none;">
+                                <button id="discount-btn" class="btn btn-outline-secondary" type="button" style="color: #fff; background-color: #6c757d; width: 75px;">Apply</button>
+                            </div>
                         </div>
 
                         <div dir="ltr" class=" mb-4 pt-2 pb-2" style="border-top: 1px solid #ececec; border-bottom: 1px solid #ececec;">

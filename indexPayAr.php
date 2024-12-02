@@ -68,6 +68,11 @@
                                 <td>تقرير موجز</td>
                                 <td class="text-center" id="summary-price"><span class="summary-label"></span> ريال</td>
                             </tr>
+
+                            <tr id="row-discount" style="display: none;">
+                                <td>خصم <span id="discount-percent-label"></span></td>
+                                <td dir="rtl" class="text-center" id="discount-price"><span id="discount-label"></span></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -83,7 +88,7 @@
                             <label for="exampleInputphone" class="form-label">رقم الهاتف* (5xxxxxxxx)</label>
                             <input maxlength="9" type="tel" class="form-control" id="exampleInputphone" required>
                         </div>
-                        <div class="mb-4">
+                        <div class="mb-3">
                             <label for="exampleBranch" class="form-label">الفرع*</label>
                             <select class="form-select" id="exampleBranch" aria-label="Default select example" required>
                                 <option selected disabled>اختر فرع</option>
@@ -92,6 +97,17 @@
                                 <option value="الدمام">الدمام</option>
                             </select>
                         </div>
+
+                        <div class="mb-4" dir="rtl">
+                            <label for="discount-input" class="form-label">كود الخصم</label>
+                            <div class="input-group flex-row-reverse">
+                                <button id="discount-btn" class="btn btn-outline-secondary" type="button" style="color: #fff; background-color: #6c757d; width: 75px;">تطبيق</button>
+                                <input type="text" class="form-control" id="discount-input" style="border: 1px solid #6c757d; box-shadow: none;">
+                            </div>
+                        </div>
+
+
+
 
                         <div class="mb-4 pt-2 pb-2" style="border-top: 1px solid #ececec; border-bottom: 1px solid #ececec;">
                             <div class="form-check form-check-reverse" style="border-bottom: 1px solid #ececec;">

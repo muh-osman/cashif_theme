@@ -13,7 +13,13 @@ const payInCenterBtn = document.getElementById("pay-in-center-btn");
 const formMysr = document.querySelector(".mysr-form");
 const formPayInCenter = document.querySelector(".pay-in-center");
 const formPayWithTamara = document.querySelector(".pay-with-tamara");
+const tableContainer = document.querySelector(".table-container");
 const summaryLabels = document.querySelectorAll(".summary-label");
+const discountBtn = document.getElementById("discount-btn");
+const discountInput = document.getElementById("discount-input");
+const rowDiscount = document.getElementById("row-discount");
+const discountLabel = document.getElementById("discount-label");
+const discountPercentLabel = document.getElementById("discount-percent-label");
 
 const origin = window.location.origin; // https://example.com
 const sub = window.location.hostname === "localhost" ? "/cashif" : "";
@@ -41,6 +47,8 @@ let mod;
 
 let total = 0;
 let checkedValues = []; // Array to hold the values of checked checkboxes
+
+let discount = 0;
 
 const fetchPrice = async () => {
   try {
@@ -189,7 +197,17 @@ function updateTotal() {
     summaryPrice = serv === "أساسي" ? 55 : serv === "شامل" ? 50 : 60;
   }
 
-  total = mainPrice + videoPrice + summaryPrice;
+  // if rowDiscount hiden then it means discount = 0 else
+  if (rowDiscount.style.display === "table-row") {
+    discount = discount || 0;
+  }
+
+  let subtotal = mainPrice + videoPrice + summaryPrice; // Calculate subtotal
+  let discountAmount = subtotal * discount; // Calculate discount amount
+  total = subtotal - discountAmount; // Calculate total after discount
+
+  // how much discount that applied
+  discountLabel.textContent = `-${discountAmount} SAR`;
 
   // Update the caption with the new total
   caption.textContent = `Total: ${total} SAR`;
@@ -225,6 +243,51 @@ document.querySelectorAll(".control-table").forEach((checkbox) => {
     // Update the total after changing the visibility
     updateTotal();
   });
+});
+
+// Discount button
+discountBtn.addEventListener("click", function () {
+  if (discountInput.value === "") {
+    alert("Discount code is required!");
+    return false;
+  }
+
+  // Show the spinner
+  discountBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>`;
+
+  setTimeout(() => {
+    if (discountInput.value === "Q10") {
+      discountBtn.innerHTML = "Apply";
+      discountBtn.disabled = true; // disable discountBtn
+      discountInput.disabled = true; // disable discountInput
+      rowDiscount.style.display = "table-row"; // show rowDiscount
+      discountPercentLabel.textContent = "10%";
+      discount = 0.1;
+      tableContainer.scrollIntoView({ behavior: "smooth" });
+      updateTotal();
+    } else if (discountInput.value === "C15") {
+      discountBtn.innerHTML = "Apply";
+      discountBtn.disabled = true; // disable discountBtn
+      discountInput.disabled = true; // disable discountInput
+      rowDiscount.style.display = "table-row"; // show rowDiscount
+      discountPercentLabel.textContent = "15%";
+      discount = 0.15;
+      tableContainer.scrollIntoView({ behavior: "smooth" });
+      updateTotal();
+    } else if (discountInput.value === "K20") {
+      discountBtn.innerHTML = "Apply";
+      discountBtn.disabled = true; // disable discountBtn
+      discountInput.disabled = true; // disable discountInput
+      rowDiscount.style.display = "table-row"; // show rowDiscount
+      discountPercentLabel.textContent = "20%";
+      discount = 0.2;
+      tableContainer.scrollIntoView({ behavior: "smooth" });
+      updateTotal();
+    } else {
+      discountBtn.innerHTML = "Apply";
+      alert("Discount code is invalid!");
+    }
+  }, 2000);
 });
 
 // Function to toggle visibility based on selected radio button
