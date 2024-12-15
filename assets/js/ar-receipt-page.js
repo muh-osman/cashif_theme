@@ -203,7 +203,7 @@ function updateTotal() {
 
   let subtotal = mainPrice + videoPrice + summaryPrice; // Calculate subtotal
   let discountAmount = subtotal * discount; // Calculate discount amount
-  total = subtotal - discountAmount; // Calculate total after discount
+  total = (subtotal - discountAmount).toFixed(1);
 
   // how much discount that applied
   discountLabel.textContent = `-${discountAmount} ريال`;
