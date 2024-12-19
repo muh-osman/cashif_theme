@@ -128,16 +128,28 @@
                                 </label>
                             </div>
 
-                            <div class="form-check pt-2">
+                            <div class="form-check pt-2 pb-2" style="border-bottom: 1px solid #ececec;">
                                 <input class="form-check-input" style="width: 1em;" type="radio" name="flexRadioDefault" id="flexRadioDefault0">
                                 <label class="form-check-label" for="flexRadioDefault0" style="color: #1A1A1AE6;">
                                     <div style="display: flex; align-items: center; gap: 8px;">
-                                        Split in 4 payments
                                         <div><img src=<?php echo get_template_directory_uri() . '/assets/images/tamara-logo.svg' ?> alt="tamata logo"></div>
+                                        Split in 4 payments
                                     </div>
                                     <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">No late fees, Sharia-compliant!</p>
                                 </label>
                             </div>
+
+                            <div class="form-check pt-2">
+                                <input class="form-check-input" type="radio" style="width: 1em;" name="flexRadioDefault" id="flexRadioDefaultTabby">
+                                <label class="form-check-label" for="flexRadioDefaultTabby" style="color: #1A1A1AE6;">
+                                    <div style="display: flex; align-items: center; gap: 8px;">
+                                        <div><img style="width: 74px;" src=<?php echo get_template_directory_uri() . '/assets/images/tabby.png' ?> alt="tabby logo"></div>
+                                        Split in 4 payments
+                                    </div>
+                                    <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">Pay in 4. No interest, no fees.</p>
+                                </label>
+                            </div>
+
                         </div>
 
                         <!-- Moyasar form -->
@@ -151,6 +163,11 @@
                         <!-- Pay with Tamara button -->
                         <div class="pay-with-tamara text-center mb-4 mt-4">
                             <button id="pay-with-tamara-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">Confirm order</button>
+                        </div>
+
+                        <!-- Pay with Tabby button -->
+                        <div class="pay-with-tabby text-center mb-4 mt-4">
+                            <button id="pay-with-tabby-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">Confirm order</button>
                         </div>
 
                     </div>

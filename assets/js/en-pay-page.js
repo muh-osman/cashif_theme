@@ -9,10 +9,12 @@ const nameInput = document.getElementById("exampleName");
 const phoneInput = document.getElementById("exampleInputphone");
 const branchInput = document.getElementById("exampleBranch");
 const payWithTamaraBtn = document.getElementById("pay-with-tamara-btn");
+const payWithTabbyBtn = document.getElementById("pay-with-tabby-btn");
 const payInCenterBtn = document.getElementById("pay-in-center-btn");
 const formMysr = document.querySelector(".mysr-form");
 const formPayInCenter = document.querySelector(".pay-in-center");
 const formPayWithTamara = document.querySelector(".pay-with-tamara");
+const formPayWithTabby = document.querySelector(".pay-with-tabby");
 const tableContainer = document.querySelector(".table-container");
 const summaryLabels = document.querySelectorAll(".summary-label");
 const discountBtn = document.getElementById("discount-btn");
@@ -155,6 +157,12 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
         alert("All fields are required!");
         return false;
       }
+
+      if (!/^5\d{8}$/.test(phone)) {
+        alert("Invalid phone number!");
+        return false;
+      }
+
       return true;
     },
   });
@@ -295,14 +303,22 @@ function toggleForms() {
     formMysr.style.display = "block"; // Show mysr-form
     formPayInCenter.style.display = "none"; // Hide pay-in-center
     formPayWithTamara.style.display = "none"; // Hide pay-with-tamara
+    formPayWithTabby.style.display = "none"; // Hide pay-with-tabby
   } else if (document.getElementById("flexRadioDefault1").checked) {
     formMysr.style.display = "none"; // Hide mysr-form
     formPayWithTamara.style.display = "none"; // Hide pay-with-tamara
     formPayInCenter.style.display = "block"; // Show pay-in-center
+    formPayWithTabby.style.display = "none"; // Hide pay-with-tabby
   } else if (document.getElementById("flexRadioDefault0").checked) {
     formMysr.style.display = "none"; // Hide mysr-form
     formPayInCenter.style.display = "none"; // Hide pay-in-center
+    formPayWithTabby.style.display = "none"; // Hide pay-with-tabby
     formPayWithTamara.style.display = "block"; // Show pay-with-tamara
+  } else if (document.getElementById("flexRadioDefaultTabby").checked) {
+    formMysr.style.display = "none"; // Hide mysr-form
+    formPayInCenter.style.display = "none"; // Hide pay-in-center
+    formPayWithTamara.style.display = "none"; // Show pay-with-tamara
+    formPayWithTabby.style.display = "block"; // Hide pay-with-tabby
   }
 }
 
@@ -316,6 +332,9 @@ document
 document
   .getElementById("flexRadioDefault0")
   .addEventListener("change", toggleForms);
+document
+  .getElementById("flexRadioDefaultTabby")
+  .addEventListener("change", toggleForms);
 
 // Initial call to set the correct display at page load
 toggleForms();
@@ -324,6 +343,11 @@ toggleForms();
 payInCenterBtn.addEventListener("click", function () {
   if (!name || !phone || !branch || branch === "Choose a branch") {
     alert("All fields are required!");
+    return false;
+  }
+
+  if (!/^5\d{8}$/.test(phone)) {
+    alert("Invalid phone number!");
     return false;
   }
 
@@ -347,6 +371,11 @@ payInCenterBtn.addEventListener("click", function () {
 payWithTamaraBtn.addEventListener("click", async function () {
   if (!name || !phone || !branch || branch === "Choose a branch") {
     alert("All fields are required!");
+    return false;
+  }
+
+  if (!/^5\d{8}$/.test(phone)) {
+    alert("Invalid phone number!");
     return false;
   }
 
@@ -462,6 +491,194 @@ payWithTamaraBtn.addEventListener("click", async function () {
     payWithTamaraBtn.disabled = false;
     payWithTamaraBtn.innerHTML = "Confirm order";
     console.error("Error creating Tamara checkout:", error);
+    alert("An error occurred while processing your payment. Please try again.");
+  }
+});
+
+// Pay with Tabby Btn (Checkout Tabby API)
+payWithTabbyBtn.addEventListener("click", async function () {
+  if (!name || !phone || !branch || branch === "Choose a branch") {
+    alert("All fields are required!");
+    return false;
+  }
+
+  if (!/^5\d{8}$/.test(phone)) {
+    alert("Invalid phone number!");
+    return false;
+  }
+
+  // Random string 16 Char
+  const timestamp = Date.now().toString(36).slice(-6);
+  let randomString = Math.random().toString(36).substr(2, 10);
+  randomString = "TABBY-" + (timestamp + randomString).slice(0, 10); // Total length will be 16
+
+  const now = new Date();
+  const formattedDate = now.toISOString();
+
+  const orderData = {
+    payment: {
+      amount: total,
+      currency: "SAR",
+      description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
+        checkedValues.join(", ") || "لايوجد"
+      }`,
+      buyer: {
+        phone: phone,
+        email: "user@example.com",
+        name: name,
+        dob: "2000-08-24",
+      },
+      shipping_address: {
+        city: branch,
+        address: branch,
+        zip: "N/A",
+      },
+      order: {
+        tax_amount: "0.00",
+        shipping_amount: "0.00",
+        discount_amount: "0.00",
+        updated_at: formattedDate,
+        reference_id: randomString,
+        items: [
+          {
+            title: serv,
+            description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
+              checkedValues.join(", ") || "لايوجد"
+            }`,
+            quantity: 1,
+            unit_price: total,
+            discount_amount: "0.00",
+            reference_id: "string",
+            image_url: "http://example.com",
+            product_url: "http://example.com",
+            gender: "Male",
+            category: serv,
+            color: "string",
+            product_material: "string",
+            size_type: "string",
+            size: "string",
+            brand: mod,
+            is_refundable: false,
+          },
+        ],
+      },
+      buyer_history: {
+        registered_since: formattedDate,
+        loyalty_level: 0,
+        wishlist_count: 0,
+        is_social_networks_connected: true,
+        is_phone_number_verified: true,
+        is_email_verified: true,
+      },
+      order_history: [
+        {
+          purchased_at: formattedDate,
+          amount: total,
+          payment_method: "card",
+          status: "new",
+          buyer: {
+            phone: phone,
+            email: "user@example.com",
+            name: name,
+            dob: "2000-08-24",
+          },
+          shipping_address: {
+            city: branch,
+            address: branch,
+            zip: "N/A",
+          },
+          items: [
+            {
+              title: serv,
+              description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
+                checkedValues.join(", ") || "لايوجد"
+              }`,
+              quantity: 1,
+              unit_price: total,
+              discount_amount: "0.00",
+              reference_id: randomString,
+              image_url: "http://example.com",
+              product_url: "http://example.com",
+              ordered: 0,
+              captured: 0,
+              shipped: 0,
+              refunded: 0,
+              gender: "Male",
+              category: serv,
+              color: "string",
+              product_material: "string",
+              size_type: "string",
+              size: "string",
+              brand: mod,
+            },
+          ],
+        },
+      ],
+      meta: {
+        order_id: null,
+        customer: null,
+      },
+      attachment: {
+        body: '{"flight_reservation_details": {"pnr": "TR9088999","affiliate_name": "some affiliate"}}',
+        content_type: "application/vnd.tabby.v1+json",
+      },
+    },
+    lang: "en",
+    merchant_code: "SA",
+    merchant_urls: {
+      success: `${origin}${sub}/thankyou/en/`,
+      cancel: `${origin}${sub}/thankyou/en/?cancel=true`,
+      failure: `${origin}${sub}/thankyou/en/?fail=true`,
+    },
+    token: null,
+  };
+
+  // disable payWithTabbyBtn button
+  payWithTabbyBtn.disabled = true;
+  // add boostrap spinner to payWithTabbyBtn button
+  payWithTabbyBtn.innerHTML = "";
+  const spinner = document.createElement("div");
+  spinner.classList.add("spinner-border");
+  spinner.setAttribute("role", "status");
+  spinner.style.margin = "auto";
+  spinner.style.width = "22.5px";
+  spinner.style.height = "22.5px";
+  payWithTabbyBtn.appendChild(spinner);
+  spinner.style.display = "block";
+
+  try {
+    // this api will send the "user data(orderData)" to back-end then the back-end will send this data to Tabby API and return the "web_url" that will take it in Front-end to redirect the user to Tabby checkout page(Checkout Session), after the payment is done, Tabby will redirect the user back to the "success_url (thankyou page)" that we have set in the "orderData" object.
+    const response = await fetch(`${BACK_END_API}/api/pay-with-tabby`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(orderData),
+    });
+
+    if (!response.ok) {
+      spinner.style.display = "none";
+      payWithTabbyBtn.disabled = false;
+      payWithTabbyBtn.innerHTML = "Confirm order";
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const result = await response.json();
+
+    // Redirect to Tabby checkout page
+    if (result.checkout_url) {
+      window.location.href = result.checkout_url;
+    } else {
+      spinner.style.display = "none";
+      payWithTabbyBtn.disabled = false;
+      payWithTabbyBtn.innerHTML = "Confirm order";
+      alert("Failed to retrieve checkout URL.");
+    }
+  } catch (error) {
+    spinner.style.display = "none";
+    payWithTabbyBtn.disabled = false;
+    payWithTabbyBtn.innerHTML = "Confirm order";
+    console.error("Error creating Tabby checkout:", error);
     alert("An error occurred while processing your payment. Please try again.");
   }
 });

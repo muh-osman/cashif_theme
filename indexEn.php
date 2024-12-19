@@ -1086,26 +1086,30 @@
                     <p class="m-0 mt-4">All rights reserved © 2024 Cashif Center</p>
                 </div>
 
-                <div class="sponsors mb-0" style="margin-top: 25px;">
+                <div class="sponsors mb-0" style="margin-top: 25px; gap: 9px; flex-wrap: wrap;">
 
-                    <div class="sponsor-logo">
+                    <div class="sponsor-logo m-0">
                         <img src=<?php echo get_template_directory_uri() . '/assets/images/mada.svg' ?> alt="mada" />
                     </div>
 
-                    <div class="sponsor-logo">
+                    <div class="sponsor-logo m-0">
                         <img src=<?php echo get_template_directory_uri() . '/assets/images/pay.svg' ?> alt="pay" />
                     </div>
 
-                    <div class="sponsor-logo" style="background-color: #fff; border-radius: 6px;">
-                        <img src=<?php echo get_template_directory_uri() . '/assets/images/tamara-logo.svg' ?> alt="tamara" />
-                    </div>
-
-                    <div class="sponsor-logo">
+                    <div class="sponsor-logo m-0">
                         <img src=<?php echo get_template_directory_uri() . '/assets/images/visa.svg' ?> alt="visa" />
                     </div>
 
-                    <div class="sponsor-logo">
+                    <div class="sponsor-logo m-0">
                         <img src=<?php echo get_template_directory_uri() . '/assets/images/mastercard.svg' ?> alt="mastercard" />
+                    </div>
+
+                    <div class="sponsor-logo m-0" style="background-color: #fff; border-radius: 6px;">
+                        <img src=<?php echo get_template_directory_uri() . '/assets/images/tamara-logo.svg' ?> alt="tamara" />
+                    </div>
+
+                    <div class="sponsor-logo m-0" style="background-color: #fff; border-radius: 6px;">
+                        <img src=<?php echo get_template_directory_uri() . '/assets/images/tabby.png' ?> alt="tabby" />
                     </div>
                 </div>
             </div>
