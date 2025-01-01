@@ -81,7 +81,7 @@ const fetchPrice = async () => {
 
     // Change price "summary" addetional service (in checkboxe and table) based on the plan
     summaryLabels.forEach((label) => {
-      label.innerHTML = serv === "أساسي" ? "55" : serv === "شامل" ? "50" : "60";
+      label.innerHTML = serv === "أساسي" ? "75" : serv === "شامل" ? "65" : "85";
     });
 
     caption.textContent = `الاجمالي: ${total} ريال`;
@@ -200,7 +200,7 @@ function updateTotal() {
   }
   // if summaryReportPriceDiv hiden then it means summaryPrice = 50 else summaryPrice = 0
   if (summaryReportPriceDiv.style.display === "table-row") {
-    summaryPrice = serv === "أساسي" ? 55 : serv === "شامل" ? 50 : 60;
+    summaryPrice = serv === "أساسي" ? 75 : serv === "شامل" ? 65 : 85;
   }
   // if rowDiscount hiden then it means discount = 0 else
   if (rowDiscount.style.display === "table-row") {
