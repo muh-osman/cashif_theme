@@ -179,7 +179,7 @@
 
         <footer dir="ltr">
             <div>
-                <p>All rights reserved © 2024 Cashif Center</p>
+                <p>All rights reserved © 2025 Cashif Center</p>
             </div>
             <div class=" footer-links-box">
                 <a href="https://cashif.cc/privacy-policy/en/">Privacy policy</a>

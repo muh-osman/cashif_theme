@@ -251,7 +251,7 @@
 
         <footer>
             <div>
-                <p>جميع الحقوق محفوظة © 2024 مركز كاشف</p>
+                <p>جميع الحقوق محفوظة © 2025 مركز كاشف</p>
             </div>
             <div class="footer-links-box">
                 <a href="https://cashif.cc/privacy-policy/">سياسة الخصوصية</a>

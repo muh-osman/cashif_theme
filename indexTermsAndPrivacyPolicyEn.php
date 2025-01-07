@@ -40,7 +40,7 @@
 
     <footer>
         <div>
-            <p>All rights reserved © 2024 Cashif Center</p>
+            <p>All rights reserved © 2025 Cashif Center</p>
         </div>
     </footer>
 
