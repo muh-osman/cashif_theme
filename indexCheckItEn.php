@@ -908,6 +908,9 @@
                                     <li>
                                         <a href="https://cashif.cc/return-policy/en/">Return and exchange</a>
                                     </li>
+                                    <li>
+                                        <a href="https://cashif.cc/blog/">Blog</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

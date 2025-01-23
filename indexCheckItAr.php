@@ -915,6 +915,10 @@
                                         <a href="https://cashif.cc/return-policy/">الاسترجاع والاستبدال</a>
                                     </li>
 
+                                    <li>
+                                        <a href="https://cashif.cc/blog/">المدونة</a>
+                                    </li>
+
                                 </ul>
                             </div>
                         </div>
