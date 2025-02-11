@@ -177,6 +177,7 @@
                                 <option value="الرياض-القادسية">Riyadh - Al-Qadisiyah</option>
                                 <option value="الرياض-الشفا">Riyadh - Al-Shifa</option>
                                 <option value="الدمام">Dammam</option>
+                                <option value="جدة">Jeddah</option>
                             </select>
                         </div>
 

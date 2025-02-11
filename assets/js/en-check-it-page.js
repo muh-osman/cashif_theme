@@ -68,6 +68,37 @@ languageToggle.addEventListener("change", function () {
 //   window.scrollTo(0, 0);
 // };
 
+// Discount for spacific URL (AD URL)
+// Get the current URL
+const currentUrl = window.location.href;
+const url = new URL(currentUrl);
+const params = new URLSearchParams(url.search);
+const dis = params.get("dis");
+const disInSessionStorage = sessionStorage.getItem("dis");
+
+// Initialize discount variable
+let discount = 0;
+const elements = document.getElementsByClassName("dis");
+
+// Check if 'dis' is present and true
+if (dis === "fifty") {
+  // Store 'dis' in session storage
+  sessionStorage.setItem("dis", dis);
+  // Check if dis is "fifty" and set discount to 50%
+  discount = 0.5; // 50% discount
+  // Loop through the collection and add the class to each element
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].classList.add("seventy-discount");
+  }
+}
+
+if (disInSessionStorage === "fifty") {
+  discount = 0.5; // 50% discount
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].classList.add("seventy-discount");
+  }
+}
+
 // Bootstrap tooltips
 const tooltipTriggerList = document.querySelectorAll(
   '[data-bs-toggle="tooltip"]'
@@ -249,15 +280,15 @@ const submit = async () => {
     //
     const mainPrice = document.getElementById("main-price");
     mainPrice.textContent = `${
-      newData[0].prices[1].price * (1).toFixed(2)
+      newData[0].prices[1].price * (1 - discount).toFixed(2)
     } SAR`;
     const fullPrice = document.getElementById("full-price");
     fullPrice.textContent = `${
-      newData[0].prices[0].price * (1).toFixed(2)
+      newData[0].prices[0].price * (1 - discount).toFixed(2)
     } SAR`;
 
     // old price
-    document.getElementById("old-price").innerHTML = `
+    document.getElementById("old-price-c").innerHTML = `
     <span class="text-decoration-line-through">
     ${(newData[0].prices[0].price * (1).toFixed(2)) / 0.8} SAR
     </span>
@@ -265,6 +296,19 @@ const submit = async () => {
       (newData[0].prices[0].price * (1).toFixed(2)) / 0.8 -
       newData[0].prices[0].price * (1).toFixed(2)
     } SAR</span>`;
+    //
+
+    if (dis === "fifty" || disInSessionStorage === "fifty") {
+      document.getElementById("old-price-b").innerHTML = `
+    <span class="text-decoration-line-through">${
+      newData[0].prices[1].price * (1).toFixed(2)
+    } SAR</span>`;
+
+      document.getElementById("old-price-c").innerHTML = `
+    <span class="text-decoration-line-through">${
+      newData[0].prices[0].price * (1).toFixed(2)
+    } SAR</span>`;
+    }
 
     //
     const overlay = document.getElementById("overlay");

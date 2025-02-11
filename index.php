@@ -297,13 +297,14 @@
             </div>
 
             <div class="row row-cols-1 row-cols-md-3 mb-3 mt-5 text-center plane-box">
-                <div class="col plane eng-pane">
+                <div class="col plane eng-pane dis">
                     <div class="card mb-4 rounded-3 shadow-sm card-price eng">
                         <div class="card-header py-3">
                             <h4 class="my-0 fw-normal">المحركات</h4>
                         </div>
                         <div class="card-body">
                             <h1 id="engain-price" class="card-title pricing-card-title"></h1>
+                            <h3 id="old-price-a" style="margin-top: -12px; font-size: 16px; color: #d32f2f"></h3>
                             <h5>تشمل فحص:</h5>
                             <ul class="list-unstyled mt-3 mb-4">
                                 <li>
@@ -494,13 +495,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col plane main-plane">
+                <div class="col plane main-plane dis">
                     <div class="card mb-4 rounded-3 shadow-sm card-price">
                         <div class="card-header py-3">
                             <h4 class="my-0 fw-normal">الأساسي</h4>
                         </div>
                         <div class="card-body">
                             <h1 id="main-price" class="card-title pricing-card-title"></h1>
+                            <h3 id="old-price-b" style="margin-top: -12px; font-size: 16px; color: #d32f2f"></h3>
                             <h5>تشمل فحص:</h5>
                             <ul class="list-unstyled mt-3 mb-4">
                                 <li>
@@ -690,14 +692,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col plane crown-box full-pane">
+                <div class="col plane crown-box full-pane dis">
                     <div class="card mb-0 rounded-3 shadow-sm card-price" style="border: 2px solid #174545;">
                         <div class="card-header py-3 crown">
                             <h4 class="my-0 fw-normal">الشامل</h4>
                         </div>
                         <div class="card-body">
-                            <h1 id="full-price" class="card-title pricing-card-title" style="margin-bottom: 0"></h1>
-                            <h3 id="old-price" style="margin-bottom: 5px; font-size: 16px; color: #d32f2f"></h3>
+                            <h1 id="full-price" class="card-title pricing-card-title"></h1>
+                            <h3 id="old-price-c" style="margin-top: -12px; font-size: 16px; color: #d32f2f"></h3>
                             <h5>تشمل فحص:</h5>
                             <ul class="list-unstyled mt-3 mb-4">
                                 <li>
@@ -1037,7 +1039,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://maps.app.goo.gl/yxdovfBmrUy3evAM7">
+                                        <a href="https://maps.app.goo.gl/22gnzZC5CGYdbhq36">
                                             جدة <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                                 <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
                                                 <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />

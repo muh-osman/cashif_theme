@@ -1531,6 +1531,27 @@ form {
   justify-content: center;
 }
 
+.seventy-discount {
+  position: relative;
+  overflow: hidden;
+}
+
+.seventy-discount::after {
+  position: absolute;
+  content: "50% OFF";
+  top: 7px;
+  right: -58px;
+  width: 175px;
+  height: 47px;
+  font-size: 14px;
+  background-color: #d32f2f;
+  transform: rotate(404deg);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .text-warning {
   display: none;
   color: #e6d39c !important;

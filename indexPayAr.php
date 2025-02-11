@@ -95,6 +95,7 @@
                                 <option value="الرياض-القادسية">الرياض - القادسية</option>
                                 <option value="الرياض-الشفا">الرياض - الشفا</option>
                                 <option value="الدمام">الدمام</option>
+                                <option value="جدة">جدة</option>
                             </select>
                         </div>
 

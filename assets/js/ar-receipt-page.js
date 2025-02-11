@@ -35,6 +35,7 @@ const plan = params.get("plan");
 const yearId = params.get("year_id");
 const carModelId = params.get("car_model_id");
 const priceId = params.get("price_id");
+const affiliate = params.get("affiliate");
 
 planSpan.innerHTML = plan;
 
@@ -69,7 +70,19 @@ const fetchPrice = async () => {
     }
     const newData = await response.json();
 
-    mainPrice = +(newData[0].prices[priceId].price * 1).toFixed(2);
+    // discount url
+    let urlDiscount = 0;
+    const dis = sessionStorage.getItem("dis");
+    if (dis) {
+      // Check if dis is "fifty" and set discount to 50%
+      if (dis === "fifty") {
+        urlDiscount = 0.5; // 50% discount
+      }
+    }
+
+    mainPrice = +(newData[0].prices[priceId].price * (1 - urlDiscount)).toFixed(
+      2
+    );
     total = mainPrice;
 
     serv = newData[0].prices[priceId].service_name;
@@ -150,6 +163,8 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
 
       service: "مخدوم",
       additionalServices: checkedValues.join(", ") || "لايوجد",
+
+      affiliate: `${affiliate ? affiliate : ""}`,
     },
 
     on_initiating: function () {
@@ -362,7 +377,7 @@ payInCenterBtn.addEventListener("click", function () {
 
   const url = `${origin}${sub}/thanks/?id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
     checkedValues.join(", ") || "لايوجد"
-  }`;
+  }${affiliate ? `&affiliate=${affiliate}` : ""}`;
 
   window.location.href = url;
 });
@@ -427,7 +442,7 @@ payWithTamaraBtn.addEventListener("click", async function () {
     country_code: "SA",
     description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&service=مخدوم&additionalServices=${
       checkedValues.join(", ") || "لايوجد"
-    }`,
+    }${affiliate ? `&affiliate=${affiliate}` : ""}`,
     merchant_url: {
       cancel: `${origin}${sub}/thanks/?cancel=true`,
       failure: `${origin}${sub}/thanks/?fail=true`,
@@ -521,7 +536,7 @@ payWithTabbyBtn.addEventListener("click", async function () {
       currency: "SAR",
       description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&service=مخدوم&additionalServices=${
         checkedValues.join(", ") || "لايوجد"
-      }`,
+      }${affiliate ? `&affiliate=${affiliate}` : ""}`,
       buyer: {
         phone: phone,
         email: "user@example.com",
@@ -544,7 +559,7 @@ payWithTabbyBtn.addEventListener("click", async function () {
             title: serv,
             description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&service=مخدوم&additionalServices=${
               checkedValues.join(", ") || "لايوجد"
-            }`,
+            }${affiliate ? `&affiliate=${affiliate}` : ""}`,
             quantity: 1,
             unit_price: total,
             discount_amount: "0.00",
@@ -592,7 +607,7 @@ payWithTabbyBtn.addEventListener("click", async function () {
               title: serv,
               description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&service=مخدوم&additionalServices=${
                 checkedValues.join(", ") || "لايوجد"
-              }`,
+              }${affiliate ? `&affiliate=${affiliate}` : ""}`,
               quantity: 1,
               unit_price: total,
               discount_amount: "0.00",

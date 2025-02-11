@@ -16,6 +16,7 @@ const branch = params.get("branch");
 const plan = params.get("plan");
 const price = params.get("price");
 const model = params.get("model");
+const affiliate = params.get("affiliate");
 
 const addServ = params.get("additionalServices");
 
@@ -119,6 +120,8 @@ async function submitUnPaidQrCode() {
         year: year,
 
         additionalServices: addServ,
+
+        affiliate: `${affiliate ? affiliate : ""}`,
       }),
     });
 
