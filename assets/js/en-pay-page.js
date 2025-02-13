@@ -268,7 +268,7 @@ document.querySelectorAll(".control-table").forEach((checkbox) => {
 });
 
 // Discount button
-discountBtn.addEventListener("click", function () {
+discountBtn.addEventListener("click", async function () {
   if (discountInput.value === "") {
     alert("Discount code is required!");
     return false;
@@ -277,39 +277,32 @@ discountBtn.addEventListener("click", function () {
   // Show the spinner
   discountBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>`;
 
-  setTimeout(() => {
-    if (discountInput.value === "Q10") {
-      discountBtn.innerHTML = "Apply";
-      discountBtn.disabled = true; // disable discountBtn
-      discountInput.disabled = true; // disable discountInput
-      rowDiscount.style.display = "table-row"; // show rowDiscount
-      discountPercentLabel.textContent = "10%";
-      discount = 0.1;
-      tableContainer.scrollIntoView({ behavior: "smooth" });
-      updateTotal();
-    } else if (discountInput.value === "C15") {
-      discountBtn.innerHTML = "Apply";
-      discountBtn.disabled = true; // disable discountBtn
-      discountInput.disabled = true; // disable discountInput
-      rowDiscount.style.display = "table-row"; // show rowDiscount
-      discountPercentLabel.textContent = "15%";
-      discount = 0.15;
-      tableContainer.scrollIntoView({ behavior: "smooth" });
-      updateTotal();
-    } else if (discountInput.value === "K20") {
-      discountBtn.innerHTML = "Apply";
-      discountBtn.disabled = true; // disable discountBtn
-      discountInput.disabled = true; // disable discountInput
-      rowDiscount.style.display = "table-row"; // show rowDiscount
-      discountPercentLabel.textContent = "20%";
-      discount = 0.2;
-      tableContainer.scrollIntoView({ behavior: "smooth" });
-      updateTotal();
-    } else {
-      discountBtn.innerHTML = "Apply";
-      alert("Discount code is invalid!");
-    }
-  }, 2000);
+  try {
+    // const response = await fetch("/api/", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({ discountCode: discountInput.value }),
+    // });
+    // const data = await response.json();
+    // if (data.valid) {
+    // }
+
+    alert("Under construction");
+    discountBtn.innerHTML = "Apply";
+    discountBtn.disabled = true; // disable discountBtn
+    discountInput.disabled = true; // disable discountInput
+    rowDiscount.style.display = "table-row"; // show rowDiscount
+    // discountPercentLabel.textContent = "10%";
+    // discount = 0.1;
+    tableContainer.scrollIntoView({ behavior: "smooth" });
+    updateTotal();
+  } catch (error) {
+    discountBtn.innerHTML = "Apply";
+    console.error("Error:", error);
+    alert("An error occurred while applying the discount.");
+  }
 });
 
 // Function to toggle visibility based on selected radio button

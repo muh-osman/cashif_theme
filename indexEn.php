@@ -1,6 +1,18 @@
 <?php get_header() ?>
 
 <body dir="ltr">
+
+    <!-- Start Banner -->
+    <a href="https://maps.app.goo.gl/697yXkaS4o6kYsos8">
+        <div dir="ltr" class="bannar">
+            <p>Exclusively for customers in <span> <span>Jeddah</span></span> – Computer check for your car for <span>5 SAR!</span></p>
+            <p>Get the offer</p>
+        </div>
+    </a>
+    <!-- End Banner -->
+
+
+
     <!--Start intro section-->
     <section class="intro-section">
         <div class="circle circle-top"></div>
@@ -126,7 +138,7 @@
                             </svg>
                         </div>
                         <h4>We check it for you</h4>
-                        <p>Did you find a used car for sale <u>while you are outside</u> Riyadh or Dammam? Cashif will inspect it for you and facilitate the transportation and shipping procedures.</p>
+                        <p>Did you find a used car for sale <u>while you are outside</u> Riyadh, Jeddah or Dammam? Cashif will inspect it for you and facilitate the transportation and shipping procedures.</p>
                         <ul>
                             <li>
                                 <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
@@ -1033,7 +1045,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://maps.app.goo.gl/22gnzZC5CGYdbhq36">
+                                        <a href="https://maps.app.goo.gl/697yXkaS4o6kYsos8">
                                             Jeddah <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                                 <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
                                                 <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />

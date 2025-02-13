@@ -2148,3 +2148,52 @@ form {
 }
 
 /* End Whatsapp Icon */
+
+/* Banner */
+body {
+  padding-top: 39px;
+}
+.bannar {
+  width: 100%;
+  padding: 9px;
+  background-color: #e2d298;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+@media (max-width: 527px) {
+  body {
+    padding-top: 72px;
+  }
+  .bannar {
+    flex-direction: column;
+  }
+}
+.bannar p {
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
+  color: #174545;
+}
+
+.bannar p span {
+  color: #d32f2f;
+  text-decoration: underline;
+}
+
+.bannar p:nth-child(2) {
+  color: #007bff;
+}
+
+.bannar:hover p:nth-child(2) {
+  text-decoration: underline;
+}
+
+.bannar svg {
+  width: 12px;
+}

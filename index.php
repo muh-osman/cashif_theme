@@ -1,6 +1,16 @@
 <?php get_header() ?>
 
 <body>
+
+    <!-- Start Banner -->
+    <a href="https://maps.app.goo.gl/697yXkaS4o6kYsos8">
+        <div class="bannar">
+            <p>حصريًا لعملاء <span> <span>جدة</span></span> – فحص كمبيوتر لسيارتك بـ <span>5 ريال!</span></p>
+            <p>احصل على العرض</p>
+        </div>
+    </a>
+    <!-- End Banner -->
+
     <!--Start intro section-->
     <section class="intro-section">
         <div class="circle circle-top"></div>
@@ -125,7 +135,7 @@
                             </svg>
                         </div>
                         <h4>خدمة مخدوم</h4>
-                        <p>حصلت سيارة مستعملة للبيع <u>وأنت خارج</u> الرياض أو الدمام ؟ كاشف يفحصها عنك ويسهل عليك إجراءات النقل والشحن.</p>
+                        <p>حصلت سيارة مستعملة للبيع <u>وأنت خارج</u> الرياض، جدة أو الدمام ؟ كاشف يفحصها عنك ويسهل عليك إجراءات النقل والشحن.</p>
                         <ul>
                             <li>
                                 <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
@@ -1039,7 +1049,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://maps.app.goo.gl/22gnzZC5CGYdbhq36">
+                                        <a href="https://maps.app.goo.gl/697yXkaS4o6kYsos8">
                                             جدة <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                                 <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
                                                 <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
