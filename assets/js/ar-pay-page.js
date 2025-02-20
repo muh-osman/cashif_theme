@@ -19,6 +19,8 @@ const tableContainer = document.querySelector(".table-container");
 const summaryLabels = document.querySelectorAll(".summary-label");
 const discountBtn = document.getElementById("discount-btn");
 const discountInput = document.getElementById("discount-input");
+let discountCode = "";
+let isDiscountCodeValide = false;
 const rowDiscount = document.getElementById("row-discount");
 const discountLabel = document.getElementById("discount-label");
 const discountPercentLabel = document.getElementById("discount-percent-label");
@@ -50,6 +52,9 @@ let mod;
 
 let total = 0;
 let checkedValues = []; // Array to hold the values of checked checkboxes
+
+let marketerCommissionPercentage = 0;
+let marketerShare = 0;
 
 let discount = 0;
 
@@ -164,6 +169,9 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
       additionalServices: checkedValues.join(", ") || "لايوجد",
 
       affiliate: `${affiliate ? affiliate : ""}`,
+
+      dc: `${discountCode ? discountCode : ""}`,
+      msh: `${marketerShare ? marketerShare : ""}`,
     },
 
     on_initiating: function () {
@@ -226,6 +234,11 @@ function updateTotal() {
   let discountAmount = subtotal * discount; // Calculate discount amount
   total = (subtotal - discountAmount).toFixed(1);
 
+  marketerShare = parseFloat(
+    (total * (marketerCommissionPercentage / 100)).toFixed(1)
+  );
+  console.log(marketerShare);
+
   // how much discount that applied
   discountLabel.textContent = `-${discountAmount} ريال`;
 
@@ -267,7 +280,8 @@ document.querySelectorAll(".control-table").forEach((checkbox) => {
 
 // Discount button
 discountBtn.addEventListener("click", async function () {
-  if (discountInput.value === "") {
+  discountCode = discountInput.value;
+  if (discountCode === "") {
     alert("رمز الخصم مطلوب!");
     return false;
   }
@@ -276,26 +290,39 @@ discountBtn.addEventListener("click", async function () {
   discountBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>`;
 
   try {
-    // const response = await fetch("/api/", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({ discountCode: discountInput.value }),
-    // });
-    // const data = await response.json();
-    // if (data.valid) {
-    // }
+    const response = await fetch(
+      `http://sprime-001-site30.atempurl.com/api/Marketers/CheckCode?code=${encodeURIComponent(
+        discountCode
+      )}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const data = await response.json();
 
-    alert("Under construction");
-    discountBtn.innerHTML = "تطبيق";
-    discountBtn.disabled = true; // disable discountBtn
-    discountInput.disabled = true; // disable discountInput
-    rowDiscount.style.display = "table-row"; // show rowDiscount
-    // discountPercentLabel.textContent = "10%";
-    // discount = 0.1;
-    tableContainer.scrollIntoView({ behavior: "smooth" });
-    updateTotal();
+    console.log(data);
+
+    if (data.result === false) {
+      discountBtn.innerHTML = "تطبيق";
+      alert("كود غير صالح.");
+      return;
+    }
+
+    if (data.result === true) {
+      isDiscountCodeValide = true;
+      discountBtn.innerHTML = "تطبيق";
+      discountBtn.disabled = true; // disable discountBtn
+      discountInput.disabled = true; // disable discountInput
+      rowDiscount.style.display = "table-row"; // show rowDiscount
+      discountPercentLabel.textContent = `${data.codeDiscountPercentage}%`;
+      discount = `${data.codeDiscountPercentage / 100}`;
+      marketerCommissionPercentage = data.marketerCommissionPercentage;
+      tableContainer.scrollIntoView({ behavior: "smooth" });
+      updateTotal();
+    }
   } catch (error) {
     discountBtn.innerHTML = "تطبيق";
     console.error("Error:", error);
@@ -368,7 +395,9 @@ payInCenterBtn.addEventListener("click", function () {
 
   const url = `${origin}${sub}/thankyou/?id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
     checkedValues.join(", ") || "لايوجد"
-  }${affiliate ? `&affiliate=${affiliate}` : ""}`;
+  }${affiliate ? `&affiliate=${affiliate}` : ""}${
+    isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""
+  }`;
 
   window.location.href = url;
 });
@@ -433,7 +462,9 @@ payWithTamaraBtn.addEventListener("click", async function () {
     country_code: "SA",
     description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
       checkedValues.join(", ") || "لايوجد"
-    }${affiliate ? `&affiliate=${affiliate}` : ""}`,
+    }${affiliate ? `&affiliate=${affiliate}` : ""}${
+      isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""
+    }`,
     merchant_url: {
       cancel: `${origin}${sub}/thankyou/?cancel=true`,
       failure: `${origin}${sub}/thankyou/?fail=true`,
@@ -527,7 +558,9 @@ payWithTabbyBtn.addEventListener("click", async function () {
       currency: "SAR",
       description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
         checkedValues.join(", ") || "لايوجد"
-      }${affiliate ? `&affiliate=${affiliate}` : ""}`,
+      }${affiliate ? `&affiliate=${affiliate}` : ""}${
+        isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""
+      }`,
       buyer: {
         phone: phone,
         email: "user@example.com",
@@ -550,7 +583,11 @@ payWithTabbyBtn.addEventListener("click", async function () {
             title: serv,
             description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
               checkedValues.join(", ") || "لايوجد"
-            }${affiliate ? `&affiliate=${affiliate}` : ""}`,
+            }${affiliate ? `&affiliate=${affiliate}` : ""}${
+              isDiscountCodeValide
+                ? `&dc=${discountCode}&msh=${marketerShare}`
+                : ""
+            }`,
             quantity: 1,
             unit_price: total,
             discount_amount: "0.00",
@@ -598,7 +635,11 @@ payWithTabbyBtn.addEventListener("click", async function () {
               title: serv,
               description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
                 checkedValues.join(", ") || "لايوجد"
-              }${affiliate ? `&affiliate=${affiliate}` : ""}`,
+              }${affiliate ? `&affiliate=${affiliate}` : ""}${
+                isDiscountCodeValide
+                  ? `&dc=${discountCode}&msh=${marketerShare}`
+                  : ""
+              }`,
               quantity: 1,
               unit_price: total,
               discount_amount: "0.00",

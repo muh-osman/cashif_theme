@@ -32,6 +32,10 @@ const numOfParams = Array.from(
   new URLSearchParams(window.location.search).keys()
 );
 
+// marketer System
+const discountCode = params.get("dc");
+const marketerShare = params.get("msh");
+
 //
 window.onload = function () {
   if (status === "paid" && message === "APPROVED") {
@@ -122,6 +126,9 @@ async function submitUnPaidQrCode() {
         additionalServices: addServ,
 
         affiliate: `${affiliate ? affiliate : ""}`,
+
+        dc: `${discountCode ? discountCode : ""}`,
+        msh: `${marketerShare ? marketerShare : ""}`,
       }),
     });
 

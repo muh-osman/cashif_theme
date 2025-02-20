@@ -6,7 +6,7 @@
     <a href="https://maps.app.goo.gl/697yXkaS4o6kYsos8">
         <div dir="ltr" class="bannar">
             <p>Exclusively for customers in <span> <span>Jeddah</span></span> – Computer check for your car for <span>5 SAR!</span></p>
-            <p>Get the offer</p>
+            <p>Jeddah branch address</p>
         </div>
     </a>
     <!-- End Banner -->

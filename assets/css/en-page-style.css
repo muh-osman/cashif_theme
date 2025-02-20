@@ -2038,11 +2038,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 9px;
 }
-@media (max-width: 678px) {
+@media (max-width: 740px) {
   body {
-    padding-top: 72px;
+    padding-top: 69px;
   }
   .bannar {
     flex-direction: column;
@@ -2050,10 +2050,7 @@ body {
 }
 @media (max-width: 565px) {
   body {
-    padding-top: 93px;
-  }
-  .bannar {
-    flex-direction: column;
+    padding-top: 90px;
   }
 }
 .bannar p {

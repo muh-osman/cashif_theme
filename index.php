@@ -6,7 +6,7 @@
     <a href="https://maps.app.goo.gl/697yXkaS4o6kYsos8">
         <div class="bannar">
             <p>حصريًا لعملاء <span> <span>جدة</span></span> – فحص كمبيوتر لسيارتك بـ <span>5 ريال!</span></p>
-            <p>احصل على العرض</p>
+            <p>عنوان فرع جدة</p>
         </div>
     </a>
     <!-- End Banner -->
