@@ -126,10 +126,10 @@ async function submitUnPaidQrCode() {
         service: "مخدوم",
         additionalServices: addServ,
 
-        affiliate: `${affiliate ? affiliate : ""}`,
+        affiliate: affiliate || null,
 
-        dc: `${discountCode ? discountCode : ""}`,
-        msh: `${marketerShare ? marketerShare : ""}`,
+        dc: discountCode || null,
+        msh: marketerShare || null,
       }),
     });
 

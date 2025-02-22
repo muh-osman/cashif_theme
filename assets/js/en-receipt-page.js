@@ -85,9 +85,18 @@ const fetchPrice = async () => {
       }
     }
 
-    mainPrice = +(newData[0].prices[priceId].price * (1 - urlDiscount)).toFixed(
-      2
-    );
+    if (dis === "fifty" && priceId === "0") {
+      mainPrice = +(
+        (newData[0].prices[priceId].price / (1 - 0.2)) *
+        (1 - urlDiscount)
+      ).toFixed(2);
+    } else {
+      mainPrice = +(
+        newData[0].prices[priceId].price *
+        (1 - urlDiscount)
+      ).toFixed(2);
+    }
+
     total = mainPrice;
 
     serv = newData[0].prices[priceId].service_name;
@@ -170,10 +179,10 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
       service: "مخدوم",
       additionalServices: checkedValues.join(", ") || "لايوجد",
 
-      affiliate: `${affiliate ? affiliate : ""}`,
+      affiliate: affiliate || null,
 
-      dc: `${discountCode ? discountCode : ""}`,
-      msh: `${marketerShare ? marketerShare : ""}`,
+      dc: discountCode || null,
+      msh: marketerShare || null,
     },
 
     on_initiating: function () {

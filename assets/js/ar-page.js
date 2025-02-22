@@ -287,9 +287,15 @@ const submit = async () => {
       newData[0].prices[1].price * (1 - discount).toFixed(2)
     } ريال`;
     const fullPrice = document.getElementById("full-price");
-    fullPrice.textContent = `${
-      newData[0].prices[0].price * (1 - discount).toFixed(2)
-    } ريال`;
+    if (dis === "fifty" || disInSessionStorage === "fifty") {
+      fullPrice.textContent = `${
+        (newData[0].prices[0].price / (1 - 0.2)) * (1 - discount).toFixed(2)
+      } ريال`;
+    } else {
+      fullPrice.textContent = `${
+        newData[0].prices[0].price * (1 - discount).toFixed(2)
+      } ريال`;
+    }
 
     // old price
     document.getElementById("old-price-c").innerHTML = `
@@ -301,7 +307,7 @@ const submit = async () => {
       newData[0].prices[0].price * (1).toFixed(2)
     } ريال</span>`;
 
-    //
+    // old prices
     if (dis === "fifty" || disInSessionStorage === "fifty") {
       document.getElementById("old-price-a").innerHTML = `
     <span class="text-decoration-line-through">${
@@ -315,7 +321,7 @@ const submit = async () => {
 
       document.getElementById("old-price-c").innerHTML = `
     <span class="text-decoration-line-through">${
-      newData[0].prices[0].price * (1).toFixed(2)
+      (newData[0].prices[0].price / (1 - 0.2)) * (1).toFixed(2)
     } ريال</span>`;
     }
     //
