@@ -2149,14 +2149,11 @@ body {
     flex-direction: column;
   }
 }
-@media (max-width: 565px) {
+/* @media (max-width: 565px) {
   body {
     padding-top: 90px;
   }
-  .bannar {
-    flex-direction: column;
-  }
-}
+} */
 .bannar p {
   margin: 0;
   font-size: 14px;
@@ -2179,4 +2176,8 @@ body {
 
 .bannar svg {
   width: 12px;
+}
+
+.no-scroll {
+  padding-right: 0px !important;
 }

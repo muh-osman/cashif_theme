@@ -3,12 +3,85 @@
 <body dir="ltr">
 
     <!-- Start Banner -->
-    <a href="https://maps.app.goo.gl/697yXkaS4o6kYsos8">
+    <button class="d-block" id="bannarBtn" onclick="openBannar()">
         <div dir="ltr" class="bannar">
-            <p>Exclusively for customers in <span> <span>Jeddah</span></span> – Computer check for your car for <span>5 SAR!</span></p>
-            <p>Jeddah branch address</p>
+            <p>Computer check for your car for only <span>5 SAR</span>!</p>
+            <p>Our branch locations</p>
         </div>
-    </a>
+    </button>
+
+    <!-- start popup modal -->
+    <div
+        class="modal fade"
+        id="war"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header flex-row-reverse">
+                    <h1 class="modal-title fs-5 w-100 text-center" style="margin-right: -32px;" id="exampleModalLabel">
+                        Cashif Branches
+                    </h1>
+                    <button type="button" class="btn-close ms-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- <h6>The customer has the right to cancel the order at any time before completing the delivery process.</h6> -->
+
+                    <ul dir="ltr" class="text-center m-0">
+                        <li class="pb-3">
+                            <a href="https://maps.app.goo.gl/MiFGsgakfo62on7u8">
+                                Riyadh - Qadisiyyah <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="pb-3">
+                            <a href="https://maps.app.goo.gl/EXwyqvoEvLnxCrzu5">
+                                Riyadh - Al-Shifa <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="https://maps.app.goo.gl/9UiHq4kW7Mjh1Aik8">
+                                Dammam <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://maps.app.goo.gl/697yXkaS4o6kYsos8">
+                                Jeddah <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openBannar() {
+            var myModal = new bootstrap.Modal(document.getElementById("war"));
+            document.body.classList.add('no-scroll'); // Set padding right
+            myModal.show();
+        }
+
+        // Add an event listener to remove the class when the modal is hidden
+        document.getElementById('war').addEventListener('hidden.bs.modal', function() {
+            document.body.classList.remove('no-scroll'); // Allow scrolling again
+        });
+    </script>
+    <!-- end popup modal -->
     <!-- End Banner -->
 
 

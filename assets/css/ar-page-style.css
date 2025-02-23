@@ -2057,3 +2057,7 @@ body {
 .bannar svg {
   width: 12px;
 }
+
+.no-scroll {
+  padding-right: 0px !important;
+}
