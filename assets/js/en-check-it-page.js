@@ -19,6 +19,46 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+const sarSymbol = `
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #174545;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"/>
+  <path class="cls-1" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"/>
+</svg>
+`;
+const smallSarSymbol = `
+<svg width="13" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+  <defs>
+    <style>
+      .cls-2 {
+        fill: #d32f2f;
+      }
+    </style>
+  </defs>
+  <path class="cls-2" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"/>
+  <path class="cls-2" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"/>
+</svg>
+`;
+const greenSmallSarSymbol = `
+<svg width="13" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+  <defs>
+    <style>
+      .cls-3 {
+        fill: #25d366;
+      }
+    </style>
+  </defs>
+  <path class="cls-3" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"/>
+  <path class="cls-3" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"/>
+</svg>
+`;
+
 // WhatsApp Btn
 const whatsappBtn = document.getElementById("whatsapp-btn");
 
@@ -279,41 +319,44 @@ const submit = async () => {
 
     //
     const mainPrice = document.getElementById("main-price");
-    mainPrice.textContent = `${
+    mainPrice.innerHTML = `${sarSymbol} ${
       newData[0].prices[1].price * (1 - discount).toFixed(2)
-    } SAR`;
+    }`;
     const fullPrice = document.getElementById("full-price");
     if (dis === "fifty" || disInSessionStorage === "fifty") {
-      fullPrice.textContent = `${
+      fullPrice.innerHTML = `${sarSymbol} ${
         (newData[0].prices[0].price / (1 - 0.2)) * (1 - discount).toFixed(2)
-      } SAR`;
+      }`;
     } else {
-      fullPrice.textContent = `${
+      fullPrice.innerHTML = `${sarSymbol} ${
         newData[0].prices[0].price * (1 - discount).toFixed(2)
-      } SAR`;
+      }`;
     }
 
-    // old price
+    // old price (20%)
     document.getElementById("old-price-c").innerHTML = `
+    <span> ${smallSarSymbol} </span>
     <span class="text-decoration-line-through">
-    ${(newData[0].prices[0].price * (1).toFixed(2)) / 0.8} SAR
+    ${(newData[0].prices[0].price * (1).toFixed(2)) / 0.8}
     </span>
-    <span style="text-decoration: none; color: #25d366; background-color: #dff1d9; margin-left: 3px; padding: 0 5px; border-radius: 2px; font-size: 16px;">Save ${
+    <span style="text-decoration: none; color: #25d366; background-color: #dff1d9; margin-left: 3px; padding: 0 5px; border-radius: 2px; font-size: 16px;">Save ${greenSmallSarSymbol} ${
       (newData[0].prices[0].price * (1).toFixed(2)) / 0.8 -
       newData[0].prices[0].price * (1).toFixed(2)
-    } SAR</span>`;
+    }</span>`;
 
-    // Old Prices
+    // Old Prices (50%)
     if (dis === "fifty" || disInSessionStorage === "fifty") {
       document.getElementById("old-price-b").innerHTML = `
+    <span> ${smallSarSymbol} </span>
     <span class="text-decoration-line-through">${
       newData[0].prices[1].price * (1).toFixed(2)
-    } SAR</span>`;
+    }</span>`;
 
       document.getElementById("old-price-c").innerHTML = `
+    <span> ${smallSarSymbol} </span>
     <span class="text-decoration-line-through">${
       (newData[0].prices[0].price / (1 - 0.2)) * (1).toFixed(2)
-    } SAR</span>`;
+    }</span>`;
     }
 
     //

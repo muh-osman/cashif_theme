@@ -1494,6 +1494,20 @@ form {
   font-weight: 800;
   margin-top: 24px;
   margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.pricing-card-title svg {
+  width: 28px;
+}
+
+@media (max-width: 575px) {
+  .pricing-card-title svg {
+    width: 24px;
+  }
 }
 
 .overlay h5 {
@@ -2183,7 +2197,7 @@ body {
 
 .bannar p span {
   color: #d32f2f;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .bannar p:nth-child(2) {
