@@ -328,7 +328,7 @@ discountBtn.addEventListener("click", async function () {
 
   try {
     const response = await fetch(
-      `http://sprime-001-site30.atempurl.com/api/Marketers/CheckCode?code=${encodeURIComponent(
+      `https://cashif-001-site1.dtempurl.com/api/Marketers/CheckCode?code=${encodeURIComponent(
         discountCode
       )}`,
       {

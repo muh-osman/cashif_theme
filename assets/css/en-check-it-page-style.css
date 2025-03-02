@@ -2163,11 +2163,11 @@ body {
     flex-direction: column;
   }
 }
-/* @media (max-width: 565px) {
+@media (max-width: 544px) {
   body {
     padding-top: 90px;
   }
-} */
+}
 .bannar p {
   margin: 0;
   font-size: 14px;
