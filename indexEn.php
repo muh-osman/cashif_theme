@@ -3,9 +3,9 @@
 <body dir="ltr">
 
     <!-- Start Banner -->
-    <a href="https://maps.app.goo.gl/697yXkaS4o6kYsos8">
-        <div dir="ltr" class="bannar">
-            <p>Exclusively for customers in <span> <span>Jeddah</span></span> – Computer check for your car for <span><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+    <button dir="ltr" class="d-block" id="bannarBtn" onclick="openBannar()">
+        <div class="bannar">
+            <p>Exclusively for <span>Jeddah and Dammam</span> customers - Computer check for your car for <span style="white-space: nowrap;"> <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
                         <defs>
                             <style>
                                 .cls-0 {
@@ -15,10 +15,83 @@
                         </defs>
                         <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
                         <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                    </svg> 5</span></p>
-            <p>Jeddah branch address</p>
+                    </svg> 5 </span> only!</p>
+            <p>Our Branch Locations</p>
         </div>
-    </a>
+    </button>
+
+    <!-- start popup modal -->
+    <div
+        class="modal fade"
+        id="war"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 w-100 text-center" style="margin-left: -32px;" id="exampleModalLabel">
+                        Cashif Branches
+                    </h1>
+                    <button type="button" class="btn-close ms-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- <h6>The customer has the right to cancel the order at any time before the delivery process is completed.</h6> -->
+
+                    <ul dir="ltr" class="text-center m-0">
+                        <li class="pb-3">
+                            <a href="https://maps.app.goo.gl/MiFGsgakfo62on7u8">
+                                Riyadh - Al-Qadisiyah <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="pb-3">
+                            <a href="https://maps.app.goo.gl/EXwyqvoEvLnxCrzu5">
+                                Riyadh - Al-Shifa <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="https://maps.app.goo.gl/9UiHq4kW7Mjh1Aik8">
+                                Dammam <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://maps.app.goo.gl/697yXkaS4o6kYsos8">
+                                Jeddah <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openBannar() {
+            var myModal = new bootstrap.Modal(document.getElementById("war"));
+            document.body.classList.add('no-scroll'); // Set padding right
+            myModal.show();
+        }
+
+        // Add an event listener to remove the class when the modal is hidden
+        document.getElementById('war').addEventListener('hidden.bs.modal', function() {
+            document.body.classList.remove('no-scroll'); // Allow scrolling again
+        });
+    </script>
+    <!-- end popup modal -->
     <!-- End Banner -->
 
 
@@ -148,35 +221,35 @@
                             </svg>
                         </div>
                         <h4>We check it for you</h4>
-                        <p>Did you find a used car for sale <u>while you are outside</u> Riyadh, Jeddah or Dammam? Cashif will inspect it for you and facilitate the transportation and shipping procedures.</p>
+                        <p>If you find a car for sale in <u>Riyadh, Jeddah, or Dammam</u> and you are outside these cities, Cashif Center will conduct a comprehensive and accurate inspection of the car, while facilitating the procedures for transferring ownership and insurance.</p>
                         <ul>
                             <li>
                                 <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
                                         <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
                                     </svg>
                                 </span>
-                                <span>Contact the car owner</span>
+                                <span>The car owner must attend one of the Cashf branches</span>
                             </li>
                             <li>
                                 <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
                                         <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
                                     </svg>
                                 </span>
-                                <span>Car inspection</span>
+                                <span>Conduct a comprehensive and thorough inspection of the vehicle</span>
                             </li>
                             <li>
                                 <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
                                         <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
                                     </svg>
                                 </span>
-                                <span>Detailed PDF report</span>
+                                <span>Download the inspection report through <a href="https://cashif.cc/dashboard/">our website</a></span>
                             </li>
                             <li>
                                 <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
                                         <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
                                     </svg>
                                 </span>
-                                <span>Insurance and shipping</span>
+                                <span>Complete the transfer of ownership and insurance with ease</span>
                             </li>
                         </ul>
                         <a class="ask-now-serv mt-4 text-center" href="https://cashif.cc/check-it/en/">Order now</a>

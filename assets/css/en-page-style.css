@@ -2054,7 +2054,7 @@ body {
   justify-content: center;
   gap: 9px;
 }
-@media (max-width: 740px) {
+@media (max-width: 828px) {
   body {
     padding-top: 69px;
   }
@@ -2062,9 +2062,14 @@ body {
     flex-direction: column;
   }
 }
-@media (max-width: 544px) {
+@media (max-width: 669px) {
   body {
     padding-top: 90px;
+  }
+}
+@media (max-width: 371px) {
+  body {
+    padding-top: 111px;
   }
 }
 .bannar p {

@@ -2048,6 +2048,11 @@ body {
     flex-direction: column;
   }
 }
+@media (max-width: 380px) {
+  body {
+    padding-top: 90px;
+  }
+}
 .bannar p {
   margin: 0;
   font-size: 14px;

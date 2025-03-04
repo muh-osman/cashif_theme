@@ -330,7 +330,7 @@ body::after {
   text-align: center;
   font-size: 32px;
   font-family: "mont-reg";
-  margin: 45px auto 0px auto;
+  margin: 36px auto 0px auto;
   line-height: 50px;
   width: 65%;
   margin-bottom: 16px;
@@ -616,6 +616,26 @@ input.check-toggle-round-flat:checked + label:after {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.check-it-title {
+  background-image: url(../../assets/images/gold_highlight.svg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  white-space: nowrap;
+  padding-bottom: 28px;
+  text-align: center;
+  margin: 0;
+  color: #fff;
+  font-weight: 900;
+  padding-top: 23px;
+}
+
+@media (max-width: 525px) {
+  .check-it-title {
+    font-size: 36px;
+  }
 }
 /* End hero image */
 
@@ -2186,6 +2206,11 @@ body {
   }
   .bannar {
     flex-direction: column;
+  }
+}
+@media (max-width: 380px) {
+  body {
+    padding-top: 90px;
   }
 }
 .bannar p {
