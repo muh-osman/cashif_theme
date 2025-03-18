@@ -4,32 +4,9 @@
 
     <div class="white-background">
 
-        <div class="title-box" style="margin-top: 0px; padding-top: 48px;">
-            <h2>
-                Additional services
-            </h2>
-        </div>
 
-
-        <section class="inputs-container">
+        <!-- <section class="inputs-container">
             <div class="inputs-box">
-
-                <div dir="ltr" class="form-check mb-3" style="display: none;">
-                    <input class="form-check-input control-table checked-input" type="checkbox" value="Shooting a video" id="reverseCheck1" data-row="row-video">
-                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck1">
-                        Shooting video of the car (<svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
-                            <defs>
-                                <style>
-                                    .cls-0 {
-                                        fill: #757575;
-                                    }
-                                </style>
-                            </defs>
-                            <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
-                            <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                        </svg> 45+)
-                    </label>
-                </div>
 
                 <div dir="ltr" class="form-check mb-3">
                     <input class="form-check-input control-table checked-input" type="checkbox" value="Summary report" id="reverseCheck3" data-row="row-summary-report">
@@ -49,16 +26,9 @@
                     </label>
                 </div>
 
-                <div dir="ltr" class="form-check mb-3">
-                    <input class="form-check-input checked-input" type="checkbox" value="mobile inspection" id="reverseCheck2" data-row="row-mobile-inspection" disabled>
-                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck2">
-                        Mobile inspection (Soon)
-                    </label>
-                </div>
-
             </div>
 
-        </section>
+        </section> -->
 
 
         <div class="table-container">
@@ -67,20 +37,21 @@
             <div class="box">
                 <div class="table-box">
 
-                    <h4 dir="ltr" class="mb-4" style="color: #1A1A1AE6;">Order</h4>
+                    <h4 dir="ltr" class="mb-4" style="color: #212529;">Additional services</h4>
 
                     <table dir="ltr" class="table">
-                        <caption dir="ltr" style="text-align: right;"></caption>
-                        <thead>
-                            <tr>
-                                <th scope="col">Service plan</th>
-                                <th class="text-center" scope="col">Price</th>
-                            </tr>
-                        </thead>
+                        <caption dir="ltr" style="text-align: right; padding-top: 24px; color: #212529;"></caption>
+
                         <tbody>
                             <tr>
-                                <td><span id="inspection-plane"></span></br><span id="car-model-name"></span></td>
-                                <td class="text-center"><svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+                                <td class="pt-2">
+                                    <input class="me-1 form-check-input control-table checked-input" type="checkbox" value="Summary report" id="reverseCheck3" data-row="row-summary-report">
+                                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck3">
+                                        Summary report
+                                    </label>
+                                </td>
+                                <td class="text-center pt-2" style="text-align: right !important;">
+                                    <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
                                         <defs>
                                             <style>
                                                 .cls-0 {
@@ -90,11 +61,19 @@
                                         </defs>
                                         <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
                                         <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                                    </svg> <span id="price-plane"></span></td>
+                                    </svg>
+                                    <span class="summary-label"></span>
+                                </td>
                             </tr>
-                            <tr id="row-video" style="display: none;">
-                                <td>Shooting a video</td>
-                                <td class="text-center" id="video-price"><svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+
+                            <tr>
+                                <td class="border-0" style="color: #213941 !important;">
+                                    <span id="inspection-plane"></span>
+                                    </br>
+                                    <span id="car-model-name"></span>
+                                </td>
+                                <td class="border-0" style="text-align: right !important;">
+                                    <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
                                         <defs>
                                             <style>
                                                 .cls-0 {
@@ -104,26 +83,18 @@
                                         </defs>
                                         <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
                                         <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                                    </svg> 45</td>
-                            </tr>
-                            <tr id="row-summary-report" style="display: none;">
-                                <td>Summary report</td>
-                                <td class="text-center" id="summary-price"><svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
-                                        <defs>
-                                            <style>
-                                                .cls-0 {
-                                                    fill: #757575;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
-                                        <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                                    </svg> <span class="summary-label"></span></td>
+                                    </svg>
+                                    <span id="price-plane"></span>
+                                </td>
                             </tr>
 
                             <tr id="row-discount" style="display: none;">
-                                <td>Discount <span id="discount-percent-label"></span></td>
-                                <td dir="ltr" class="text-center" id="discount-price"><span id="discount-label"></span></td>
+                                <td class="border-top border-bottom-0" style="border-color: #ececec !important; color: #213941 !important;">
+                                    Discount <span id="discount-percent-label"></span>
+                                </td>
+                                <td dir="ltr" class="border-top border-bottom-0" style="border-color: #ececec !important; text-align: right !important;" id="discount-price">
+                                    <span id="discount-label"></span>
+                                </td>
                             </tr>
 
                         </tbody>

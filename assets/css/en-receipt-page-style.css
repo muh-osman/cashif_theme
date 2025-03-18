@@ -21,12 +21,6 @@ body {
   direction: ltr;
 }
 
-.white-background {
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-}
-
 @font-face {
   font-family: "mont-bold";
   src: url(../fonts/ArbFONTS-Montserrat-Arabic-Bold.ttf);
@@ -60,6 +54,68 @@ ul {
   padding: 0px;
   color: #fff;
 }
+
+/*  */
+.white-background {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 64px 16px 0 16px;
+}
+
+.general-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.steps-box {
+  /* background-color: red; */
+}
+.steps-box h1 {
+  margin-bottom: 32px;
+}
+.steps-box ol {
+  padding-left: 18px;
+  /* padding-right: 0; */
+}
+.steps-box ol li {
+  padding-bottom: 16px;
+  color: #757575;
+}
+.line-through {
+  text-decoration: line-through;
+}
+
+@media (max-width: 1030px) {
+  body {
+    padding: 0 !important;
+  }
+  .white-background {
+    padding: 0;
+  }
+  .general-container {
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  .steps-box {
+    padding: 16px;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .steps-box h1 {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    font-size: 24px;
+  }
+  .steps-box ol {
+    padding-right: 0;
+    font-size: 14px;
+  }
+}
+
+/*  */
 
 /*Start  Section*/
 .title-box {
@@ -105,7 +161,7 @@ ul {
 }
 
 label {
-  color: #757575;
+  color: #747a79;
 }
 
 input[type="checkbox"]:checked + label {
@@ -321,6 +377,8 @@ option {
 table > :not(caption) > * > * {
   background-color: transparent !important;
   border-color: #ececec !important;
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
 }
 
 table th,

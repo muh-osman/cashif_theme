@@ -5,54 +5,16 @@
     <div class="white-background">
 
 
-        <!-- Start Section -->
-        <section class="services-section">
-
-            <div class="service-card d-flex flex-column h-100">
-
-                <h4 dir="ltr">The service includes:</h4>
-                <ul dir="ltr">
-                    <li>
-                        <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
-                            </svg>
-                        </span>
-                        <span class="small-text-in-small-screeen">Car owner must attend Cashif center</span>
-                    </li>
-                    <li>
-                        <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
-                            </svg>
-                        </span>
-                        <span class="small-text-in-small-screeen">Inspect and test the car</span>
-                    </li>
-                    <li>
-                        <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
-                            </svg>
-                        </span>
-                        <span class="small-text-in-small-screeen">Report in PDF format</span>
-                    </li>
-                </ul>
-            </div>
-
-        </section>
-        <!-- End Section -->
-
-        <div class="title-box">
-            <h2>
-                Additional services
-            </h2>
-        </div>
-
-
-        <section class="inputs-container">
+        <!-- <section class="inputs-container">
             <div class="inputs-box">
 
                 <div class="form-check mb-3">
+
+
                     <input class="form-check-input control-table checked-input" type="checkbox" value="Shooting a video" id="reverseCheck1" data-row="row-video">
                     <label class="form-check-label small-text-in-small-screeen" for="reverseCheck1">
-                        Shooting video of the car (<svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+                        Shooting video of the car (
+                        <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
                             <defs>
                                 <style>
                                     .cls-0 {
@@ -62,8 +24,11 @@
                             </defs>
                             <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
                             <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                        </svg> 45+)
+                        </svg>
+                         45+)
                     </label>
+
+
                 </div>
 
                 <div class="form-check mb-3">
@@ -83,235 +48,233 @@
                     </label>
                 </div>
 
-                <div class="form-check mb-3">
-                    <input class="form-check-input checked-input" type="checkbox" value="mobile inspection" id="reverseCheck2" data-row="row-mobile-inspection" disabled>
-                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck2">
-                        Mobile inspection (Soon)
-                    </label>
+            </div>
+
+        </section> -->
+
+        <div class="general-container">
+            <div class="steps-box">
+                <div>
+                    <h1>Steps to request the service:</h1>
+                    <ol>
+                        <li>After completing the payment, you will receive a barcode for the service.</li>
+                        <li>Share the barcode image with the car owner and ask him to go to the nearest branch.</li>
+                        <li>The vehicle will be inspected, after which you can download the report from <a target="_blank" href="https://cashif.cc/dashboard/">our website</a>.</li>
+                        <li>We assist with car ownership and insurance transfers in partnership with our collaborators.</li>
+                    </ol>
                 </div>
 
             </div>
 
-        </section>
-
-        <div class="title-box">
-            <h2>
-                Post-Inspection Services
-            </h2>
-        </div>
-
-        <div class="sub-title-box mt-5">
-            <h3>
-                Vehicle Ownership Transfer
-            </h3>
-        </div>
-
-        <div>
-            <div class="text-center p-2 pt-0 note-box">
-                <p class="small-text-in-small-screeen">In collaboration with <span>our partners</span>, we facilitate the vehicle ownership transfer process for you.</p>
-                <p class="small-text-in-small- m-0">The cost of vehicle ownership transfer is <span><svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
-                            <defs>
-                                <style>
-                                    .cls-x {
-                                        fill: #ff0000;
-                                    }
-                                </style>
-                            </defs>
-                            <path class="cls-x" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
-                            <path class="cls-x" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                        </svg> 550</span>.</p>
-            </div>
-        </div>
-
-        <div class="sub-title-box mt-5">
-            <h3>
-                Vehicle Insurance
-            </h3>
-        </div>
-
-        <div>
-            <div class="text-center p-2 pt-0 note-box">
-                <p class="small-text-in-small-screeen m-0">In collaboration with <span>insurance companies</span>, we help you obtain suitable insurance.</p>
-            </div>
-        </div>
-
-        <div class="sub-title-box mt-5">
-            <h3>
-                Vehicle Shipping
-            </h3>
-        </div>
-
-        <div>
-            <div class="text-center p-2 pt-0 note-box">
-                <p class="mb-4 small-text-in-small-screeen">In collaboration with <span>Al-Bassami Company</span> for vehicle shipping, we offer you a <span>10%</span> discount on the total invoice.</p>
-            </div>
-        </div>
+            <div>
+                <div class="table-container">
 
 
-        <div class="table-container">
+                    <div class="box">
+                        <div class="table-box">
+
+                            <h4 class="mb-4" style="color: #212529;">Additional services</h4>
+
+                            <table dir="ltr" class="table">
+                                <caption dir="ltr" style="padding-top: 24px; color: #212529;"></caption>
+
+                                <tbody>
 
 
-            <div class="box">
-                <div class="table-box">
+                                    <tr>
+                                        <td class="border-0 pt-2 pb-2">
+                                            <input class="me-1 form-check-input control-table checked-input" type="checkbox" value="Shooting a video" id="reverseCheck1" data-row="row-video">
+                                            <label class="form-check-label small-text-in-small-screeen" for="reverseCheck1">
+                                                Shooting video of the car
+                                            </label>
+                                        </td>
 
-                    <h4 class="mb-4" style="color: #1A1A1AE6;">Order</h4>
+                                        <td class="text-center border-0 pt-2 pb-2">
+                                            <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+                                                <defs>
+                                                    <style>
+                                                        .cls-0 {
+                                                            fill: #757575;
+                                                        }
+                                                    </style>
+                                                </defs>
+                                                <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
+                                                <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
+                                            </svg>
+                                            45
+                                        </td>
+                                    </tr>
 
-                    <table dir="ltr" class="table">
-                        <caption dir="ltr"></caption>
-                        <thead>
-                            <tr>
-                                <th scope="col">Service plan</th>
-                                <th class="text-center" scope="col">Price</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><span id="inspection-plane"></span></br><span id="car-model-name"></span></td>
-                                <td class="text-center"><svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
-                                        <defs>
-                                            <style>
-                                                .cls-0 {
-                                                    fill: #757575;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
-                                        <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                                    </svg> <span id="price-plane"></span></td>
-                            </tr>
-                            <tr id="row-video" style="display: none;">
-                                <td>Shooting a video</td>
-                                <td class="text-center" id="video-price"><svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
-                                        <defs>
-                                            <style>
-                                                .cls-0 {
-                                                    fill: #757575;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
-                                        <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                                    </svg> 45</td>
-                            </tr>
-                            <tr id="row-summary-report" style="display: none;">
-                                <td>Summary report</td>
-                                <td class="text-center" id="summary-price"><svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
-                                        <defs>
-                                            <style>
-                                                .cls-0 {
-                                                    fill: #757575;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
-                                        <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                                    </svg> <span class="summary-label"></span></td>
-                            </tr>
+                                    <tr>
+                                        <td class="pt-2">
+                                            <input class="me-1 form-check-input control-table checked-input" type="checkbox" value="Summary report" id="reverseCheck3" data-row="row-summary-report">
+                                            <label class="form-check-label small-text-in-small-screeen" for="reverseCheck3">
+                                                Summary report
+                                            </label>
+                                        </td>
 
-                            <tr id="row-discount" style="display: none;">
-                                <td>Discount <span id="discount-percent-label"></span></td>
-                                <td dir="ltr" class="text-center" id="discount-price"><span id="discount-label"></span></td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                </div>
+                                        <td class="text-center pt-2">
+                                            <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+                                                <defs>
+                                                    <style>
+                                                        .cls-0 {
+                                                            fill: #757575;
+                                                        }
+                                                    </style>
+                                                </defs>
+                                                <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
+                                                <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
+                                            </svg>
+                                            <span class="summary-label"></span>
+                                        </td>
+                                    </tr>
 
 
+                                    <tr>
+                                        <td class="border-0" style="color: #213941 !important;">
+                                            <span id="inspection-plane"></span>
+                                            </br>
+                                            <span id="car-model-name"></span>
+                                        </td>
+                                        <td class="text-center border-0">
+                                            <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+                                                <defs>
+                                                    <style>
+                                                        .cls-0 {
+                                                            fill: #757575;
+                                                        }
+                                                    </style>
+                                                </defs>
+                                                <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
+                                                <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
+                                            </svg>
+                                            <span id="price-plane"></span>
+                                        </td>
+                                    </tr>
 
-                <div class="inputs-containers">
+                                    <tr id="row-discount" style="display: none;">
+                                        <td class="border-top border-bottom-0" style="border-color: #ececec !important; color: #213941 !important;">
+                                            Discount <span id="discount-percent-label"></span>
+                                        </td>
+                                        <td dir="ltr" class="text-center border-top border-bottom-0" style="border-color: #ececec !important;" id="discount-price">
+                                            <span id="discount-label"></span>
+                                        </td>
+                                    </tr>
 
-                    <div>
-                        <div class="mb-3">
-                            <label for="exampleName" class="form-label">Full name*</label>
-                            <input type="text" class="form-control" id="exampleName" aria-describedby="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputphone" class="form-label">Phone number* (5xxxxxxxx)</label>
-                            <input maxlength="9" type="tel" class="form-control" id="exampleInputphone" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleBranch" class="form-label">Branch*</label>
-                            <select class="form-select" id="exampleBranch" aria-label="Default select example" required>
-                                <option selected disabled>Choose a branch</option>
-                                <option value="الرياض-القادسية">Riyadh - Al-Qadisiyah</option>
-                                <option value="الرياض-الشفا">Riyadh - Al-Shifa</option>
-                                <option value="الدمام">Dammam</option>
-                                <option value="جدة">Jeddah</option>
-                            </select>
+                                </tbody>
+                            </table>
                         </div>
 
-                        <div class="mb-4" dir="ltr">
-                            <label for="discount-input" class="form-label">Discount code</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="discount-input" style="border: 1px solid #6c757d; box-shadow: none;">
-                                <button id="discount-btn" class="btn btn-outline-secondary" type="button" style="color: #fff; background-color: #6c757d; width: 75px;">Apply</button>
-                            </div>
-                        </div>
 
-                        <div dir="ltr" class=" mb-4 pt-2 pb-2" style="border-top: 1px solid #ececec; border-bottom: 1px solid #ececec;">
-                            <div dir="ltr" class="form-check" style="border-bottom: 1px solid #ececec;">
-                                <input dir="ltr" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                <label dir="ltr" class="form-check-label" for="flexRadioDefault2" style="color: #1A1A1AE6;">
-                                    Electronic payment
-                                    <p style="color: #747a79; font-size: 11px; margin-top: 6px;">Pay with credit card, Mada, Visa, MasterCard</p>
-                                </label>
-                            </div>
 
-                            <div dir="ltr" class="form-check pt-2 pb-2" style="border-bottom: 1px solid #ececec;">
-                                <input dir="ltr" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                <label dir="ltr" class="form-check-label" for="flexRadioDefault1" style="color: #1A1A1AE6;">
-                                    Pay at the center
-                                    <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">Pay at one of the Cashif branches</p>
-                                </label>
-                            </div>
+                        <div class="inputs-containers">
 
-                            <div class="form-check pt-2 pb-2" style="border-bottom: 1px solid #ececec;">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault0">
-                                <label class="form-check-label" for="flexRadioDefault0" style="color: #1A1A1AE6;">
-                                    <div style="display: flex; align-items: center; gap: 8px;">
-                                        <div><img src=<?php echo get_template_directory_uri() . '/assets/images/tamara-logo.svg' ?> alt="tamata logo"></div>
-                                        Split in 4 payments
+                            <div>
+                                <div class="mb-3">
+                                    <label for="exampleName" class="form-label">Full name*</label>
+                                    <input type="text" class="form-control" id="exampleName" aria-describedby="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputphone" class="form-label">Phone number* (5xxxxxxxx)</label>
+                                    <input maxlength="9" type="tel" class="form-control" id="exampleInputphone" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleBranch" class="form-label">Branch*</label>
+                                    <select class="form-select" id="exampleBranch" aria-label="Default select example" required>
+                                        <option selected disabled>Choose a branch</option>
+                                        <option value="الرياض-القادسية">Riyadh - Al-Qadisiyah</option>
+                                        <option value="الرياض-الشفا">Riyadh - Al-Shifa</option>
+                                        <option value="الدمام">Dammam</option>
+                                        <option value="جدة">Jeddah</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-4" dir="ltr">
+                                    <label for="discount-input" class="form-label">Discount code</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="discount-input" style="border: 1px solid #6c757d; box-shadow: none;">
+                                        <button id="discount-btn" class="btn btn-outline-secondary" type="button" style="color: #fff; background-color: #6c757d; width: 75px;">Apply</button>
                                     </div>
-                                    <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">No late fees, Sharia-compliant!</p>
-                                </label>
-                            </div>
+                                </div>
 
-                            <div class="form-check pt-2">
-                                <input class="form-check-input" type="radio" style="width: 1em;" name="flexRadioDefault" id="flexRadioDefaultTabby">
-                                <label class="form-check-label" for="flexRadioDefaultTabby" style="color: #1A1A1AE6;">
-                                    <div style="display: flex; align-items: center; gap: 8px;">
-                                        <div><img style="width: 74px;" src=<?php echo get_template_directory_uri() . '/assets/images/tabby.png' ?> alt="tabby logo"></div>
-                                        Split in 4 payments
+                                <div dir="ltr" class=" mb-4 pt-2 pb-2" style="border-top: 1px solid #ececec; border-bottom: 1px solid #ececec;">
+                                    <div dir="ltr" class="form-check" style="border-bottom: 1px solid #ececec;">
+                                        <input dir="ltr" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                        <label dir="ltr" class="form-check-label" for="flexRadioDefault2" style="color: #1A1A1AE6;">
+                                            Electronic payment
+                                            <p style="color: #747a79; font-size: 11px; margin-top: 6px;">Pay with credit card, Mada, Visa, MasterCard</p>
+                                        </label>
                                     </div>
-                                    <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">Pay in 4. No interest, no fees.</p>
-                                </label>
+
+                                    <div dir="ltr" class="form-check pt-2 pb-2" style="border-bottom: 1px solid #ececec;">
+                                        <input dir="ltr" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <label dir="ltr" class="form-check-label" for="flexRadioDefault1" style="color: #1A1A1AE6;">
+                                            Pay at the center
+                                            <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">Pay at one of the Cashif branches</p>
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check pt-2 pb-2" style="border-bottom: 1px solid #ececec;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault0">
+                                        <label class="form-check-label" for="flexRadioDefault0" style="color: #1A1A1AE6;">
+                                            <div style="display: flex; align-items: center; gap: 8px;">
+                                                <div><img src=<?php echo get_template_directory_uri() . '/assets/images/tamara-logo.svg' ?> alt="tamata logo"></div>
+                                                Split in 4 payments
+                                            </div>
+                                            <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">No late fees, Sharia-compliant!</p>
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check pt-2">
+                                        <input class="form-check-input" type="radio" style="width: 1em;" name="flexRadioDefault" id="flexRadioDefaultTabby">
+                                        <label class="form-check-label" for="flexRadioDefaultTabby" style="color: #1A1A1AE6;">
+                                            <div style="display: flex; align-items: center; gap: 8px;">
+                                                <div><img style="width: 74px;" src=<?php echo get_template_directory_uri() . '/assets/images/tabby.png' ?> alt="tabby logo"></div>
+                                                Split in 4 payments
+                                            </div>
+                                            <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">Pay in 4. No interest, no fees.</p>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Moyasar form -->
+                                <div class="mysr-form"></div>
+
+                                <!-- Pay in center button -->
+                                <div class="pay-in-center text-center mb-4 mt-4">
+                                    <button id="pay-in-center-btn" class="btn btn-primary" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">Confirm order</button>
+                                </div>
+
+                                <!-- Pay with Tamara button -->
+                                <div class="pay-with-tamara text-center mb-4 mt-4">
+                                    <button id="pay-with-tamara-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">Confirm order</button>
+                                </div>
+
+                                <!-- Pay with Tabby button -->
+                                <div class="pay-with-tabby text-center mb-4 mt-4">
+                                    <button id="pay-with-tabby-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">Confirm order</button>
+                                </div>
+
                             </div>
                         </div>
-
-                        <!-- Moyasar form -->
-                        <div class="mysr-form"></div>
-
-                        <!-- Pay in center button -->
-                        <div class="pay-in-center text-center mb-4 mt-4">
-                            <button id="pay-in-center-btn" class="btn btn-primary" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">Confirm order</button>
-                        </div>
-
-                        <!-- Pay with Tamara button -->
-                        <div class="pay-with-tamara text-center mb-4 mt-4">
-                            <button id="pay-with-tamara-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">Confirm order</button>
-                        </div>
-
-                        <!-- Pay with Tabby button -->
-                        <div class="pay-with-tabby text-center mb-4 mt-4">
-                            <button id="pay-with-tabby-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">Confirm order</button>
-                        </div>
-
                     </div>
+
                 </div>
             </div>
-
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         <footer dir="ltr">
@@ -324,7 +287,6 @@
                 <a href="https://cashif.cc/terms-of-service/en/">Terms of service</a>
             </div>
         </footer>
-
 
         <!--Start WhatsApp icon section-->
         <a id="whatsapp-btn" aria-label="WhatsApp Customer Service" class="sticky-icon" target="_blank" href="https://api.whatsapp.com/send?phone=966920019948&text=*Select from the main menu*">

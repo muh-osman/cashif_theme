@@ -2,8 +2,6 @@ const spinner = document.getElementById("spinner");
 const planSpan = document.getElementById("inspection-plane");
 const pricePlane = document.getElementById("price-plane");
 const carModelName = document.getElementById("car-model-name");
-const videoPriceDiv = document.getElementById("row-video");
-const summaryReportPriceDiv = document.getElementById("row-summary-report");
 const caption = document.querySelector(".table caption");
 const nameInput = document.getElementById("exampleName");
 const phoneInput = document.getElementById("exampleInputphone");
@@ -252,12 +250,12 @@ function updateTotal() {
   let videoPrice = 0;
   let summaryPrice = 0;
 
-  // if videoPriceDiv hiden then it means videoPrice = 45 else videoPrice = 0
-  if (videoPriceDiv.style.display === "table-row") {
+  // if videoPrice input checked then it means videoPrice = 45 else videoPrice = 0
+  if (document.getElementById("reverseCheck1")?.checked) {
     videoPrice = 45;
   }
-  // if summaryReportPriceDiv hiden then it means summaryPrice = 50 else summaryPrice = 0
-  if (summaryReportPriceDiv.style.display === "table-row") {
+  // if summaryReportPrice input checked then it means summaryPrice = 50 else summaryPrice = 0
+  if (document.getElementById("reverseCheck3").checked) {
     summaryPrice = serv === "أساسي" ? 75 : serv === "شامل" ? 65 : 85;
   }
   // if rowDiscount hiden then it means discount = 0 else
@@ -267,7 +265,7 @@ function updateTotal() {
 
   let subtotal = mainPrice + videoPrice + summaryPrice; // Calculate subtotal
   let discountAmount = subtotal * discount; // Calculate discount amount
-  total = (subtotal - discountAmount).toFixed(1);
+  total = Math.floor(subtotal - discountAmount);
 
   marketerShare = parseFloat(
     (total * (marketerCommissionPercentage / 100)).toFixed(1)
@@ -298,16 +296,6 @@ function updateTotal() {
 // Add event listeners to checkboxes
 document.querySelectorAll(".control-table").forEach((checkbox) => {
   checkbox.addEventListener("change", function () {
-    const rowId = this.getAttribute("data-row");
-    const row = document.getElementById(rowId); // row in table
-
-    // Show or hide the row based on checkbox state
-    if (this.checked) {
-      row.style.display = "table-row"; // Show the row
-    } else {
-      row.style.display = "none"; // Hide the row
-    }
-
     // Update the total after changing the visibility
     updateTotal();
   });
@@ -777,4 +765,32 @@ window.addEventListener("scroll", function () {
   } else {
     whatsappBtn.classList.remove("hide-btn");
   }
+});
+
+// Add line-through style to <td>
+document.addEventListener("DOMContentLoaded", function () {
+  // Get all rows in the table
+  const rows = document.querySelectorAll("tr");
+
+  rows.forEach((row) => {
+    // Find the checkbox and the second <td> in the current row
+    const checkbox = row.querySelector('input[type="checkbox"]');
+    const secondTd = row.querySelector("td:nth-child(2)");
+
+    if (checkbox && secondTd) {
+      // Add event listener to the checkbox
+      checkbox.addEventListener("change", function () {
+        if (!checkbox.checked) {
+          secondTd.classList.add("line-through");
+        } else {
+          secondTd.classList.remove("line-through");
+        }
+      });
+
+      // Initial check in case the checkbox is not checked by default
+      if (!checkbox.checked) {
+        secondTd.classList.add("line-through");
+      }
+    }
+  });
 });

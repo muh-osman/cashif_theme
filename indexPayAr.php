@@ -4,81 +4,28 @@
 
     <div class="white-background">
 
-        <div class="title-box" style="margin-top: 0px; padding-top: 48px;">
-            <h2>
-                خدمات إضافية
-            </h2>
-        </div>
-
-        <section class="inputs-container">
-            <div class="inputs-box">
-
-                <div class="form-check form-check-reverse mb-3" style="display: none;">
-                    <input class="form-check-input control-table checked-input" type="checkbox" value="تصوير فيديو" id="reverseCheck1" data-row="row-video">
-                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck1">
-                        تصوير مقطع فيديو للسيارة (+45 <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
-                            <defs>
-                                <style>
-                                    .cls-0 {
-                                        fill: #757575;
-                                    }
-                                </style>
-                            </defs>
-                            <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
-                            <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                        </svg>)
-                    </label>
-                </div>
-
-                <div class="form-check form-check-reverse mb-3">
-                    <input class="form-check-input control-table checked-input" type="checkbox" value="تقرير موجز" id="reverseCheck3" data-row="row-summary-report">
-                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck3">
-                        تقرير موجز (+<span class="summary-label"></span> <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
-                            <defs>
-                                <style>
-                                    .cls-0 {
-                                        fill: #757575;
-                                    }
-                                </style>
-                            </defs>
-                            <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
-                            <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                        </svg>)
-                    </label>
-                </div>
-
-                <div class="form-check form-check-reverse mb-3">
-                    <input class="form-check-input checked-input" type="checkbox" value="فحص متنقل" id="reverseCheck2" data-row="row-mobile-inspection" disabled>
-                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck2">
-                        فحص متنقل (قريبا)
-                    </label>
-                </div>
-
-            </div>
-
-        </section>
-
-
         <div class="table-container">
 
             <div class="box">
 
                 <div class=" table-box">
 
-                    <h4 class="mb-4" style="color: #1A1A1AE6;">طلبك</h4>
+                    <h4 class="mb-4">خدمات إضافية</h4>
 
                     <table class="table">
-                        <caption style="padding-top: 24px; color: #1A1A1AE6;"></caption>
-                        <thead>
-                            <tr>
-                                <th scope="col">الباقة</th>
-                                <th class="text-center" scope="col">المجموع</th>
-                            </tr>
-                        </thead>
+                        <caption style="padding-top: 24px; color: #212529;"></caption>
+
                         <tbody>
                             <tr>
-                                <td>فحص <span id="inspection-plane"></span></br><span id="car-model-name"></span></td>
-                                <td class="text-center"><span id="price-plane"></span> <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+                                <td class="pt-2">
+                                    <input class="ms-1 form-check-input control-table checked-input" type="checkbox" value="تقرير موجز" id="reverseCheck3" data-row="row-summary-report">
+                                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck3">
+                                        تقرير موجز
+                                    </label>
+                                </td>
+                                <td class="text-center pt-2" style="text-align: left !important;">
+                                    <span class="summary-label"></span>
+                                    <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
                                         <defs>
                                             <style>
                                                 .cls-0 {
@@ -88,40 +35,40 @@
                                         </defs>
                                         <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
                                         <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                                    </svg></td>
-                            </tr>
-                            <tr id="row-video" style="display: none;">
-                                <td>تصوير فيديو</td>
-                                <td class="text-center" id="video-price">45 <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
-                                        <defs>
-                                            <style>
-                                                .cls-0 {
-                                                    fill: #757575;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
-                                        <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                                    </svg></td>
-                            </tr>
-                            <tr id="row-summary-report" style="display: none;">
-                                <td>تقرير موجز</td>
-                                <td class="text-center" id="summary-price"><span class="summary-label"></span> <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
-                                        <defs>
-                                            <style>
-                                                .cls-0 {
-                                                    fill: #757575;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
-                                        <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                                    </svg></td>
+                                    </svg>
+                                </td>
                             </tr>
 
+                            <tr>
+                                <td class="border-0" style="color: #213941 !important;">
+                                    فحص <span id="inspection-plane"></span>
+                                    </br>
+                                    <span id="car-model-name"></span>
+                                </td>
+                                <td class="border-0" style="text-align: left !important;">
+                                    <span id="price-plane"></span>
+                                    <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+                                        <defs>
+                                            <style>
+                                                .cls-0 {
+                                                    fill: #757575;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
+                                        <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
+                                    </svg>
+                                </td>
+                            </tr>
+
+
                             <tr id="row-discount" style="display: none;">
-                                <td>خصم <span id="discount-percent-label"></span></td>
-                                <td dir="rtl" class="text-center" id="discount-price"><span id="discount-label"></span></td>
+                                <td class="border-top border-bottom-0" style="border-color: #ececec !important; color: #213941 !important;">
+                                    خصم <span id="discount-percent-label"></span>
+                                </td>
+                                <td dir="rtl" class="border-top border-bottom-0" style="border-color: #ececec !important; text-align: left !important;" id="discount-price">
+                                    <span id="discount-label"></span>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -238,7 +185,6 @@
                 <a href="https://cashif.cc/terms-of-service/">شروط الخدمة</a>
             </div>
         </footer>
-
 
 
         <!--Start WhatsApp icon section-->

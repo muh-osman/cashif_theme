@@ -4,311 +4,211 @@
 
     <div class="white-background">
 
-        <!-- Start Section -->
-        <section class="services-section">
+        <div class="general-container">
 
-            <div class="service-card d-flex flex-column h-100">
-                <h4>الخدمة تشمل:</h4>
-                <ul>
-                    <li>
-                        <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
-                            </svg>
-                        </span>
-                        <span class="small-text-in-small-screeen">حضور صاحب السيارة الى أحد مراكز كاشف</span>
-                    </li>
-                    <li>
-                        <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
-                            </svg>
-                        </span>
-                        <span class="small-text-in-small-screeen">فحص وتجربة السيارة ميدانًيا</span>
-                    </li>
-                    <li>
-                        <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
-                            </svg>
-                        </span>
-                        <span class="small-text-in-small-screeen">صياغة التقرير بصيغة PDF</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <!-- End Section -->
-
-        <div class="title-box">
-            <h2>
-                خدمات إضافية
-            </h2>
-        </div>
-
-        <section class="inputs-container">
-            <div class="inputs-box">
-
-                <div class="form-check form-check-reverse mb-3">
-                    <input class="form-check-input control-table checked-input" type="checkbox" value="تصوير فيديو" id="reverseCheck1" data-row="row-video">
-                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck1">
-                        تصوير مقطع فيديو للسيارة (+45 <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
-                            <defs>
-                                <style>
-                                    .cls-0 {
-                                        fill: #757575;
-                                    }
-                                </style>
-                            </defs>
-                            <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
-                            <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                        </svg>)
-                    </label>
+            <div class="steps-box">
+                <div>
+                    <h1>خطوات طلب الخدمة:</h1>
+                    <ol>
+                        <li>بعد إتمام الدفع، ستحصل على باركود خاص بالخدمة.</li>
+                        <li>قم بمشاركة صورة الباركود مع مالك السيارة واطلب منه التوجه إلى أقرب فرع.</li>
+                        <li>سيتم فحص السيارة، وبعد ذلك يمكنك تحميل التقرير من <a target="_blank" href="https://cashif.cc/dashboard/">موقعنا الإلكتروني</a>.</li>
+                        <li>بالتعاون مع شركائنا, نسهل عليك إجراءات نقل ملكية السيارة وتأمينها.</li>
+                    </ol>
                 </div>
-
-                <div class="form-check form-check-reverse mb-3">
-                    <input class="form-check-input control-table checked-input" type="checkbox" value="تقرير موجز" id="reverseCheck3" data-row="row-summary-report">
-                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck3">
-                        تقرير موجز (+<span class="summary-label"></span> <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
-                            <defs>
-                                <style>
-                                    .cls-0 {
-                                        fill: #757575;
-                                    }
-                                </style>
-                            </defs>
-                            <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
-                            <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                        </svg>)
-                    </label>
-                </div>
-
-                <div class="form-check form-check-reverse mb-3">
-                    <input class="form-check-input checked-input" type="checkbox" value="فحص متنقل" id="reverseCheck2" data-row="row-mobile-inspection" disabled>
-                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck2">
-                        فحص متنقل (قريبا)
-                    </label>
-                </div>
-
             </div>
 
-        </section>
+            <div>
 
-        <div class="title-box">
-            <h2>
-                خدمات ما بعد الفحص
-            </h2>
-        </div>
+                <div class="table-container">
 
-        <div class="sub-title-box mt-5">
-            <h3>
-                نقل ملكية السيارة
-            </h3>
-        </div>
+                    <div class="box">
 
-        <div>
-            <div class="text-center p-2 pt-0 note-box">
-                <p class="small-text-in-small-screeen">بالتعاون مع <span>شركائنا</span>, نسهل عليك إجراءات نقل ملكية السيارة</p>
-                <p class="small-text-in-small- m-0">سعر نقل ملكية السيارة <span>550 <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
-                            <defs>
-                                <style>
-                                    .cls-x {
-                                        fill: #ff0000;
-                                    }
-                                </style>
-                            </defs>
-                            <path class="cls-x" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
-                            <path class="cls-x" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                        </svg></span></p>
-            </div>
-        </div>
+                        <div class=" table-box">
 
-        <div class="sub-title-box mt-5">
-            <h3>
-                تأمين السيارة
-            </h3>
-        </div>
+                            <h4 class="mb-4" style="color: #212529;">خدمات إضافية</h4>
 
-        <div>
-            <div class="text-center p-2 pt-0 note-box">
-                <p class="small-text-in-small-screeen m-0">بالتعاون مع <span>شركات التأمين</span>, نسهل عليك الحصول على تأمين مناسب لك</p>
-            </div>
-        </div>
+                            <table class="table">
+                                <caption style="padding-top: 24px; color: #212529;"></caption>
 
-        <div class="sub-title-box mt-5">
-            <h3>
-                شحن السيارة
-            </h3>
-        </div>
+                                <tbody>
+                                    <tr>
+                                        <td class="border-0 pt-2 pb-2">
+                                            <input class="ms-1 form-check-input control-table checked-input" type="checkbox" value="تصوير فيديو" id="reverseCheck1" data-row="row-video">
+                                            <label class="form-check-label small-text-in-small-screeen" for="reverseCheck1">
+                                                تصوير مقطع فيديو للسيارة
+                                            </label>
+                                        </td>
+                                        <td class="text-center border-0 pt-2 pb-2">
+                                            45
+                                            <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+                                                <defs>
+                                                    <style>
+                                                        .cls-0 {
+                                                            fill: #757575;
+                                                        }
+                                                    </style>
+                                                </defs>
+                                                <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
+                                                <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
+                                            </svg>
+                                        </td>
+                                    </tr>
 
-        <div>
-            <div class="text-center p-2 pt-0 note-box">
-                <p class="mb-4 small-text-in-small-screeen">بالتعاون مع <span>شركة البسامي</span> للنقليات, نقدم لك خصم <span>%10</span> من اجمالي الفاتورة.</p>
-            </div>
-        </div>
+                                    <tr>
+                                        <td class="pt-2">
+                                            <input class="ms-1 form-check-input control-table checked-input" type="checkbox" value="تقرير موجز" id="reverseCheck3" data-row="row-summary-report">
+                                            <label class="form-check-label small-text-in-small-screeen" for="reverseCheck3">
+                                                تقرير موجز
+                                            </label>
+                                        </td>
+                                        <td class="text-center pt-2">
+                                            <span class="summary-label"></span> <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+                                                <defs>
+                                                    <style>
+                                                        .cls-0 {
+                                                            fill: #757575;
+                                                        }
+                                                    </style>
+                                                </defs>
+                                                <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
+                                                <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
+                                            </svg>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="border-0" style="color: #213941 !important;">
+                                            فحص <span id="inspection-plane"></span>
+                                            </br>
+                                            <span id="car-model-name"></span>
+                                        </td>
+                                        <td class="text-center  border-0">
+                                            <span id="price-plane"></span>
+                                            <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+                                                <defs>
+                                                    <style>
+                                                        .cls-0 {
+                                                            fill: #757575;
+                                                        }
+                                                    </style>
+                                                </defs>
+                                                <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
+                                                <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
+                                            </svg>
+                                        </td>
+                                    </tr>
 
 
-        <div class="table-container">
+                                    <tr id="row-discount" style="display: none;">
+                                        <td class="border-top border-bottom-0" style="border-color: #ececec !important; color: #213941 !important;">
+                                            خصم <span id="discount-percent-label"></span>
+                                        </td>
+                                        <td dir="rtl" class="text-center border-top border-bottom-0" style="border-color: #ececec !important;" id="discount-price"><span id="discount-label"></span></td>
+                                    </tr>
 
-            <div class="box">
-
-                <div class=" table-box">
-
-                    <h4 class="mb-4" style="color: #1A1A1AE6;">طلبك</h4>
-
-                    <table class="table">
-                        <caption style="padding-top: 24px; color: #1A1A1AE6;"></caption>
-                        <thead>
-                            <tr>
-                                <th scope="col">الباقة</th>
-                                <th class="text-center" scope="col">المجموع</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>فحص <span id="inspection-plane"></span></br><span id="car-model-name"></span></td>
-                                <td class="text-center"><span id="price-plane"></span> <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
-                                        <defs>
-                                            <style>
-                                                .cls-0 {
-                                                    fill: #757575;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
-                                        <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                                    </svg></td>
-                            </tr>
-                            <tr id="row-video" style="display: none;">
-                                <td>تصوير فيديو</td>
-                                <td class="text-center" id="video-price">45 <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
-                                        <defs>
-                                            <style>
-                                                .cls-0 {
-                                                    fill: #757575;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
-                                        <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                                    </svg></td>
-                            </tr>
-                            <tr id="row-summary-report" style="display: none;">
-                                <td>تقرير موجز</td>
-                                <td class="text-center" id="summary-price"><span class="summary-label"></span> <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
-                                        <defs>
-                                            <style>
-                                                .cls-0 {
-                                                    fill: #757575;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
-                                        <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                                    </svg></td>
-                            </tr>
-
-                            <tr id="row-discount" style="display: none;">
-                                <td>خصم <span id="discount-percent-label"></span></td>
-                                <td dir="rtl" class="text-center" id="discount-price"><span id="discount-label"></span></td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="inputs-containers">
-
-                    <div>
-                        <div class="mb-3">
-                            <label for="exampleName" class="form-label">الاسم الثلاثي*</label>
-                            <input type="text" class="form-control" id="exampleName" aria-describedby="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputphone" class="form-label">رقم الهاتف* (5xxxxxxxx)</label>
-                            <input maxlength="9" type="tel" class="form-control" id="exampleInputphone" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleBranch" class="form-label">الفرع*</label>
-                            <select class="form-select" id="exampleBranch" aria-label="Default select example" required>
-                                <option selected disabled>اختر فرع</option>
-                                <option value="الرياض-القادسية">الرياض - القادسية</option>
-                                <option value="الرياض-الشفا">الرياض - الشفا</option>
-                                <option value="الدمام">الدمام</option>
-                                <option value="جدة">جدة</option>
-                            </select>
+                                </tbody>
+                            </table>
                         </div>
 
-                        <div class="mb-4" dir="rtl">
-                            <label for="discount-input" class="form-label">كود الخصم</label>
-                            <div class="input-group flex-row-reverse">
-                                <button id="discount-btn" class="btn btn-outline-secondary" type="button" style="color: #fff; background-color: #6c757d; width: 75px;">تطبيق</button>
-                                <input type="text" class="form-control" id="discount-input" style="border: 1px solid #6c757d; box-shadow: none;">
-                            </div>
-                        </div>
+                        <div class="inputs-containers">
 
-                        <div class="mb-4 pt-2 pb-2" style="border-top: 1px solid #ececec; border-bottom: 1px solid #ececec;">
-                            <div class="form-check form-check-reverse" style="border-bottom: 1px solid #ececec;">
-                                <input class="form-check-input" style="width: 1em;" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                <label class="form-check-label" for="flexRadioDefault2" style="color: #1A1A1AE6;">
-                                    دفع الكتروني
-                                    <p style="color: #747a79; font-size: 11px; margin-top: 6px; ">ادفع باستخدام بطاقة الإئتمان, Mada, Visa, MasterCard</p>
-                                </label>
-                            </div>
+                            <div>
+                                <div class="mb-3">
+                                    <label for="exampleName" class="form-label">الاسم الثلاثي*</label>
+                                    <input type="text" class="form-control" id="exampleName" aria-describedby="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputphone" class="form-label">رقم الهاتف* (5xxxxxxxx)</label>
+                                    <input maxlength="9" type="tel" class="form-control" id="exampleInputphone" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleBranch" class="form-label">الفرع*</label>
+                                    <select class="form-select" id="exampleBranch" aria-label="Default select example" required>
+                                        <option selected disabled>اختر فرع</option>
+                                        <option value="الرياض-القادسية">الرياض - القادسية</option>
+                                        <option value="الرياض-الشفا">الرياض - الشفا</option>
+                                        <option value="الدمام">الدمام</option>
+                                        <option value="جدة">جدة</option>
+                                    </select>
+                                </div>
 
-                            <div class="form-check form-check-reverse pt-2 pb-2" style="border-bottom: 1px solid #ececec;">
-                                <input class="form-check-input" type="radio" style="width: 1em;" name="flexRadioDefault" id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1" style="color: #1A1A1AE6;">
-                                    دفع في المركز
-                                    <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">قم بالدفع عند حضورك الى أحد فروع كاشف</p>
-                                </label>
-                            </div>
-
-
-                            <div class="form-check form-check-reverse pt-2 pb-2" style="border-bottom: 1px solid #ececec;">
-                                <input class="form-check-input" type="radio" style="width: 1em;" name="flexRadioDefault" id="flexRadioDefault0">
-                                <label class="form-check-label" for="flexRadioDefault0" style="color: #1A1A1AE6;">
-                                    <div style="display: flex; align-items: center; gap: 8px;">
-                                        <div><img src=<?php echo get_template_directory_uri() . '/assets/images/tamara-logo.svg' ?> alt="tamata logo"></div>
-                                        قسمها على 4 دفعات
+                                <div class="mb-4" dir="rtl">
+                                    <label for="discount-input" class="form-label">كود الخصم</label>
+                                    <div class="input-group flex-row-reverse">
+                                        <button id="discount-btn" class="btn btn-outline-secondary" type="button" style="color: #fff; background-color: #6c757d; width: 75px;">تطبيق</button>
+                                        <input type="text" class="form-control" id="discount-input" style="border: 1px solid #6c757d; box-shadow: none;">
                                     </div>
-                                    <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">بدون رسوم تأخير، متوافقة مع الشريعة الإسلامية</p>
-                                </label>
-                            </div>
+                                </div>
 
-                            <div class="form-check form-check-reverse pt-2">
-                                <input class="form-check-input" type="radio" style="width: 1em;" name="flexRadioDefault" id="flexRadioDefaultTabby">
-                                <label class="form-check-label" for="flexRadioDefaultTabby" style="color: #1A1A1AE6;">
-                                    <div style="display: flex; align-items: center; gap: 8px;">
-                                        <div><img style="width: 74px;" src=<?php echo get_template_directory_uri() . '/assets/images/tabby.png' ?> alt="tabby logo"></div>
-                                        قسمها على 4 دفعات
+                                <div class="mb-4 pt-2 pb-2" style="border-top: 1px solid #ececec; border-bottom: 1px solid #ececec;">
+                                    <div class="form-check form-check-reverse" style="border-bottom: 1px solid #ececec;">
+                                        <input class="form-check-input" style="width: 1em;" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2" style="color: #1A1A1AE6;">
+                                            دفع الكتروني
+                                            <p style="color: #747a79; font-size: 11px; margin-top: 6px; ">ادفع باستخدام بطاقة الإئتمان, Mada, Visa, MasterCard</p>
+                                        </label>
                                     </div>
-                                    <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">بدون أي فوائد، أو رسوم</p>
-                                </label>
+
+                                    <div class="form-check form-check-reverse pt-2 pb-2" style="border-bottom: 1px solid #ececec;">
+                                        <input class="form-check-input" type="radio" style="width: 1em;" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1" style="color: #1A1A1AE6;">
+                                            دفع في المركز
+                                            <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">قم بالدفع عند حضورك الى أحد فروع كاشف</p>
+                                        </label>
+                                    </div>
+
+
+                                    <div class="form-check form-check-reverse pt-2 pb-2" style="border-bottom: 1px solid #ececec;">
+                                        <input class="form-check-input" type="radio" style="width: 1em;" name="flexRadioDefault" id="flexRadioDefault0">
+                                        <label class="form-check-label" for="flexRadioDefault0" style="color: #1A1A1AE6;">
+                                            <div style="display: flex; align-items: center; gap: 8px;">
+                                                <div><img src=<?php echo get_template_directory_uri() . '/assets/images/tamara-logo.svg' ?> alt="tamata logo"></div>
+                                                قسمها على 4 دفعات
+                                            </div>
+                                            <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">بدون رسوم تأخير، متوافقة مع الشريعة الإسلامية</p>
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check form-check-reverse pt-2">
+                                        <input class="form-check-input" type="radio" style="width: 1em;" name="flexRadioDefault" id="flexRadioDefaultTabby">
+                                        <label class="form-check-label" for="flexRadioDefaultTabby" style="color: #1A1A1AE6;">
+                                            <div style="display: flex; align-items: center; gap: 8px;">
+                                                <div><img style="width: 74px;" src=<?php echo get_template_directory_uri() . '/assets/images/tabby.png' ?> alt="tabby logo"></div>
+                                                قسمها على 4 دفعات
+                                            </div>
+                                            <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">بدون أي فوائد، أو رسوم</p>
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                                <!-- Moyasar form -->
+                                <div class="mysr-form"></div>
+
+                                <!-- Pay in center button -->
+                                <div class="pay-in-center text-center mb-4 mt-4">
+                                    <button id="pay-in-center-btn" class="btn btn-primary" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">تأكيد الطلب</button>
+                                </div>
+
+                                <!-- Pay with Tamara button -->
+                                <div class="pay-with-tamara text-center mb-4 mt-4">
+                                    <button id="pay-with-tamara-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">تأكيد الطلب</button>
+                                </div>
+
+                                <!-- Pay with Tabby button -->
+                                <div class="pay-with-tabby text-center mb-4 mt-4">
+                                    <button id="pay-with-tabby-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">تأكيد الطلب</button>
+                                </div>
                             </div>
-
                         </div>
 
-                        <!-- Moyasar form -->
-                        <div class="mysr-form"></div>
-
-                        <!-- Pay in center button -->
-                        <div class="pay-in-center text-center mb-4 mt-4">
-                            <button id="pay-in-center-btn" class="btn btn-primary" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">تأكيد الطلب</button>
-                        </div>
-
-                        <!-- Pay with Tamara button -->
-                        <div class="pay-with-tamara text-center mb-4 mt-4">
-                            <button id="pay-with-tamara-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">تأكيد الطلب</button>
-                        </div>
-
-                        <!-- Pay with Tabby button -->
-                        <div class="pay-with-tabby text-center mb-4 mt-4">
-                            <button id="pay-with-tabby-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #183f9c; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">تأكيد الطلب</button>
-                        </div>
                     </div>
+
                 </div>
 
             </div>
-
         </div>
-
 
         <footer>
             <div>
@@ -320,6 +220,7 @@
                 <a href="https://cashif.cc/terms-of-service/">شروط الخدمة</a>
             </div>
         </footer>
+
 
 
 
