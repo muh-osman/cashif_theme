@@ -26,20 +26,42 @@
 
                         <div class=" table-box">
 
-                            <h4 class="mb-4" style="color: #212529;">خدمات إضافية</h4>
+                            <h4 class="mb-4" style="color: #212529;">طلبك</h4>
 
                             <table class="table">
                                 <caption style="padding-top: 24px; color: #212529;"></caption>
 
                                 <tbody>
                                     <tr>
-                                        <td class="border-0 pt-2 pb-2">
+                                        <td style="color: #213941 !important;">
+                                            فحص <span id="inspection-plane"></span>
+                                            </br>
+                                            <span id="car-model-name"></span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span id="price-plane"></span>
+                                            <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+                                                <defs>
+                                                    <style>
+                                                        .cls-0 {
+                                                            fill: #757575;
+                                                        }
+                                                    </style>
+                                                </defs>
+                                                <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
+                                                <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
+                                            </svg>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="border-0">
                                             <input class="ms-1 form-check-input control-table checked-input" type="checkbox" value="تصوير فيديو" id="reverseCheck1" data-row="row-video">
                                             <label class="form-check-label small-text-in-small-screeen" for="reverseCheck1">
                                                 تصوير مقطع فيديو للسيارة
                                             </label>
                                         </td>
-                                        <td class="text-center border-0 pt-2 pb-2">
+                                        <td class="text-center border-0">
                                             45
                                             <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
                                                 <defs>
@@ -56,13 +78,13 @@
                                     </tr>
 
                                     <tr>
-                                        <td class="pt-2">
+                                        <td>
                                             <input class="ms-1 form-check-input control-table checked-input" type="checkbox" value="تقرير موجز" id="reverseCheck3" data-row="row-summary-report">
                                             <label class="form-check-label small-text-in-small-screeen" for="reverseCheck3">
                                                 تقرير موجز
                                             </label>
                                         </td>
-                                        <td class="text-center pt-2">
+                                        <td class="text-center">
                                             <span class="summary-label"></span> <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
                                                 <defs>
                                                     <style>
@@ -77,27 +99,6 @@
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="border-0" style="color: #213941 !important;">
-                                            فحص <span id="inspection-plane"></span>
-                                            </br>
-                                            <span id="car-model-name"></span>
-                                        </td>
-                                        <td class="text-center  border-0">
-                                            <span id="price-plane"></span>
-                                            <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
-                                                <defs>
-                                                    <style>
-                                                        .cls-0 {
-                                                            fill: #757575;
-                                                        }
-                                                    </style>
-                                                </defs>
-                                                <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
-                                                <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                                            </svg>
-                                        </td>
-                                    </tr>
 
 
                                     <tr id="row-discount" style="display: none;">
@@ -114,6 +115,13 @@
                         <div class="inputs-containers">
 
                             <div>
+                                <div class="mb-3" dir="rtl">
+                                    <label for="discount-input" class="form-label">كود الخصم</label>
+                                    <div class="input-group flex-row-reverse">
+                                        <button id="discount-btn" class="btn btn-outline-secondary" type="button" style="color: #fff; background-color: #6c757d; width: 75px;">تطبيق</button>
+                                        <input type="text" class="form-control" id="discount-input" style="border: 1px solid #6c757d; box-shadow: none;">
+                                    </div>
+                                </div>
                                 <div class="mb-3">
                                     <label for="exampleName" class="form-label">الاسم الثلاثي*</label>
                                     <input type="text" class="form-control" id="exampleName" aria-describedby="name" required>
@@ -122,7 +130,7 @@
                                     <label for="exampleInputphone" class="form-label">رقم الهاتف* (5xxxxxxxx)</label>
                                     <input maxlength="9" type="tel" class="form-control" id="exampleInputphone" required>
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-4">
                                     <label for="exampleBranch" class="form-label">الفرع*</label>
                                     <select class="form-select" id="exampleBranch" aria-label="Default select example" required>
                                         <option selected disabled>اختر فرع</option>
@@ -133,13 +141,7 @@
                                     </select>
                                 </div>
 
-                                <div class="mb-4" dir="rtl">
-                                    <label for="discount-input" class="form-label">كود الخصم</label>
-                                    <div class="input-group flex-row-reverse">
-                                        <button id="discount-btn" class="btn btn-outline-secondary" type="button" style="color: #fff; background-color: #6c757d; width: 75px;">تطبيق</button>
-                                        <input type="text" class="form-control" id="discount-input" style="border: 1px solid #6c757d; box-shadow: none;">
-                                    </div>
-                                </div>
+
 
                                 <div class="mb-4 pt-2 pb-2" style="border-top: 1px solid #ececec; border-bottom: 1px solid #ececec;">
                                     <div class="form-check form-check-reverse" style="border-bottom: 1px solid #ececec;">

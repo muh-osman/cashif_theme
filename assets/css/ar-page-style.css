@@ -2025,7 +2025,7 @@ form {
 
 /* Banner */
 body {
-  padding-top: 39px;
+  /* padding-top: 39px; */
 }
 .bannar {
   width: 100%;
@@ -2042,7 +2042,7 @@ body {
 }
 @media (max-width: 527px) {
   body {
-    padding-top: 69px;
+    /* padding-top: 69px; */
   }
   .bannar {
     flex-direction: column;
@@ -2050,7 +2050,7 @@ body {
 }
 @media (max-width: 380px) {
   body {
-    padding-top: 90px;
+    /* padding-top: 90px; */
   }
 }
 .bannar p {

@@ -37,42 +37,20 @@
             <div class="box">
                 <div class="table-box">
 
-                    <h4 dir="ltr" class="mb-4" style="color: #212529;">Additional services</h4>
+                    <h4 dir="ltr" class="mb-4" style="color: #212529;">Order</h4>
 
                     <table dir="ltr" class="table">
                         <caption dir="ltr" style="text-align: right; padding-top: 24px; color: #212529;"></caption>
 
                         <tbody>
-                            <tr>
-                                <td class="pt-2">
-                                    <input class="me-1 form-check-input control-table checked-input" type="checkbox" value="Summary report" id="reverseCheck3" data-row="row-summary-report">
-                                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck3">
-                                        Summary report
-                                    </label>
-                                </td>
-                                <td class="text-center pt-2" style="text-align: right !important;">
-                                    <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
-                                        <defs>
-                                            <style>
-                                                .cls-0 {
-                                                    fill: #757575;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
-                                        <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                                    </svg>
-                                    <span class="summary-label"></span>
-                                </td>
-                            </tr>
 
                             <tr>
-                                <td class="border-0" style="color: #213941 !important;">
+                                <td style="color: #213941 !important;">
                                     <span id="inspection-plane"></span>
                                     </br>
                                     <span id="car-model-name"></span>
                                 </td>
-                                <td class="border-0" style="text-align: right !important;">
+                                <td style="text-align: right !important;">
                                     <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
                                         <defs>
                                             <style>
@@ -85,6 +63,29 @@
                                         <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
                                     </svg>
                                     <span id="price-plane"></span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input class="me-1 form-check-input control-table checked-input" type="checkbox" value="Summary report" id="reverseCheck3" data-row="row-summary-report">
+                                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck3">
+                                        Summary report
+                                    </label>
+                                </td>
+                                <td class="text-center" style="text-align: right !important;">
+                                    <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+                                        <defs>
+                                            <style>
+                                                .cls-0 {
+                                                    fill: #757575;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
+                                        <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
+                                    </svg>
+                                    <span class="summary-label"></span>
                                 </td>
                             </tr>
 
@@ -106,6 +107,13 @@
                 <div dir="ltr" class="inputs-containers">
 
                     <div>
+                        <div class="mb-3" dir="ltr">
+                            <label for="discount-input" class="form-label">Discount code</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="discount-input" style="border: 1px solid #6c757d; box-shadow: none;">
+                                <button id="discount-btn" class="btn btn-outline-secondary" type="button" style="color: #fff; background-color: #6c757d; width: 75px;">Apply</button>
+                            </div>
+                        </div>
                         <div class="mb-3">
                             <label for="exampleName" class="form-label">Full name*</label>
                             <input type="text" class="form-control" id="exampleName" aria-describedby="name" required>
@@ -114,7 +122,7 @@
                             <label for="exampleInputphone" class="form-label">Phone number* (5xxxxxxxx)</label>
                             <input maxlength="9" type="tel" class="form-control" id="exampleInputphone" required>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-4">
                             <label for="exampleBranch" class="form-label">Branch*</label>
                             <select class="form-select" id="exampleBranch" aria-label="Default select example" required>
                                 <option selected disabled>Choose a branch</option>
@@ -126,13 +134,7 @@
                         </div>
 
 
-                        <div class="mb-4" dir="ltr">
-                            <label for="discount-input" class="form-label">Discount code</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="discount-input" style="border: 1px solid #6c757d; box-shadow: none;">
-                                <button id="discount-btn" class="btn btn-outline-secondary" type="button" style="color: #fff; background-color: #6c757d; width: 75px;">Apply</button>
-                            </div>
-                        </div>
+
 
                         <div dir="ltr" class=" mb-4 pt-2 pb-2" style="border-top: 1px solid #ececec; border-bottom: 1px solid #ececec;">
                             <div dir="ltr" class="form-check" style="border-bottom: 1px solid #ececec;">

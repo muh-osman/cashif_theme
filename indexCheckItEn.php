@@ -4,7 +4,7 @@
 
 
     <!-- Start Banner -->
-    <button dir="ltr" class="d-block" id="bannarBtn" onclick="openBannar()">
+    <!-- <button dir="ltr" class="d-block" id="bannarBtn" onclick="openBannar()">
         <div class="bannar">
             <p>Exclusively for <span>Jeddah and Dammam</span> customers - Computer check for your car for <span style="white-space: nowrap;"> <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
                         <defs>
@@ -19,10 +19,10 @@
                     </svg> 5 </span> only!</p>
             <p>Our Branch Locations</p>
         </div>
-    </button>
+    </button> -->
 
     <!-- start popup modal -->
-    <div
+    <!-- <div
         class="modal fade"
         id="war"
         tabindex="-1"
@@ -37,7 +37,6 @@
                     <button type="button" class="btn-close ms-0" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <!-- <h6>The customer has the right to cancel the order at any time before the delivery process is completed.</h6> -->
 
                     <ul dir="ltr" class="text-center m-0">
                         <li class="pb-3">
@@ -50,7 +49,7 @@
                         </li>
 
                         <li class="pb-3">
-                            <a href="https://maps.app.goo.gl/EXwyqvoEvLnxCrzu5">
+                            <a href="https://maps.app.goo.gl/pXCnG7RPXJ2CDLqe7?g_st=aw">
                                 Riyadh - Al-Shifa <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
                                     <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
@@ -78,9 +77,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <script>
+    <!-- <script>
         function openBannar() {
             var myModal = new bootstrap.Modal(document.getElementById("war"));
             document.body.classList.add('no-scroll'); // Set padding right
@@ -91,7 +90,7 @@
         document.getElementById('war').addEventListener('hidden.bs.modal', function() {
             document.body.classList.remove('no-scroll'); // Allow scrolling again
         });
-    </script>
+    </script> -->
     <!-- end popup modal -->
     <!-- End Banner -->
 
@@ -920,7 +919,7 @@
                                     </li>
 
                                     <li>
-                                        <a href="https://maps.app.goo.gl/EXwyqvoEvLnxCrzu5">
+                                        <a href="https://maps.app.goo.gl/pXCnG7RPXJ2CDLqe7?g_st=aw">
                                             Riyadh - Al Shifa <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                                 <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
                                                 <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
