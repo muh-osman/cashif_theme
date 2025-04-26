@@ -402,7 +402,7 @@
                             <h4 class="my-0 fw-normal">Basic</h4>
                         </div>
                         <div class="card-body">
-                            <h1 id="main-price" class="card-title pricing-card-title"></h1>
+                            <h2 id="main-price" class="card-title pricing-card-title"></h2>
                             <h3 id="old-price-b" style="margin-top: -12px; font-size: 16px; color: #d32f2f"></h3>
                             <h5>Check includes:</h5>
                             <ul dir="ltr" class="list-unstyled mt-3 mb-4">
@@ -598,7 +598,7 @@
                             <h4 class="my-0 fw-normal">Full Inspection</h4>
                         </div>
                         <div class="card-body">
-                            <h1 id="full-price" class="card-title pricing-card-title"></h1>
+                            <h2 id="full-price" class="card-title pricing-card-title"></h2>
                             <h3 id="old-price-c" style="margin-top: -12px; font-size: 16px; color: #d32f2f"></h3>
                             <h5>Check includes:</h5>
                             <ul dir="ltr" class="list-unstyled mt-3 mb-4">

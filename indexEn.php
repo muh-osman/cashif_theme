@@ -110,11 +110,11 @@
                     <img src=<?php echo get_template_directory_uri() . '/assets/images/logo.webp' ?> alt="Cashif logo" />
                 </div>
                 <div class="discount-details">
-                    <h6 dir="ltr">
+                    <h1 dir="ltr">
                         <span>Cashif for car inspection</span>
                         <br />
                         A center specialized in inspecting used cars, keeps pace with the latest technologies to help you in your purchasing decision
-                    </h6>
+                    </h1>
                 </div>
 
                 <a href="#prices" class="discount-bttn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
@@ -397,7 +397,7 @@
                             <h4 class="my-0 fw-normal">Engine</h4>
                         </div>
                         <div class="card-body">
-                            <h1 id="engain-price" class="card-title pricing-card-title"></h1>
+                            <h2 id="engain-price" class="card-title pricing-card-title"></h2>
                             <h3 id="old-price-a" style="margin-top: -12px; font-size: 16px; color: #d32f2f"></h3>
                             <h5>Check includes:</h5>
                             <ul dir="ltr" class="list-unstyled mt-3 mb-4">
@@ -594,7 +594,7 @@
                             <h4 class="my-0 fw-normal">Basic</h4>
                         </div>
                         <div class="card-body">
-                            <h1 id="main-price" class="card-title pricing-card-title"></h1>
+                            <h2 id="main-price" class="card-title pricing-card-title"></h2>
                             <h3 id="old-price-b" style="margin-top: -12px; font-size: 16px; color: #d32f2f"></h3>
                             <h5>Check includes:</h5>
                             <ul dir="ltr" class="list-unstyled mt-3 mb-4">
@@ -790,7 +790,7 @@
                             <h4 class="my-0 fw-normal">Full Inspection</h4>
                         </div>
                         <div class="card-body">
-                            <h1 id="full-price" class="card-title pricing-card-title"></h1>
+                            <h2 id="full-price" class="card-title pricing-card-title"></h2>
                             <h3 id="old-price-c" style="margin-top: -12px; font-size: 16px; color: #d32f2f"></h3>
                             <h5>Check includes:</h5>
                             <ul dir="ltr" class="list-unstyled mt-3 mb-4">

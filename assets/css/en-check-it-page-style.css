@@ -1477,6 +1477,7 @@ form {
   align-items: center;
   justify-content: center;
   gap: 9px;
+  font-size: 37px;
 }
 
 .pricing-card-title svg {

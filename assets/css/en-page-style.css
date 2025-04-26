@@ -320,12 +320,12 @@ body::after {
     font-size: 20px;
   }
 
-  .intro-section .intro-content .discount-details h6 {
+  .intro-section .intro-content .discount-details h1 {
     width: 100%;
   }
 }
 
-.intro-section .intro-content .discount-details h6 {
+.intro-section .intro-content .discount-details h1 {
   color: #bbb;
   text-align: center;
   font-size: 24px;
@@ -335,7 +335,7 @@ body::after {
   width: 65%;
 }
 
-.intro-section .intro-content .discount-details h6 span {
+.intro-section .intro-content .discount-details h1 span {
   color: #fef8fb;
   font-size: 48px;
   font-weight: 600;
@@ -371,24 +371,24 @@ body::after {
 }
 
 @media (max-width: 768px) {
-  .intro-section .intro-content .discount-details h6 {
+  .intro-section .intro-content .discount-details h1 {
     text-align: center;
     width: 100%;
   }
 
-  .intro-section .intro-content .discount-details h6 span {
+  .intro-section .intro-content .discount-details h1 span {
     font-size: 27px !important;
   }
 }
 
 @media (max-width: 625px) {
-  .intro-section .intro-content .discount-details h6 {
+  .intro-section .intro-content .discount-details h1 {
     line-height: 1.7;
     width: 100%;
     font-size: 16px;
   }
 
-  .intro-section .intro-content .discount-details h6 span {
+  .intro-section .intro-content .discount-details h1 span {
     font-size: 22px;
   }
 }
@@ -553,8 +553,8 @@ input.check-toggle-round-flat + label:after {
   transition: margin 0.2s;
 }
 
-input.check-toggle-round-flat:checked + label {
-}
+/* input.check-toggle-round-flat:checked + label {
+} */
 
 input.check-toggle-round-flat:checked + label:after {
   margin-right: 44px;
@@ -1362,6 +1362,7 @@ form {
   align-items: center;
   justify-content: center;
   gap: 9px;
+  font-size: 37px;
 }
 
 .pricing-card-title svg {
