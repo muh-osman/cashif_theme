@@ -117,22 +117,81 @@
                     </h1>
                 </div>
 
-                <a href="#prices" class="discount-bttn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+                <a href="https://cashif.cc/dashboard/prices" id="discountBttn" class="discount-bttn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
                     Service prices
                 </a>
 
 
-                <div class="lang-switcher">
+                <!-- <div class="lang-switcher">
                     <div class="switch">
                         <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
                         <label for="language-toggle"></label>
                         <span class="on">AR</span>
                         <span class="off">EN</span>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="login-btn-box">
-                    <a href="https://cashif.cc/dashboard/" target="_blank">Login</a>
+                    <!-- <a href="https://cashif.cc/dashboard/" target="_blank">Login</a> -->
+
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle unset-three-dot-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg fill="#fff" width="32" height="32" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="MoreVertIcon">
+                                <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2"></path>
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu unset-three-dot-ul">
+                            <li>
+                                <a style="display: flex;" class="dropdown-item" href="https://cashif.cc/">
+                                    <span style="margin-right: 16px; display: flex; align-items: center;">
+                                        <svg fill="#0000008a" width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="TranslateIcon">
+                                            <path d="m12.87 15.07-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path>
+                                        </svg>
+                                    </span>
+                                    <span>العربية</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a style="display: flex;" class="dropdown-item" href="https://cashif.cc/dashboard/contact">
+                                    <span style="margin-right: 16px; display: flex; align-items: center;">
+                                        <svg fill="#0000008a" width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                            <path d="M20 4H4v2h16zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6zm-9 4H6v-4h6z"></path>
+                                        </svg>
+                                    </span>
+                                    <span>Our branches</span>
+                                </a>
+                            </li>
+                            <li><a style="display: flex;" class="dropdown-item" href="https://api.whatsapp.com/send?phone=966920019948&text=*Select from the main menu*">
+                                    <span style="margin-right: 16px; display: flex; align-items: center;">
+                                        <svg fill="#0000008a" width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                            <path d="M16.75 13.96c.25.13.41.2.46.3.06.11.04.61-.21 1.18-.2.56-1.24 1.1-1.7 1.12-.46.02-.47.36-2.96-.73-2.49-1.09-3.99-3.75-4.11-3.92-.12-.17-.96-1.38-.92-2.61.05-1.22.69-1.8.95-2.04.24-.26.51-.29.68-.26h.47c.15 0 .36-.06.55.45l.69 1.87c.06.13.1.28.01.44l-.27.41-.39.42c-.12.12-.26.25-.12.5.12.26.62 1.09 1.32 1.78.91.88 1.71 1.17 1.95 1.3.24.14.39.12.54-.04l.81-.94c.19-.25.35-.19.58-.11l1.67.88M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10c-1.97 0-3.8-.57-5.35-1.55L2 22l1.55-4.65A9.969 9.969 0 0 1 2 12 10 10 0 0 1 12 2m0 2a8 8 0 0 0-8 8c0 1.72.54 3.31 1.46 4.61L4.5 19.5l2.89-.96A7.95 7.95 0 0 0 12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8z"></path>
+                                        </svg>
+                                    </span>
+                                    <span>Contact us</span>
+                                </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li id="login"><a style="display: flex;" class="dropdown-item" href="https://cashif.cc/dashboard/login">
+                                    <span style="margin-right: 16px; display: flex; align-items: center;">
+                                        <svg fill="#0000008a" width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="LoginIcon">
+                                            <path d="M11 7 9.6 8.4l2.6 2.6H2v2h10.2l-2.6 2.6L11 17l5-5zm9 12h-8v2h8c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-8v2h8z"></path>
+                                        </svg>
+                                    </span>
+                                    <span>Login</span>
+                                </a></li>
+
+                            <li id="logout"><a style="display: flex;" class="dropdown-item" href="https://cashif.cc/dashboard/logout">
+                                    <span style="margin-right: 16px; display: flex; align-items: center;">
+                                        <svg fill="#0000008a" width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="LogoutIcon">
+                                            <path d="m17 7-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4z"></path>
+                                        </svg>
+                                    </span>
+                                    <span>Logout</span>
+                                </a></li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
@@ -164,14 +223,14 @@
             Our services
         </h2>
     </div>
-    <section dir="ltr" class="services-section">
+    <section dir="ltr" class="services-section" id="inspection-before-buying">
         <div class="container">
             <div class="row justify-content-center">
 
                 <div class="col-lg-6 col-md-6 col-12 serv-container" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                     <div class="service-card d-flex flex-column h-100">
                         <div class="service-img">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
                                 <path d="M160 64c0-11.8-6.5-22.6-16.9-28.2s-23-5-32.8 1.6l-96 64C-.5 111.2-4.4 131 5.4 145.8s29.7 18.7 44.4 8.9L96 123.8V416H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96 96c17.7 0 32-14.3 32-32s-14.3-32-32-32H160V64z" />
                             </svg>
                         </div>
@@ -207,7 +266,7 @@
                                 <span>Points and rewards</span>
                             </li>
                         </ul>
-                        <a class="ask-now-serv mt-4 text-center" href="#prices">Order now</a>
+                        <a class="ask-now-serv mt-4 text-center" id="ask-now-btn" href="https://cashif.cc/dashboard/prices">Order now</a>
                     </div>
                 </div>
 
@@ -215,7 +274,7 @@
                 <div class="col-lg-6 col-md-6 col-12 serv-container" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                     <div class="service-card d-flex flex-column h-100">
                         <div class="service-img">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                 <path d="M142.9 96c-21.5 0-42.2 8.5-57.4 23.8L54.6 150.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L40.2 74.5C67.5 47.3 104.4 32 142.9 32C223 32 288 97 288 177.1c0 38.5-15.3 75.4-42.5 102.6L109.3 416H288c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-12.9 0-24.6-7.8-29.6-19.8s-2.2-25.7 6.9-34.9L200.2 234.5c15.2-15.2 23.8-35.9 23.8-57.4c0-44.8-36.3-81.1-81.1-81.1z" />
                             </svg>
                         </div>
@@ -241,7 +300,7 @@
                                         <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
                                     </svg>
                                 </span>
-                                <span>Download the inspection report through <a href="https://cashif.cc/dashboard/">our website</a></span>
+                                <span>Download the inspection report through <a href="https://cashif.cc/dashboard/reports">our website</a></span>
                             </li>
                             <li>
                                 <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
@@ -310,7 +369,7 @@
             </div>
             <div class="how-we-box">
                 <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path d="M280 24c0-13.3-10.7-24-24-24s-24 10.7-24 24v80c0 13.3 10.7 24 24 24s24-10.7 24-24V24zM185.8 224H326.2c6.8 0 12.8 4.3 15.1 10.6L360.3 288H151.7l19.1-53.4c2.3-6.4 8.3-10.6 15.1-10.6zm-75.3-10.9L82.2 292.4C62.1 300.9 48 320.8 48 344v40 64 32c0 17.7 14.3 32 32 32H96c17.7 0 32-14.3 32-32V448H384v32c0 17.7 14.3 32 32 32h16c17.7 0 32-14.3 32-32V448 384 344c0-23.2-14.1-43.1-34.2-51.6l-28.3-79.3C390.1 181.3 360 160 326.2 160H185.8c-33.8 0-64 21.3-75.3 53.1zM128 344a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm232 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM39 39c-9.4 9.4-9.4 24.6 0 33.9l48 48c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L73 39c-9.4-9.4-24.6-9.4-33.9 0zm400 0L391 87c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l48-48c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0z" />
                     </svg>
                 </div>
@@ -319,7 +378,7 @@
             </div>
             <div class="how-we-box">
                 <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                         <path d="M400 0L176 0c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8L24 64C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9L192 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l192 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-26.1 0C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24L446.4 64c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112l84.4 0c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6l84.4 0c-5.1 66.3-31.1 111.2-63 142.3z" />
                     </svg>
                 </div>
@@ -328,7 +387,7 @@
             </div>
             <div class="how-we-box">
                 <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                         <path d="M173.8 5.5c11-7.3 25.4-7.3 36.4 0L228 17.2c6 3.9 13 5.8 20.1 5.4l21.3-1.3c13.2-.8 25.6 6.4 31.5 18.2l9.6 19.1c3.2 6.4 8.4 11.5 14.7 14.7L344.5 83c11.8 5.9 19 18.3 18.2 31.5l-1.3 21.3c-.4 7.1 1.5 14.2 5.4 20.1l11.8 17.8c7.3 11 7.3 25.4 0 36.4L366.8 228c-3.9 6-5.8 13-5.4 20.1l1.3 21.3c.8 13.2-6.4 25.6-18.2 31.5l-19.1 9.6c-6.4 3.2-11.5 8.4-14.7 14.7L301 344.5c-5.9 11.8-18.3 19-31.5 18.2l-21.3-1.3c-7.1-.4-14.2 1.5-20.1 5.4l-17.8 11.8c-11 7.3-25.4 7.3-36.4 0L156 366.8c-6-3.9-13-5.8-20.1-5.4l-21.3 1.3c-13.2 .8-25.6-6.4-31.5-18.2l-9.6-19.1c-3.2-6.4-8.4-11.5-14.7-14.7L39.5 301c-11.8-5.9-19-18.3-18.2-31.5l1.3-21.3c.4-7.1-1.5-14.2-5.4-20.1L5.5 210.2c-7.3-11-7.3-25.4 0-36.4L17.2 156c3.9-6 5.8-13 5.4-20.1l-1.3-21.3c-.8-13.2 6.4-25.6 18.2-31.5l19.1-9.6C65 70.2 70.2 65 73.4 58.6L83 39.5c5.9-11.8 18.3-19 31.5-18.2l21.3 1.3c7.1 .4 14.2-1.5 20.1-5.4L173.8 5.5zM272 192a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM1.3 441.8L44.4 339.3c.2 .1 .3 .2 .4 .4l9.6 19.1c11.7 23.2 36 37.3 62 35.8l21.3-1.3c.2 0 .5 0 .7 .2l17.8 11.8c5.1 3.3 10.5 5.9 16.1 7.7l-37.6 89.3c-2.3 5.5-7.4 9.2-13.3 9.7s-11.6-2.2-14.8-7.2L74.4 455.5l-56.1 8.3c-5.7 .8-11.4-1.5-15-6s-4.3-10.7-2.1-16zm248 60.4L211.7 413c5.6-1.8 11-4.3 16.1-7.7l17.8-11.8c.2-.1 .4-.2 .7-.2l21.3 1.3c26 1.5 50.3-12.6 62-35.8l9.6-19.1c.1-.2 .2-.3 .4-.4l43.2 102.5c2.2 5.3 1.4 11.4-2.1 16s-9.3 6.9-15 6l-56.1-8.3-32.2 49.2c-3.2 5-8.9 7.7-14.8 7.2s-11-4.3-13.3-9.7z" />
                     </svg>
                 </div>
@@ -340,16 +399,14 @@
     <!-- End why deal with us section -->
 
     <!--Start Search section-->
-    <section id="prices" class="title-box">
+    <!-- <section id="prices" class="title-box">
         <h2 data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">Service prices</h2>
     </section>
     <section dir="ltr" class="getService-section" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
         <div class="container">
             <p class="form-sub-title">Search for your car's model in English</p>
-            <!-- Search -->
             <div class="input-group mb-3 search-input">
                 <button aria-label="Years Button" id="dropdownButton" class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Model year</button>
-                <!-- Spinner -->
                 <div id="spinner" class="spinner-border text-warning" role="status"></div>
 
                 <ul class="dropdown-menu">
@@ -373,17 +430,16 @@
                 </ul>
                 <input type="text" class="form-control" placeholder="E.g. Camry" require>
             </div>
-            <!-- Search result -->
             <div class="search-result" id="search-result"></div>
             <button dir="ltr" aria-label="Search Button" onclick="submit()" id="btn" type="submit" class="contact-bttn submit-btn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
                 Search
             </button>
         </div>
-    </section>
+    </section> -->
     <!--End Search section-->
 
     <!-- Start Overlay (plans)-->
-    <div dir="ltr" class="overlay" id="overlay">
+    <!-- <div dir="ltr" class="overlay" id="overlay">
         <div>
 
             <div class="title-box">
@@ -403,7 +459,7 @@
                             <ul dir="ltr" class="list-unstyled mt-3 mb-4">
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> The engine <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check performance, oil level, and sound">
@@ -416,7 +472,7 @@
 
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Transmission <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Test switching smoothness and performance">
@@ -428,7 +484,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Differential <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check sounds and leaks">
@@ -440,7 +496,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Undercarriage mechanics <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Mechanical inspection under the car: Moving parts: Inspecting the moving parts and ensuring that there is no damage or corrosion. Undercarriage: Check for rust or damage to the undercarriage">
@@ -452,7 +508,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Computer and sensors <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Use diagnostic devices to examine electronic systems">
@@ -464,7 +520,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Internal structure <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check car chassis: bumps, rust, welds, mounting points, and mechanical connections to ensure structural and car integrity">
@@ -476,7 +532,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Car test drive <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Test drive to check overall performance">
@@ -489,7 +545,7 @@
 
                                 <li>
                                     <span>
-                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                                             <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
                                         </svg>
                                     </span> Exoskeleton <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Inspect the body, paint, bumps, and scratches">
@@ -501,7 +557,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                                             <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
                                         </svg>
                                     </span> Airbags <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check the safety and operation of the airbags">
@@ -513,7 +569,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                                             <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
                                         </svg>
                                     </span> Interior decorations <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check the integrity of the seats, buttons and internal devices">
@@ -525,7 +581,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                                             <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
                                         </svg>
                                     </span> Specific features of the car <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check navigation system, cameras, and sensors. And others">
@@ -537,7 +593,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                                             <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
                                         </svg>
                                     </span> Car exterior accessories <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check mirrors and exterior lights">
@@ -549,7 +605,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                                             <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
                                         </svg>
                                     </span> The glass <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check safety of glass">
@@ -561,7 +617,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                                             <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
                                         </svg>
                                     </span> Tires and rims <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check tire wear and rim balance">
@@ -573,7 +629,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                                             <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
                                         </svg>
                                     </span> The headlights & taillights <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Inspection of the operation and safety of the headlights and taillights">
@@ -600,7 +656,7 @@
                             <ul dir="ltr" class="list-unstyled mt-3 mb-4">
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> The engine <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check performance, oil level, and sound">
@@ -613,7 +669,7 @@
 
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Transmission <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Test switching smoothness and performance">
@@ -625,7 +681,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Differential <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check sounds and leaks">
@@ -637,7 +693,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Undercarriage mechanics <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Mechanical inspection under the car: Moving parts: Inspecting the moving parts and ensuring that there is no damage or corrosion. Undercarriage: Check for rust or damage to the undercarriage">
@@ -649,7 +705,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Computer and sensors <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Use diagnostic devices to examine electronic systems">
@@ -661,7 +717,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Internal structure <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check car chassis: bumps, rust, welds, mounting points, and mechanical connections to ensure structural and car integrity">
@@ -673,7 +729,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Car test drive <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Test drive to check overall performance">
@@ -685,7 +741,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Exoskeleton <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Inspect the body, paint, bumps, and scratches">
@@ -697,7 +753,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Airbags <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check the safety and operation of the airbags">
@@ -709,7 +765,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                                             <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
                                         </svg>
                                     </span> Interior decorations <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check the integrity of the seats, buttons and internal devices">
@@ -721,7 +777,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                                             <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
                                         </svg>
                                     </span> Specific features of the car <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check navigation system, cameras, and sensors. And others">
@@ -733,7 +789,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                                             <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
                                         </svg>
                                     </span> Car exterior accessories <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check mirrors and exterior lights">
@@ -745,7 +801,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                                             <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
                                         </svg>
                                     </span> The glass <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check safety of glass">
@@ -757,7 +813,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                                             <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
                                         </svg>
                                     </span> Tires and rims <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check tire wear and rim balance">
@@ -769,7 +825,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="wrong-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                                             <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
                                         </svg>
                                     </span> The headlights & taillights <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Inspection of the operation and safety of the headlights and taillights">
@@ -796,7 +852,7 @@
                             <ul dir="ltr" class="list-unstyled mt-3 mb-4">
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> The engine <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check performance, oil level, and sound">
@@ -809,7 +865,7 @@
 
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Transmission <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Test switching smoothness and performance">
@@ -821,7 +877,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Differential <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check sounds and leaks">
@@ -833,7 +889,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Undercarriage mechanics <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Mechanical inspection under the car: Moving parts: Inspecting the moving parts and ensuring that there is no damage or corrosion. Undercarriage: Check for rust or damage to the undercarriage">
@@ -845,7 +901,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Computer and sensors <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Use diagnostic devices to examine electronic systems">
@@ -857,7 +913,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Internal structure <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check car chassis: bumps, rust, welds, mounting points, and mechanical connections to ensure structural and car integrity">
@@ -869,7 +925,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Car test drive <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Test drive to check overall performance">
@@ -881,7 +937,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Exoskeleton <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Inspect the body, paint, bumps, and scratches">
@@ -893,7 +949,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Airbags <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check the safety and operation of the airbags">
@@ -905,7 +961,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Interior decorations <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check the integrity of the seats, buttons and internal devices">
@@ -917,7 +973,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Specific features of the car <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check navigation system, cameras, and sensors. And others">
@@ -929,7 +985,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Car exterior accessories <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check mirrors and exterior lights">
@@ -941,7 +997,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> The glass <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check safety of glass">
@@ -953,7 +1009,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> Tires and rims <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Check tire wear and rim balance">
@@ -965,7 +1021,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <svg class="true-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                                         </svg>
                                     </span> The headlights & taillights <button aria-label="Tooltip Button" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Inspection of the operation and safety of the headlights and taillights">
@@ -984,7 +1040,7 @@
 
         </div>
 
-    </div>
+    </div> -->
     <!-- End Overlay (plans) -->
 
     <!-- Start Testimonian -->
@@ -1143,7 +1199,7 @@
                                 <h4>Cashif services</h4>
                                 <ul>
                                     <li>
-                                        <a href="#prices">Pre-purchase inspection</a>
+                                        <a href="#inspection-before-buying">Pre-purchase inspection</a>
                                     </li>
 
                                     <li>
@@ -1231,6 +1287,72 @@
         </svg>
     </a>
     <!--End WhatsApp icon section-->
+
+
+    <nav class="mob-phone-nav">
+        <div class="navigation">
+            <ul>
+                <li class="list" aria-label="Booking" title="Booking">
+                    <a href="https://cashif.cc/dashboard/booking">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path d="M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zm64 80l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm128 0l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM64 400l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zm112 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16z" />
+                            </svg>
+                        </span>
+                        <span class="text-mob-nav">Booking</span>
+                    </a>
+                </li>
+
+                <li class="list search-in-mob-nav" id="search-in-mob-nav" aria-label="Prices" title="Prices">
+                    <a href="https://cashif.cc/dashboard/prices" class="search-icon-nav-mob-link">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M320 96L192 96 144.6 24.9C137.5 14.2 145.1 0 157.9 0L354.1 0c12.8 0 20.4 14.2 13.3 24.9L320 96zM192 128l128 0c3.8 2.5 8.1 5.3 13 8.4C389.7 172.7 512 250.9 512 416c0 53-43 96-96 96L96 512c-53 0-96-43-96-96C0 250.9 122.3 172.7 179 136.4c0 0 0 0 0 0s0 0 0 0c4.8-3.1 9.2-5.9 13-8.4zm84 88c0-11-9-20-20-20s-20 9-20 20l0 14c-7.6 1.7-15.2 4.4-22.2 8.5c-13.9 8.3-25.9 22.8-25.8 43.9c.1 20.3 12 33.1 24.7 40.7c11 6.6 24.7 10.8 35.6 14l1.7 .5c12.6 3.8 21.8 6.8 28 10.7c5.1 3.2 5.8 5.4 5.9 8.2c.1 5-1.8 8-5.9 10.5c-5 3.1-12.9 5-21.4 4.7c-11.1-.4-21.5-3.9-35.1-8.5c-2.3-.8-4.7-1.6-7.2-2.4c-10.5-3.5-21.8 2.2-25.3 12.6s2.2 21.8 12.6 25.3c1.9 .6 4 1.3 6.1 2.1c0 0 0 0 0 0s0 0 0 0c8.3 2.9 17.9 6.2 28.2 8.4l0 14.6c0 11 9 20 20 20s20-9 20-20l0-13.8c8-1.7 16-4.5 23.2-9c14.3-8.9 25.1-24.1 24.8-45c-.3-20.3-11.7-33.4-24.6-41.6c-11.5-7.2-25.9-11.6-37.1-15c0 0 0 0 0 0l-.7-.2c-12.8-3.9-21.9-6.7-28.3-10.5c-5.2-3.1-5.3-4.9-5.3-6.7c0-3.7 1.4-6.5 6.2-9.3c5.4-3.2 13.6-5.1 21.5-5c9.6 .1 20.2 2.2 31.2 5.2c10.7 2.8 21.6-3.5 24.5-14.2s-3.5-21.6-14.2-24.5c-6.5-1.7-13.7-3.4-21.1-4.7l0-13.9z" />
+                            </svg>
+                        </span>
+                        <span class="text-mob-nav">Prices</span>
+                    </a>
+                </li>
+
+                <li class="list act" id="home-nav" aria-label="Home" title="Home">
+                    <a href="https://cashif.cc/en">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                            </svg>
+                        </span>
+                        <span class="text-mob-nav">Home</span>
+                    </a>
+                </li>
+
+                <li class="list category-btn-in-mob-nav" aria-label="Reports" title="Reports">
+                    <a href="https://cashif.cc/dashboard/reports">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                <path d="M64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-288-128 0c-17.7 0-32-14.3-32-32L224 0 64 0zM256 0l0 128 128 0L256 0zM112 256l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
+                            </svg>
+                        </span>
+                        <span class="text-mob-nav">Reports</span>
+                    </a>
+                </li>
+
+                <li class="list" aria-label="Falak" title="Falak">
+                    <a href="https://cashif.cc/dashboard/falak/marketer">
+                        <span class="icon">
+                            <svg
+                                style="width: 44px"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 512">
+                                <path d="M323.4 85.2l-96.8 78.4c-16.1 13-19.2 36.4-7 53.1c12.9 17.8 38 21.3 55.3 7.8l99.3-77.2c7-5.4 17-4.2 22.5 2.8s4.2 17-2.8 22.5l-20.9 16.2L512 316.8 512 128l-.7 0-3.9-2.5L434.8 79c-15.3-9.8-33.2-15-51.4-15c-21.8 0-43 7.5-60 21.2zm22.8 124.4l-51.7 40.2C263 274.4 217.3 268 193.7 235.6c-22.2-30.5-16.6-73.1 12.7-96.8l83.2-67.3c-11.6-4.9-24.1-7.4-36.8-7.4C234 64 215.7 69.6 200 80l-72 48 0 224 28.2 0 91.4 83.4c19.6 17.9 49.9 16.5 67.8-3.1c5.5-6.1 9.2-13.2 11.1-20.6l17 15.6c19.5 17.9 49.9 16.6 67.8-2.9c4.5-4.9 7.8-10.6 9.9-16.5c19.4 13 45.8 10.3 62.1-7.5c17.9-19.5 16.6-49.9-2.9-67.8l-134.2-123zM16 128c-8.8 0-16 7.2-16 16L0 352c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-224-80 0zM48 320a16 16 0 1 1 0 32 16 16 0 1 1 0-32zM544 128l0 224c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-208c0-8.8-7.2-16-16-16l-80 0zm32 208a16 16 0 1 1 32 0 16 16 0 1 1 -32 0z" />
+                            </svg>
+                        </span>
+                        <span class="text-mob-nav">Falak</span>
+                    </a>
+                </li>
+                <div class="indicat"></div>
+            </ul>
+        </div>
+    </nav>
 
 
     <?php get_footer() ?>

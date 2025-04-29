@@ -59,7 +59,7 @@
                     <ol>
                         <li>After completing the payment, you will receive a barcode for the service.</li>
                         <li>Share the barcode image with the car owner and ask him to go to the nearest branch.</li>
-                        <li>The vehicle will be inspected, after which you can download the report from <a target="_blank" href="https://cashif.cc/dashboard/">our website</a>.</li>
+                        <li>The vehicle will be inspected, after which you can download the report from <a target="_blank" href="https://cashif.cc/dashboard/reports">our website</a>.</li>
                         <li>We assist with car ownership and insurance transfers in partnership with our collaborators.</li>
                     </ol>
                 </div>
