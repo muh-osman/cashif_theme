@@ -409,8 +409,13 @@ function activeLink() {
 list.forEach((item) => item.addEventListener("click", activeLink));
 //
 const discountBttn = document.getElementById("discountBttn");
+const discountBttnTwo = document.getElementById("discountBttnTwo");
 const priceNavbar = document.getElementById("search-in-mob-nav");
 discountBttn.addEventListener("click", () => {
+  list.forEach((item) => item.classList.remove("act"));
+  priceNavbar.classList.add("act");
+});
+discountBttnTwo.addEventListener("click", () => {
   list.forEach((item) => item.classList.remove("act"));
   priceNavbar.classList.add("act");
 });

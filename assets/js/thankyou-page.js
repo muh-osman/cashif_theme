@@ -9,6 +9,7 @@ const amount = params.get("amount");
 const message = params.get("message");
 
 const year = params.get("yearId");
+const fullYear = params.get("fy");
 
 const fullName = params.get("fullname");
 const phone = params.get("phone");
@@ -122,6 +123,7 @@ async function submitUnPaidQrCode() {
         price: price,
         model: model,
         year: year,
+        fy: fullYear,
 
         additionalServices: addServ,
 

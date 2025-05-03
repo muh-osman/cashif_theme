@@ -103,7 +103,7 @@ ul {
   padding: 15px;
   position: relative;
   margin-bottom: 200px;
-  background-color: #203840;
+  background-color: #174545;
 }
 
 .intro-section::before {
@@ -138,7 +138,7 @@ body::after {
 }
 .intro-section::after {
   content: "";
-  background-image: url(../images/intro-curve.svg);
+  background-image: url(../images/intro-curves.svg);
   background-size: cover;
   position: absolute;
   left: 0;
@@ -352,7 +352,7 @@ body::after {
   align-items: center;
   border-radius: 50px;
   background-color: #e2d399;
-  color: #213941;
+  color: #174545;
   font-size: 18px;
   margin: 32px 0 0;
   transition: 0.2s;
@@ -434,7 +434,7 @@ body::after {
 
 .login-btn-box a:hover {
   background-color: #e2d399;
-  color: #213941;
+  color: #174545;
 } */
 
 @media (max-width: 625px) {
@@ -754,7 +754,7 @@ input.check-toggle-round-flat:checked + label:after {
 }
 
 .title-box h2 {
-  color: #213941;
+  color: #174545;
   text-align: center;
   font-family: "mont-medium";
   font-size: 25px;
@@ -805,7 +805,7 @@ input.check-toggle-round-flat:checked + label:after {
   width: 100px;
   height: 100px;
   margin: 0 auto 25px;
-  background-color: #213941;
+  background-color: #174545;
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -822,7 +822,7 @@ input.check-toggle-round-flat:checked + label:after {
   text-align: center;
   font-size: 25px;
   font-weight: 400;
-  color: #213941;
+  color: #174545;
   font-family: "mont-bold";
 }
 
@@ -1012,7 +1012,7 @@ input.check-toggle-round-flat:checked + label:after {
 }
 
 .why-we-boxs .how-we-box div {
-  background-color: #213941;
+  background-color: #174545;
   height: 105px;
   width: 100%;
   display: flex;
@@ -1027,12 +1027,12 @@ input.check-toggle-round-flat:checked + label:after {
 }
 
 .why-we-boxs .how-we-box h2 {
-  color: 213941;
+  color: 174545;
   text-align: center;
   font-size: 18px;
   font-weight: 600;
   padding: 16px;
-  color: #213941;
+  color: #174545;
   margin: 0;
   padding-top: 22px;
 }
@@ -1076,7 +1076,7 @@ input.check-toggle-round-flat:checked + label:after {
 
 .getService-section::before {
   position: absolute;
-  background: #213941;
+  background: #174545;
   inset: 0 -4px;
   content: "";
   z-index: -1;
@@ -1157,7 +1157,7 @@ input.check-toggle-round-flat:checked + label:after {
   justify-content: center;
   align-items: center;
   border-radius: 50px;
-  background-color: #213941;
+  background-color: #174545;
   color: #fff;
   font-size: 18px;
   transition: 0.2s;
@@ -1358,7 +1358,7 @@ form {
 }
 
 .tooltip-inner {
-  background-color: #213941;
+  background-color: #174545;
 }
 
 /* modal */
@@ -1653,7 +1653,7 @@ form {
 }
 
 .ask-now {
-  background-color: #213941;
+  background-color: #174545;
   color: #fff;
   width: 100%;
   padding: 8px 12px;
@@ -1675,7 +1675,7 @@ form {
 }
 
 #demo {
-  background-color: #213941;
+  background-color: #174545;
   max-width: 900px;
   margin: auto;
   border-radius: 22px;
@@ -2410,4 +2410,57 @@ nav.mob-phone-nav {
 .dropdown-item {
   padding-bottom: 6px;
   padding-top: 6px;
+}
+
+/* CTA */
+.CTA {
+  padding: 32px;
+}
+
+.CTA-box {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  padding: 48px;
+  background-color: #174545;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  justify-content: center;
+  border-radius: 16px;
+  /* height: 300px; */
+}
+
+.dots-canvas {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  width: 80px;
+}
+
+.dots-canvas img {
+  width: 100%;
+}
+
+@media (max-width: 625px) {
+  .CTA {
+    padding: 16px;
+  }
+
+  .CTA-box {
+    width: 100%;
+    padding: 32px;
+  }
+}
+
+.CTA-box p {
+  margin-top: 16px;
+  color: #bbb;
+}
+
+.CTA-box a {
+  margin: 0 !important;
 }

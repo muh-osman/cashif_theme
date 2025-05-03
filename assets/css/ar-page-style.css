@@ -103,7 +103,7 @@ ul {
   padding: 15px;
   position: relative;
   margin-bottom: 200px;
-  background-color: #203840;
+  background-color: #174545;
 }
 
 .intro-section::before {
@@ -138,7 +138,7 @@ body::after {
 }
 .intro-section::after {
   content: "";
-  background-image: url(../images/intro-curve.svg);
+  background-image: url(../images/intro-curves.svg);
   background-size: cover;
   position: absolute;
   left: 0;
@@ -350,7 +350,7 @@ body::after {
   align-items: center;
   border-radius: 50px;
   background-color: #e2d399;
-  color: #213941;
+  color: #174545;
   font-size: 18px;
   margin: 48px 0 0;
   transition: 0.2s;
@@ -359,7 +359,7 @@ body::after {
 }
 
 .discount-bttn:hover {
-  background-color: #203840;
+  background-color: #174545;
   border: 1px solid #e2d399;
   color: #e2d399;
 }
@@ -430,7 +430,7 @@ body::after {
 
 .login-btn-box a:hover {
   background-color: #e2d399;
-  color: #213941;
+  color: #174545;
 } */
 
 @media (max-width: 625px) {
@@ -576,7 +576,7 @@ input.check-toggle-round-flat:checked + label:after {
 }
 
 .title-box h2 {
-  color: #213941;
+  color: #174545;
   text-align: center;
   font-family: "mont-medium";
   font-size: 25px;
@@ -602,7 +602,7 @@ input.check-toggle-round-flat:checked + label:after {
 }
 
 .plyr__control--overlaid {
-  background: #203840 !important;
+  background: #174545 !important;
 }
 
 .plyr--full-ui input[type="range"] {
@@ -619,7 +619,7 @@ input.check-toggle-round-flat:checked + label:after {
 }
 
 .plyr--video .plyr__control:hover {
-  background: #203840;
+  background: #174545;
 }
 
 .plyr__control.plyr__tab-focus {
@@ -679,7 +679,7 @@ input.check-toggle-round-flat:checked + label:after {
   width: 100px;
   height: 100px;
   margin: 0 auto 25px;
-  background-color: #213941;
+  background-color: #174545;
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -696,7 +696,7 @@ input.check-toggle-round-flat:checked + label:after {
   text-align: center;
   font-size: 25px;
   font-weight: 400;
-  color: #213941;
+  color: #174545;
   font-family: "mont-bold";
 }
 
@@ -742,7 +742,7 @@ input.check-toggle-round-flat:checked + label:after {
 }
 
 .ask-now-serv {
-  background-color: #213941;
+  background-color: #174545;
   color: #fff;
   width: 100%;
   padding: 8px 12px;
@@ -898,7 +898,7 @@ input.check-toggle-round-flat:checked + label:after {
 }
 
 .why-we-boxs .how-we-box div {
-  background-color: #213941;
+  background-color: #174545;
   height: 105px;
   width: 100%;
   display: flex;
@@ -913,12 +913,12 @@ input.check-toggle-round-flat:checked + label:after {
 }
 
 .why-we-boxs .how-we-box h2 {
-  color: 213941;
+  color: 174545;
   text-align: center;
   font-size: 18px;
   font-weight: 600;
   padding: 16px;
-  color: #213941;
+  color: #174545;
   margin: 0;
   padding-top: 22px;
 }
@@ -962,7 +962,7 @@ input.check-toggle-round-flat:checked + label:after {
 
 .getService-section::before {
   position: absolute;
-  background: #213941;
+  background: #174545;
   inset: 0 -4px;
   content: "";
   z-index: -1;
@@ -1043,7 +1043,7 @@ input.check-toggle-round-flat:checked + label:after {
   justify-content: center;
   align-items: center;
   border-radius: 50px;
-  background-color: #213941;
+  background-color: #174545;
   color: #fff;
   font-size: 18px;
   transition: 0.2s;
@@ -1243,7 +1243,7 @@ form {
 }
 
 .tooltip-inner {
-  background-color: #213941;
+  background-color: #174545;
 }
 
 /* modal */
@@ -1536,7 +1536,7 @@ form {
 }
 
 .ask-now {
-  background-color: #213941;
+  background-color: #174545;
   color: #fff;
   width: 100%;
   padding: 8px 12px;
@@ -1558,7 +1558,7 @@ form {
 }
 
 #demo {
-  background-color: #213941;
+  background-color: #174545;
   max-width: 900px;
   margin: auto;
   border-radius: 22px;

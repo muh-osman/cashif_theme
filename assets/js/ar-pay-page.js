@@ -62,6 +62,7 @@ const yearId = params.get("year_id");
 const carModelId = params.get("car_model_id");
 const priceId = params.get("price_id");
 const affiliate = params.get("affiliate");
+const fullYear = params.get("full_year");
 
 planSpan.innerHTML = plan;
 
@@ -169,6 +170,7 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
   console.log("Phone: ", phone);
   console.log("Branch: ", branch);
   console.log("additionalServices: ", checkedValues.join(", ") || "لايوجد");
+  console.log("full year: ", fullYear);
 
   // Re-initialize Moyasar with the new amount
   Moyasar.init({
@@ -194,6 +196,7 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
       branch: branch,
 
       year: yearId,
+      fy: fullYear || null,
 
       plan: serv,
       model: mod,
@@ -420,7 +423,7 @@ payInCenterBtn.addEventListener("click", function () {
     checkedValues.join(", ") || "لايوجد"
   }${affiliate ? `&affiliate=${affiliate}` : ""}${
     isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""
-  }`;
+  }${fullYear ? `&fy=${fullYear}` : ""}`;
 
   window.location.href = url;
 });
@@ -487,7 +490,7 @@ payWithTamaraBtn.addEventListener("click", async function () {
       checkedValues.join(", ") || "لايوجد"
     }${affiliate ? `&affiliate=${affiliate}` : ""}${
       isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""
-    }`,
+    }${fullYear ? `&fy=${fullYear}` : ""}`,
     merchant_url: {
       cancel: `${origin}${sub}/thankyou/?cancel=true`,
       failure: `${origin}${sub}/thankyou/?fail=true`,
@@ -583,7 +586,7 @@ payWithTabbyBtn.addEventListener("click", async function () {
         checkedValues.join(", ") || "لايوجد"
       }${affiliate ? `&affiliate=${affiliate}` : ""}${
         isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""
-      }`,
+      }${fullYear ? `&fy=${fullYear}` : ""}`,
       buyer: {
         phone: phone,
         email: "user@example.com",
@@ -610,7 +613,7 @@ payWithTabbyBtn.addEventListener("click", async function () {
               isDiscountCodeValide
                 ? `&dc=${discountCode}&msh=${marketerShare}`
                 : ""
-            }`,
+            }${fullYear ? `&fy=${fullYear}` : ""}`,
             quantity: 1,
             unit_price: total,
             discount_amount: "0.00",
@@ -662,7 +665,7 @@ payWithTabbyBtn.addEventListener("click", async function () {
                 isDiscountCodeValide
                   ? `&dc=${discountCode}&msh=${marketerShare}`
                   : ""
-              }`,
+              }${fullYear ? `&fy=${fullYear}` : ""}`,
               quantity: 1,
               unit_price: total,
               discount_amount: "0.00",

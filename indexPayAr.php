@@ -17,7 +17,7 @@
 
                         <tbody>
                             <tr>
-                                <td style="color: #213941 !important;">
+                                <td style="color: #174545 !important;">
                                     فحص <span id="inspection-plane"></span>
                                     </br>
                                     <span id="car-model-name"></span>
@@ -66,7 +66,7 @@
 
 
                             <tr id="row-discount" style="display: none;">
-                                <td class="border-top border-bottom-0" style="border-color: #ececec !important; color: #213941 !important;">
+                                <td class="border-top border-bottom-0" style="border-color: #ececec !important; color: #174545 !important;">
                                     خصم <span id="discount-percent-label"></span>
                                 </td>
                                 <td dir="rtl" class="border-top border-bottom-0" style="border-color: #ececec !important; text-align: left !important;" id="discount-price">

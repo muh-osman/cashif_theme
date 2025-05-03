@@ -45,7 +45,7 @@
                         <tbody>
 
                             <tr>
-                                <td style="color: #213941 !important;">
+                                <td style="color: #174545 !important;">
                                     <span id="inspection-plane"></span>
                                     </br>
                                     <span id="car-model-name"></span>
@@ -90,7 +90,7 @@
                             </tr>
 
                             <tr id="row-discount" style="display: none;">
-                                <td class="border-top border-bottom-0" style="border-color: #ececec !important; color: #213941 !important;">
+                                <td class="border-top border-bottom-0" style="border-color: #ececec !important; color: #174545 !important;">
                                     Discount <span id="discount-percent-label"></span>
                                 </td>
                                 <td dir="ltr" class="border-top border-bottom-0" style="border-color: #ececec !important; text-align: right !important;" id="discount-price">

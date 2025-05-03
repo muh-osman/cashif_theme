@@ -401,6 +401,46 @@
     </section>
     <!-- End why deal with us section -->
 
+
+
+    <!-- Start CTA Section -->
+    <section class="CTA">
+        <div class="CTA-box">
+
+            <!-- <div class="dots-canvas">
+                <img src=<?php echo get_template_directory_uri() . '/assets/images/Vector.png' ?> alt="canves">
+            </div>
+
+            <div class="dots-canvas" style="right: 16px; bottom: 16px; top: unset; left: unset;">
+                <img class="" src=<?php echo get_template_directory_uri() . '/assets/images/arc.png' ?> alt="canves">
+            </div> -->
+
+
+
+            <div>
+                <!-- <h2>
+                    لو تبي تشتري سيارة من منطقة غير منطقتك, مخدوم يفحصها بالنيابة عنك
+                </h2> -->
+                <!-- <p>افحص الآن ولا تدفع قيمة عيوبها مرتين</p> -->
+                <h2>Check now and don't pay twice for its defects</h2>
+            </div>
+
+
+            <div class="hero-btn-container">
+                <a href="https://cashif.cc/dashboard/prices?checkit=true" class="discount-bttn" id="discountBttnTwo">
+                    Check-It Service prices
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- End CTA Section -->
+
+
+
+
+
+
+
     <!--Start Search section-->
     <!-- <section id="prices" class="title-box">
         <h2 data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">Service prices</h2>
