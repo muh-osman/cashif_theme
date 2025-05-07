@@ -85,7 +85,7 @@
                                             </label>
                                         </td>
                                         <td class="text-center">
-                                            <span class="summary-label"></span> <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+                                            <span class="summary-label">80</span> <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
                                                 <defs>
                                                     <style>
                                                         .cls-0 {
@@ -152,13 +152,13 @@
                                         </label>
                                     </div>
 
-                                    <div class="form-check form-check-reverse pt-2 pb-2" style="border-bottom: 1px solid #ececec;">
+                                    <!-- <div class="form-check form-check-reverse pt-2 pb-2" style="border-bottom: 1px solid #ececec;">
                                         <input class="form-check-input" type="radio" style="width: 1em;" name="flexRadioDefault" id="flexRadioDefault1">
                                         <label class="form-check-label" for="flexRadioDefault1" style="color: #1A1A1AE6;">
                                             دفع في المركز
                                             <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">قم بالدفع عند حضورك الى أحد فروع كاشف</p>
                                         </label>
-                                    </div>
+                                    </div> -->
 
 
                                     <div class="form-check form-check-reverse pt-2 pb-2" style="border-bottom: 1px solid #ececec;">

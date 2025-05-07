@@ -14,7 +14,7 @@ const formPayInCenter = document.querySelector(".pay-in-center");
 const formPayWithTamara = document.querySelector(".pay-with-tamara");
 const formPayWithTabby = document.querySelector(".pay-with-tabby");
 const tableContainer = document.querySelector(".table-container");
-const summaryLabels = document.querySelectorAll(".summary-label");
+// const summaryLabels = document.querySelectorAll(".summary-label");
 const discountBtn = document.getElementById("discount-btn");
 const discountInput = document.getElementById("discount-input");
 let discountCode = "";
@@ -132,9 +132,9 @@ const fetchPrice = async () => {
     carModelName.innerHTML = newData[0].model_name;
 
     // Change price "summary" addetional service (in checkboxe and table) based on the plan
-    summaryLabels.forEach((label) => {
-      label.innerHTML = serv === "أساسي" ? "75" : serv === "شامل" ? "65" : "85";
-    });
+    // summaryLabels.forEach((label) => {
+    //   label.innerHTML = serv === "أساسي" ? "75" : serv === "شامل" ? "65" : "85";
+    // });
 
     caption.innerHTML = `الاجمالي: ${total} ${sarSymbolDark}`;
 
@@ -186,7 +186,7 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
 
     apple_pay: {
       country: "SA",
-      label: "كاشف لفحص السيارات",
+      label: "Cashif for car inspection",
       validate_merchant_url: "https://api.moyasar.com/v1/applepay/initiate",
     },
 
@@ -259,7 +259,7 @@ function updateTotal() {
   }
   // if summaryReportPrice input checked then it means summaryPrice = 50 else summaryPrice = 0
   if (document.getElementById("reverseCheck3").checked) {
-    summaryPrice = serv === "أساسي" ? 75 : serv === "شامل" ? 65 : 85;
+    summaryPrice = 80;
   }
   // if rowDiscount hiden then it means discount = 0 else
   if (rowDiscount.style.display === "table-row") {

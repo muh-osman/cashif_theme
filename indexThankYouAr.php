@@ -4,9 +4,17 @@
 
     <div id="thanks-box" class="thanks-box">
 
-        <div class="qr-box mt-5">
-            <canvas id="qr-canvas"></canvas>
+        <div class="qr-box">
+            <div>
+                <canvas id="qr-canvas"></canvas>
+                <button id="download-qr-btn" class="download-btn" type="button">
+                    <svg focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="DownloadIcon">
+                        <path d="M5 20h14v-2H5zM19 9h-4V3H9v6H5l7 7z"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
+
 
         <div class="text-center mt-5">
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#1fb952" class="bi bi-check-circle" viewBox="0 0 16 16">
@@ -52,6 +60,37 @@
                 </a>
             </li>
         </ul>
+
+        <div class="partner-container">
+            <h2>خصم خاص <span>لعملاء كاشف!</span></h2>
+            <h4>اعرض الكوبونات لدى شركائنا عند وصولك</h4>
+            <div class="partner-box">
+                <div>
+                    <a href="<?php echo get_template_directory_uri() . '/assets/images/1.png' ?>" download>
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/1.png' ?>" alt="our partner">
+                    </a>
+                    <p>اضغط على الصورة لتحميل الكوبون</p>
+                </div>
+                <div>
+                    <a href="<?php echo get_template_directory_uri() . '/assets/images/2.png' ?>" download>
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/2.png' ?>" alt="our partner">
+                    </a>
+                    <p>اضغط على الصورة لتحميل الكوبون</p>
+                </div>
+                <div>
+                    <a href="<?php echo get_template_directory_uri() . '/assets/images/3.png' ?>" download>
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/3.png' ?>" alt="our partner">
+                    </a>
+                    <p>اضغط على الصورة لتحميل الكوبون</p>
+                </div>
+                <div>
+                    <a href="<?php echo get_template_directory_uri() . '/assets/images/4.png' ?>" download>
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/4.png' ?>" alt="our partner">
+                    </a>
+                    <p>اضغط على الصورة لتحميل الكوبون</p>
+                </div>
+            </div>
+        </div>
 
     </div>
 

@@ -4,8 +4,15 @@
 
     <div id="thanks-box" class="thanks-box">
 
-        <div class="qr-box mt-5">
-            <canvas id="qr-canvas"></canvas>
+        <div class="qr-box">
+            <div>
+                <canvas id="qr-canvas"></canvas>
+                <button id="download-qr-btn" class="download-btn" type="button">
+                    <svg focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="DownloadIcon">
+                        <path d="M5 20h14v-2H5zM19 9h-4V3H9v6H5l7 7z"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
 
         <div class="text-center mt-5">
@@ -44,7 +51,7 @@
                 </a>
             </li>
             <li>
-                <a href="https://maps.app.goo.gl/697yXkaS4o6kYsos8">
+                <a dir="ltr" href="https://maps.app.goo.gl/697yXkaS4o6kYsos8">
                     Jeddah <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
                         <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
@@ -52,6 +59,37 @@
                 </a>
             </li>
         </ul>
+
+        <div dir="ltr" class="partner-container">
+            <h2>Special discount <span>For Cashif customers!</span></h2>
+            <h4>Show coupons at our partners upon arrival.</h4>
+            <div class="partner-box">
+                <div>
+                    <a href="<?php echo get_template_directory_uri() . '/assets/images/1.png' ?>" download>
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/1.png' ?>" alt="our partner">
+                    </a>
+                    <p>Click on the image to download the coupon</p>
+                </div>
+                <div>
+                    <a href="<?php echo get_template_directory_uri() . '/assets/images/2.png' ?>" download>
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/2.png' ?>" alt="our partner">
+                    </a>
+                    <p>Click on the image to download the coupon</p>
+                </div>
+                <div>
+                    <a href="<?php echo get_template_directory_uri() . '/assets/images/3.png' ?>" download>
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/3.png' ?>" alt="our partner">
+                    </a>
+                    <p>Click on the image to download the coupon</p>
+                </div>
+                <div>
+                    <a href="<?php echo get_template_directory_uri() . '/assets/images/4.png' ?>" download>
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/4.png' ?>" alt="our partner">
+                    </a>
+                    <p>Click on the image to download the coupon</p>
+                </div>
+            </div>
+        </div>
 
     </div>
 

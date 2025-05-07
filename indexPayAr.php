@@ -47,7 +47,7 @@
                                 </td>
 
                                 <td class="text-center" style="text-align: left !important;">
-                                    <span class="summary-label"></span>
+                                    <span class="summary-label">80</span>
                                     <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
                                         <defs>
                                             <style>

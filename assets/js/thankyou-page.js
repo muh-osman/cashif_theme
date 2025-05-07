@@ -86,7 +86,7 @@ async function submitPaidQrCode() {
 
     var qr = new QRious({
       element: document.getElementById("qr-canvas"),
-      size: 300,
+      size: 250,
     });
 
     qr.set({
@@ -149,7 +149,7 @@ async function submitUnPaidQrCode() {
 
     var qr = new QRious({
       element: document.getElementById("qr-canvas"),
-      size: 300,
+      size: 250,
     });
 
     qr.set({
@@ -178,7 +178,7 @@ async function submitPaidWithTamara() {
 
     var qr = new QRious({
       element: document.getElementById("qr-canvas"),
-      size: 300,
+      size: 250,
     });
 
     qr.set({
@@ -207,7 +207,7 @@ async function submitPaidWithTabby() {
 
     var qr = new QRious({
       element: document.getElementById("qr-canvas"),
-      size: 300,
+      size: 250,
     });
 
     qr.set({
@@ -227,3 +227,29 @@ async function submitPaidWithTabby() {
     document.getElementById("spinner").style.display = "none";
   }
 }
+
+//Alert Before Refresh Page
+window.addEventListener("beforeunload", function (e) {
+  // This will make the browser show a confirmation dialog
+  e.preventDefault();
+  e.returnValue = "";
+});
+
+// Download qr code using btn
+const downloadQrBtn = document.getElementById("download-qr-btn");
+downloadQrBtn.addEventListener("click", function () {
+  // Get the QR code canvas
+  const qrCanvas = document.getElementById("qr-canvas");
+  // Create a temporary link element
+  const link = document.createElement("a");
+  // Set the href to the QR code's data URL
+  link.href = qrCanvas.toDataURL("image/png");
+  // Set the download attribute with a filename
+  link.download = "qrcode.png";
+  // Append the link to the body (required for Firefox)
+  document.body.appendChild(link);
+  // Trigger the download
+  link.click();
+  // Clean up by removing the link
+  document.body.removeChild(link);
+});

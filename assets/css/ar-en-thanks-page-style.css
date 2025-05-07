@@ -71,15 +71,18 @@ h4 {
     line-height: 1.5;
   }
   ul {
-    gap: 16px;
+    gap: 14px;
   }
 
   ul svg {
-    display: none;
+    /* display: none; */
+    width: 12px;
+    height: 12px;
   }
 
   ul a {
-    font-size: 14px;
+    font-size: 12px;
+    text-decoration: underline;
   }
 }
 
@@ -88,6 +91,22 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.qr-box div {
+  width: fit-content;
+  position: relative;
+}
+
+.download-btn {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  bottom: -19px;
+  left: 0;
+  background-color: transparent;
+}
+.download-btn svg {
+  fill: #0d6efd;
 }
 /* End QR */
 
@@ -144,4 +163,53 @@ h4 {
   align-items: center;
   justify-content: center;
   z-index: 99999;
+}
+
+/* Our patner */
+.partner-container {
+  background-color: #174545;
+  border-radius: 16px;
+  padding: 16px;
+  padding-top: 48px;
+  margin-top: 32px;
+}
+.partner-container h2 {
+  color: #fff;
+  text-align: center;
+}
+.partner-container h4 {
+  color: #bbb;
+  margin-bottom: 48px;
+  text-align: center;
+}
+.partner-container span {
+  color: #e1d296;
+}
+.partner-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.partner-box div {
+  width: 300px;
+  position: relative;
+}
+.partner-box img {
+  width: 100%;
+}
+.partner-box p {
+  text-align: center;
+  color: #fff;
+  font-size: 9px;
+  margin-bottom: 0;
+  margin-top: 6px;
+}
+
+@media (max-width: 625px) {
+  .partner-box div {
+    width: 100%;
+  }
 }

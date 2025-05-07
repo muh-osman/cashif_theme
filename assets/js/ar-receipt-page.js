@@ -132,9 +132,9 @@ const fetchPrice = async () => {
     carModelName.innerHTML = newData[0].model_name;
 
     // Change price "summary" addetional service (in checkboxe and table) based on the plan
-    summaryLabels.forEach((label) => {
-      label.innerHTML = serv === "أساسي" ? "75" : serv === "شامل" ? "65" : "85";
-    });
+    // summaryLabels.forEach((label) => {
+    //   label.innerHTML = serv === "أساسي" ? "75" : serv === "شامل" ? "65" : "85";
+    // });
 
     caption.innerHTML = `الاجمالي: ${total} ${sarSymbolDark}`;
 
@@ -186,7 +186,7 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
 
     apple_pay: {
       country: "SA",
-      label: "كاشف لفحص السيارات",
+      label: "Cashif for car inspection",
       validate_merchant_url: "https://api.moyasar.com/v1/applepay/initiate",
     },
 
@@ -260,7 +260,7 @@ function updateTotal() {
   }
   // if summaryReportPrice checked then it means summaryPrice = 50 else summaryPrice = 0
   if (document.getElementById("reverseCheck3").checked) {
-    summaryPrice = serv === "أساسي" ? 75 : serv === "شامل" ? 65 : 85;
+    summaryPrice = 80;
   }
 
   // if rowDiscount hiden then it means discount = 0 else
@@ -365,12 +365,14 @@ function toggleForms() {
     formPayInCenter.style.display = "none"; // Hide pay-in-center
     formPayWithTamara.style.display = "none"; // Hide pay-with-tamara
     formPayWithTabby.style.display = "none"; // Hide pay-with-tabby
-  } else if (document.getElementById("flexRadioDefault1").checked) {
-    formMysr.style.display = "none"; // Hide mysr-form
-    formPayWithTamara.style.display = "none"; // Hide pay-with-tamara
-    formPayInCenter.style.display = "block"; // Show pay-in-center
-    formPayWithTabby.style.display = "none"; // Hide pay-with-tabby
-  } else if (document.getElementById("flexRadioDefault0").checked) {
+  }
+  // else if (document.getElementById("flexRadioDefault1").checked) {
+  //   formMysr.style.display = "none"; // Hide mysr-form
+  //   formPayWithTamara.style.display = "none"; // Hide pay-with-tamara
+  //   formPayInCenter.style.display = "block"; // Show pay-in-center
+  //   formPayWithTabby.style.display = "none"; // Hide pay-with-tabby
+  // }
+  else if (document.getElementById("flexRadioDefault0").checked) {
     formMysr.style.display = "none"; // Hide mysr-form
     formPayInCenter.style.display = "none"; // Hide pay-in-center
     formPayWithTamara.style.display = "block"; // Show pay-with-tamara
@@ -384,9 +386,9 @@ function toggleForms() {
 }
 
 // Add event listeners to radio buttons
-document
-  .getElementById("flexRadioDefault1")
-  .addEventListener("change", toggleForms);
+// document
+//   .getElementById("flexRadioDefault1")
+//   .addEventListener("change", toggleForms);
 document
   .getElementById("flexRadioDefault2")
   .addEventListener("change", toggleForms);
