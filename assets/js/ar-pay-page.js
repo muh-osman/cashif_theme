@@ -363,12 +363,14 @@ function toggleForms() {
     formPayInCenter.style.display = "none"; // Hide pay-in-center
     formPayWithTamara.style.display = "none"; // Hide pay-with-tamara
     formPayWithTabby.style.display = "none"; // Hide pay-with-tabby
-  } else if (document.getElementById("flexRadioDefault1").checked) {
-    formMysr.style.display = "none"; // Hide mysr-form
-    formPayWithTamara.style.display = "none"; // Hide pay-with-tamara
-    formPayWithTabby.style.display = "none"; // Hide pay-with-tabby
-    formPayInCenter.style.display = "block"; // Show pay-in-center
-  } else if (document.getElementById("flexRadioDefault0").checked) {
+  }
+  // else if (document.getElementById("flexRadioDefault1").checked) {
+  //   formMysr.style.display = "none"; // Hide mysr-form
+  //   formPayWithTamara.style.display = "none"; // Hide pay-with-tamara
+  //   formPayWithTabby.style.display = "none"; // Hide pay-with-tabby
+  //   formPayInCenter.style.display = "block"; // Show pay-in-center
+  // }
+  else if (document.getElementById("flexRadioDefault0").checked) {
     formMysr.style.display = "none"; // Hide mysr-form
     formPayInCenter.style.display = "none"; // Hide pay-in-center
     formPayWithTabby.style.display = "none"; // Hide pay-with-tabby
@@ -382,9 +384,9 @@ function toggleForms() {
 }
 
 // Add event listeners to radio buttons
-document
-  .getElementById("flexRadioDefault1")
-  .addEventListener("change", toggleForms);
+// document
+//   .getElementById("flexRadioDefault1")
+//   .addEventListener("change", toggleForms);
 document
   .getElementById("flexRadioDefault2")
   .addEventListener("change", toggleForms);

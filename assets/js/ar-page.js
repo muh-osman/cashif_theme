@@ -1,3 +1,6 @@
+// Store language in local storage immediately
+localStorage.setItem("lang", "ar");
+//
 // Video player
 const player = new Plyr(document.getElementById("player"));
 

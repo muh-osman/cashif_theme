@@ -94,19 +94,20 @@ h4 {
 }
 .qr-box div {
   width: fit-content;
-  position: relative;
+  /* position: relative; */
 }
 
 .download-btn {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  bottom: -19px;
-  left: 0;
-  background-color: transparent;
+  background-color: #174545;
+  display: block;
+  width: 100%;
+  border: none;
 }
-.download-btn svg {
-  fill: #0d6efd;
+
+.download-btn:hover,
+.download-btn:active {
+  background-color: #133a3a !important;
+  border: none !important;
 }
 /* End QR */
 
@@ -176,6 +177,7 @@ h4 {
 .partner-container h2 {
   color: #fff;
   text-align: center;
+  font-weight: 600;
 }
 .partner-container h4 {
   color: #bbb;
@@ -212,4 +214,56 @@ h4 {
   .partner-box div {
     width: 100%;
   }
+}
+
+.btn-one {
+  background-color: #ee7b3a;
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+.btn-one:hover,
+.btn-one:active {
+  background-color: #d46f34 !important;
+  border: none !important;
+}
+
+.btn-two {
+  background-color: #4dc0ec;
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+.btn-two:hover,
+.btn-two:active {
+  background-color: #43a8cf !important;
+  border: none !important;
+}
+
+.btn-three {
+  background-color: #e93737;
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+.btn-three:hover,
+.btn-three:active {
+  background-color: #ce2f2f !important;
+  border: none !important;
+}
+
+.btn-four {
+  background-color: #25265f;
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+.btn-four:hover,
+.btn-four:active {
+  background-color: #1e1f50 !important;
+  border: none !important;
 }

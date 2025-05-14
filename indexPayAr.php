@@ -122,13 +122,13 @@
                                 </label>
                             </div>
 
-                            <div class="form-check form-check-reverse pt-2 pb-2" style="border-bottom: 1px solid #ececec;">
+                            <!-- <div class="form-check form-check-reverse pt-2 pb-2" style="border-bottom: 1px solid #ececec;">
                                 <input class="form-check-input" type="radio" style="width: 1em;" name="flexRadioDefault" id="flexRadioDefault1">
                                 <label class="form-check-label" for="flexRadioDefault1" style="color: #1A1A1AE6;">
                                     دفع في المركز
                                     <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">قم بالدفع عند حضورك الى أحد فروع كاشف</p>
                                 </label>
-                            </div>
+                            </div> -->
 
 
                             <div class="form-check form-check-reverse pt-2 pb-2" style="border-bottom: 1px solid #ececec;">
