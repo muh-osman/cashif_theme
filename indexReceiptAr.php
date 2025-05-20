@@ -58,7 +58,7 @@
                                         <td class="border-0">
                                             <input class="ms-1 form-check-input control-table checked-input" type="checkbox" value="تصوير فيديو" id="reverseCheck1" data-row="row-video">
                                             <label class="form-check-label small-text-in-small-screeen" for="reverseCheck1">
-                                                تصوير مقطع فيديو للسيارة
+                                                تصوير السيارة
                                             </label>
                                         </td>
                                         <td class="text-center border-0">

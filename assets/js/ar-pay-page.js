@@ -64,6 +64,12 @@ const priceId = params.get("price_id");
 const affiliate = params.get("affiliate");
 const fullYear = params.get("full_year");
 
+// URL Discount
+const dis = params.get("dis");
+if (dis === "fifty") {
+  sessionStorage.setItem("dis", dis);
+}
+
 planSpan.innerHTML = plan;
 
 // Fetch price and initialize Moyasar
@@ -84,43 +90,30 @@ let marketerShare = 0;
 let discount = 0;
 
 const fetchPrice = async () => {
+  const disParam = sessionStorage.getItem("dis");
+  let apiUrl = "";
+  if (disParam === "fifty") {
+    apiUrl = `${FETCH_PRICES_API}/api/get-fifty-precent-discounted-prices-by-model-and-year?car_model_id=${carModelId}&year_id=${yearId}`;
+  } else {
+    apiUrl = `${FETCH_PRICES_API}/api/get-discounted-prices-by-model-and-year?car_model_id=${carModelId}&year_id=${yearId}`;
+  }
+
   try {
-    const response = await fetch(
-      `${FETCH_PRICES_API}/api/get-discounted-prices-by-model-and-year?car_model_id=${carModelId}&year_id=${yearId}`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const response = await fetch(apiUrl, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
     if (!response.ok) {
       throw new Error("Failed to fetch data from the new API");
     }
     const newData = await response.json();
 
-    // discount url
-    let urlDiscount = 0;
-    const dis = sessionStorage.getItem("dis");
-    if (dis) {
-      // Check if dis is "fifty" and set discount to 50%
-      if (dis === "fifty") {
-        urlDiscount = 0.5; // 50% discount
-      }
-    }
-
-    if (dis === "fifty" && priceId === "0") {
-      mainPrice = +(
-        (newData[0].prices[priceId].price / (1 - 0.2)) *
-        (1 - urlDiscount)
-      ).toFixed(2);
-    } else {
-      mainPrice = +(
-        newData[0].prices[priceId].price *
-        (1 - urlDiscount)
-      ).toFixed(2);
-    }
+    // First ensure the price exists and is a valid number
+    const priceValue = newData[0]?.prices[priceId]?.price;
+    mainPrice = priceValue ? parseFloat(Number(priceValue).toFixed(2)) : 0;
 
     total = mainPrice;
 
@@ -139,6 +132,29 @@ const fetchPrice = async () => {
     caption.innerHTML = `الاجمالي: ${total} ${sarSymbolDark}`;
 
     spinner.style.display = "none";
+
+    // After fetching the price and setting mainPrice, add this code:
+    if (disParam === "fifty") {
+      const branchSelect = document.getElementById("exampleBranch");
+      const options = branchSelect.options;
+
+      // Loop through all options and hide/show as needed
+      for (let i = 0; i < options.length; i++) {
+        if (options[i].value === "جدة") {
+          options[i].hidden = false; // Show Jeddah option
+        } else {
+          options[i].hidden = true; // Hide all other options
+        }
+      }
+
+      // Set Jeddah as selected if it exists
+      const jeddahOption = branchSelect.querySelector('option[value="جدة"]');
+      if (jeddahOption) {
+        jeddahOption.selected = true;
+        branch = "جدة"; // Update the branch variable
+      }
+    }
+
     // Initialize Moyasar with the initial amount
     updateMoyasarAmount(total, mainDescription, name, phone, branch);
   } catch (error) {

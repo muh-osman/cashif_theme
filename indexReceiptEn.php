@@ -106,7 +106,7 @@
                                         <td class="border-0">
                                             <input class="me-1 form-check-input control-table checked-input" type="checkbox" value="Shooting a video" id="reverseCheck1" data-row="row-video">
                                             <label class="form-check-label small-text-in-small-screeen" for="reverseCheck1">
-                                                Shooting video of the car
+                                                Taking pictures of the car
                                             </label>
                                         </td>
 

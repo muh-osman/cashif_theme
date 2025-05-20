@@ -115,12 +115,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Discount for spacific URL (AD URL)
 // Get the current URL
-// const currentUrl = window.location.href;
-// const url = new URL(currentUrl);
-// const params = new URLSearchParams(url.search);
-// const dis = params.get("dis");
+const currentUrl = window.location.href;
+const url = new URL(currentUrl);
+const params = new URLSearchParams(url.search);
+const dis = params.get("dis");
+const bannarBtn = document.getElementById("bannarBtn");
+if (dis === "fifty" || sessionStorage.getItem("dis") === "fifty") {
+  bannarBtn.style.display = "block";
+  if (dis === "fifty") {
+    sessionStorage.setItem("dis", dis);
+  }
+} else {
+  bannarBtn.style.display = "none";
+  document.body.style.paddingTop = "0";
+}
 // const disInSessionStorage = sessionStorage.getItem("dis");
-// // Initialize discount variable
+
+// Initialize discount variable
 // let discount = 0;
 // const elements = document.getElementsByClassName("dis");
 

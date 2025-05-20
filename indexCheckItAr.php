@@ -3,9 +3,9 @@
 <body>
 
     <!-- Start Banner -->
-    <!-- <button class="d-block" id="bannarBtn" onclick="openBannar()">
+    <button style="display: none;" id="bannarBtn" onclick="openBannar()">
         <div class="bannar">
-            <p>حصريًا لعملاء <span>جدة والدمام</span> - فحص كمبيوتر لسيارتك بـ <span style="white-space: nowrap;">5 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+            <p>حصريًا لعملاء <span>جدة</span> - فحص كمبيوتر لسيارتك بـ <span style="white-space: nowrap;">5 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
                         <defs>
                             <style>
                                 .cls-0 {
@@ -18,10 +18,10 @@
                     </svg></span></p>
             <p>أماكن فروعنا</p>
         </div>
-    </button> -->
+    </button>
 
     <!-- start popup modal -->
-    <!-- <div
+    <div
         class="modal fade"
         id="war"
         tabindex="-1"
@@ -76,9 +76,9 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
-    <!-- <script>
+    <script>
         function openBannar() {
             var myModal = new bootstrap.Modal(document.getElementById("war"));
             document.body.classList.add('no-scroll'); // Set padding right
@@ -89,7 +89,7 @@
         document.getElementById('war').addEventListener('hidden.bs.modal', function() {
             document.body.classList.remove('no-scroll'); // Allow scrolling again
         });
-    </script> -->
+    </script>
     <!-- end popup modal -->
     <!-- End Banner -->
 
