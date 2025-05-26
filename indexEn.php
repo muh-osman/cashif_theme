@@ -224,10 +224,9 @@
         </h2>
     </div>
     <section dir="ltr" class="services-section" id="inspection-before-buying">
-        <div class="container">
+        <div class="container" style="max-width: unset;">
             <div class="row justify-content-center">
-
-                <div class="col-lg-6 col-md-6 col-12 serv-container" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                <div class="col-lg-4 col-md-6 col-12 serv-container" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                     <div class="service-card d-flex flex-column h-100">
                         <div class="service-img">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
@@ -270,8 +269,7 @@
                     </div>
                 </div>
 
-
-                <div class="col-lg-6 col-md-6 col-12 serv-container" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                <div class="col-lg-4 col-md-6 col-12 serv-container" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                     <div class="service-card d-flex flex-column h-100">
                         <div class="service-img">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
@@ -311,6 +309,49 @@
                             </li>
                         </ul>
                         <a class="ask-now-serv mt-4 text-center" href="https://cashif.cc/check-it/en/">Order now</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 serv-container" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                    <div class="service-card d-flex flex-column h-100">
+                        <div class="service-img">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path d="M0 64C0 46.3 14.3 32 32 32l240 0c13.2 0 25 8.1 29.8 20.4s1.5 26.3-8.2 35.2L162.3 208l21.7 0c75.1 0 136 60.9 136 136s-60.9 136-136 136l-78.6 0C63 480 24.2 456 5.3 418.1l-1.9-3.8c-7.9-15.8-1.5-35 14.3-42.9s35-1.5 42.9 14.3l1.9 3.8c8.1 16.3 24.8 26.5 42.9 26.5l78.6 0c39.8 0 72-32.2 72-72s-32.2-72-72-72L80 272c-13.2 0-25-8.1-29.8-20.4s-1.5-26.3 8.2-35.2L189.7 96 32 96C14.3 96 0 81.7 0 64z" />
+                            </svg>
+                        </div>
+                        <h4>Traveler's Check</h4>
+                        <p>A customized <u>pre-travel</u> inspection to ensure your vehicle's roadworthiness, covering essential checks that guarantee a safe and comfortable journey.</p>
+                        <ul>
+                            <li>
+                                <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
+                                        <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
+                                    </svg>
+                                </span>
+                                <span>Oil and fluids inspection</span>
+                            </li>
+                            <li>
+                                <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
+                                        <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
+                                    </svg>
+                                </span>
+                                <span>Tires, brakes, and lights inspection</span>
+                            </li>
+                            <li>
+                                <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
+                                        <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
+                                    </svg>
+                                </span>
+                                <span>Safety tools and wipers inspection</span>
+                            </li>
+                            <li>
+                                <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
+                                        <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
+                                    </svg>
+                                </span>
+                                <span>Road test for the vehicle</span>
+                            </li>
+                        </ul>
+                        <a href="https://cashif.cc/dashboard/prices/?passengerCheck=true" class="ask-now-serv mt-4 text-center">Order Now</a>
                     </div>
                 </div>
             </div>

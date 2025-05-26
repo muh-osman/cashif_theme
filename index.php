@@ -221,9 +221,9 @@
         </h2>
     </div>
     <section class="services-section" id="inspection-before-buying">
-        <div class="container">
+        <div class="container" style="max-width: unset;">
             <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-6 col-12 serv-container" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                <div class="col-lg-4 col-md-6 col-12 serv-container" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                     <div class="service-card d-flex flex-column h-100">
                         <div class="service-img">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
@@ -266,8 +266,7 @@
                     </div>
                 </div>
 
-
-                <div class="col-lg-6 col-md-6 col-12 serv-container" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                <div class="col-lg-4 col-md-6 col-12 serv-container" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                     <div class="service-card d-flex flex-column h-100">
                         <div class="service-img">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
@@ -309,9 +308,116 @@
                         <a class="ask-now-serv mt-4 text-center" href="https://cashif.cc/check-it/">أطلب الأن</a>
                     </div>
                 </div>
+
+                <div class="col-lg-4 col-md-6 col-12 serv-container" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                    <div class="service-card d-flex flex-column h-100">
+                        <div class="service-img">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path d="M0 64C0 46.3 14.3 32 32 32l240 0c13.2 0 25 8.1 29.8 20.4s1.5 26.3-8.2 35.2L162.3 208l21.7 0c75.1 0 136 60.9 136 136s-60.9 136-136 136l-78.6 0C63 480 24.2 456 5.3 418.1l-1.9-3.8c-7.9-15.8-1.5-35 14.3-42.9s35-1.5 42.9 14.3l1.9 3.8c8.1 16.3 24.8 26.5 42.9 26.5l78.6 0c39.8 0 72-32.2 72-72s-32.2-72-72-72L80 272c-13.2 0-25-8.1-29.8-20.4s-1.5-26.3 8.2-35.2L189.7 96 32 96C14.3 96 0 81.7 0 64z" />
+                            </svg>
+                        </div>
+                        <h4>فحص المسافر</h4>
+                        <p>فحص مخصص <u>قبل السفر</u> للتأكد من سلامة السيارة على الطريق، يشمل أهم الفحوصات التي تضمن رحلة آمنة ومريحة.</p>
+                        <ul>
+                            <li>
+                                <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
+                                        <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
+                                    </svg>
+                                </span>
+                                <span>فحص الزيوت والسوائل</span>
+                            </li>
+                            <li>
+                                <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
+                                        <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
+                                    </svg>
+                                </span>
+                                <span>فحص الكفرات والفرامل والأنوار</span>
+                            </li>
+                            <li>
+                                <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
+                                        <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
+                                    </svg>
+                                </span>
+                                <span>فحص أدوات السلامة والمساحات</span>
+                            </li>
+                            <li>
+                                <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
+                                        <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
+                                    </svg>
+                                </span>
+                                <span>تجربة السيارة على الطريق</span>
+                            </li>
+                        </ul>
+                        <a href="https://cashif.cc/dashboard/prices/?passengerCheck=true" class="ask-now-serv mt-4 text-center">أطلب الأن</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- start popup modal -->
+    <!-- <div
+        class="modal fade"
+        id="wars"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabels"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 w-100 text-center" style="margin-left: -32px;" id="exampleModalLabels">
+                        نوع السيارة
+                    </h1>
+                    <button type="button" class="btn-close ms-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <ul style="display: flex; align-items: center; justify-content: space-around;" class="text-center m-0">
+                        <li>
+                            <a style="color: #30323f; display: flex; flex-direction: column-reverse; font-size: 14px;" href="https://cashif.cc/dashboard/prices/?passenger=sedan">
+                                <span>سيارة سيدان</span>
+                                <img style="margin: auto; width: 75px" src=<?php echo get_template_directory_uri() . '/assets/images/1.jpg' ?> alt="sedan car">
+                            </a>
+                        </li>
+
+                        <div class="vr" style="background-color: #dee2e6; opacity: 1;"></div>
+
+                        <li>
+                            <a style="color: #30323f; display: flex; flex-direction: column-reverse; font-size: 14px;" href="https://cashif.cc/dashboard/prices/?passenger=suv">
+                                <span>سيارة دفع رباعي</span>
+                                <img style="margin: auto; width: 75px" src=<?php echo get_template_directory_uri() . '/assets/images/2.jpg' ?> alt="4*4 car">
+                            </a>
+                        </li>
+
+                        <div class="vr" style="background-color: #dee2e6; opacity: 1;"></div>
+
+                        <li>
+                            <a style="color: #30323f; display: flex; flex-direction: column-reverse; font-size: 14px;" href="https://cashif.cc/dashboard/prices/?passenger=luxury">
+                                <span>سيارة فارهة</span>
+                                <img style="margin: auto; width: 75px" src=<?php echo get_template_directory_uri() . '/assets/images/3.jpg' ?> alt="luxury car">
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <script>
+        function openPassnger() {
+            var myModal = new bootstrap.Modal(document.getElementById("wars"));
+            document.body.classList.add('no-scroll'); // Set padding right
+            myModal.show();
+        }
+
+        // Add an event listener to remove the class when the modal is hidden
+        document.getElementById('wars').addEventListener('hidden.bs.modal', function() {
+            document.body.classList.remove('no-scroll'); // Allow scrolling again
+        });
+    </script> -->
+    <!-- End popup modal -->
+
     <!-- End Our Services Section -->
 
     <!-- Start inspection stage section -->

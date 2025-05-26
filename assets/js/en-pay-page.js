@@ -14,7 +14,9 @@ const formPayInCenter = document.querySelector(".pay-in-center");
 const formPayWithTamara = document.querySelector(".pay-with-tamara");
 const formPayWithTabby = document.querySelector(".pay-with-tabby");
 const tableContainer = document.querySelector(".table-container");
-// const summaryLabels = document.querySelectorAll(".summary-label");
+const airBagLabel = document.querySelectorAll(".air-bag-label");
+const summaryReportRow = document.getElementById("summary-report-row");
+const airBagRow = document.getElementById("air-bag-row");
 const discountBtn = document.getElementById("discount-btn");
 const discountInput = document.getElementById("discount-input");
 let discountCode = "";
@@ -64,7 +66,34 @@ const priceId = params.get("price_id");
 const affiliate = params.get("affiliate");
 const fullYear = params.get("full_year");
 
-planSpan.innerHTML = plan;
+const passenger = params.get("passenger");
+
+// URL Discount
+const dis = params.get("dis");
+if (dis === "fifty") {
+  sessionStorage.setItem("dis", dis);
+}
+
+if (passenger) {
+  summaryReportRow.style.display = "none";
+  airBagRow.style.display = "table-row";
+} else {
+  summaryReportRow.style.display = "table-row";
+  airBagRow.style.display = "none";
+}
+
+if (passenger === "sedan") {
+  planSpan.innerHTML = "Passenger Check - Sedan";
+  carModelName.style.display = "none";
+} else if (passenger === "suv") {
+  planSpan.innerHTML = "Passenger Check - SUV";
+  carModelName.style.display = "none";
+} else if (passenger === "luxury") {
+  planSpan.innerHTML = "Passenger Check - Luxury";
+  carModelName.style.display = "none";
+} else {
+  planSpan.innerHTML = plan;
+}
 
 // Fetch price and initialize Moyasar
 let name;
@@ -84,61 +113,89 @@ let marketerShare = 0;
 let discount = 0;
 
 const fetchPrice = async () => {
+  const disParam = sessionStorage.getItem("dis");
+  let apiUrl = "";
+  if (disParam === "fifty") {
+    apiUrl = `${FETCH_PRICES_API}/api/get-fifty-precent-discounted-prices-by-model-and-year?car_model_id=${carModelId}&year_id=${yearId}`;
+  } else {
+    apiUrl = `${FETCH_PRICES_API}/api/get-discounted-prices-by-model-and-year?car_model_id=${carModelId}&year_id=${yearId}`;
+  }
+
   try {
-    const response = await fetch(
-      `${FETCH_PRICES_API}/api/get-discounted-prices-by-model-and-year?car_model_id=${carModelId}&year_id=${yearId}`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const response = await fetch(apiUrl, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
     if (!response.ok) {
       throw new Error("Failed to fetch data from the new API");
     }
     const newData = await response.json();
 
-    // discount url
-    let urlDiscount = 0;
-    const dis = sessionStorage.getItem("dis");
-    if (dis) {
-      // Check if dis is "fifty" and set discount to 50%
-      if (dis === "fifty") {
-        urlDiscount = 0.5; // 50% discount
-      }
+    let priceValue = 0;
+
+    if (passenger === "sedan") {
+      priceValue = 100;
+      serv = "المسافر";
+      mod = "سيدان";
+    } else if (passenger === "suv") {
+      priceValue = 150;
+      serv = "المسافر";
+      mod = "دفع رباعي";
+    } else if (passenger === "luxury") {
+      priceValue = 200;
+      serv = "المسافر";
+      mod = "فارهة";
+    } else {
+      // First ensure the price exists and is a valid number
+      priceValue = newData[0]?.prices[priceId]?.price;
+      serv = newData[0].prices[priceId].service_name;
+      mod = newData[0].model_name;
     }
 
-    if (dis === "fifty" && priceId === "0") {
-      mainPrice = +(
-        (newData[0].prices[priceId].price / (1 - 0.2)) *
-        (1 - urlDiscount)
-      ).toFixed(2);
-    } else {
-      mainPrice = +(
-        newData[0].prices[priceId].price *
-        (1 - urlDiscount)
-      ).toFixed(2);
-    }
+    // First ensure the price exists and is a valid number
+    mainPrice = priceValue ? parseFloat(Number(priceValue).toFixed(2)) : 0;
 
     total = mainPrice;
 
-    serv = newData[0].prices[priceId].service_name;
-    mod = newData[0].model_name;
     mainDescription = `فحص(${serv}) موديل(${mod})`;
 
     pricePlane.innerHTML = mainPrice;
     carModelName.innerHTML = newData[0].model_name;
 
-    // Change price "summary" addetional service (in checkboxe and table) based on the plan
-    // summaryLabels.forEach((label) => {
-    //   label.innerHTML = serv === "أساسي" ? "75" : serv === "شامل" ? "65" : "85";
-    // });
+    // Change price "airBagLabel" addetional service (in checkboxe and table) based on the plan
+    airBagLabel.forEach((label) => {
+      label.innerHTML = mainPrice;
+    });
 
     caption.innerHTML = `Total: ${sarSymbolDark} ${total}`;
 
     spinner.style.display = "none";
+
+    // After fetching the price and setting mainPrice, add this code:
+    if (disParam === "fifty") {
+      const branchSelect = document.getElementById("exampleBranch");
+      const options = branchSelect.options;
+
+      // Loop through all options and hide/show as needed
+      for (let i = 0; i < options.length; i++) {
+        if (options[i].value === "جدة") {
+          options[i].hidden = false; // Show Jeddah option
+        } else {
+          options[i].hidden = true; // Hide all other options
+        }
+      }
+
+      // Set Jeddah as selected if it exists
+      const jeddahOption = branchSelect.querySelector('option[value="جدة"]');
+      if (jeddahOption) {
+        jeddahOption.selected = true;
+        branch = "جدة"; // Update the branch variable
+      }
+    }
+
     // Initialize Moyasar with the initial amount
     updateMoyasarAmount(total, mainDescription, name, phone, branch);
   } catch (error) {
@@ -253,6 +310,7 @@ function updateTotal() {
 
   let videoPrice = 0;
   let summaryPrice = 0;
+  let airBagPrice = 0;
 
   // if videoPrice input checked then it means videoPrice = 45 else videoPrice = 0
   if (document.getElementById("reverseCheck1")?.checked) {
@@ -262,13 +320,17 @@ function updateTotal() {
   if (document.getElementById("reverseCheck3").checked) {
     summaryPrice = 80;
   }
+  // if airBag input checked then it means airBag Price = mainPrice
+  if (document.getElementById("reverseCheck4").checked) {
+    summaryPrice = mainPrice;
+  }
 
   // if rowDiscount hiden then it means discount = 0 else
   if (rowDiscount.style.display === "table-row") {
     discount = discount || 0;
   }
 
-  let subtotal = mainPrice + videoPrice + summaryPrice; // Calculate subtotal
+  let subtotal = mainPrice + videoPrice + summaryPrice + airBagPrice; // Calculate subtotal
   let discountAmount = subtotal * discount; // Calculate discount amount
   total = Math.floor(subtotal - discountAmount);
 

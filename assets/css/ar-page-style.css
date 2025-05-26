@@ -642,7 +642,7 @@ input.check-toggle-round-flat:checked + label:after {
 }
 @media (max-width: 625px) {
   .services-section .row {
-    row-gap: 20px;
+    row-gap: 24px;
   }
 }
 

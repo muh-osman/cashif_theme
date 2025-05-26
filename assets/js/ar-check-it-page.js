@@ -305,7 +305,7 @@ if (dis === "fifty" || sessionStorage.getItem("dis") === "fifty") {
 //     return;
 //   }
 
-//   if (yearValue >= 2015) {
+//   if (yearValue >= 2017) {
 //     yearValue = 2;
 //   } else {
 //     yearValue = 1;
