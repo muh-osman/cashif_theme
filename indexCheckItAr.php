@@ -1050,11 +1050,14 @@
                                 <h4>خدمات كاشف</h4>
                                 <ul>
                                     <li>
-                                        <a href="https://cashif.cc/">فحص ما قبل الشراء</a>
+                                        <a href="https://cashif.cc/#inspection-before-buying">فحص ما قبل الشراء</a>
                                     </li>
 
                                     <li>
                                         <a href="#">خدمة مخدوم</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://cashif.cc/#passnger-check">فحص المسافر</a>
                                     </li>
                                 </ul>
                             </div>

@@ -43,8 +43,6 @@ window.onload = function () {
     submitPaidQrCode();
   } else if (tamaraPaymentStatus === "approved" && tamaraOrderId) {
     submitPaidWithTamara();
-  } else if (fullName && phone && branch && plan && price && model) {
-    submitUnPaidQrCode();
   } else if (
     tabbyPaymentId &&
     tabbyCancel !== "true" &&

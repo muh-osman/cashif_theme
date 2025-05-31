@@ -1046,11 +1046,14 @@
                                 <h4>Cashif services</h4>
                                 <ul>
                                     <li>
-                                        <a href="https://cashif.cc/en/">Pre-purchase inspection</a>
+                                        <a href="https://cashif.cc/en/#inspection-before-buying"">Pre-purchase inspection</a>
                                     </li>
 
                                     <li>
                                         <a href="#">We check it for you</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://cashif.cc/en/#passnger-check">Traveler's Check</a>
                                     </li>
                                 </ul>
                             </div>

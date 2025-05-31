@@ -312,7 +312,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-12 serv-container" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                <div id="passnger-check" class="col-lg-4 col-md-6 col-12 serv-container" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                     <div class="service-card d-flex flex-column h-100">
                         <div class="service-img">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
@@ -1242,9 +1242,11 @@
                                     <li>
                                         <a href="#inspection-before-buying">Pre-purchase inspection</a>
                                     </li>
-
                                     <li>
                                         <a href="https://cashif.cc/check-it/en/">We check it for you</a>
+                                    </li>
+                                    <li>
+                                        <a href="#passnger-check">Traveler's Check</a>
                                     </li>
                                 </ul>
                             </div>
