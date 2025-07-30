@@ -481,3 +481,39 @@ if (getCookie("auth") === "true") {
   login.style.display = "block";
   logout.style.display = "none";
 }
+
+//
+// Function to track visitor information
+function trackVisitor() {
+  // Collect visitor information
+  // const visitorInfo = {
+  //   url: window.location.href,
+  //   referrer: document.referrer,
+  //   userAgent: navigator.userAgent,
+  //   screenWidth: window.screen.width,
+  //   screenHeight: window.screen.height,
+  //   language: navigator.language,
+  //   timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+  //   localStorageLang: localStorage.getItem("lang") || "not set",
+  // };
+
+  // Make POST request to track visitor
+  fetch(`${FETCH_PRICES_API}/api/visitors/track`, {
+    method: "POST",
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log("Visitor tracked successfully:", data);
+    })
+    .catch((error) => {
+      console.error("Error tracking visitor:", error);
+    });
+}
+
+// Call the function when the page loads
+document.addEventListener("DOMContentLoaded", trackVisitor);

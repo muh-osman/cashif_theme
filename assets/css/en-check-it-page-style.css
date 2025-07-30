@@ -2295,6 +2295,7 @@ nav.mob-phone-nav {
   flex-direction: column;
   width: 100%;
   text-align: center;
+  height: 100%;
 }
 
 .navigation ul li a .icon {
@@ -2306,13 +2307,17 @@ nav.mob-phone-nav {
 }
 
 .mob-phone-nav svg {
-  width: 35px;
-  height: 35px;
+  width: 32px;
+  height: 32px;
 }
 
 .navigation ul li a .icon svg {
   transition: 0.3s;
   fill: #fff;
+}
+
+.navigation ul li a .icon {
+  transform: translateY(-10px);
 }
 
 .navigation ul li.act a .icon {
@@ -2324,10 +2329,10 @@ nav.mob-phone-nav {
   position: absolute;
   color: #fff;
   font-weight: 500;
-  font-size: 0.75em;
+  font-size: 11px;
   letter-spacing: 0.05em;
   transition: 0.3s;
-  opacity: 0;
+  opacity: 1;
   transform: translateY(20px);
 }
 

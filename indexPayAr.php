@@ -47,7 +47,7 @@
                                 </td>
 
                                 <td class="text-center" style="text-align: left !important;">
-                                    <span class="summary-label">80</span>
+                                    <span class="summary-label">100</span>
                                     <svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
                                         <defs>
                                             <style>
@@ -112,6 +112,7 @@
                                 <button id="discount-btn" class="btn btn-outline-secondary" type="button" style="color: #fff; background-color: #6c757d; width: 75px;">تطبيق</button>
                                 <input type="text" class="form-control" id="discount-input" style="border: 1px solid #6c757d; box-shadow: none;">
                             </div>
+                            <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">سيتم احتساب القيمة الأعلى عند إدخال كود لباقة تحتوي على خصم</p>
                         </div>
 
                         <div class="mb-3">

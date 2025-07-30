@@ -68,6 +68,9 @@ const fullYear = params.get("full_year");
 
 const passenger = params.get("passenger");
 
+const off = params.get("off");
+console.log(`Off: ${off}`);
+
 // URL Discount
 const dis = params.get("dis");
 if (dis === "fifty") {
@@ -228,6 +231,7 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
   console.log("Branch: ", branch);
   console.log("additionalServices: ", checkedValues.join(", ") || "لايوجد");
   console.log("full year: ", fullYear);
+  console.log("Discount Code: ", discountCode);
 
   // Re-initialize Moyasar with the new amount
   Moyasar.init({
@@ -318,7 +322,7 @@ function updateTotal() {
   }
   // if summaryReportPrice input checked then it means summaryPrice = 50 else summaryPrice = 0
   if (document.getElementById("reverseCheck3").checked) {
-    summaryPrice = 80;
+    summaryPrice = 100;
   }
   // if airBag input checked then it means airBag Price = mainPrice
   if (document.getElementById("reverseCheck4").checked) {
@@ -396,12 +400,31 @@ discountBtn.addEventListener("click", async function () {
     console.log(data);
 
     if (data.result === false) {
-      discountBtn.innerHTML = "تطبيق";
+      discountBtn.innerHTML = "Apply";
+      discountCode = "";
       alert("Invalid code.");
       return;
     }
 
-    if (data.result === true) {
+    if (data.result === true && data.codeDiscountPercentage === +off) {
+      alert(
+        "The entered discount code is equal to the base discount on the package."
+      );
+      discountBtn.innerHTML = "Apply";
+    }
+
+    if (data.result === true && data.codeDiscountPercentage < +off) {
+      alert(
+        "The entered discount code is less than the base discount on the package. The higher value will be applied."
+      );
+      discountBtn.innerHTML = "Apply";
+    }
+
+    if (data.result === true && data.codeDiscountPercentage > +off) {
+      mainPrice = mainPrice / (1 - +off / 100);
+      total = mainPrice;
+      pricePlane.innerHTML = mainPrice;
+
       isDiscountCodeValide = true;
       discountBtn.innerHTML = "Apply";
       discountBtn.disabled = true; // disable discountBtn

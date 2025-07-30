@@ -68,6 +68,9 @@ const fullYear = params.get("full_year");
 
 const passenger = params.get("passenger");
 
+const off = params.get("off");
+console.log(`Off: ${off}`);
+
 // URL Discount
 const dis = params.get("dis");
 if (dis === "fifty") {
@@ -228,6 +231,7 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
   console.log("Branch: ", branch);
   console.log("additionalServices: ", checkedValues.join(", ") || "لايوجد");
   console.log("full year: ", fullYear);
+  console.log("Discount Code: ", discountCode);
 
   // Re-initialize Moyasar with the new amount
   Moyasar.init({
@@ -317,7 +321,7 @@ function updateTotal() {
   }
   // if summaryReportPrice input checked then it means summaryPrice = 50 else summaryPrice = 0
   if (document.getElementById("reverseCheck3").checked) {
-    summaryPrice = 80;
+    summaryPrice = 100;
   }
   // if airBag input checked then it means airBag Price = mainPrice
   if (document.getElementById("reverseCheck4").checked) {
@@ -395,11 +399,28 @@ discountBtn.addEventListener("click", async function () {
 
     if (data.result === false) {
       discountBtn.innerHTML = "تطبيق";
+      discountCode = "";
       alert("كود غير صالح.");
       return;
     }
 
-    if (data.result === true) {
+    if (data.result === true && data.codeDiscountPercentage === +off) {
+      alert("كود الخصم المدخل مساوي للخصم الأساسي على الباقة");
+      discountBtn.innerHTML = "تطبيق";
+    }
+
+    if (data.result === true && data.codeDiscountPercentage < +off) {
+      alert(
+        "كود الخصم المدخل أقل من الخصم الأساسي على الباقة, سيتم تطبيق القيمة الأعلى"
+      );
+      discountBtn.innerHTML = "تطبيق";
+    }
+
+    if (data.result === true && data.codeDiscountPercentage > +off) {
+      mainPrice = mainPrice / (1 - +off / 100);
+      total = mainPrice;
+      pricePlane.innerHTML = mainPrice;
+
       isDiscountCodeValide = true;
       discountBtn.innerHTML = "تطبيق";
       discountBtn.disabled = true; // disable discountBtn
