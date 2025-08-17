@@ -242,7 +242,7 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
     description: description,
     publishable_api_key: PUBLISHABLE_API_KEY, // Use the key from config.js
     callback_url: `${origin}${sub}/thankyou/en`,
-    methods: ["creditcard", "applepay"],
+    methods: ["creditcard", "applepay", "samsungpay"],
 
     supported_networks: ["mada", "visa", "mastercard"],
 
@@ -250,6 +250,14 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
       country: "SA",
       label: "Cashif for car inspection",
       validate_merchant_url: "https://api.moyasar.com/v1/applepay/initiate",
+    },
+
+    samsung_pay: {
+      service_id: "4d1df6e9f3324a559f7fbf",
+      order_number: "ORD-" + Date.now(), // Example: "ORD-1723456789012"
+      country: "SA",
+      label: "Cashif for car inspection",
+      environment: "PRODUCTION",
     },
 
     metadata: {
