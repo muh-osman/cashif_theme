@@ -281,10 +281,15 @@ function updateTotal() {
 
   let videoPrice = 0;
   let summaryPrice = 0;
+  let explainReport = 0;
 
   // if videoPrice checked then it means videoPrice = 45 else videoPrice = 0
   if (document.getElementById("reverseCheck1").checked) {
     videoPrice = 45;
+  }
+  // if explainReport checked then it means explainReport = 50 else explainReport = 0
+  if (document.getElementById("reverseCheck2").checked) {
+    explainReport = 50;
   }
   // if summaryReportPrice checked then it means summaryPrice = 50 else summaryPrice = 0
   if (document.getElementById("reverseCheck3").checked) {
@@ -296,7 +301,7 @@ function updateTotal() {
     discount = discount || 0;
   }
 
-  let subtotal = mainPrice + videoPrice + summaryPrice; // Calculate subtotal
+  let subtotal = mainPrice + videoPrice + summaryPrice + explainReport; // Calculate subtotal
   let discountAmount = subtotal * discount; // Calculate discount amount
   total = Math.floor(subtotal - discountAmount);
 
