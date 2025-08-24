@@ -177,7 +177,7 @@
 
                                     <tr id="row-discount" style="display: none;">
                                         <td class="border-top border-bottom-0" style="border-color: #ececec !important; color: #174545 !important;">
-                                            Discount <span id="discount-percent-label"></span>
+                                            Discount <span id="discount-percent-label"></span> <span>on inspection</span>
                                         </td>
                                         <td dir="ltr" class="text-center border-top border-bottom-0" style="border-color: #ececec !important;" id="discount-price">
                                             <span id="discount-label"></span>

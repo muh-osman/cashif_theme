@@ -286,9 +286,11 @@ function updateTotal() {
     discount = discount || 0;
   }
 
-  let subtotal = mainPrice + videoPrice + summaryPrice + explainReport; // Calculate subtotal
+  let subtotal = mainPrice; // Calculate subtotal
   let discountAmount = subtotal * discount; // Calculate discount amount
-  total = Math.floor(subtotal - discountAmount);
+  total = Math.floor(
+    subtotal + videoPrice + summaryPrice + explainReport - discountAmount
+  );
 
   marketerShare = parseFloat(
     (total * (marketerCommissionPercentage / 100)).toFixed(1)

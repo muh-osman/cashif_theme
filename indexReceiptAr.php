@@ -126,7 +126,7 @@
 
                                     <tr id="row-discount" style="display: none;">
                                         <td class="border-top border-bottom-0" style="border-color: #ececec !important; color: #174545 !important;">
-                                            خصم <span id="discount-percent-label"></span>
+                                            خصم <span id="discount-percent-label"></span> <span>على الفحص</span>
                                         </td>
                                         <td dir="rtl" class="text-center border-top border-bottom-0" style="border-color: #ececec !important;" id="discount-price"><span id="discount-label"></span></td>
                                     </tr>
