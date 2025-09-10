@@ -1119,6 +1119,10 @@
                         <img src=<?php echo get_template_directory_uri() . '/assets/images/pay.svg' ?> alt="pay" />
                     </div>
 
+                    <div class="sponsor-logo m-0" style="padding-top: 1px; padding-bottom: 1px;">
+                        <img src=<?php echo get_template_directory_uri() . '/assets/images/samsung.png' ?> alt="pay" />
+                    </div>
+
                     <div class="sponsor-logo m-0">
                         <img src=<?php echo get_template_directory_uri() . '/assets/images/visa.svg' ?> alt="visa" />
                     </div>

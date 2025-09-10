@@ -68,7 +68,7 @@ const fullYear = params.get("full_year");
 
 const passenger = params.get("passenger");
 
-const off = params.get("off");
+const off = params.get("off") || 0;
 console.log(`Off: ${off}`);
 
 // URL Discount
@@ -223,23 +223,43 @@ const fetchPrice = async () => {
 fetchPrice();
 
 // Function to update the Moyasar amount
+let isMoyasarFormInit = false;
+let updatedTotal = null;
+let updatedDescription = null;
+let updatedName = null;
+let updatedPhone = null;
+let updatedBranch = null;
 function updateMoyasarAmount(total, description, name, phone, branch) {
-  console.log("Total: ", total);
-  console.log("Description: ", description);
-  console.log("Name: ", name);
-  console.log("Phone: ", phone);
-  console.log("Branch: ", branch);
+  updatedTotal = total;
+  updatedDescription = description;
+  updatedName = name;
+  updatedPhone = phone;
+  updatedBranch = branch;
+
+  console.log("--------------------------------------------------");
+  console.log("Total: ", updatedTotal);
+  console.log("Description: ", updatedDescription);
+  console.log("Name: ", updatedName);
+  console.log("Phone: ", updatedPhone);
+  console.log("Branch: ", updatedBranch);
   console.log("additionalServices: ", checkedValues.join(", ") || "لايوجد");
   console.log("full year: ", fullYear);
   console.log("Discount Code: ", discountCode);
+  console.log("--------------------------------------------------");
 
-  // Re-initialize Moyasar with the new amount
-  Moyasar.init({
+  // Check if Moyasar form init before
+  if (isMoyasarFormInit === true) {
+    Moyasar.setAmount(updatedTotal * 100);
+  }
+  isMoyasarFormInit = true;
+
+  // Initialize/Re-initialize Moyasar form
+  window.Moyasar.init({
     element: ".mysr-form",
     language: "en",
-    amount: total * 100, // Convert to smallest currency unit
+    amount: updatedTotal * 100, // Convert to smallest currency unit
     currency: "SAR",
-    description: description,
+    description: updatedDescription,
     publishable_api_key: PUBLISHABLE_API_KEY, // Use the key from config.js
     callback_url: `${origin}${sub}/thankyou/en`,
     methods: ["creditcard", "applepay", "samsungpay"],
@@ -257,20 +277,20 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
       order_number: "ORD-" + Date.now(), // Example: "ORD-1723456789012"
       country: "SA",
       label: "Cashif for car inspection",
-      environment: "PRODUCTION",
+      environment: "PRODUCTION", // PRODUCTION, STAGE, STAGE_WITHOUT_APK
     },
 
     metadata: {
-      name: name,
-      phone: phone,
-      branch: branch,
+      name: updatedName,
+      phone: updatedPhone,
+      branch: updatedBranch,
 
       year: yearId,
       fy: fullYear || null,
 
       plan: serv,
       model: mod,
-      price: total,
+      price: updatedTotal,
 
       additionalServices: checkedValues.join(", ") || "لايوجد",
 
@@ -280,18 +300,49 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
       msh: marketerShare || null,
     },
 
-    on_initiating: function () {
-      if (!name || !phone || !branch || branch === "Choose a branch") {
+    on_failure: async function (error) {
+      console.log(error);
+    },
+
+    on_initiating: async function () {
+      console.log(updatedName);
+      console.log(updatedPhone);
+      console.log(updatedBranch);
+
+      if (
+        !updatedName ||
+        !updatedPhone ||
+        !updatedBranch ||
+        updatedBranch === "Choose a branch"
+      ) {
         alert("All fields are required!");
         return false;
       }
 
-      if (!/^5\d{8}$/.test(phone)) {
+      if (!/^5\d{8}$/.test(updatedPhone)) {
         alert("Invalid phone number!");
         return false;
       }
 
-      return true;
+      // Update the data
+      return {
+        amount: updatedTotal * 100,
+        description: updatedDescription,
+        metadata: {
+          name: updatedName,
+          phone: updatedPhone,
+          branch: updatedBranch,
+          year: yearId,
+          fy: fullYear || null,
+          plan: serv,
+          model: mod,
+          price: updatedTotal,
+          additionalServices: checkedValues.join(", ") || "لايوجد",
+          affiliate: affiliate || null,
+          dc: discountCode || null,
+          msh: marketerShare || null,
+        },
+      };
     },
   });
 }
@@ -351,7 +402,7 @@ function updateTotal() {
   marketerShare = parseFloat(
     (total * (marketerCommissionPercentage / 100)).toFixed(1)
   );
-  console.log(marketerShare);
+  console.log("marketerShare: ", marketerShare);
 
   // how much discount that applied
   discountLabel.innerHTML = `${sarSymbol} ${discountAmount}-`;

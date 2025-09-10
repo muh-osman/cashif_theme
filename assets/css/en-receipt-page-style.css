@@ -368,6 +368,12 @@ option {
   }
 }
 
+@media (min-width: 767px) {
+  .paragraph-under-discount-input {
+    max-width: 340px;
+  }
+}
+
 .table-box {
   padding: 16px;
   overflow: hidden;

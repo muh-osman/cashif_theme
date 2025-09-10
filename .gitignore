@@ -8,3 +8,6 @@ assets/secret/google-tag.js
 assets/secret/Capture.PNG
 assets/secret/payment-gateway-(secret keys).txt
 assets/secret/apple-developer-merchantid-domain-association
+
+# Finder metadata
+.DS_Store

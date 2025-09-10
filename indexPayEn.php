@@ -137,7 +137,7 @@
                                 <input type="text" class="form-control" id="discount-input" style="border: 1px solid #6c757d; box-shadow: none;">
                                 <button id="discount-btn" class="btn btn-outline-secondary" type="button" style="color: #fff; background-color: #6c757d; width: 75px;">Apply</button>
                             </div>
-                            <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">The higher value will be applied when entering a discount code for a package that already includes a discount</p>
+                            <p class="paragraph-under-discount-input" style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">The higher value will be applied when entering a discount code for a package that already includes a discount</p>
                         </div>
                         <div class="mb-3">
                             <label for="exampleName" class="form-label">Full name*</label>
