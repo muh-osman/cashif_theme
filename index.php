@@ -116,7 +116,7 @@
                 </div>
 
                 <a href="https://cashif.cc/dashboard/prices" id="discountBttn" class="discount-bttn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
-                    أسعار الخدمات
+                    الخدمات والأسعار
                 </a>
 
 
@@ -159,6 +159,19 @@
                                     <span>فروعنا</span>
                                 </a>
                             </li>
+
+                            <li>
+                                <a style="display: flex;" class="dropdown-item" href="https://cashif.cc/blog/">
+                                    <span style="margin-left: 16px; display: flex; align-items: center;">
+                                        <svg fill="#0000008a" width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="BookmarkBorderIcon">
+                                            <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2m0 15-5-2.18L7 18V5h10z"></path>
+                                        </svg>
+                                    </span>
+                                    <span>المدونة</span>
+                                </a>
+                            </li>
+
+
                             <li><a style="display: flex;" class="dropdown-item" href="https://api.whatsapp.com/send?phone=966920019948&text=*اختر من القائمة الرئيسية*">
                                     <span style="margin-left: 16px; display: flex; align-items: center;">
                                         <svg fill="#0000008a" width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
@@ -166,7 +179,10 @@
                                         </svg>
                                     </span>
                                     <span>اتصل بنا</span>
-                                </a></li>
+                                </a>
+                            </li>
+
+
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -220,6 +236,7 @@
             خدماتنا
         </h2>
     </div>
+
     <section class="services-section" id="inspection-before-buying">
         <div class="container" style="max-width: unset;">
             <div class="row justify-content-center">

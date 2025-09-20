@@ -37,8 +37,11 @@ if (preg_match('/\/en\/?$/', $current_url)) {
     <!-- <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=fetch"></script> -->
     <!-- <script src="https://cdn.moyasar.com/mpf/1.14.0/moyasar.js"></script> -->
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/moyasar-payment-form@2.0.18/dist/moyasar.css" />
-    <script src="https://cdn.jsdelivr.net/npm/moyasar-payment-form@2.0.18/dist/moyasar.umd.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/moyasar-payment-form@2.0.18/dist/moyasar.css" /> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/moyasar-payment-form@2.0.18/dist/moyasar.umd.min.js"></script> -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/moyasar-payment-form@2.1.1/dist/moyasar.css" />
+    <script src="https://cdn.jsdelivr.net/npm/moyasar-payment-form@2.1.1/dist/moyasar.umd.min.js"></script>
 
 
     <!-- QrCode -->
