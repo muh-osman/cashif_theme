@@ -38,7 +38,6 @@ body {
 }
 body {
   margin: 0px;
-  padding: 0px;
   overflow-x: hidden;
   direction: rtl;
 }
@@ -311,12 +310,7 @@ body::after {
 }
 
 @media (max-width: 625px) {
-  .intro-section
-    .intro-content
-    .discount-details
-    .dicount-title
-    .discount-text
-    p {
+  .intro-section .intro-content .discount-details .dicount-title .discount-text p {
     font-size: 20px;
   }
 
@@ -806,8 +800,7 @@ input.check-toggle-round-flat:checked + label:after {
   box-shadow: 0 0 0 5px rgba(YourRGBColor, 0.5);
 }
 
-.plyr__menu__container
-  .plyr__control[role="menuitemradio"][aria-checked="true"]::before {
+.plyr__menu__container .plyr__control[role="menuitemradio"][aria-checked="true"]::before {
   background: #e2d399;
 }
 /*End Video section*/
@@ -2192,7 +2185,7 @@ form {
 
 /* Banner */
 body {
-  padding-top: 39px;
+  /* padding-top: 39px; */
   /* padding-top: 15px; */
 }
 .bannar {
@@ -2210,7 +2203,7 @@ body {
 }
 @media (max-width: 527px) {
   body {
-    padding-top: 69px;
+    /* padding-top: 69px; */
     /* padding-top: 15px; */
   }
   .bannar {
