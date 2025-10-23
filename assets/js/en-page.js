@@ -63,7 +63,7 @@ function getCookie(name) {
 // Check if auth cookie is true
 const login = document.getElementById("login");
 const logout = document.getElementById("logout");
-if (getCookie("auth") === "true") {
+if (getCookie("auth")) {
   // Find the SVG element and change it
   const svgElement = document.querySelector(".unset-three-dot-button");
 

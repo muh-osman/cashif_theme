@@ -63,6 +63,8 @@ const carModelId = params.get("car_model_id");
 const priceId = params.get("price_id");
 const affiliate = params.get("affiliate");
 const fullYear = params.get("full_year");
+const serviceId = params.get("service_id");
+const id = params.get("id");
 
 const off = params.get("off") || 0;
 console.log(`Off: ${off}`);
@@ -87,8 +89,10 @@ let marketerShare = 0;
 let discount = 0;
 
 const fetchPrice = async () => {
+  const apiUrl = "https://cashif-001-site1.dtempurl.com/api/ServicePrices";
+
   try {
-    const response = await fetch(`${FETCH_PRICES_API}/api/get-discounted-prices-by-model-and-year?car_model_id=${carModelId}&year_id=${yearId}`, {
+    const response = await fetch(apiUrl, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -100,30 +104,38 @@ const fetchPrice = async () => {
     }
     const newData = await response.json();
 
-    // discount url
-    let urlDiscount = 0;
-    const dis = sessionStorage.getItem("dis");
-    if (dis) {
-      // Check if dis is "fifty" and set discount to 50%
-      if (dis === "fifty") {
-        urlDiscount = 0.5; // 50% discount
-      }
-    }
+    // Find the object with the specific id
+    const foundObject = newData.find((item) => item.id == id); // Use == for string/number comparison
 
-    if (dis === "fifty" && priceId === "0") {
-      mainPrice = +((newData[0].prices[priceId].price / (1 - 0.2)) * (1 - urlDiscount)).toFixed(2);
-    } else {
-      mainPrice = +(newData[0].prices[priceId].price * (1 - urlDiscount)).toFixed(2);
-    }
+    // First ensure the price exists and is a valid number
+    const priceValue = foundObject.serviceAr === "الفحص الشامل" ? foundObject.price * (1 - 10 / 100) : foundObject.price;
+
+    mainPrice = priceValue ? parseFloat(Number(priceValue).toFixed(2)) : 0;
+
+    // discount url
+    // let urlDiscount = 0;
+    // const dis = sessionStorage.getItem("dis");
+    // if (dis) {
+    //   // Check if dis is "fifty" and set discount to 50%
+    //   if (dis === "fifty") {
+    //     urlDiscount = 0.5; // 50% discount
+    //   }
+    // }
+
+    // if (dis === "fifty" && priceId === "0") {
+    //   mainPrice = +((newData[0].prices[priceId].price / (1 - 0.2)) * (1 - urlDiscount)).toFixed(2);
+    // } else {
+    //   mainPrice = +(newData[0].prices[priceId].price * (1 - urlDiscount)).toFixed(2);
+    // }
 
     total = mainPrice;
 
-    serv = newData[0].prices[priceId].service_name;
-    mod = newData[0].model_name;
+    serv = foundObject.serviceAr;
+    mod = foundObject.carMarkAr;
     mainDescription = `الخدمة(مخدوم) فحص(${serv}) موديل(${mod})`;
 
     pricePlane.innerHTML = mainPrice;
-    carModelName.innerHTML = newData[0].model_name;
+    carModelName.innerHTML = foundObject?.carMarkEn;
 
     // Change price "summary" addetional service (in checkboxe and table) based on the plan
     // summaryLabels.forEach((label) => {
@@ -140,19 +152,6 @@ const fetchPrice = async () => {
     // alert(error);
   }
 };
-
-// // Check if the page is being loaded from the cache
-// window.addEventListener("pageshow", function (event) {
-//   // If the page load from the cache, reload it
-//   if (
-//     event.persisted ||
-//     (window.performance && window.performance.navigation.type === 2)
-//   ) {
-//     console.log("User navigated back or forward to this page.");
-//     location.reload();
-//   } else {
-//   }
-// });
 
 fetchPrice();
 

@@ -309,12 +309,7 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
       console.log(updatedPhone);
       console.log(updatedBranch);
 
-      if (
-        !updatedName ||
-        !updatedPhone ||
-        !updatedBranch ||
-        updatedBranch === "Choose a branch"
-      ) {
+      if (!updatedName || !updatedPhone || !updatedBranch || updatedBranch === "Choose a branch") {
         alert("All fields are required!");
         return false;
       }
@@ -356,15 +351,9 @@ function handleInputChange() {
   updateTotal();
 }
 // Add event listeners to the input fields
-document
-  .getElementById("exampleName")
-  .addEventListener("input", handleInputChange);
-document
-  .getElementById("exampleInputphone")
-  .addEventListener("input", handleInputChange);
-document
-  .getElementById("exampleBranch")
-  .addEventListener("change", handleInputChange);
+document.getElementById("exampleName").addEventListener("input", handleInputChange);
+document.getElementById("exampleInputphone").addEventListener("input", handleInputChange);
+document.getElementById("exampleBranch").addEventListener("change", handleInputChange);
 
 // Function to update the total sum
 function updateTotal() {
@@ -395,13 +384,9 @@ function updateTotal() {
 
   let subtotal = mainPrice; // Calculate subtotal
   let discountAmount = subtotal * discount; // Calculate discount amount
-  total = Math.floor(
-    subtotal + videoPrice + summaryPrice + airBagPrice - discountAmount
-  );
+  total = Math.floor(subtotal + videoPrice + summaryPrice + airBagPrice - discountAmount);
 
-  marketerShare = parseFloat(
-    (total * (marketerCommissionPercentage / 100)).toFixed(1)
-  );
+  marketerShare = parseFloat((total * (marketerCommissionPercentage / 100)).toFixed(1));
   console.log("marketerShare: ", marketerShare);
 
   // how much discount that applied
@@ -417,9 +402,7 @@ function updateTotal() {
     }
   });
 
-  mainDescription = `فحص(${serv}) موديل(${mod}) خدمات اضافية(${
-    checkedValues.join(", ") || "لايوجد"
-  })`;
+  mainDescription = `فحص(${serv}) موديل(${mod}) خدمات اضافية(${checkedValues.join(", ") || "لايوجد"})`;
 
   // Update the Moyasar amount
   updateMoyasarAmount(total, mainDescription, name, phone, branch);
@@ -445,17 +428,12 @@ discountBtn.addEventListener("click", async function () {
   discountBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>`;
 
   try {
-    const response = await fetch(
-      `https://cashif-001-site1.dtempurl.com/api/Marketers/CheckCode?code=${encodeURIComponent(
-        discountCode
-      )}`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const response = await fetch(`https://cashif-001-site1.dtempurl.com/api/Marketers/CheckCode?code=${encodeURIComponent(discountCode)}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     const data = await response.json();
 
     console.log(data);
@@ -468,16 +446,12 @@ discountBtn.addEventListener("click", async function () {
     }
 
     if (data.result === true && data.codeDiscountPercentage === +off) {
-      alert(
-        "The entered discount code is equal to the base discount on the package."
-      );
+      alert("The entered discount code is equal to the base discount on the package.");
       discountBtn.innerHTML = "Apply";
     }
 
     if (data.result === true && data.codeDiscountPercentage < +off) {
-      alert(
-        "The entered discount code is less than the base discount on the package. The higher value will be applied."
-      );
+      alert("The entered discount code is less than the base discount on the package. The higher value will be applied.");
       discountBtn.innerHTML = "Apply";
     }
 
@@ -535,15 +509,9 @@ function toggleForms() {
 // document
 //   .getElementById("flexRadioDefault1")
 //   .addEventListener("change", toggleForms);
-document
-  .getElementById("flexRadioDefault2")
-  .addEventListener("change", toggleForms);
-document
-  .getElementById("flexRadioDefault0")
-  .addEventListener("change", toggleForms);
-document
-  .getElementById("flexRadioDefaultTabby")
-  .addEventListener("change", toggleForms);
+document.getElementById("flexRadioDefault2").addEventListener("change", toggleForms);
+document.getElementById("flexRadioDefault0").addEventListener("change", toggleForms);
+document.getElementById("flexRadioDefaultTabby").addEventListener("change", toggleForms);
 
 // Initial call to set the correct display at page load
 toggleForms();
@@ -561,19 +529,11 @@ payInCenterBtn.addEventListener("click", function () {
   }
 
   // Random string 14 Char
-  const randomString = Array.from(
-    { length: 14 },
-    () =>
-      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"[
-        Math.floor(Math.random() * 62)
-      ]
-  ).join("");
+  const randomString = Array.from({ length: 14 }, () => "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"[Math.floor(Math.random() * 62)]).join("");
 
   const url = `${origin}${sub}/thankyou/en/?id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
     checkedValues.join(", ") || "لايوجد"
-  }${affiliate ? `&affiliate=${affiliate}` : ""}${
-    isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""
-  }${fullYear ? `&fy=${fullYear}` : ""}`;
+  }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}`;
 
   window.location.href = url;
 });
@@ -638,9 +598,7 @@ payWithTamaraBtn.addEventListener("click", async function () {
     country_code: "SA",
     description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
       checkedValues.join(", ") || "لايوجد"
-    }${affiliate ? `&affiliate=${affiliate}` : ""}${
-      isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""
-    }${fullYear ? `&fy=${fullYear}` : ""}`,
+    }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}`,
     merchant_url: {
       cancel: `${origin}${sub}/thankyou/en/?cancel=true`,
       failure: `${origin}${sub}/thankyou/en/?fail=true`,
@@ -734,9 +692,7 @@ payWithTabbyBtn.addEventListener("click", async function () {
       currency: "SAR",
       description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
         checkedValues.join(", ") || "لايوجد"
-      }${affiliate ? `&affiliate=${affiliate}` : ""}${
-        isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""
-      }${fullYear ? `&fy=${fullYear}` : ""}`,
+      }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}`,
       buyer: {
         phone: phone,
         email: "user@example.com",
@@ -759,11 +715,7 @@ payWithTabbyBtn.addEventListener("click", async function () {
             title: serv,
             description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
               checkedValues.join(", ") || "لايوجد"
-            }${affiliate ? `&affiliate=${affiliate}` : ""}${
-              isDiscountCodeValide
-                ? `&dc=${discountCode}&msh=${marketerShare}`
-                : ""
-            }${fullYear ? `&fy=${fullYear}` : ""}`,
+            }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}`,
             quantity: 1,
             unit_price: total,
             discount_amount: "0.00",
@@ -811,11 +763,7 @@ payWithTabbyBtn.addEventListener("click", async function () {
               title: serv,
               description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
                 checkedValues.join(", ") || "لايوجد"
-              }${affiliate ? `&affiliate=${affiliate}` : ""}${
-                isDiscountCodeValide
-                  ? `&dc=${discountCode}&msh=${marketerShare}`
-                  : ""
-              }${fullYear ? `&fy=${fullYear}` : ""}`,
+              }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}`,
               quantity: 1,
               unit_price: total,
               discount_amount: "0.00",
@@ -910,8 +858,7 @@ payWithTabbyBtn.addEventListener("click", async function () {
 const whatsappBtn = document.getElementById("whatsapp-btn");
 window.addEventListener("scroll", function () {
   let scrollPosition = window.scrollY || window.pageYOffset;
-  let documentHeight =
-    document.documentElement.scrollHeight - window.innerHeight;
+  let documentHeight = document.documentElement.scrollHeight - window.innerHeight;
 
   if (scrollPosition >= documentHeight) {
     whatsappBtn.classList.add("hide-btn");

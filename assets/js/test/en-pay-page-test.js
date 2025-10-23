@@ -14,7 +14,9 @@ const formPayInCenter = document.querySelector(".pay-in-center");
 const formPayWithTamara = document.querySelector(".pay-with-tamara");
 const formPayWithTabby = document.querySelector(".pay-with-tabby");
 const tableContainer = document.querySelector(".table-container");
-// const summaryLabels = document.querySelectorAll(".summary-label");
+const airBagLabel = document.querySelectorAll(".air-bag-label");
+const summaryReportRow = document.getElementById("summary-report-row");
+const airBagRow = document.getElementById("air-bag-row");
 const discountBtn = document.getElementById("discount-btn");
 const discountInput = document.getElementById("discount-input");
 let discountCode = "";
@@ -63,11 +65,40 @@ const carModelId = params.get("car_model_id");
 const priceId = params.get("price_id");
 const affiliate = params.get("affiliate");
 const fullYear = params.get("full_year");
+const serviceId = params.get("service_id");
+const id = params.get("id");
+
+const passenger = params.get("passenger");
 
 const off = params.get("off") || 0;
 console.log(`Off: ${off}`);
 
-planSpan.innerHTML = plan;
+// URL Discount
+// const dis = params.get("dis");
+// if (dis === "fifty") {
+//   sessionStorage.setItem("dis", dis);
+// }
+
+if (passenger) {
+  summaryReportRow.style.display = "none";
+  airBagRow.style.display = "table-row";
+} else {
+  summaryReportRow.style.display = "table-row";
+  airBagRow.style.display = "none";
+}
+
+if (passenger === "sedan") {
+  planSpan.innerHTML = "Passenger Check - Sedan";
+  carModelName.style.display = "none";
+} else if (passenger === "suv") {
+  planSpan.innerHTML = "Passenger Check - SUV";
+  carModelName.style.display = "none";
+} else if (passenger === "luxury") {
+  planSpan.innerHTML = "Passenger Check - Luxury";
+  carModelName.style.display = "none";
+} else {
+  planSpan.innerHTML = plan;
+}
 
 // Fetch price and initialize Moyasar
 let name;
@@ -87,8 +118,11 @@ let marketerShare = 0;
 let discount = 0;
 
 const fetchPrice = async () => {
+  // const disParam = sessionStorage.getItem("dis");
+  const apiUrl = "https://cashif-001-site1.dtempurl.com/api/ServicePrices";
+
   try {
-    const response = await fetch(`${FETCH_PRICES_API}/api/get-discounted-prices-by-model-and-year?car_model_id=${carModelId}&year_id=${yearId}`, {
+    const response = await fetch(apiUrl, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -100,39 +134,73 @@ const fetchPrice = async () => {
     }
     const newData = await response.json();
 
-    // discount url
-    let urlDiscount = 0;
-    const dis = sessionStorage.getItem("dis");
-    if (dis) {
-      // Check if dis is "fifty" and set discount to 50%
-      if (dis === "fifty") {
-        urlDiscount = 0.5; // 50% discount
-      }
+    // Find the object with the specific id
+    const foundObject = newData.find((item) => item.id == id); // Use == for string/number comparison
+
+    console.log(foundObject);
+
+    let priceValue = 0;
+
+    if (passenger === "sedan") {
+      priceValue = 100;
+      serv = "المسافر";
+      mod = "سيدان";
+    } else if (passenger === "suv") {
+      priceValue = 150;
+      serv = "المسافر";
+      mod = "دفع رباعي";
+    } else if (passenger === "luxury") {
+      priceValue = 200;
+      serv = "المسافر";
+      mod = "فارهة";
+    } else {
+      // First ensure the price exists and is a valid number
+      priceValue = foundObject.serviceAr === "الفحص الشامل" ? foundObject.price * (1 - 10 / 100) : foundObject.price;
+      serv = foundObject.serviceAr;
+      mod = foundObject.carMarkAr;
     }
 
-    if (dis === "fifty" && priceId === "0") {
-      mainPrice = +((newData[0].prices[priceId].price / (1 - 0.2)) * (1 - urlDiscount)).toFixed(2);
-    } else {
-      mainPrice = +(newData[0].prices[priceId].price * (1 - urlDiscount)).toFixed(2);
-    }
+    // First ensure the price exists and is a valid number
+    mainPrice = priceValue ? parseFloat(Number(priceValue).toFixed(2)) : 0;
 
     total = mainPrice;
 
-    serv = newData[0].prices[priceId].service_name;
-    mod = newData[0].model_name;
-    mainDescription = `الخدمة(مخدوم) فحص(${serv}) موديل(${mod})`;
+    mainDescription = `فحص(${serv}) موديل(${mod})`;
 
     pricePlane.innerHTML = mainPrice;
-    carModelName.innerHTML = newData[0].model_name;
+    carModelName.innerHTML = foundObject?.carMarkEn;
 
-    // Change price "summary" addetional service (in checkboxe and table) based on the plan
-    // summaryLabels.forEach((label) => {
-    //   label.innerHTML = serv === "أساسي" ? "75" : serv === "شامل" ? "65" : "85";
-    // });
+    // Change price "airBagLabel" addetional service (in checkboxe and table) based on the plan
+    airBagLabel.forEach((label) => {
+      label.innerHTML = mainPrice;
+    });
 
     caption.innerHTML = `Total: ${sarSymbolDark} ${total}`;
 
     spinner.style.display = "none";
+
+    // After fetching the price and setting mainPrice, add this code:
+    // if (disParam === "fifty") {
+    //   const branchSelect = document.getElementById("exampleBranch");
+    //   const options = branchSelect.options;
+
+    //   // Loop through all options and hide/show as needed
+    //   for (let i = 0; i < options.length; i++) {
+    //     if (options[i].value === "جدة") {
+    //       options[i].hidden = false; // Show Jeddah option
+    //     } else {
+    //       options[i].hidden = true; // Hide all other options
+    //     }
+    //   }
+
+    //   // Set Jeddah as selected if it exists
+    //   const jeddahOption = branchSelect.querySelector('option[value="جدة"]');
+    //   if (jeddahOption) {
+    //     jeddahOption.selected = true;
+    //     branch = "جدة"; // Update the branch variable
+    //   }
+    // }
+
     // Initialize Moyasar with the initial amount
     updateMoyasarAmount(total, mainDescription, name, phone, branch);
   } catch (error) {
@@ -195,7 +263,7 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
     currency: "SAR",
     description: updatedDescription,
     publishable_api_key: PUBLISHABLE_API_KEY, // Use the key from config.js
-    callback_url: `${origin}${sub}/thanks/en`,
+    callback_url: `${origin}${sub}/thankyou/en`,
     methods: ["creditcard", "applepay", "samsungpay"],
 
     supported_networks: ["mada", "visa", "mastercard"],
@@ -226,7 +294,6 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
       model: mod,
       price: updatedTotal,
 
-      service: "مخدوم",
       additionalServices: checkedValues.join(", ") || "لايوجد",
 
       affiliate: affiliate || null,
@@ -267,7 +334,6 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
           plan: serv,
           model: mod,
           price: updatedTotal,
-          service: "مخدوم",
           additionalServices: checkedValues.join(", ") || "لايوجد",
           affiliate: affiliate || null,
           dc: discountCode || null,
@@ -298,19 +364,19 @@ function updateTotal() {
 
   let videoPrice = 0;
   let summaryPrice = 0;
-  let explainReport = 0;
+  let airBagPrice = 0;
 
-  // if videoPriceDiv checked then it means videoPrice = 45 else videoPrice = 0
-  if (document.getElementById("reverseCheck1").checked) {
+  // if videoPrice input checked then it means videoPrice = 45 else videoPrice = 0
+  if (document.getElementById("reverseCheck1")?.checked) {
     videoPrice = 45;
   }
-  // if explainReport checked then it means explainReport = 50 else explainReport = 0
-  if (document.getElementById("reverseCheck2").checked) {
-    explainReport = 50;
-  }
-  // if summaryReportPriceDiv checked then it means summaryPrice = 50 else summaryPrice = 0
+  // if summaryReportPrice input checked then it means summaryPrice = 50 else summaryPrice = 0
   if (document.getElementById("reverseCheck3").checked) {
     summaryPrice = 100;
+  }
+  // if airBag input checked then it means airBag Price = mainPrice
+  if (document.getElementById("reverseCheck4").checked) {
+    summaryPrice = mainPrice;
   }
 
   // if rowDiscount hiden then it means discount = 0 else
@@ -320,7 +386,7 @@ function updateTotal() {
 
   let subtotal = mainPrice; // Calculate subtotal
   let discountAmount = subtotal * discount; // Calculate discount amount
-  total = Math.floor(subtotal + videoPrice + summaryPrice + explainReport - discountAmount);
+  total = Math.floor(subtotal + videoPrice + summaryPrice + airBagPrice - discountAmount);
 
   marketerShare = parseFloat((total * (marketerCommissionPercentage / 100)).toFixed(1));
   console.log("marketerShare: ", marketerShare);
@@ -338,7 +404,7 @@ function updateTotal() {
     }
   });
 
-  mainDescription = `الخدمة(مخدوم) فحص(${serv}) موديل(${mod}) خدمات اضافية(${checkedValues.join(", ") || "لايوجد"})`;
+  mainDescription = `فحص(${serv}) موديل(${mod}) خدمات اضافية(${checkedValues.join(", ") || "لايوجد"})`;
 
   // Update the Moyasar amount
   updateMoyasarAmount(total, mainDescription, name, phone, branch);
@@ -347,7 +413,7 @@ function updateTotal() {
 // Add event listeners to checkboxes
 document.querySelectorAll(".control-table").forEach((checkbox) => {
   checkbox.addEventListener("change", function () {
-    // Update the total after changing the input checkbox
+    // Update the total after changing the visibility
     updateTotal();
   });
 });
@@ -431,8 +497,8 @@ function toggleForms() {
   else if (document.getElementById("flexRadioDefault0").checked) {
     formMysr.style.display = "none"; // Hide mysr-form
     formPayInCenter.style.display = "none"; // Hide pay-in-center
-    formPayWithTamara.style.display = "block"; // Show pay-with-tamara
     formPayWithTabby.style.display = "none"; // Hide pay-with-tabby
+    formPayWithTamara.style.display = "block"; // Show pay-with-tamara
   } else if (document.getElementById("flexRadioDefaultTabby").checked) {
     formMysr.style.display = "none"; // Hide mysr-form
     formPayInCenter.style.display = "none"; // Hide pay-in-center
@@ -467,7 +533,7 @@ payInCenterBtn.addEventListener("click", function () {
   // Random string 14 Char
   const randomString = Array.from({ length: 14 }, () => "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"[Math.floor(Math.random() * 62)]).join("");
 
-  const url = `${origin}${sub}/thanks/en/?id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
+  const url = `${origin}${sub}/thankyou/en/?id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
     checkedValues.join(", ") || "لايوجد"
   }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}`;
 
@@ -532,13 +598,13 @@ payWithTamaraBtn.addEventListener("click", async function () {
       phone_number: phone,
     },
     country_code: "SA",
-    description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&service=مخدوم&additionalServices=${
+    description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
       checkedValues.join(", ") || "لايوجد"
     }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}`,
     merchant_url: {
-      cancel: `${origin}${sub}/thanks/en/?cancel=true`,
-      failure: `${origin}${sub}/thanks/en/?fail=true`,
-      success: `${origin}${sub}/thanks/en/`,
+      cancel: `${origin}${sub}/thankyou/en/?cancel=true`,
+      failure: `${origin}${sub}/thankyou/en/?fail=true`,
+      success: `${origin}${sub}/thankyou/en/`,
     },
     payment_type: "PAY_BY_INSTALMENTS",
     instalments: 3,
@@ -626,7 +692,7 @@ payWithTabbyBtn.addEventListener("click", async function () {
     payment: {
       amount: total,
       currency: "SAR",
-      description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&service=مخدوم&additionalServices=${
+      description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
         checkedValues.join(", ") || "لايوجد"
       }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}`,
       buyer: {
@@ -649,7 +715,7 @@ payWithTabbyBtn.addEventListener("click", async function () {
         items: [
           {
             title: serv,
-            description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&service=مخدوم&additionalServices=${
+            description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
               checkedValues.join(", ") || "لايوجد"
             }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}`,
             quantity: 1,
@@ -697,7 +763,7 @@ payWithTabbyBtn.addEventListener("click", async function () {
           items: [
             {
               title: serv,
-              description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&service=مخدوم&additionalServices=${
+              description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
                 checkedValues.join(", ") || "لايوجد"
               }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}`,
               quantity: 1,
@@ -733,9 +799,9 @@ payWithTabbyBtn.addEventListener("click", async function () {
     lang: "en",
     merchant_code: "SA",
     merchant_urls: {
-      success: `${origin}${sub}/thanks/en/`,
-      cancel: `${origin}${sub}/thanks/en/?cancel=true`,
-      failure: `${origin}${sub}/thanks/en/?fail=true`,
+      success: `${origin}${sub}/thankyou/en/`,
+      cancel: `${origin}${sub}/thankyou/en/?cancel=true`,
+      failure: `${origin}${sub}/thankyou/en/?fail=true`,
     },
     token: null,
   };
