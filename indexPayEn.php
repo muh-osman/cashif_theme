@@ -2,39 +2,59 @@
 
 <body>
 
-    <div class="white-background">
+
+    <!-- Redeem Modal -->
+    <div class="modal fade" id="redeeme-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" dir="ltr">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body" style="padding-bottom: 0;">
+                    <div>
+                        <p style="color: #747a79; margin-bottom: 6px;">Your points balance</p>
+                        <h2 style="color: #1a1a1ae6; margin-bottom: 12px;"><span id="points-span-in-modal">0</span> <span>points</span></h2>
 
 
-        <!-- <section class="inputs-container">
-            <div class="inputs-box">
-
-                <div dir="ltr" class="form-check mb-3">
-                    <input class="form-check-input control-table checked-input" type="checkbox" value="Summary report" id="reverseCheck3" data-row="row-summary-report">
-                    <label class="form-check-label small-text-in-small-screeen" for="reverseCheck3">
-                        Summary report (<svg width="16" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
-                            <defs>
-                                <style>
-                                    .cls-0 {
-                                        fill: #757575;
-                                    }
-                                </style>
-                            </defs>
-                            <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
-                            <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
-                        </svg>
-                        <span class="summary-label"></span>+)
-                    </label>
+                        <div class="mb-3">
+                            <label class="form-label">Redeem:</label>
+                            <input min="1" step="1" id="redeeme-value-input" dir="ltr" type="number" class="form-control" required>
+                            <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0;">Each point is worth one Riyal</p>
+                        </div>
+                    </div>
                 </div>
-
+                <div class="modal-footer" style="border: none;">
+                    <button id="confirm-redeeme-btn" type="button" class="confirm-redeeme-btn">Confirm</button>
+                </div>
             </div>
+        </div>
+    </div>
 
-        </section> -->
+
+
+
+    <div class="white-background">
 
 
         <div class="table-container">
 
 
             <div class="box">
+
+                <!-- Signin Banner -->
+                <div id="signin-banner" class="signin-banner" style="font-size: 12px; text-align: center;">
+                    <span class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Sign in to redeem your points, each point equals one Riyal"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                        </svg>
+                    </span>
+                    To benefit from your points, <a href="https://cashif.cc/dashboard/login/?from=prices">sign in</a> to your Cashif account
+
+                </div>
+
+                <!-- Redeem Banner -->
+                <div id="redeeme-banner" class="redeeme-banner" dir="ltr">
+                    Your current points balance is <span id="points-span">0</span> points. <button id="redeeme-btn" data-bs-toggle="modal" data-bs-target="#redeeme-modal">Redeem</button>
+                </div>
+
+
                 <div class="table-box">
 
                     <h4 dir="ltr" class="mb-4" style="color: #212529;">Order</h4>
@@ -122,6 +142,15 @@
                                 </td>
                             </tr>
 
+                            <tr id="row-redeeme" style="display: none;">
+                                <td class="border-top border-bottom-0" style="border-color: #ececec !important; color: #174545 !important;">
+                                    Discount from redeeming <span id="ammount-of-redeemed-point-label"></span> <span>points</span>
+                                </td>
+                                <td dir="rtl" class="border-top border-bottom-0" style="border-color: #ececec !important; text-align: right !important;">
+                                    <span id="redeeme-label"></span>
+                                </td>
+                            </tr>
+
                         </tbody>
                     </table>
                 </div>
@@ -134,8 +163,8 @@
                         <div class="mb-3" dir="ltr">
                             <label for="discount-input" class="form-label">Discount code</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="discount-input" style="border: 1px solid #6c757d; box-shadow: none;">
-                                <button id="discount-btn" class="btn btn-outline-secondary" type="button" style="color: #fff; background-color: #6c757d; width: 75px;">Apply</button>
+                                <input type="text" class="form-control" id="discount-input" style="border: 1px solid #174545; box-shadow: none;">
+                                <button id="discount-btn" class="btn btn-outline-secondary" type="button" style="border: 1px solid #174545; color: #fff; background-color: #174545; width: 75px;">Apply</button>
                             </div>
                             <p class="paragraph-under-discount-input" style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">The higher value will be applied when entering a discount code for a package that already includes a discount</p>
                         </div>
@@ -207,17 +236,17 @@
 
                         <!-- Pay in center button -->
                         <div class="pay-in-center text-center mb-4 mt-4">
-                            <button id="pay-in-center-btn" class="btn btn-primary" style="background-color: #768dff; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">Confirm order</button>
+                            <button id="pay-in-center-btn" class="btn btn-primary" style="background-color: #174545; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">Confirm order</button>
                         </div>
 
                         <!-- Pay with Tamara button -->
                         <div class="pay-with-tamara text-center mb-4 mt-4">
-                            <button id="pay-with-tamara-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #768dff; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">Confirm order</button>
+                            <button id="pay-with-tamara-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #174545; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">Confirm order</button>
                         </div>
 
                         <!-- Pay with Tabby button -->
                         <div class="pay-with-tabby text-center mb-4 mt-4">
-                            <button id="pay-with-tabby-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #768dff; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">Confirm order</button>
+                            <button id="pay-with-tabby-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #174545; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">Confirm order</button>
                         </div>
 
                     </div>

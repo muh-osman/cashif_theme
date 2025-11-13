@@ -321,8 +321,7 @@ input[type="checkbox"]:checked + label {
 .form-select {
   height: 39px;
   border: none;
-  box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgba(0, 0, 0, 0.07),
-    0 1px 1.5px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgba(0, 0, 0, 0.07), 0 1px 1.5px 0 rgba(0, 0, 0, 0.05);
 }
 
 @media (max-width: 768px) {
@@ -338,6 +337,10 @@ input[type="checkbox"]:checked + label {
 
 .mysr-form {
   width: 100% !important;
+}
+
+.mysr-form div#mysr button.bg-primary {
+  background-color: #174545 !important;
 }
 
 .form-label,
@@ -540,4 +543,82 @@ footer .footer-links-box a {
   align-items: center;
   justify-content: center;
   z-index: 99999;
+}
+
+/* signin-banner */
+.signin-banner {
+  display: none;
+  background-color: #174545;
+  padding: 9px 12px;
+  font-size: 13px;
+  color: #fff;
+}
+.signin-banner a {
+  text-decoration: underline;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .signin-banner {
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-top: -8px;
+  }
+}
+
+.signin-banner svg {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+/* Custom tooltip styles */
+.tooltip-inner {
+  /* background-color: #174545; */
+  font-size: 13px !important;
+}
+
+/* redeeme-banner */
+.redeeme-banner {
+  display: none;
+  background-color: #174545;
+  padding: 9px 12px;
+  font-size: 13px;
+  color: #fff;
+}
+.redeeme-banner button {
+  background-color: transparent;
+  text-decoration: underline;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .redeeme-banner {
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-top: -8px;
+  }
+}
+/* hide arrow of input type number */
+/* For WebKit browsers (Chrome, Safari, Edge, Opera) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* Important to remove any default margin */
+}
+
+/* For Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.confirm-redeeme-btn {
+  width: 100%;
+  color: #fff;
+  background-color: #174545;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 8px 12px;
+  margin: 4px;
 }

@@ -2,6 +2,31 @@
 
 <body>
 
+
+    <!-- Redeeme Modal -->
+    <div class="modal fade" id="redeeme-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body" style="padding-bottom: 0;">
+                    <div>
+                        <p style="color: #747a79; margin-bottom: 6px;">رصيد نقاطك</p>
+                        <h2 style="color: #1a1a1ae6; margin-bottom: 12px;"><span id="points-span-in-modal">0</span> <span>نقطة</span></h2>
+
+                        <div class="mb-3">
+                            <label class="form-label">استبدال:</label>
+                            <input min="1" step="1" id="redeeme-value-input" dir="ltr" type="number" class="form-control" required>
+                            <p style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0;">كل نقطة تساوي ريال واحد</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border: none;">
+                    <button id="confirm-redeeme-btn" type="button" class="confirm-redeeme-btn">تأكيد</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="white-background">
 
         <div class="general-container">
@@ -23,6 +48,22 @@
                 <div class="table-container">
 
                     <div class="box">
+
+
+                        <!-- Signin Banner -->
+                        <div id="signin-banner" class="signin-banner">
+                            للاستفادة من نقاطك، <a href="https://cashif.cc/dashboard/login/?from=prices">سجّل الدخول</a> إلى حسابك في كاشف <span class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="سجل الدخول لاستبدال نقاطك، كل نقطة تساوي ريال واحد"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                                </svg></span>
+                        </div>
+
+                        <!-- Redeeme Banner -->
+                        <div id="redeeme-banner" class="redeeme-banner" style="text-align: center;">
+                            رصيد نقاطك الحالي <span id="points-span">0</span> نقطة. <button id="redeeme-btn" data-bs-toggle="modal" data-bs-target="#redeeme-modal">استبدال</button>
+                        </div>
+
+
 
                         <div class=" table-box">
 
@@ -131,6 +172,17 @@
                                         <td dir="rtl" class="text-center border-top border-bottom-0" style="border-color: #ececec !important;" id="discount-price"><span id="discount-label"></span></td>
                                     </tr>
 
+
+
+                                    <tr id="row-redeeme" style="display: none;">
+                                        <td class="border-top border-bottom-0" style="border-color: #ececec !important; color: #174545 !important;">
+                                            خصم من استبدال <span id="ammount-of-redeemed-point-label"></span> <span>نقطة</span>
+                                        </td>
+                                        <td dir="rtl" class="border-top border-bottom-0" style="border-color: #ececec !important; text-align: center !important;">
+                                            <span id="redeeme-label"></span>
+                                        </td>
+                                    </tr>
+
                                 </tbody>
                             </table>
                         </div>
@@ -141,8 +193,8 @@
                                 <div class="mb-3" dir="rtl">
                                     <label for="discount-input" class="form-label">كود الخصم</label>
                                     <div class="input-group flex-row-reverse">
-                                        <button id="discount-btn" class="btn btn-outline-secondary" type="button" style="color: #fff; background-color: #6c757d; width: 75px;">تطبيق</button>
-                                        <input type="text" class="form-control" id="discount-input" style="border: 1px solid #6c757d; box-shadow: none;">
+                                        <button id="discount-btn" class="btn btn-outline-secondary" type="button" style="color: #fff; background-color: #174545; width: 75px; border-color: #174545;">تطبيق</button>
+                                        <input type="text" class="form-control" id="discount-input" style="border: 1px solid #174545; box-shadow: none;">
                                     </div>
                                     <p class="paragraph-under-discount-input" style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">سيتم احتساب القيمة الأعلى عند إدخال كود لباقة تحتوي على خصم</p>
                                 </div>
@@ -214,17 +266,17 @@
 
                                 <!-- Pay in center button -->
                                 <div class="pay-in-center text-center mb-4 mt-4">
-                                    <button id="pay-in-center-btn" class="btn btn-primary" style="background-color: #768dff; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">تأكيد الطلب</button>
+                                    <button id="pay-in-center-btn" class="btn btn-primary" style="background-color: #174545; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">تأكيد الطلب</button>
                                 </div>
 
                                 <!-- Pay with Tamara button -->
                                 <div class="pay-with-tamara text-center mb-4 mt-4">
-                                    <button id="pay-with-tamara-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #768dff; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">تأكيد الطلب</button>
+                                    <button id="pay-with-tamara-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #174545; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">تأكيد الطلب</button>
                                 </div>
 
                                 <!-- Pay with Tabby button -->
                                 <div class="pay-with-tabby text-center mb-4 mt-4">
-                                    <button id="pay-with-tabby-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #768dff; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">تأكيد الطلب</button>
+                                    <button id="pay-with-tabby-btn" class="btn btn-primary d-flex justify-content-center" style="background-color: #174545; color: #fff; font-size: 15px; padding: 8.5px 12px; border-radius: 7px; border: none; cursor: pointer; width: 100%;">تأكيد الطلب</button>
                                 </div>
                             </div>
                         </div>

@@ -1,3 +1,7 @@
+// init Bootstrap tooltip
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+const tooltipList = [...tooltipTriggerList].map((tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl));
+//
 const spinner = document.getElementById("spinner");
 const planSpan = document.getElementById("inspection-plane");
 const pricePlane = document.getElementById("price-plane");
@@ -50,6 +54,185 @@ const sarSymbolDark = `
   <path class="cls-2" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"/>
 </svg>
 `;
+
+// Decode the token to get clientId
+let clientId = null;
+function decodeToken(token) {
+  try {
+    // JWT uses URL-safe base64 encoding
+    const base64Url = token.split(".")[1];
+    const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+
+    const jsonPayload = decodeURIComponent(
+      atob(base64)
+        .split("")
+        .map((c) => "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2))
+        .join("")
+    );
+
+    return JSON.parse(jsonPayload);
+  } catch (error) {
+    console.error("Token decoding failed:", error);
+    return null;
+  }
+}
+
+// Show/hide pay page banner
+// Function to get cookie value by name of cookie.
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(";").shift();
+}
+// Check if auth cookie is true
+const signinBanner = document.getElementById("signin-banner");
+const redeemeBanner = document.getElementById("redeeme-banner");
+if (getCookie("auth")) {
+  signinBanner.style.display = "none";
+  redeemeBanner.style.display = "block";
+
+  fetchPoints(getCookie("phone"));
+
+  clientId = +decodeToken(getCookie("auth")).clientId;
+} else {
+  signinBanner.style.display = "block";
+  redeemeBanner.style.display = "none";
+}
+
+let points = 0;
+const pointsSpan = document.getElementById("points-span");
+const pointsSpanInModal = document.getElementById("points-span-in-modal");
+async function fetchPoints(phone) {
+  // Hide redeeme link
+  const redeemeBtn = document.getElementById("redeeme-btn");
+  redeemeBtn.style.display = "none";
+  try {
+    const response = await fetch(`https://cashif-001-site1.dtempurl.com/api/ClientPoint/GetClientPoints?clienttPhoneNumber=${phone}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch points from the new API");
+    }
+
+    const jsonData = await response.json();
+    points = Math.trunc(jsonData.points || 0);
+
+    pointsSpan.innerHTML = points || 0;
+    pointsSpanInModal.innerHTML = points || 0;
+
+    // console.log(points);
+
+    if (points !== 0) {
+      redeemeBtn.style.display = "inline-block";
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    // alert(error);
+  }
+}
+
+let trigerOneTime = true;
+const redeemeValueInput = document.getElementById("redeeme-value-input");
+const confirmRedeemeBtn = document.getElementById("confirm-redeeme-btn");
+const rowRedeeme = document.getElementById("row-redeeme");
+
+const ammountOfRedeemedPointLabel = document.getElementById("ammount-of-redeemed-point-label");
+const RedeemeLabel = document.getElementById("redeeme-label");
+
+let redeemeAmoumntValue = 0; //  the amount of redeemed points
+confirmRedeemeBtn.addEventListener("click", function () {
+  // Get the input value
+  const inputValue = redeemeValueInput.value.trim();
+
+  // Check if input is empty
+  if (inputValue === "") {
+    alert("يرجى إدخال قيمة للاستبدال");
+    redeemeValueInput.focus();
+    return;
+  }
+
+  // Convert to number
+  let numberValue = Number(inputValue);
+
+  // Validation checks
+  if (isNaN(numberValue)) {
+    alert("يرجى إدخال رقم صحيح فقط");
+    redeemeValueInput.focus();
+    return;
+  }
+
+  if (numberValue <= 0) {
+    alert("يرجى إدخال رقم أكبر من الصفر");
+    redeemeValueInput.focus();
+    return;
+  }
+
+  if (!Number.isInteger(numberValue)) {
+    alert("يرجى إدخال رقم صحيح بدون كسور");
+    redeemeValueInput.focus();
+    return;
+  }
+
+  // Additional check: make sure the redemption value doesn't exceed available points
+  if (numberValue > points) {
+    alert(`لا يمكن استبدال نقاط أكثر من رصيدك. رصيدك الحالي: ${points} نقطة`);
+    redeemeValueInput.focus();
+    return;
+  }
+
+  if (numberValue > total) {
+    alert(`لا يمكن استبدال نقاط أكثر من قيمة الطلب. قيمة الطلب الحالي: ${total} ريال`);
+    redeemeValueInput.focus();
+    return;
+  }
+
+  if (numberValue === total) {
+    alert(`لا يمكن استبدال نقاطك بكامل قيمة الطلب. الحد الأدنى للطلب 100 ريال`);
+    redeemeValueInput.focus();
+    return;
+  }
+
+  if (numberValue > total - 100) {
+    alert(`لا يمكن استبدال نقاطك لكامل قيمة الفاتورة، الحد الأدنى للطلب 100 ريال`);
+    redeemeValueInput.focus();
+    return;
+  }
+
+  // If all validations pass, proceed with redemption
+  console.log("Valid redemption value:", numberValue);
+
+  if (trigerOneTime) {
+    points = points - numberValue;
+    redeemeAmoumntValue = numberValue;
+    trigerOneTime = false;
+    redeemeValueInput.style.color = "#6c757d";
+    confirmRedeemeBtn.style.backgroundColor = "#6c757d";
+    confirmRedeemeBtn.style.color = "#fff";
+    rowRedeeme.style.display = "table-row"; // show row
+
+    ammountOfRedeemedPointLabel.innerHTML = numberValue;
+    // how much redeeme discount that applied
+    RedeemeLabel.innerHTML = `-${numberValue} ${sarSymbol}`;
+
+    pointsSpan.innerHTML = points || 0;
+    pointsSpanInModal.innerHTML = points || 0;
+
+    redeemeValueInput.disabled = true;
+    confirmRedeemeBtn.disabled = true;
+
+    // Close the modal
+    const modal = bootstrap.Modal.getInstance(document.getElementById("redeeme-modal"));
+    modal.hide();
+
+    updateTotal();
+  }
+});
+
+//
 
 const origin = window.location.origin; // https://example.com
 const sub = window.location.hostname === "localhost" ? "/cashif" : "";
@@ -297,6 +480,9 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
 
       dc: discountCode || null,
       msh: marketerShare || null,
+
+      cd: clientId || null,
+      rv: redeemeAmoumntValue || null,
     },
 
     on_failure: async function (error) {
@@ -335,6 +521,8 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
           affiliate: affiliate || null,
           dc: discountCode || null,
           msh: marketerShare || null,
+          cd: clientId || null,
+          rv: redeemeAmoumntValue || null,
         },
       };
     },
@@ -382,7 +570,14 @@ function updateTotal() {
 
   let subtotal = mainPrice; // Calculate subtotal
   let discountAmount = subtotal * discount; // Calculate discount amount
-  total = Math.floor(subtotal + videoPrice + summaryPrice + airBagPrice - discountAmount);
+  //  redeemeAmoumntValue is amount of redeemed points
+  total = Math.floor(subtotal + videoPrice + summaryPrice + airBagPrice - discountAmount - redeemeAmoumntValue);
+
+  if (total < 100) {
+    alert("الحد الأدنى لقيمة الطلب 100 ريال");
+    location.reload();
+    return false;
+  }
 
   marketerShare = parseFloat((total * (marketerCommissionPercentage / 100)).toFixed(1));
   console.log("marketerShare: ", marketerShare);
@@ -446,12 +641,21 @@ discountBtn.addEventListener("click", async function () {
     if (data.result === true && data.codeDiscountPercentage === +off) {
       alert("كود الخصم المدخل مساوي للخصم الأساسي على الباقة");
       discountBtn.innerHTML = "تطبيق";
+      return;
     }
 
     if (data.result === true && data.codeDiscountPercentage < +off) {
       alert("كود الخصم المدخل أقل من الخصم الأساسي على الباقة, سيتم تطبيق القيمة الأعلى");
       discountBtn.innerHTML = "تطبيق";
+      return;
     }
+
+    // if (redeemeAmoumntValue !== 0) {
+    //   alert("قم بتطبيق كود الخصم قبل استبدال النقاط لتفادي الرصيد السالب");
+    //   discountBtn.innerHTML = "تطبيق";
+    //   location.reload();
+    //   return;
+    // }
 
     if (data.result === true && data.codeDiscountPercentage > +off) {
       mainPrice = mainPrice / (1 - +off / 100);
@@ -462,6 +666,8 @@ discountBtn.addEventListener("click", async function () {
       discountBtn.innerHTML = "تطبيق";
       discountBtn.disabled = true; // disable discountBtn
       discountInput.disabled = true; // disable discountInput
+      discountBtn.style.backgroundColor = "#757575";
+      discountInput.style.opacity = "0.65";
       rowDiscount.style.display = "table-row"; // show rowDiscount
       discountPercentLabel.textContent = `${data.codeDiscountPercentage}%`;
       discount = `${data.codeDiscountPercentage / 100}`;
@@ -531,7 +737,9 @@ payInCenterBtn.addEventListener("click", function () {
 
   const url = `${origin}${sub}/thankyou/?id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
     checkedValues.join(", ") || "لايوجد"
-  }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}`;
+  }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}${
+    redeemeAmoumntValue ? `&rv=${redeemeAmoumntValue}&cd=${clientId}` : ""
+  }`;
 
   window.location.href = url;
 });
@@ -596,7 +804,9 @@ payWithTamaraBtn.addEventListener("click", async function () {
     country_code: "SA",
     description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
       checkedValues.join(", ") || "لايوجد"
-    }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}`,
+    }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}${
+      redeemeAmoumntValue ? `&rv=${redeemeAmoumntValue}&cd=${clientId}` : ""
+    }`,
     merchant_url: {
       cancel: `${origin}${sub}/thankyou/?cancel=true`,
       failure: `${origin}${sub}/thankyou/?fail=true`,
@@ -690,7 +900,9 @@ payWithTabbyBtn.addEventListener("click", async function () {
       currency: "SAR",
       description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
         checkedValues.join(", ") || "لايوجد"
-      }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}`,
+      }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}${
+        redeemeAmoumntValue ? `&rv=${redeemeAmoumntValue}&cd=${clientId}` : ""
+      }`,
       buyer: {
         phone: phone,
         email: "user@example.com",
@@ -713,7 +925,9 @@ payWithTabbyBtn.addEventListener("click", async function () {
             title: serv,
             description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
               checkedValues.join(", ") || "لايوجد"
-            }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}`,
+            }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}${
+              redeemeAmoumntValue ? `&rv=${redeemeAmoumntValue}&cd=${clientId}` : ""
+            }`,
             quantity: 1,
             unit_price: total,
             discount_amount: "0.00",
@@ -761,7 +975,9 @@ payWithTabbyBtn.addEventListener("click", async function () {
               title: serv,
               description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
                 checkedValues.join(", ") || "لايوجد"
-              }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}`,
+              }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}${
+                redeemeAmoumntValue ? `&rv=${redeemeAmoumntValue}&cd=${clientId}` : ""
+              }`,
               quantity: 1,
               unit_price: total,
               discount_amount: "0.00",
