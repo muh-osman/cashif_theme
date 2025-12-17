@@ -85,25 +85,32 @@ function getCookie(name) {
 // Check if auth cookie is true
 const signinBanner = document.getElementById("signin-banner");
 const redeemeBanner = document.getElementById("redeeme-banner");
+const helperTextUnderDiscountInputIfAuth = document.getElementById("helper-text-under-discount-input-if-auth");
+const helperTextUnderDiscountInputIfNotAuth = document.getElementById("helper-text-under-discount-input-if-not-auth");
 if (getCookie("auth")) {
   signinBanner.style.display = "none";
+  helperTextUnderDiscountInputIfNotAuth.style.display = "none";
   redeemeBanner.style.display = "block";
+  helperTextUnderDiscountInputIfAuth.style.display = "block";
 
   fetchPoints(getCookie("phone"));
 
   clientId = +decodeToken(getCookie("auth")).clientId;
 } else {
   signinBanner.style.display = "block";
+  helperTextUnderDiscountInputIfNotAuth.style.display = "block";
   redeemeBanner.style.display = "none";
+  helperTextUnderDiscountInputIfAuth.style.display = "none";
 }
 
 let points = 0;
 const pointsSpan = document.getElementById("points-span");
-const pointsSpanInModal = document.getElementById("points-span-in-modal");
+// const pointsSpanInModal = document.getElementById("points-span-in-modal");
+const pointsSpanUnderRedemeInput = document.getElementById("points-span-under-redeme-input");
 async function fetchPoints(phone) {
   // Hide redeeme link
-  const redeemeBtn = document.getElementById("redeeme-btn");
-  redeemeBtn.style.display = "none";
+  // const redeemeBtn = document.getElementById("redeeme-btn");
+  // redeemeBtn.style.display = "none";
   try {
     const response = await fetch(`https://cashif-001-site1.dtempurl.com/api/ClientPoint/GetClientPoints?clienttPhoneNumber=${phone}`, {
       method: "GET",
@@ -120,12 +127,13 @@ async function fetchPoints(phone) {
     points = Math.trunc(jsonData.points || 0);
 
     pointsSpan.innerHTML = points || 0;
-    pointsSpanInModal.innerHTML = points || 0;
+    // pointsSpanInModal.innerHTML = points || 0;
+    pointsSpanUnderRedemeInput.innerHTML = points || 0;
 
     // console.log(points);
 
     if (points !== 0) {
-      redeemeBtn.style.display = "inline-block";
+      // redeemeBtn.style.display = "inline-block";
     }
   } catch (error) {
     console.error("Error:", error);
@@ -145,6 +153,11 @@ let redeemeAmoumntValue = 0; //  the amount of redeemed points
 confirmRedeemeBtn.addEventListener("click", function () {
   // Get the input value
   const inputValue = redeemeValueInput.value.trim();
+
+  if (!getCookie("auth")) {
+    alert("يرجى تسجيل الدخول لاستبدال النقاط");
+    return;
+  }
 
   // Check if input is empty
   if (inputValue === "") {
@@ -217,14 +230,15 @@ confirmRedeemeBtn.addEventListener("click", function () {
     RedeemeLabel.innerHTML = `-${numberValue} ${sarSymbol}`;
 
     pointsSpan.innerHTML = points || 0;
-    pointsSpanInModal.innerHTML = points || 0;
+    // pointsSpanInModal.innerHTML = points || 0;
+    pointsSpanUnderRedemeInput.innerHTML = points || 0;
 
     redeemeValueInput.disabled = true;
     confirmRedeemeBtn.disabled = true;
 
     // Close the modal
-    const modal = bootstrap.Modal.getInstance(document.getElementById("redeeme-modal"));
-    modal.hide();
+    // const modal = bootstrap.Modal.getInstance(document.getElementById("redeeme-modal"));
+    // modal.hide();
 
     updateTotal();
   }
@@ -246,6 +260,9 @@ const carModelId = params.get("car_model_id");
 const priceId = params.get("price_id");
 const affiliate = params.get("affiliate");
 const fullYear = params.get("full_year");
+const comfortService = params.get("comfort_service");
+
+const address = params.get("address");
 
 const off = params.get("off") || 0;
 console.log(`Off: ${off}`);
@@ -256,7 +273,7 @@ if (dis === "fifty") {
   sessionStorage.setItem("dis", dis);
 }
 
-planSpan.innerHTML = plan;
+planSpan.innerHTML = `${plan} ${comfortService === "yes" ? " - خدمة مرتاح" : ""}`;
 
 // Fetch price and initialize Moyasar
 let name;
@@ -278,8 +295,9 @@ let discount = 0;
 const fetchPrice = async () => {
   const disParam = sessionStorage.getItem("dis");
   let apiUrl = "";
-  if (disParam === "fifty") {
-    apiUrl = `${FETCH_PRICES_API}/api/get-fifty-precent-discounted-prices-by-model-and-year?car_model_id=${carModelId}&year_id=${yearId}`;
+  if (comfortService === "yes") {
+    // apiUrl = `${FETCH_PRICES_API}/api/get-fifty-precent-discounted-prices-by-model-and-year?car_model_id=${carModelId}&year_id=${yearId}`;
+    apiUrl = `${FETCH_PRICES_API}/api/get-discounted-prices-by-model-and-year-for-mertah-service?car_model_id=${carModelId}&year_id=${yearId}`;
   } else {
     apiUrl = `${FETCH_PRICES_API}/api/get-discounted-prices-by-model-and-year?car_model_id=${carModelId}&year_id=${yearId}`;
   }
@@ -433,7 +451,7 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
       model: mod,
       price: updatedTotal,
 
-      service: "مخدوم",
+      service: comfortService === "yes" ? "مرتاح+مخدوم" : "مخدوم",
       additionalServices: checkedValues.join(", ") || "لايوجد",
 
       affiliate: affiliate || null,
@@ -443,6 +461,8 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
 
       cd: clientId || null,
       rv: redeemeAmoumntValue || null,
+
+      ad: address || null,
     },
 
     on_failure: async function (error) {
@@ -477,13 +497,14 @@ function updateMoyasarAmount(total, description, name, phone, branch) {
           plan: serv,
           model: mod,
           price: updatedTotal,
-          service: "مخدوم",
+          service: comfortService === "yes" ? "مرتاح+مخدوم" : "مخدوم",
           additionalServices: checkedValues.join(", ") || "لايوجد",
           affiliate: affiliate || null,
           dc: discountCode || null,
           msh: marketerShare || null,
           cd: clientId || null,
           rv: redeemeAmoumntValue || null,
+          ad: address || null,
         },
       };
     },
@@ -576,6 +597,11 @@ discountBtn.addEventListener("click", async function () {
   discountCode = discountInput.value;
   if (discountCode === "") {
     alert("رمز الخصم مطلوب!");
+    return false;
+  }
+
+  if (comfortService === "yes") {
+    alert("الخصم مفعّل مسبقًا، لا يمكن إضافة خصم آخر.");
     return false;
   }
 
@@ -683,28 +709,28 @@ document.getElementById("flexRadioDefaultTabby").addEventListener("change", togg
 toggleForms();
 
 //pay In Center Btn
-payInCenterBtn.addEventListener("click", function () {
-  if (!name || !phone || !branch || branch === "اختر فرع") {
-    alert("جميع الحقول مطلوبة!");
-    return false;
-  }
+// payInCenterBtn.addEventListener("click", function () {
+//   if (!name || !phone || !branch || branch === "اختر فرع") {
+//     alert("جميع الحقول مطلوبة!");
+//     return false;
+//   }
 
-  if (!/^5\d{8}$/.test(phone)) {
-    alert("رقم الهاتف غير صالح!");
-    return false;
-  }
+//   if (!/^5\d{8}$/.test(phone)) {
+//     alert("رقم الهاتف غير صالح!");
+//     return false;
+//   }
 
-  // Random string 14 Char
-  const randomString = Array.from({ length: 14 }, () => "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"[Math.floor(Math.random() * 62)]).join("");
+//   // Random string 14 Char
+//   const randomString = Array.from({ length: 14 }, () => "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"[Math.floor(Math.random() * 62)]).join("");
 
-  const url = `${origin}${sub}/thanks/?id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
-    checkedValues.join(", ") || "لايوجد"
-  }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}${
-    redeemeAmoumntValue ? `&rv=${redeemeAmoumntValue}&cd=${clientId}` : ""
-  }`;
+//   const url = `${origin}${sub}/thanks/?id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&additionalServices=${
+//     checkedValues.join(", ") || "لايوجد"
+//   }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}${
+//     redeemeAmoumntValue ? `&rv=${redeemeAmoumntValue}&cd=${clientId}` : ""
+//   }`;
 
-  window.location.href = url;
-});
+//   window.location.href = url;
+// });
 
 // Pay with Tamara Btn (Checkout Tamara API)
 payWithTamaraBtn.addEventListener("click", async function () {
@@ -764,11 +790,11 @@ payWithTamaraBtn.addEventListener("click", async function () {
       phone_number: phone,
     },
     country_code: "SA",
-    description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&service=مخدوم&additionalServices=${
-      checkedValues.join(", ") || "لايوجد"
-    }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}${
-      redeemeAmoumntValue ? `&rv=${redeemeAmoumntValue}&cd=${clientId}` : ""
-    }`,
+    description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&service=${
+      comfortService === "yes" ? "مرتاح+مخدوم" : "مخدوم"
+    }&additionalServices=${checkedValues.join(", ") || "لايوجد"}${affiliate ? `&affiliate=${affiliate}` : ""}${
+      isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""
+    }${fullYear ? `&fy=${fullYear}` : ""}${redeemeAmoumntValue ? `&rv=${redeemeAmoumntValue}&cd=${clientId}` : ""}${address ? `&ad=${address}` : ""}`,
     merchant_url: {
       cancel: `${origin}${sub}/thanks/?cancel=true`,
       failure: `${origin}${sub}/thanks/?fail=true`,
@@ -860,11 +886,11 @@ payWithTabbyBtn.addEventListener("click", async function () {
     payment: {
       amount: total,
       currency: "SAR",
-      description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&service=مخدوم&additionalServices=${
-        checkedValues.join(", ") || "لايوجد"
-      }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}${
-        redeemeAmoumntValue ? `&rv=${redeemeAmoumntValue}&cd=${clientId}` : ""
-      }`,
+      description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&service=${
+        comfortService === "yes" ? "مرتاح+مخدوم" : "مخدوم"
+      }&additionalServices=${checkedValues.join(", ") || "لايوجد"}${affiliate ? `&affiliate=${affiliate}` : ""}${
+        isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""
+      }${fullYear ? `&fy=${fullYear}` : ""}${redeemeAmoumntValue ? `&rv=${redeemeAmoumntValue}&cd=${clientId}` : ""}${address ? `&ad=${address}` : ""}`,
       buyer: {
         phone: phone,
         email: "user@example.com",
@@ -885,11 +911,11 @@ payWithTabbyBtn.addEventListener("click", async function () {
         items: [
           {
             title: serv,
-            description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&service=مخدوم&additionalServices=${
-              checkedValues.join(", ") || "لايوجد"
-            }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}${
-              redeemeAmoumntValue ? `&rv=${redeemeAmoumntValue}&cd=${clientId}` : ""
-            }`,
+            description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&service=${
+              comfortService === "yes" ? "مرتاح+مخدوم" : "مخدوم"
+            }&additionalServices=${checkedValues.join(", ") || "لايوجد"}${affiliate ? `&affiliate=${affiliate}` : ""}${
+              isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""
+            }${fullYear ? `&fy=${fullYear}` : ""}${redeemeAmoumntValue ? `&rv=${redeemeAmoumntValue}&cd=${clientId}` : ""}${address ? `&ad=${address}` : ""}`,
             quantity: 1,
             unit_price: total,
             discount_amount: "0.00",
@@ -935,11 +961,11 @@ payWithTabbyBtn.addEventListener("click", async function () {
           items: [
             {
               title: serv,
-              description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&service=مخدوم&additionalServices=${
-                checkedValues.join(", ") || "لايوجد"
-              }${affiliate ? `&affiliate=${affiliate}` : ""}${isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""}${fullYear ? `&fy=${fullYear}` : ""}${
-                redeemeAmoumntValue ? `&rv=${redeemeAmoumntValue}&cd=${clientId}` : ""
-              }`,
+              description: `id=${randomString}&fullname=${name}&phone=${phone}&branch=${branch}&plan=${serv}&price=${total}&model=${mod}&yearId=${yearId}&service=${
+                comfortService === "yes" ? "مرتاح+مخدوم" : "مخدوم"
+              }&additionalServices=${checkedValues.join(", ") || "لايوجد"}${affiliate ? `&affiliate=${affiliate}` : ""}${
+                isDiscountCodeValide ? `&dc=${discountCode}&msh=${marketerShare}` : ""
+              }${fullYear ? `&fy=${fullYear}` : ""}${redeemeAmoumntValue ? `&rv=${redeemeAmoumntValue}&cd=${clientId}` : ""}${address ? `&ad=${address}` : ""}`,
               quantity: 1,
               unit_price: total,
               discount_amount: "0.00",

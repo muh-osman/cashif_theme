@@ -237,7 +237,7 @@
                                 <path d="M160 64c0-11.8-6.5-22.6-16.9-28.2s-23-5-32.8 1.6l-96 64C-.5 111.2-4.4 131 5.4 145.8s29.7 18.7 44.4 8.9L96 123.8V416H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96 96c17.7 0 32-14.3 32-32s-14.3-32-32-32H160V64z" />
                             </svg>
                         </div>
-                        <h4>Purchase check</h4>
+                        <h4>Purchase Check</h4>
                         <p>Inspect all parts of the used vehicle to identify and discover faults and defects before making a purchase decision.</p>
                         <ul>
                             <li>
@@ -269,7 +269,7 @@
                                 <span>Points and rewards</span>
                             </li>
                         </ul>
-                        <a class="ask-now-serv mt-4 text-center" id="ask-now-btn" href="https://cashif.cc/dashboard/prices">Order now</a>
+                        <a class="ask-now-serv mt-4 text-center" id="ask-now-btn" href="https://cashif.cc/dashboard/plans?purchaseInspection=true">Order now</a>
                     </div>
                 </div>
 
@@ -280,8 +280,8 @@
                                 <path d="M142.9 96c-21.5 0-42.2 8.5-57.4 23.8L54.6 150.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L40.2 74.5C67.5 47.3 104.4 32 142.9 32C223 32 288 97 288 177.1c0 38.5-15.3 75.4-42.5 102.6L109.3 416H288c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-12.9 0-24.6-7.8-29.6-19.8s-2.2-25.7 6.9-34.9L200.2 234.5c15.2-15.2 23.8-35.9 23.8-57.4c0-44.8-36.3-81.1-81.1-81.1z" />
                             </svg>
                         </div>
-                        <h4>We check it for you</h4>
-                        <p>If you find a car for sale in <u>Riyadh, Jeddah, or Dammam</u> and you are outside these cities, Cashif Center will conduct a comprehensive and accurate inspection of the car, while facilitating the procedures for transferring ownership and insurance.</p>
+                        <h4>Makhdoom Check</h4>
+                        <p>If you find a car for sale in <u>Riyadh, Jeddah, or Dammam</u> and you are outside these cities, Khashef Center will conduct a comprehensive and accurate vehicle inspection, while facilitating ownership transfer, insurance, and shipping the car to your city.</p>
                         <ul>
                             <li>
                                 <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
@@ -309,7 +309,7 @@
                                         <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
                                     </svg>
                                 </span>
-                                <span>Complete the transfer of ownership and insurance with ease</span>
+                                <span>Completing ownership transfer, insurance, and vehicle shipping</span>
                             </li>
                         </ul>
                         <a class="ask-now-serv mt-4 text-center" href="https://cashif.cc/check-it/en/">Order now</a>
@@ -355,7 +355,7 @@
                                 <span>Road test for the vehicle</span>
                             </li>
                         </ul>
-                        <a href="https://cashif.cc/dashboard/prices/?passengerCheck=true" class="ask-now-serv mt-4 text-center">Order Now</a>
+                        <a href="https://cashif.cc/dashboard/plans?passengerCheck=true" class="ask-now-serv mt-4 text-center">Order Now</a>
                     </div>
                 </div>
             </div>

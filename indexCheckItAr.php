@@ -117,12 +117,12 @@
                         </span>
                     </h6>
                     <h6 class="mt-0">
-                        كاشف يقوم بفحص السيارة بدقة ويسهّل عليك إجراءات نقل الملكية والتأمين
+                        كاشف يقوم بفحص السيارة بدقة ويسهّل عليك إجراءات نقل الملكية والتأمين وشحن المركبة
                     </h6>
                 </div>
 
                 <div class="hero-btn-container">
-                    <a href="https://cashif.cc/dashboard/prices?checkit=true" class="discount-bttn" id="discountBttn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                    <a href="https://cashif.cc/dashboard/plans?checkit=true" class="discount-bttn" id="discountBttn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
                         اطلب الخدمة الآن
                     </a>
                 </div>
@@ -289,8 +289,8 @@
                         </div>
                     </div>
                     <div>
-                        <h3>تأمين السيارة</h3>
-                        <h6>بالتعاون مع شركائنا، نساعدك في تأمين السيارة بما يتناسب مع احتياجاتك</h6>
+                        <h3>تأمين ونقل الملكية</h3>
+                        <h6>بالتعاون مع شركائنا، يتم توفير تأمين للمركبة وإتمام إجراءات نقل الملكية بسهولة وسرعة</h6>
                     </div>
                 </div>
 
@@ -303,8 +303,8 @@
                         </div>
                     </div>
                     <div>
-                        <h3>نقل الملكية</h3>
-                        <h6>بالتعاون مع شركائنا، نقوم بإجراءات نقل الملكية بسهولة وسرعة</h6>
+                        <h3>شحن السيارة</h3>
+                        <h6>بالتعاون مع شركائنا، يتم تنفيذ خدمة شحن المركبة إلى مدن المملكة</h6>
                     </div>
                 </div>
 
@@ -420,7 +420,7 @@
 
 
             <div class="hero-btn-container">
-                <a href="https://cashif.cc/dashboard/prices?checkit=true" class="discount-bttn" id="discountBttnTwo">
+                <a href="https://cashif.cc/dashboard/plans?checkit=true" class="discount-bttn" id="discountBttnTwo">
                     أسعار مخدوم
                 </a>
             </div>

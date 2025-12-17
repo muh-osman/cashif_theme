@@ -122,12 +122,12 @@
                         </span>
                     </h6>
                     <h6 class="mt-0">
-                        Cashif carefully inspects the car and facilitates the procedures for transferring ownership and insurance.
+                        Cashif carefully inspects the car and facilitates the procedures for transferring ownership, insurance, and vehicle shipping for you.
                     </h6>
                 </div>
 
                 <div class="hero-btn-container">
-                    <a href="https://cashif.cc/dashboard/prices?checkit=true" id="discountBttn" class="discount-bttn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                    <a href="https://cashif.cc/dashboard/plans?checkit=true" id="discountBttn" class="discount-bttn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
                         Order now
                     </a>
                 </div>
@@ -293,8 +293,8 @@
                         </div>
                     </div>
                     <div>
-                        <h3>Car insurance</h3>
-                        <h6>In cooperation with our partners, we help you secure the car that suits your needs</h6>
+                        <h3>Insurance and Ownership Transfer</h3>
+                        <h6>In collaboration with our partners, vehicle insurance is provided and ownership transfer procedures are completed easily and quickly</h6>
                     </div>
                 </div>
 
@@ -307,8 +307,8 @@
                         </div>
                     </div>
                     <div>
-                        <h3>Transfer of ownership</h3>
-                        <h6>In cooperation with our partners, we carry out ownership transfer procedures easily and quickly</h6>
+                        <h3>Vehicle Shipping</h3>
+                        <h6>In collaboration with our partners, vehicle shipping services to cities across the Kingdom are carried out.</h6>
                     </div>
                 </div>
 
@@ -425,7 +425,7 @@
 
 
             <div class="hero-btn-container">
-                <a href="https://cashif.cc/dashboard/prices?checkit=true" class="discount-bttn" id="discountBttnTwo">
+                <a href="https://cashif.cc/dashboard/plans?checkit=true" class="discount-bttn" id="discountBttnTwo">
                     Check-It Service prices
                 </a>
             </div>

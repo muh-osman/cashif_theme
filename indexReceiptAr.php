@@ -4,7 +4,7 @@
 
 
     <!-- Redeeme Modal -->
-    <div class="modal fade" id="redeeme-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="redeeme-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body" style="padding-bottom: 0;">
@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <div class="white-background">
@@ -51,7 +51,7 @@
 
 
                         <!-- Signin Banner -->
-                        <div id="signin-banner" class="signin-banner">
+                        <div id="signin-banner" class="signin-banner text-center">
                             للاستفادة من نقاطك، <a href="https://cashif.cc/dashboard/login/?from=prices">سجّل الدخول</a> إلى حسابك في كاشف <span class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="سجل الدخول لاستبدال نقاطك، كل نقطة تساوي ريال واحد"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
                                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
                                     <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
@@ -60,7 +60,8 @@
 
                         <!-- Redeeme Banner -->
                         <div id="redeeme-banner" class="redeeme-banner" style="text-align: center;">
-                            رصيد نقاطك الحالي <span id="points-span">0</span> نقطة. <button id="redeeme-btn" data-bs-toggle="modal" data-bs-target="#redeeme-modal">استبدال</button>
+                            رصيد نقاطك الحالي <span id="points-span">0</span> نقطة
+                            <!-- <button id="redeeme-btn" data-bs-toggle="modal" data-bs-target="#redeeme-modal">استبدال</button> -->
                         </div>
 
 
@@ -193,12 +194,23 @@
                                 <div class="mb-3" dir="rtl">
                                     <label for="discount-input" class="form-label">كود الخصم</label>
                                     <div class="input-group flex-row-reverse">
-                                        <button id="discount-btn" class="btn btn-outline-secondary" type="button" style="color: #fff; background-color: #174545; width: 75px; border-color: #174545;">تطبيق</button>
-                                        <input type="text" class="form-control" id="discount-input" style="border: 1px solid #174545; box-shadow: none;">
+                                        <button id="discount-btn" class="btn btn-outline-secondary" type="button" style="color: #fff; background-color: #174545; width: 86px; border-color: #174545;">تطبيق</button>
+                                        <input dir="ltr" type="text" class="form-control" id="discount-input" style="border: 1px solid #174545; box-shadow: none; text-align: right;">
                                     </div>
                                     <p class="paragraph-under-discount-input" style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">سيتم احتساب القيمة الأعلى عند إدخال كود لباقة تحتوي على خصم</p>
                                 </div>
-                                <div class="mb-3">
+
+                                <div class="mb-3" dir="rtl">
+                                    <label for="discount-input" class="form-label">استبدال النقاط</label>
+                                    <div class="input-group flex-row-reverse">
+                                        <button id="confirm-redeeme-btn" class="btn btn-outline-secondary" type="button" style="color: #fff; background-color: #174545; width: 86px; border-color: #174545;">استبدال</button>
+                                        <input dir="ltr" id="redeeme-value-input" type="number" class="form-control" style="border: 1px solid #174545; box-shadow: none; text-align: right;">
+                                    </div>
+                                    <p id="helper-text-under-discount-input-if-auth" class="paragraph-under-discount-input" style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">رصيد نقاطك الحالي <span id="points-span-under-redeme-input">0</span> نقطة </p>
+                                    <p id="helper-text-under-discount-input-if-not-auth" class="paragraph-under-discount-input" style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">للاستفادة من نقاطك، <a href="https://cashif.cc/dashboard/login/?from=prices">سجّل الدخول</a> إلى حسابك في كاشف</p>
+                                </div>
+
+                                <div class="mb-3 mt-4 pt-4" style="border-top: 1px solid #174545;">
                                     <label for="exampleName" class="form-label">الاسم الثلاثي*</label>
                                     <input type="text" class="form-control" id="exampleName" aria-describedby="name" required>
                                 </div>
@@ -219,8 +231,8 @@
 
 
 
-                                <div class="mb-4 pt-2 pb-2" style="border-top: 1px solid #ececec; border-bottom: 1px solid #ececec;">
-                                    <div class="form-check form-check-reverse" style="border-bottom: 1px solid #ececec;">
+                                <div class="mb-4 pt-4 pb-2" style="border-top: 1px solid #174545;">
+                                    <div class="form-check form-check-reverse">
                                         <input class="form-check-input" style="width: 1em;" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                                         <label class="form-check-label" for="flexRadioDefault2" style="color: #1A1A1AE6;">
                                             دفع الكتروني
@@ -237,7 +249,7 @@
                                     </div> -->
 
 
-                                    <div class="form-check form-check-reverse pt-2 pb-2" style="border-bottom: 1px solid #ececec;">
+                                    <div class="form-check form-check-reverse pt-2 pb-2">
                                         <input class="form-check-input" type="radio" style="width: 1em;" name="flexRadioDefault" id="flexRadioDefault0">
                                         <label class="form-check-label" for="flexRadioDefault0" style="color: #1A1A1AE6;">
                                             <div style="display: flex; align-items: center; gap: 8px;">

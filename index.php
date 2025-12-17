@@ -270,7 +270,7 @@
                                 <span>نقاط ومكافئات</span>
                             </li>
                         </ul>
-                        <a class="ask-now-serv mt-4 text-center" id="ask-now-btn" href="https://cashif.cc/dashboard/prices">أطلب الأن</a>
+                        <a class="ask-now-serv mt-4 text-center" id="ask-now-btn" href="https://cashif.cc/dashboard/plans?purchaseInspection=true">أطلب الأن</a>
                     </div>
                 </div>
 
@@ -282,7 +282,7 @@
                             </svg>
                         </div>
                         <h4>خدمة مخدوم</h4>
-                        <p>في حال وجدت سيارة للبيع في <u>الرياض، جدة، أو الدمام</u> وأنت خارج هذه المدن، مركز كاشف يقوم بفحص شامل ودقيق للسيارة، مع تسهيل إجراءات نقل الملكية والتأمين.</p>
+                        <p>في حال وجدت سيارة للبيع في <u>الرياض، جدة، أو الدمام</u> وأنت خارج هذه المدن، مركز كاشف يقوم بفحص شامل ودقيق للسيارة، مع تسهيل إجراءات نقل الملكية والتأمين وشحن السيارة إلى مدينتك.</p>
                         <ul>
                             <li>
                                 <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
@@ -310,7 +310,7 @@
                                         <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
                                     </svg>
                                 </span>
-                                <span>إتمام نقل الملكية والتأمين بكل سهولة</span>
+                                <span>إتمام نقل الملكية والتأمين وشحن السيارة</span>
                             </li>
                         </ul>
                         <a class="ask-now-serv mt-4 text-center" href="https://cashif.cc/check-it/">أطلب الأن</a>
@@ -356,7 +356,7 @@
                                 <span>تجربة السيارة على الطريق</span>
                             </li>
                         </ul>
-                        <a href="https://cashif.cc/dashboard/prices/?passengerCheck=true" class="ask-now-serv mt-4 text-center">أطلب الأن</a>
+                        <a href="https://cashif.cc/dashboard/plans?passengerCheck=true" class="ask-now-serv mt-4 text-center">أطلب الأن</a>
                     </div>
                 </div>
             </div>

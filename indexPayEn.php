@@ -4,7 +4,7 @@
 
 
     <!-- Redeem Modal -->
-    <div class="modal fade" id="redeeme-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" dir="ltr">
+    <!-- <div class="modal fade" id="redeeme-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" dir="ltr">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body" style="padding-bottom: 0;">
@@ -25,7 +25,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 
@@ -50,8 +50,9 @@
                 </div>
 
                 <!-- Redeem Banner -->
-                <div id="redeeme-banner" class="redeeme-banner" dir="ltr">
-                    Your current points balance is <span id="points-span">0</span> points. <button id="redeeme-btn" data-bs-toggle="modal" data-bs-target="#redeeme-modal">Redeem</button>
+                <div id="redeeme-banner" class="redeeme-banner text-center" dir="ltr">
+                    Your current points balance is <span id="points-span">0</span> points
+                    <!-- <button id="redeeme-btn" data-bs-toggle="modal" data-bs-target="#redeeme-modal">Redeem</button> -->
                 </div>
 
 
@@ -163,12 +164,23 @@
                         <div class="mb-3" dir="ltr">
                             <label for="discount-input" class="form-label">Discount code</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="discount-input" style="border: 1px solid #174545; box-shadow: none;">
-                                <button id="discount-btn" class="btn btn-outline-secondary" type="button" style="border: 1px solid #174545; color: #fff; background-color: #174545; width: 75px;">Apply</button>
+                                <input dir="ltr" type="text" class="form-control" id="discount-input" style="border: 1px solid #174545; box-shadow: none;">
+                                <button id="discount-btn" class="btn btn-outline-secondary" type="button" style="border: 1px solid #174545; color: #fff; background-color: #174545; width: 94px;">Apply</button>
                             </div>
                             <p class="paragraph-under-discount-input" style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">The higher value will be applied when entering a discount code for a package that already includes a discount</p>
                         </div>
-                        <div class="mb-3">
+
+                        <div class="mb-3" dir="ltr">
+                            <label for="discount-input" class="form-label">Redeem points</label>
+                            <div class="input-group flex-row">
+                                <input dir="ltr" id="redeeme-value-input" type="number" class="form-control" style="border: 1px solid #174545; box-shadow: none;">
+                                <button id="confirm-redeeme-btn" class="btn btn-outline-secondary" type="button" style="color: #fff; background-color: #174545; width: 94px; border-color: #174545;">Redeem</button>
+                            </div>
+                            <p id="helper-text-under-discount-input-if-auth" class="paragraph-under-discount-input" style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">Your current points balance <span id="points-span-under-redeme-input">0</span> points </p>
+                            <p id="helper-text-under-discount-input-if-not-auth" class="paragraph-under-discount-input" style="color: #747a79; font-size: 11px; margin-top: 6px; margin-bottom: 0px;">To benefit from your points, <a href="https://cashif.cc/dashboard/login/?from=prices">sign in</a> to your Cashif account</p>
+                        </div>
+
+                        <div class="mb-3 mt-4 pt-4" style="border-top: 1px solid #174545;">
                             <label for="exampleName" class="form-label">Full name*</label>
                             <input type="text" class="form-control" id="exampleName" aria-describedby="name" required>
                         </div>
@@ -190,8 +202,8 @@
 
 
 
-                        <div dir="ltr" class=" mb-4 pt-2 pb-2" style="border-top: 1px solid #ececec; border-bottom: 1px solid #ececec;">
-                            <div dir="ltr" class="form-check" style="border-bottom: 1px solid #ececec;">
+                        <div dir="ltr" class="mb-4 pt-4 pb-2" style="border-top: 1px solid #174545;">
+                            <div dir="ltr" class="form-check">
                                 <input dir="ltr" class="form-check-input" style="width: 1em;" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                                 <label dir="ltr" class="form-check-label" for="flexRadioDefault2" style="color: #1A1A1AE6;">
                                     Electronic payment
@@ -207,7 +219,7 @@
                                 </label>
                             </div> -->
 
-                            <div class="form-check pt-2 pb-2" style="border-bottom: 1px solid #ececec;">
+                            <div class="form-check pt-2 pb-2">
                                 <input class="form-check-input" style="width: 1em;" type="radio" name="flexRadioDefault" id="flexRadioDefault0">
                                 <label class="form-check-label" for="flexRadioDefault0" style="color: #1A1A1AE6;">
                                     <div style="display: flex; align-items: center; gap: 8px;">

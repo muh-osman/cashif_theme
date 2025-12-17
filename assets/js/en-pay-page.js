@@ -87,25 +87,32 @@ function getCookie(name) {
 // Check if auth cookie is true
 const signinBanner = document.getElementById("signin-banner");
 const redeemeBanner = document.getElementById("redeeme-banner");
+const helperTextUnderDiscountInputIfAuth = document.getElementById("helper-text-under-discount-input-if-auth");
+const helperTextUnderDiscountInputIfNotAuth = document.getElementById("helper-text-under-discount-input-if-not-auth");
 if (getCookie("auth")) {
   signinBanner.style.display = "none";
+  helperTextUnderDiscountInputIfNotAuth.style.display = "none";
   redeemeBanner.style.display = "block";
+  helperTextUnderDiscountInputIfAuth.style.display = "block";
 
   fetchPoints(getCookie("phone"));
 
   clientId = +decodeToken(getCookie("auth")).clientId;
 } else {
   signinBanner.style.display = "block";
+  helperTextUnderDiscountInputIfNotAuth.style.display = "block";
   redeemeBanner.style.display = "none";
+  helperTextUnderDiscountInputIfAuth.style.display = "none";
 }
 
 let points = 0;
 const pointsSpan = document.getElementById("points-span");
-const pointsSpanInModal = document.getElementById("points-span-in-modal");
+// const pointsSpanInModal = document.getElementById("points-span-in-modal");
+const pointsSpanUnderRedemeInput = document.getElementById("points-span-under-redeme-input");
 async function fetchPoints(phone) {
   // Hide redeeme link
-  const redeemeBtn = document.getElementById("redeeme-btn");
-  redeemeBtn.style.display = "none";
+  // const redeemeBtn = document.getElementById("redeeme-btn");
+  // redeemeBtn.style.display = "none";
   try {
     const response = await fetch(`https://cashif-001-site1.dtempurl.com/api/ClientPoint/GetClientPoints?clienttPhoneNumber=${phone}`, {
       method: "GET",
@@ -122,12 +129,13 @@ async function fetchPoints(phone) {
     points = Math.trunc(jsonData.points || 0);
 
     pointsSpan.innerHTML = points || 0;
-    pointsSpanInModal.innerHTML = points || 0;
+    // pointsSpanInModal.innerHTML = points || 0;
+    pointsSpanUnderRedemeInput.innerHTML = points || 0;
 
     // console.log(points);
 
     if (points !== 0) {
-      redeemeBtn.style.display = "inline-block";
+      // redeemeBtn.style.display = "inline-block";
     }
   } catch (error) {
     console.error("Error:", error);
@@ -147,6 +155,11 @@ let redeemeAmoumntValue = 0; //  the amount of redeemed points
 confirmRedeemeBtn.addEventListener("click", function () {
   // Get the input value
   const inputValue = redeemeValueInput.value.trim();
+
+  if (!getCookie("auth")) {
+    alert("Please log in to redeem points");
+    return;
+  }
 
   // Check if input is empty
   if (inputValue === "") {
@@ -219,14 +232,15 @@ confirmRedeemeBtn.addEventListener("click", function () {
     RedeemeLabel.innerHTML = `-${numberValue} ${sarSymbol}`;
 
     pointsSpan.innerHTML = points || 0;
-    pointsSpanInModal.innerHTML = points || 0;
+    // pointsSpanInModal.innerHTML = points || 0;
+    pointsSpanUnderRedemeInput.innerHTML = points || 0;
 
     redeemeValueInput.disabled = true;
     confirmRedeemeBtn.disabled = true;
 
     // Close the modal
-    const modal = bootstrap.Modal.getInstance(document.getElementById("redeeme-modal"));
-    modal.hide();
+    // const modal = bootstrap.Modal.getInstance(document.getElementById("redeeme-modal"));
+    // modal.hide();
 
     updateTotal();
   }
