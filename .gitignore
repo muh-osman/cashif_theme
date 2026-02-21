@@ -4,8 +4,9 @@
 assets/js/config.js
 
 # Secret (files)
-assets/secret/google-tag.html
-assets/secret/Capture.PNG
+assets/secret/google-tag-manager.html
+assets/secret/cashif.png
+assets/secret/cashif-blog.png
 assets/secret/payment-gateway-(secret keys).txt
 assets/secret/apple-developer-merchantid-domain-association
 
