@@ -20,18 +20,13 @@ function wpdocs_cashif_theme_scripts()
     // Define an array of styles to enqueue based on URL patterns
     //  ex: https://cashif.cc/check-it/receipt/en/?plan=Basic&model=Camry&price=430 => en-receipt-page-style.css
     $styles = [
-        '/\/check-it\/receipt\/en\/\?plan=([^&]+)&year_id=([^&]+)&car_model_id=([^&]+)&price_id=([^&]*)/' => 'en-receipt',
-        '/\/check-it\/receipt\/\?plan=([^&]+)&year_id=([^&]+)&car_model_id=([^&]+)&price_id=([^&]*)/' => 'ar-receipt',
         '/\/check-it\/en/' => 'en-check-it',
         '/\/check-it/' => 'ar-check-it',
         '/\/privacy-policy/' => 'ar-en-privacy-policy',
         '/\/return-policy/' => 'ar-en-return-policy',
         '/\/terms-of-service/' => 'ar-en-terms-of-service',
-        '/\/pay/' => 'ar-en-pay',
 
         '/\/terms-and-privacy-policy/' => 'ar-en-privacy-policy',
-        '/\/thanks/' => 'ar-en-thanks',
-        '/\/thankyou/' => 'ar-en-thanks',
         '/\/en/' => 'en',
         '/\//' => 'ar'
     ];
@@ -56,15 +51,8 @@ function wpdocs_cashif_theme_scripts()
 
     // Define an array of scripts to enqueue based on URL patterns
     $scripts = [
-        '/\/check-it\/receipt\/en\/\?plan=([^&]+)&year_id=([^&]+)&car_model_id=([^&]+)&price_id=([^&]*)/' => 'en-receipt',
-        '/\/check-it\/receipt\/\?plan=([^&]+)&year_id=([^&]+)&car_model_id=([^&]+)&price_id=([^&]*)/' => 'ar-receipt',
         '/\/check-it\/en/' => 'en-check-it',
         '/\/check-it/' => 'ar-check-it',
-        '/\/thanks\/en/' => 'thanks',
-        '/\/thanks/' => 'thanks',
-        '/\/thankyou/' => 'thankyou',
-        '/\/pay\/en/' => 'en-pay',
-        '/\/pay/' => 'ar-pay',
         '/\/en/' => 'en',
         '/\//' => 'ar'
     ];
@@ -90,18 +78,11 @@ function custom_rewrite_rule()
         'en' => 30,
         'check-it/en' => 36,
 
-        'check-it/receipt' => 45,
-        'check-it/receipt/en' => 47,
-        'thanks/en' => 70,
-
         'privacy-policy/en' => 57,
         'return-policy/en' => 59,
         'terms-of-service/en' => 61,
 
         'terms-and-privacy-policy/en' => 65,
-
-        'pay/en' => 74,
-        'thankyou/en' => 78,
 
     ];
 

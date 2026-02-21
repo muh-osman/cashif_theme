@@ -5,7 +5,7 @@
     <!-- Start Banner -->
     <button style="display: none;" id="bannarBtn" onclick="openBannar()">
         <div class="bannar">
-            <p>حصريًا لعملاء <span>جدة</span> - فحص كمبيوتر لسيارتك بـ <span style="white-space: nowrap;">5 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+            <p>حصريًا لعملاء <span>القصيم</span> - فحص كمبيوتر لسيارتك بـ <span style="white-space: nowrap;">5 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
                         <defs>
                             <style>
                                 .cls-0 {
@@ -16,7 +16,7 @@
                         <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
                         <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
                     </svg></span></p>
-            <p>أماكن فروعنا</p>
+            <p>فرع بريدة</p>
         </div>
     </button>
 
@@ -38,39 +38,47 @@
                 <div class="modal-body">
 
                     <ul class="text-center m-0">
-                        <li class="pb-3">
+                        <!-- <li class="pb-3">
                             <a href="https://maps.app.goo.gl/MiFGsgakfo62on7u8">
                                 الرياض - القادسية <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
                                     <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
                                 </svg>
                             </a>
-                        </li>
+                        </li> -->
 
-                        <li class="pb-3">
+                        <!-- <li class="pb-3">
                             <a href="https://maps.app.goo.gl/pXCnG7RPXJ2CDLqe7?g_st=aw">
                                 الرياض - الشفا <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
                                     <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
                                 </svg>
                             </a>
+                        </li> -->
+                        <li>
+                            <a href="https://maps.app.goo.gl/Gd7g3VScomNQP8DR7">
+                                القصيم <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                                </svg>
+                            </a>
                         </li>
-                        <li class="pb-3">
+                        <!-- <li class="pb-3">
                             <a href="https://maps.app.goo.gl/9UiHq4kW7Mjh1Aik8">
                                 الدمام <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
                                     <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
                                 </svg>
                             </a>
-                        </li>
-                        <li>
+                        </li> -->
+                        <!-- <li>
                             <a href="https://maps.app.goo.gl/697yXkaS4o6kYsos8">
                                 جدة <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
                                     <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
                                 </svg>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
 
                 </div>
@@ -204,7 +212,7 @@
     <!--End intro section-->
 
     <!--Start Video Section-->
-    <div class="title-box">
+    <!-- <div class="title-box">
         <h2 data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
             من هو كاشف ؟
         </h2>
@@ -218,8 +226,54 @@
                 </video>
             </div>
         </div>
-    </section>
+    </section> -->
     <!--End Video Section-->
+
+
+    <!-- Start Image Carousel -->
+    <div class="carousel-container" style="max-width: 1000px; margin: auto;" dir="ltr">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-indicators">
+                <?php for ($i = 50; $i <= 59; $i++): ?>
+                    <button type="button"
+                        data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide-to="<?php echo $i - 50; ?>"
+                        class="<?php echo $i === 50 ? 'active' : ''; ?>"
+                        <?php echo $i === 50 ? 'aria-current="true"' : ''; ?>
+                        aria-label="Slide <?php echo $i - 49; ?>">
+                    </button>
+                <?php endfor; ?>
+            </div>
+            <div class="carousel-inner">
+                <?php
+                for ($i = 50; $i <= 59; $i++):
+                    $active = $i === 50 ? 'active' : '';
+                ?>
+                    <div class="carousel-item <?php echo $active; ?>">
+                        <picture>
+                            <!-- Mobile images (up to 768px) -->
+                            <source media="(max-width: 768px)"
+                                srcset="<?php echo get_template_directory_uri() . '/assets/images/mobile/' . $i . '.jpg'; ?>">
+                            <!-- Desktop images (default) -->
+                            <img src="<?php echo get_template_directory_uri() . '/assets/images/desktop/' . $i . '.jpg'; ?>"
+                                class="d-block w-100"
+                                alt="Cashif Carousel <?php echo $i; ?>">
+                        </picture>
+                    </div>
+                <?php endfor; ?>
+            </div>
+            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button> -->
+        </div>
+    </div>
+    <!-- End Image Carousel -->
+
 
     <!-- Start Our Services Section -->
     <div class="title-box">
@@ -282,7 +336,7 @@
                             </svg>
                         </div>
                         <h4>خدمة مخدوم</h4>
-                        <p>في حال وجدت سيارة للبيع في <u>الرياض، جدة، أو الدمام</u> وأنت خارج هذه المدن، مركز كاشف يقوم بفحص شامل ودقيق للسيارة، مع تسهيل إجراءات نقل الملكية والتأمين وشحن السيارة إلى مدينتك.</p>
+                        <p>في حال وجدت سيارة للبيع في <u>الرياض، جدة، الدمام، أو القصيم</u> وأنت خارج هذه المدن، مركز كاشف يقوم بفحص شامل ودقيق للسيارة، مع تسهيل إجراءات نقل الملكية والتأمين وشحن السيارة إلى مدينتك.</p>
                         <ul>
                             <li>
                                 <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
@@ -296,7 +350,7 @@
                                         <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
                                     </svg>
                                 </span>
-                                <span>إجراء فحص شامل ودقيق للسيارة</span>
+                                <span>فحص دقيق للسيارة مع تسجيل مرئي وشرح التقرير بمقطع فيديو مسجل</span>
                             </li>
                             <li>
                                 <span><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-119a5lz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="VerifiedUserIcon">
@@ -446,6 +500,178 @@
     </section>
     <!-- End why deal with us section -->
 
+
+
+    <!-- Start FAQ Accordion Section -->
+    <div class="title-box">
+        <h2 data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">الاسئلة الشائعة</h2>
+    </div>
+
+    <section class="faq-section">
+        <div class="container" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <div class="accordion" id="faqAccordion">
+
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            من هو كاشف؟
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            كاشف مركز متخصص في فحص السيارات المستعملة، يقدم فحصًا فنيًا دقيقًا ويصدر تقرير فحص ورقي وإلكتروني يوضح الحالة الفعلية للسيارة، لمساعدة المشتري على اتخاذ قرار الشراء بثقة.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            ما الذي يميّز كاشف عن غيره؟
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">يمتلك كاشف فريقًا من الفنيين المختصين بخبرة تتجاوز 10 سنوات، ويقدّم ضمانًا على صحة تقرير الفحص.</div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            هل يوجد ضمان؟
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            نعم، يوجد ضمان على صحة تقرير الفحص، ويتم تطبيقه وفق شروط محددة.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            ما هي خدمات كاشف الرئيسية؟
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>خدمة فحص الشراء</p>
+                            فحص شامل لجميع أجزاء السيارة المستعملة لاكتشاف الأعطال والعيوب قبل اتخاذ قرار الشراء.
+                            <p style="margin-top: 16px;">خدمة مخدوم</p>
+                            في حال وجود سيارة للبيع في الرياض، جدة، القصيم، أو الدمام وأنت خارج هذه المدن، يقوم مركز كاشف بفحص السيارة فحصًا شاملًا ودقيقًا، مع تسهيل إجراءات نقل الملكية والتأمين وشحن السيارة إلى مدينتك.
+                            <p style="margin-top: 16px;">خدمة المسافر</p>
+                            فحص مخصص قبل السفر للتأكد من جاهزية السيارة وسلامتها على الطريق، ويشمل أهم الفحوصات التي تضمن رحلة آمنة ومريحة.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            ما هي باقات الفحص؟
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>باقة الفحص الشامل تشمل:</p>
+                            <ul>
+                                <li>المحرك</li>
+                                <li>ناقل الحركة</li>
+                                <li>الدفرنس</li>
+                                <li>ميكانيكا أسفل السيارة</li>
+                                <li>الكمبيوتر والحساسات</li>
+                                <li>الهيكل الداخلي</li>
+                                <li>تجربة السيارة</li>
+                                <li>الهيكل الخارجي</li>
+                                <li>الوسائد الهوائية</li>
+                                <li>الديكورات الداخلية</li>
+                                <li>المزايا المخصصة للسيارة</li>
+                                <li>الملحقات الخارجية</li>
+                                <li>الزجاج</li>
+                                <li>الكفرات والجنوط</li>
+                                <li>الشمعات والأسطبات</li>
+                            </ul>
+
+                            <p style="margin-top: 16px;">باقة الفحص الأساسي تشمل:</p>
+                            <ul>
+                                <li>المحرك</li>
+                                <li>ناقل الحركة</li>
+                                <li>الدفرنس</li>
+                                <li>ميكانيكا أسفل السيارة</li>
+                                <li>الكمبيوتر والحساسات</li>
+                                <li>الهيكل الداخلي</li>
+                                <li>تجربة السيارة</li>
+                                <li>الهيكل الخارجي</li>
+                                <li>الوسائد الهوائية</li>
+                            </ul>
+
+
+                            <p style="margin-top: 16px;">باقة فحص المحركات تشمل:</p>
+                            <ul>
+                                <li>المحرك</li>
+                                <li>ناقل الحركة</li>
+                                <li>الدفرنس</li>
+                                <li>ميكانيكا أسفل السيارة</li>
+                                <li>الكمبيوتر والحساسات</li>
+                                <li>الهيكل الداخلي</li>
+                                <li>تجربة السيارة</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            ما هي خدمات كاشف الإضافية؟
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>بالتعاون مع شركائنا، يقدّم كاشف الخدمات التالية:</p>
+                            <ul>
+                                <li>نقل ملكية السيارة وإصدار التأمين</li>
+                                <li>خدمة مرتاح: استلام السيارة من موقعك عبر سطحة، فحصها في المركز، ثم إعادتها إلى نفس الموقع</li>
+                                <li>شحن السيارة إلى جميع مدن المملكة</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            ما هي خدمات كاشف الإلكترونية؟
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>حجز موعد الفحص أونلاين</li>
+                                <li>الاطلاع على الأسعار والباقات أونلاين</li>
+                                <li>وسائل دفع متعددة</li>
+                                <li>تحميل تقرير الفحص أونلاين</li>
+                                <li>متابعة نقاط الرصيد المجاني (نقاط الولاء)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
     <!-- Start Testimonian -->
     <div class="title-box">
         <h2 data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">آراء العملاء</h2>
@@ -581,6 +807,14 @@
                                         </a>
                                     </li>
                                     <li>
+                                        <a href="https://maps.app.goo.gl/Gd7g3VScomNQP8DR7">
+                                            القصيم <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="https://maps.app.goo.gl/9UiHq4kW7Mjh1Aik8">
                                             الدمام <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                                 <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
@@ -702,11 +936,19 @@
 
     <!--Start WhatsApp icon section-->
     <a id="whatsapp-btn" aria-label="WhatsApp Customer Service" class="sticky-icon" target="_blank" href="https://api.whatsapp.com/send?phone=966920019948&text=*اختر من القائمة الرئيسية*">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-whatsapp" viewbox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" class="bi bi-whatsapp" viewbox="0 0 16 16">
             <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
         </svg>
     </a>
     <!--End WhatsApp icon section-->
+
+    <!--Start gift icon section-->
+    <!-- <a id="whatsapp-btn" aria-label="WhatsApp Customer Service" class="sticky-icon gift-icon" href="https://cashif.cc/dashboard/1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="fill: rgb(211, 48, 48); width: 36px; height: 36px;">
+            <path d="M321.5 68.8C329.1 55.9 342.9 48 357.8 48l2.2 0c22.1 0 40 17.9 40 40s-17.9 40-40 40l-73.3 0 34.8-59.2zm-131 0l34.8 59.2-73.3 0c-22.1 0-40-17.9-40-40s17.9-40 40-40l2.2 0c14.9 0 28.8 7.9 36.3 20.8zm89.6-24.3l-24.1 41-24.1-41C215.7 16.9 186.1 0 154.2 0L152 0c-48.6 0-88 39.4-88 88 0 14.4 3.5 28 9.6 40L32 128c-17.7 0-32 14.3-32 32l0 32c0 17.7 14.3 32 32 32l448 0c17.7 0 32-14.3 32-32l0-32c0-17.7-14.3-32-32-32l-41.6 0c6.1-12 9.6-25.6 9.6-40 0-48.6-39.4-88-88-88l-2.2 0c-31.9 0-61.5 16.9-77.7 44.4zM480 272l-200 0 0 208 136 0c35.3 0 64-28.7 64-64l0-144zm-248 0l-200 0 0 144c0 35.3 28.7 64 64 64l136 0 0-208z"></path>
+        </svg>
+    </a> -->
+    <!--End gift icon section-->
 
 
 

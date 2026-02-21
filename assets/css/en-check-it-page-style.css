@@ -636,18 +636,72 @@ input.check-toggle-round-flat:checked + label:after {
   padding: 32px;
   padding-top: 0;
   /* background-color: #fff; */
+  margin-top: 100px;
+  padding-left: 64px;
+  padding-right: 64px;
 }
 
 .new-serv-stages-title {
   /* background-color: #fff; */
 }
 
+.step-box {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 22px;
+  padding-top: 86px;
+  position: relative;
+}
+
+.steps-img-box {
+  position: absolute;
+  top: -75px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 150px;
+  border: 11px solid #f0f1f3;
+  border-radius: 50%;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.step-box h1 {
+  text-align: center;
+  color: #174545;
+}
+
+.step-box h5 {
+  text-align: center;
+  color: red;
+  margin-bottom: 16px;
+}
+
+.step-box ol {
+  color: #747a79;
+  padding-left: 0;
+}
+
+.step-box ol li {
+  font-family: "mont-light";
+  margin-bottom: 9px;
+}
+
+.step-box ol li a {
+  font-family: "mont-light";
+}
+
+.step-box ol li::marker {
+  color: #174545;
+  font-weight: 700;
+  font-family: "mont-medium";
+}
+
 .two-box-box {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 90px;
 }
 
 .right-new-serv {
@@ -724,11 +778,20 @@ input.check-toggle-round-flat:checked + label:after {
   .new-serv-stages .stage {
     height: 250px;
   }
+
+  .new-serv-stages {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .two-box-box {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 580px) {
   .new-serv-stages {
-    padding: 16px;
+    /* padding: 16px; */
   }
   .new-serv-stages .stage {
     height: auto;
@@ -2119,10 +2182,10 @@ form {
 /* Start Whatsapp Icon */
 .sticky-icon {
   position: fixed;
-  width: 60px;
-  height: 60px;
-  left: 30px;
-  bottom: 30px;
+  width: 56px;
+  height: 56px;
+  left: 32px;
+  bottom: 32px;
   z-index: 9999999;
   background-color: #25d366;
   border-radius: 100%;
@@ -2137,8 +2200,8 @@ form {
 
 @media (max-width: 625px) {
   .sticky-icon {
-    width: 55px;
-    height: 55px;
+    width: 52px;
+    height: 52px;
   }
 }
 
@@ -2146,9 +2209,40 @@ form {
   bottom: -66px;
 }
 
+.gift-icon {
+  left: 32px;
+  bottom: 100px;
+  background-color: #ffd53b;
+  color: #fff !important;
+}
+
+#whatsapp-btn {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
+}
+
+#whatsapp-btn svg {
+  width: 30px;
+}
+
 @media (max-width: 625px) {
   #whatsapp-btn {
-    display: none;
+    /* display: none; */
+
+    left: 16px;
+    bottom: 100px;
+  }
+
+  .gift-icon {
+    left: 16px;
+    bottom: 164px !important;
+  }
+
+  .gift-icon svg {
+    width: 28px !important;
+  }
+
+  #whatsapp-btn svg {
+    width: 23px;
   }
 }
 
@@ -2458,4 +2552,64 @@ nav.mob-phone-nav {
 
 .CTA-box a {
   margin: 0 !important;
+}
+
+/* FAQ */
+.faq-section {
+  /* padding: 60px 0; */
+  /* background-color: #f8f9fa; */
+}
+
+.accordion-button {
+  background-color: #fff;
+  color: #174545;
+  font-weight: 600;
+  padding: 15px 20px;
+  /* border: 1px solid #dee2e6; */
+  text-align: left;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #fff;
+  color: #174545;
+  box-shadow: none !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.accordion-body {
+  padding: 20px;
+  background-color: #fff;
+  /* border: 1px solid #dee2e6; */
+  border-top: none;
+  text-align: left;
+  line-height: 1.6;
+  color: #707171;
+  border-top: 1px solid #dee2e6;
+  font-family: "mont-light" !important;
+}
+
+.accordion-body ul {
+  /* list-style-position: inside; */
+  color: #707171;
+  margin: 0;
+  padding-left: 14px;
+}
+
+.accordion-body ul li {
+  font-family: "mont-light" !important;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+.accordion-button::after {
+  margin-right: 0;
+  margin-left: auto;
 }

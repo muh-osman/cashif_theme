@@ -5,7 +5,7 @@
     <!-- Start Banner -->
     <button style="display: none;" id="bannarBtn" onclick="openBannar()">
         <div class="bannar">
-            <p>حصريًا لعملاء <span>جدة</span> - فحص كمبيوتر لسيارتك بـ <span style="white-space: nowrap;">5 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
+            <p>حصريًا لعملاء <span>القصيم</span> - فحص كمبيوتر لسيارتك بـ <span style="white-space: nowrap;">5 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39">
                         <defs>
                             <style>
                                 .cls-0 {
@@ -16,7 +16,7 @@
                         <path class="cls-0" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z" />
                         <path class="cls-0" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z" />
                     </svg></span></p>
-            <p>أماكن فروعنا</p>
+            <p>فرع بريدة</p>
         </div>
     </button>
 
@@ -38,39 +38,47 @@
                 <div class="modal-body">
 
                     <ul class="text-center m-0">
-                        <li class="pb-3">
+                        <!-- <li class="pb-3">
                             <a href="https://maps.app.goo.gl/MiFGsgakfo62on7u8">
                                 الرياض - القادسية <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
                                     <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
                                 </svg>
                             </a>
-                        </li>
+                        </li> -->
 
-                        <li class="pb-3">
+                        <!-- <li class="pb-3">
                             <a href="https://maps.app.goo.gl/pXCnG7RPXJ2CDLqe7?g_st=aw">
                                 الرياض - الشفا <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
                                     <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
                                 </svg>
                             </a>
+                        </li> -->
+                        <li>
+                            <a href="https://maps.app.goo.gl/Gd7g3VScomNQP8DR7">
+                                القصيم <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                                </svg>
+                            </a>
                         </li>
-                        <li class="pb-3">
+                        <!-- <li class="pb-3">
                             <a href="https://maps.app.goo.gl/9UiHq4kW7Mjh1Aik8">
                                 الدمام <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
                                     <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
                                 </svg>
                             </a>
-                        </li>
-                        <li>
+                        </li> -->
+                        <!-- <li>
                             <a href="https://maps.app.goo.gl/697yXkaS4o6kYsos8">
                                 جدة <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
                                     <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
                                 </svg>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
 
                 </div>
@@ -113,11 +121,11 @@
                     <h1 class="check-it-title">خدمة مخدوم</h1>
                     <h6 class="first-title">
                         <span>
-                            وجدت سيارة مستعملة للبيع وأنت خارج الرياض، جدة أو الدمام؟
+                            وجدت سيارة مستعملة للبيع وأنت خارج الرياض، جدة الدمام أو القصيم؟
                         </span>
                     </h6>
                     <h6 class="mt-0">
-                        كاشف يقوم بفحص السيارة بدقة ويسهّل عليك إجراءات نقل الملكية والتأمين وشحن المركبة
+                        كاشف يقوم بفحص السيارة بدقة مع تسجيل مرئي وشرح تقرير الفحص بمقطع فيديو مسجل، ويسهّل عليك إجراءات نقل الملكية والتأمين وشحن المركبة
                     </h6>
                 </div>
 
@@ -215,12 +223,11 @@
         <h2 data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">مراحل الخدمة</h2>
     </div>
 
-    <section class="new-serv-stages">
+    <!-- <section class="new-serv-stages">
 
         <div class="two-box-box">
 
             <div class="right-new-serv">
-
                 <div class="stage">
                     <div>
                         <div class="svg-box">
@@ -265,7 +272,6 @@
             </div>
 
             <div class="left-new-serv">
-
                 <div class="stage">
                     <div>
                         <div class="svg-box">
@@ -307,12 +313,61 @@
                         <h6>بالتعاون مع شركائنا، يتم تنفيذ خدمة شحن المركبة إلى مدن المملكة</h6>
                     </div>
                 </div>
-
             </div>
 
         </div>
 
+    </section> -->
+
+
+
+    <section class="new-serv-stages">
+        <div class="two-box-box">
+
+            <div dir="rtl" style="width: 100%;" class="step-box">
+                <h1>الخطوة الاولى</h1>
+                <h5>(فحص السيارة)</h5>
+                <ol style="padding-right: 18px;">
+                    <li>بعد طلب الخدمة سيصلك صورة باركود, قم بارسالها لصاحب السيارة</li>
+                    <li>اطلب من صاحب السيارة التوجه الى الفرع المحدد</li>
+                    <li>بعد الانتهاء من الفحص، يتم إرفاق تقرير الفحص عبر الواتساب و<a id="ask-now-btn" href="https://cashif.cc/dashboard/reports">الموقع الالكتروني</a></li>
+                    <li>ملاحظة: يظهر التقرير فقط للرقم المسجل أثناء الدفع، ولن يتم عرض التقرير على صاحب السيارة (البائع).</li>
+                </ol>
+                <div class="steps-img-box">
+                    <img style="width: 100%; padding: 19px;" src=<?php echo get_template_directory_uri() . '/assets/images/one.webp' ?> alt="one">
+                </div>
+            </div>
+
+            <div dir="rtl" style="width: 100%;" class="step-box">
+                <h1>الخطوة الثانية</h1>
+                <h5>(نقل الملكية والتأمين)</h5>
+                <ol style="padding-right: 18px;">
+                    <li>عند الرغبة بنقل الملكية أو التأمين، سيتم تزويدك <a href="https://wa.me/966548682102">برقم المسؤول</a> ويتم النقل بشكل فوري.</li>
+                </ol>
+                <div class="steps-img-box">
+                    <img style="width: 100%; padding: 19px;" src=<?php echo get_template_directory_uri() . '/assets/images/two.jpg' ?> alt="one">
+                </div>
+            </div>
+
+            <div dir="rtl" style="width: 100%;" class="step-box">
+                <h1>الخطوة الثالثة</h1>
+                <h5>(شحن السيارة)</h5>
+                <ol style="padding-right: 18px;">
+                    <li>شحن السيارة من مدينة الفحص إلى مدينتك بكل سهولة، بالتعاون مع شركة شحن معتمدة، دون الحاجة لوجودك.</li>
+                    <li>بعد اكمال الطلب عبر موقعنا الإلكتروني، يمكن لصاحب السيارة التوجه إلى شركة البسامي مباشرة.</li>
+                    <li>أو يمكنه الانتظار حتى وصول السطحة التابعة للبسامي، لاستلام السيارة وشحنها إلى مدينتك.</li>
+                    <li>ملاحظة: مركز كاشف لا يستلم السيارة من صاحب السيارة.</li>
+                </ol>
+                <div class="steps-img-box">
+                    <img style="width: 100%; padding: 19px;" src=<?php echo get_template_directory_uri() . '/assets/images/three.jpg' ?> alt="one">
+                </div>
+            </div>
+
+
+        </div>
     </section>
+
+
     <!-- End new services stages section -->
 
     <!-- Start inspection stage section -->
@@ -396,6 +451,107 @@
     </section>
     <!-- End why deal with us section -->
 
+    <!-- Start FAQ Accordion Section -->
+    <div class="title-box">
+        <h2 data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">الاسئلة الشائعة</h2>
+    </div>
+
+    <section class="faq-section">
+        <div class="container" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <div class="accordion" id="faqAccordion">
+
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            هل السعر يشمل الفحص والنقل والشحن؟
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            لا. السعر لا يشمل جميع الخدمات في مبلغ واحد.
+
+                            <ul>
+                                <li>الفحص له سعر مستقل</li>
+                                <li>نقل الملكية والتأمين خدمة اختيارية بسعر مستقل</li>
+                                <li>شحن السيارة يتم احتسابه بسعر مستقل حسب المدينة والمسافة</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            هل يستلم مركز كاشف السيارة من البائع؟
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            لا. مركز كاشف لا يستلم السيارة من صاحبها.
+                            يجب على مالك السيارة الحضور بها إلى الفرع المحدد لإجراء الفحص. </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            متى أستلم تقرير الفحص؟
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            بعد الانتهاء من الفحص:
+
+                            <ul>
+                                <li>يصلك التقرير عبر واتساب</li>
+                                <li>ويمكن تحميله من الموقع في أي وقت</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            هل يمكنني نقل الملكية والتأمين من خلالكم؟
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            نعم. يتوفر موظف مختص لتسهيل إجراءات نقل الملكية والتأمين عند الرغبة.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            كيف يتم شحن السيارة؟
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            بعد اكمال الطلب عبر موقعنا الالكتروني:
+
+                            <ul>
+                                <li>يمكن لمالك السيارة التوجه مباشرة إلى شركة البسامي للنقل.</li>
+                                <li>أو الانتظار حتى وصول السطحة لاستلام السيارة ونقلها الى شركة البسامي.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <p style="font-family: mont-light; font-size: 14px;"><span style="color: red; font-family: mont-light;">تنويه:</span> مركز كاشف لا يستلم السيارة من صاحب السيارة "البائع"</p>
+        </div>
+    </section>
+
     <!-- Start CTA Section -->
     <section class="CTA">
         <div class="CTA-box">
@@ -410,18 +566,18 @@
 
 
 
-            <div>
-                <!-- <h2>
+            <!-- <div> -->
+            <!-- <h2>
                     لو تبي تشتري سيارة من منطقة غير منطقتك, مخدوم يفحصها بالنيابة عنك
                 </h2> -->
-                <!-- <p>افحص الآن ولا تدفع قيمة عيوبها مرتين</p> -->
-                <h2>افحص الآن ولا تدفع قيمة عيوبها مرتين</h2>
-            </div>
+            <!-- <p>افحص الآن ولا تدفع قيمة عيوبها مرتين</p> -->
+            <!-- <h2>افحص الآن ولا تدفع قيمة عيوبها مرتين</h2> -->
+            <!-- </div> -->
 
 
             <div class="hero-btn-container">
                 <a href="https://cashif.cc/dashboard/plans?checkit=true" class="discount-bttn" id="discountBttnTwo">
-                    أسعار مخدوم
+                    أطلب الأن
                 </a>
             </div>
         </div>
@@ -562,6 +718,14 @@
                                         </a>
                                     </li>
                                     <li>
+                                        <a href="https://maps.app.goo.gl/Gd7g3VScomNQP8DR7">
+                                            القصيم <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="https://maps.app.goo.gl/9UiHq4kW7Mjh1Aik8">
                                             الدمام <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                                 <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
@@ -682,11 +846,20 @@
 
     <!--Start WhatsApp icon section-->
     <a id="whatsapp-btn" aria-label="WhatsApp Customer Service" class="sticky-icon" target="_blank" href="https://api.whatsapp.com/send?phone=966920019948&text=*اختر من القائمة الرئيسية*">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-whatsapp" viewbox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" class="bi bi-whatsapp" viewbox="0 0 16 16">
             <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
         </svg>
     </a>
     <!--End WhatsApp icon section-->
+
+
+    <!--Start gift icon section-->
+    <!-- <a id="whatsapp-btn" aria-label="WhatsApp Customer Service" class="sticky-icon gift-icon" href="https://cashif.cc/dashboard/1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="fill: rgb(211, 48, 48); width: 36px; height: 36px;">
+            <path d="M321.5 68.8C329.1 55.9 342.9 48 357.8 48l2.2 0c22.1 0 40 17.9 40 40s-17.9 40-40 40l-73.3 0 34.8-59.2zm-131 0l34.8 59.2-73.3 0c-22.1 0-40-17.9-40-40s17.9-40 40-40l2.2 0c14.9 0 28.8 7.9 36.3 20.8zm89.6-24.3l-24.1 41-24.1-41C215.7 16.9 186.1 0 154.2 0L152 0c-48.6 0-88 39.4-88 88 0 14.4 3.5 28 9.6 40L32 128c-17.7 0-32 14.3-32 32l0 32c0 17.7 14.3 32 32 32l448 0c17.7 0 32-14.3 32-32l0-32c0-17.7-14.3-32-32-32l-41.6 0c6.1-12 9.6-25.6 9.6-40 0-48.6-39.4-88-88-88l-2.2 0c-31.9 0-61.5 16.9-77.7 44.4zM480 272l-200 0 0 208 136 0c35.3 0 64-28.7 64-64l0-144zm-248 0l-200 0 0 144c0 35.3 28.7 64 64 64l136 0 0-208z"></path>
+        </svg>
+    </a> -->
+    <!--End gift icon section-->
 
     <!-- Start mobile phone Navbar -->
     <nav class="mob-phone-nav">

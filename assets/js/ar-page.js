@@ -1,3 +1,10 @@
+// Store URL parameters in session storage
+const urlParams = window.location.search;
+
+if (urlParams) {
+  sessionStorage.setItem("lottery_referral_params", urlParams);
+}
+
 // Store language in local storage immediately
 localStorage.setItem("lang", "ar");
 //
@@ -24,20 +31,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Discount for spacific URL (AD URL)
 // Get the current URL
-// const currentUrl = window.location.href;
-// const url = new URL(currentUrl);
-// const params = new URLSearchParams(url.search);
-// const dis = params.get("dis");
-// const bannarBtn = document.getElementById("bannarBtn");
-// if (dis === "fifty" || sessionStorage.getItem("dis") === "fifty") {
-//   bannarBtn.style.display = "block";
-//   if (dis === "fifty") {
-//     sessionStorage.setItem("dis", dis);
-//   }
-// } else {
-//   bannarBtn.style.display = "none";
-//   document.body.style.paddingTop = "0";
-// }
+const currentUrl = window.location.href;
+const url = new URL(currentUrl);
+const params = new URLSearchParams(url.search);
+const dis = params.get("utm_source");
+const bannarBtn = document.getElementById("bannarBtn");
+if (dis === "tiktok_bridah" || sessionStorage.getItem("utm_source") === "tiktok_bridah") {
+  bannarBtn.style.display = "block";
+  if (dis === "tiktok_bridah") {
+    sessionStorage.setItem("utm_source", dis);
+  }
+} else {
+  bannarBtn.style.display = "none";
+  document.body.style.paddingTop = "0";
+}
 
 // Mobile Navbar add active class
 const list = document.querySelectorAll(".list");
