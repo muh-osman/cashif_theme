@@ -140,11 +140,30 @@
                     </a>
                 </div>
 
+                <div id="login2" class="login-btn-box login-btn" style="display: flex; align-items: center; height: 44px; justify-content: center;">
+                    <div>
+                        <a
+                            style="color: #fef8fb; font-size: 16px; padding: 6px 12px; display: inline-flex; justify-content: center; align-items: center; border-radius: 50px; transition: 0.2s; border: 1px solid #fef8fb;"
+                            href="https://cashif.cc/dashboard/login">
+
+                            <span>Login</span>
+
+                            <span style="margin-left: 8px; display: flex; align-items: center;">
+                                <svg fill="#fef8fb" width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="LoginIcon">
+                                    <path d="M11 7 9.6 8.4l2.6 2.6H2v2h10.2l-2.6 2.6L11 17l5-5zm9 12h-8v2h8c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-8v2h8z"></path>
+                                </svg>
+                            </span>
+
+
+                        </a>
+                    </div>
+                </div>
+
                 <div class="login-btn-box">
 
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle unset-three-dot-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <svg fill="#fff" width="32" height="32" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="MenuIcon">
+                            <svg fill="#fef8fb" width="32" height="32" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="MenuIcon">
                                 <path d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"></path>
                             </svg>
                         </button>
@@ -192,26 +211,32 @@
                                     </span>
                                     <span>Contact us</span>
                                 </a></li>
+
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li id="login"><a style="display: flex;" class="dropdown-item" href="https://cashif.cc/dashboard/login">
+
+                            <li id="login">
+                                <a style="display: flex;" class="dropdown-item" href="https://cashif.cc/dashboard/login">
                                     <span style="margin-right: 16px; display: flex; align-items: center;">
                                         <svg fill="#0000008a" width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="LoginIcon">
                                             <path d="M11 7 9.6 8.4l2.6 2.6H2v2h10.2l-2.6 2.6L11 17l5-5zm9 12h-8v2h8c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-8v2h8z"></path>
                                         </svg>
                                     </span>
                                     <span>Login</span>
-                                </a></li>
+                                </a>
+                            </li>
 
-                            <li id="logout"><a style="display: flex;" class="dropdown-item" href="https://cashif.cc/dashboard/logout">
+                            <li id="logout">
+                                <a style="display: flex;" class="dropdown-item" href="https://cashif.cc/dashboard/logout">
                                     <span style="margin-right: 16px; display: flex; align-items: center;">
                                         <svg fill="#0000008a" width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="LogoutIcon">
                                             <path d="m17 7-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4z"></path>
                                         </svg>
                                     </span>
                                     <span>Logout</span>
-                                </a></li>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -812,7 +837,7 @@
             <div class="rights-section mt-0" style="justify-content: space-between;">
 
                 <div class="rights-info">
-                    <p class="m-0 mt-4">All rights reserved © 2025 Cashif Center</p>
+                    <p class="m-0 mt-4">All rights reserved © 2026 Cashif Center</p>
                 </div>
 
                 <div class="sponsors mb-0" style="margin-top: 25px; gap: 9px; flex-wrap: wrap;">
